@@ -1,44 +1,43 @@
-# Table of contents
+# Summary
 
-## Fundamentals
-
+## Into
 * [What is Proof of Stake](README.md)
-* [What is Cosmos](fundamentals/what-is-cosmos.md)
-* [What is Liquid Staking](fundamentals/what-is-liquid-staking.md)
-* [What is DeFi](fundamentals/what-is-defi.md)
+* [What is Cosmos](Intro/fundamentals/what-is-cosmos.md)
+* [What is Liquid Staking](Intro/fundamentals/what-is-liquid-staking.md)
+* [What is DeFi](Intro/fundamentals/what-is-defi.md)
 
 ***
 
-* [What is Persistence One?](what-is-persistence-one.md)
-* [Why Persistence](why-persistence.md)
-* [What is pSTAKE?](what-is-pstake.md)
+* [What is Persistence One?](Intro/what-is-persistence-one.md)
+* [Why Persistence](Intro/why-persistence.md)
+* [What is pSTAKE?](Intro/what-is-pstake.md)
 
 ## 🕸 Networks
 
-* [Ethereum](networks/ethereum.md)
-* [Cosmos Assets](networks/cosmos-assets.md)
-* [Binance Smart Chain](networks/binance-smart-chain.md)
-* [Solana](networks/solana.md)
-* [Avalanche](networks/avalanche.md)
+* [Ethereum](Networks/ethereum.md)
+* [Cosmos Assets](Networks/cosmos-assets.md)
+* [Binance Smart Chain](Networks/binance-smart-chain.md)
+* [Solana](Networks/solana.md)
+* [Avalanche](Networks/avalanche.md)
 
 ## 🪙 Tokens
 
-* [$XPRT](tokens/usdxprt.md)
-* [$PSTAKE](tokens/usdpstake.md)
-* [$XPRT-$PSTAKE Relationship](tokens/usdxprt-usdpstake-relationship.md)
+* [$XPRT](Tokens/usdxprt.md)
+* [$PSTAKE](Tokens/usdpstake.md)
+* [$XPRT-$PSTAKE Relationship](Tokens/usdxprt-usdpstake-relationship.md)
 
 ## 📘 Guides
 
-* [Stake $XPRT](guides/stake-usdxprt.md)
-* [Use pSTAKE with Keplr](guides/use-pstake-with-keplr.md)
-* [Provide Liquidity ](guides/provide-liquidity.md)
+* [Stake $XPRT](Guides/stake-usdxprt.md)
+* [Use pSTAKE with Keplr](Guides/use-pstake-with-keplr.md)
+* [Provide Liquidity ](Guides/provide-liquidity.md)
 
 ## 💻 Technology
 
-* [Grants](technology/grants.md)
-* [Validators](technology/validators.md)
-* [Audits](technology/audits.md)
-* [Persistence SDK](technology/persistence-sdk.md)
+* [Grants](Technology/grants.md)
+* [Validators](Technology/validators.md)
+* [Audits](Technology/audits.md)
+* [Persistence SDK](Technology/persistence-sdk.md)
 
 ## links
 
