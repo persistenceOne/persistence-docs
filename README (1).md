@@ -40,16 +40,16 @@ Each of the applications mentioned above has a direct value-add in terms of incr
 
 Follow our handy guides to get started on the basics as quickly as possible:
 
-{% content-ref url="../../guides/stake-usdxprt.md" %}
-[stake-usdxprt.md](../../guides/stake-usdxprt.md)
+{% content-ref url="guides/stake-usdxprt.md" %}
+[stake-usdxprt.md](guides/stake-usdxprt.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../guides/use-pstake-with-keplr.md" %}
-[use-pstake-with-keplr.md](../../guides/use-pstake-with-keplr.md)
+{% content-ref url="guides/use-pstake-with-keplr.md" %}
+[use-pstake-with-keplr.md](guides/use-pstake-with-keplr.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../guides/provide-liquidity.md" %}
-[provide-liquidity.md](../../guides/provide-liquidity.md)
+{% content-ref url="guides/provide-liquidity.md" %}
+[provide-liquidity.md](guides/provide-liquidity.md)
 {% endcontent-ref %}
 
 {% hint style="info" %}
@@ -64,16 +64,16 @@ Learn the fundamentals of Liquid Staking to get a deeper understanding of our ma
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="../fundamentals/what-is-cosmos.md" %}
-[what-is-cosmos.md](../fundamentals/what-is-cosmos.md)
+{% content-ref url="Intro/what-is-cosmos.md" %}
+[what-is-cosmos.md](Intro/what-is-cosmos.md)
 {% endcontent-ref %}
 
-{% content-ref url="../fundamentals/what-is-liquid-staking.md" %}
-[what-is-liquid-staking.md](../fundamentals/what-is-liquid-staking.md)
+{% content-ref url="Intro/what-is-liquid-staking.md" %}
+[what-is-liquid-staking.md](Intro/what-is-liquid-staking.md)
 {% endcontent-ref %}
 
-{% content-ref url="../fundamentals/what-is-defi.md" %}
-[what-is-defi.md](../fundamentals/what-is-defi.md)
+{% content-ref url="Intro/what-is-defi.md" %}
+[what-is-defi.md](Intro/what-is-defi.md)
 {% endcontent-ref %}
 
 {% hint style="info" %}

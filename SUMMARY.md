@@ -1,23 +1,21 @@
 # Table of contents
 
-* [Persistence](README.md)
-
 ## Intro
 
-* [Fundamentals](intro/fundamentals/README.md)
-  * [What is Proof of Stake](intro/fundamentals/what-is-proof-of-stake.md)
-  * [What is Cosmos](intro/fundamentals/what-is-cosmos.md)
-  * [What is Liquid Staking](intro/fundamentals/what-is-liquid-staking.md)
-  * [What is DeFi](intro/fundamentals/what-is-defi.md)
-* [What is Persistence One?](intro/readme/README.md)
-  * [Why Persistence?](intro/readme/why-persistence.md)
-  * [What is pSTAKE?](intro/readme/what-is-pstake.md)
+* [Fundamentals](README.md)
+  * [What is Proof of Stake](Intro/what-is-proof-of-stake.md)
+  * [What is Cosmos](Intro/what-is-cosmos.md)
+  * [What is Liquid Staking](Intro/what-is-liquid-staking.md)
+  * [What is DeFi](Intro/what-is-defi.md)
+* [What is Persistence One?](<README (1).md>)
+  * [Why Persistence?](Intro/why-persistence.md)
+  * [What is pSTAKE?](Intro/what-is-pstake.md)
 * [Networks](intro/networks/README.md)
-  * [Ethereum](intro/networks/ethereum.md)
-  * [Cosmos Assets](intro/networks/cosmos-assets.md)
-  * [Binance Smart Chain](intro/networks/binance-smart-chain.md)
-  * [Solana](intro/networks/solana.md)
-  * [Avalanche](intro/networks/avalanche.md)
+  * [Ethereum](networks/ethereum.md)
+  * [Cosmos Assets](networks/cosmos-assets.md)
+  * [Binance Smart Chain](networks/binance-smart-chain.md)
+  * [Solana](networks/solana.md)
+  * [Avalanche](networks/avalanche.md)
 
 ## Chain
 
