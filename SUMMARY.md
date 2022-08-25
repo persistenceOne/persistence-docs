@@ -22,9 +22,13 @@
 
 ## Learn
 
-## Core
+## Chain
+* [Creating a Wallet](Chain/creating-a-wallet.md)
+* [Governance](Chain/governance.md)
 
 ## Contracts
+* [Uploading a Contract](Contracts/governance.md.md)
+* [Interacting with a Contract](Contracts/interacting-with-contracts.md)
 
 ## 📘 Guides
 
