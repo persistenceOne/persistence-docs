@@ -1,21 +1,23 @@
 # Table of contents
 
-## Into
+* [Persistence](README.md)
 
-* [Fundamentals](README.md)
-  * [What is Proof of Stake](into/fundamentals/what-is-proof-of-stake.md)
-  * [What is Cosmos](into/fundamentals/what-is-cosmos.md)
-  * [What is Liquid Staking](into/fundamentals/what-is-liquid-staking.md)
-  * [What is DeFi](into/fundamentals/what-is-defi.md)
-* [What is Persistence One?](into/readme/README.md)
-  * [Why Persistence?](into/readme/why-persistence.md)
-  * [What is pSTAKE?](into/readme/what-is-pstake.md)
-* [Networks](into/networks/README.md)
-  * [Ethereum](into/networks/ethereum.md)
-  * [Cosmos Assets](into/networks/cosmos-assets.md)
-  * [Binance Smart Chain](into/networks/binance-smart-chain.md)
-  * [Solana](into/networks/solana.md)
-  * [Avalanche](into/networks/avalanche.md)
+## Intro
+
+* [Fundamentals](intro/fundamentals/README.md)
+  * [What is Proof of Stake](intro/fundamentals/what-is-proof-of-stake.md)
+  * [What is Cosmos](intro/fundamentals/what-is-cosmos.md)
+  * [What is Liquid Staking](intro/fundamentals/what-is-liquid-staking.md)
+  * [What is DeFi](intro/fundamentals/what-is-defi.md)
+* [What is Persistence One?](intro/readme/README.md)
+  * [Why Persistence?](intro/readme/why-persistence.md)
+  * [What is pSTAKE?](intro/readme/what-is-pstake.md)
+* [Networks](intro/networks/README.md)
+  * [Ethereum](intro/networks/ethereum.md)
+  * [Cosmos Assets](intro/networks/cosmos-assets.md)
+  * [Binance Smart Chain](intro/networks/binance-smart-chain.md)
+  * [Solana](intro/networks/solana.md)
+  * [Avalanche](intro/networks/avalanche.md)
 
 ## Chain
 

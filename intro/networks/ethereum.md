@@ -4,9 +4,7 @@ The transition from Ethereum 1.0 to 2.0 (otherwise known as “The Merge”) is 
 
 The move to PoS consensus is now setting the stage for the next phase in Ethereum’s life cycle. Greater scalability, security, and efficiency are anticipated to result from the upgrade, all of which are poised to encourage further utility and drive the adoption of not only the Ethereum network and ETH but also ETH liquid staking.
 
-
-
-## stkETH&#x20;
+## stkETH
 
 As previously noted, the next addition to pSTAKE’s liquid staking ecosystem will be stkETH, the liquid staked representation of ETH. This means that ETH holders will be able to stake their tokens via [pSTAKE](https://pstake.finance/) in order to earn staking rewards whilst being issued stkETH.
 
