@@ -1,4 +1,4 @@
-# Why Persistence?
+# Why Persistence
 
 DeFi (decentralized finance) has vastly enhanced opportunities for users across the financial landscape, offering accessible and highly attractive yield-generating vehicles to the majority of the global population through the blockchain. At its peak in November 2021, DeFi [had grown to $240B+ TVL](https://defillama.com/) across various flourishing ecosystems (currently \~$100B).
 

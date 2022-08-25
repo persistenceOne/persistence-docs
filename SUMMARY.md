@@ -7,7 +7,7 @@
   * [What is Cosmos](Intro/what-is-cosmos.md)
   * [What is Liquid Staking](Intro/what-is-liquid-staking.md)
   * [What is DeFi](Intro/what-is-defi.md)
-* [What is Persistence One?](<README (1).md>)
+* [What is Persistence One?](README.md)
   * [Why Persistence?](Intro/why-persistence.md)
   * [What is pSTAKE?](Intro/what-is-pstake.md)
 * [Networks](intro/networks/README.md)
