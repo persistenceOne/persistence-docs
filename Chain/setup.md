@@ -79,8 +79,8 @@ One example config to tweak is the `minimum-gas-prices` field inside app.toml, w
  minimum-gas-prices = "0stake"
  ```
 ## Run a Localnet
-Now that everything is set up, you can finally start your node:
+Now that everything is set up, you can finally start your node with the command:
 
-Copy
-persistencecore start
+`persistencecore start`
+
 You should see blocks come in.
