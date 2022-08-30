@@ -1,6 +1,17 @@
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+
 .grunt
+
+# OS
+.DS_Store
+*.swp
+*.swo
+*.swl
+*.swm
+*.swn
+.vscode
+.idea
 
 ## Dependency directory
 ## Commenting this out is preferred by some people, see

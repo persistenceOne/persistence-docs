@@ -21,6 +21,7 @@
 
 * [Creating a Wallet](Chain/creating-a-wallet.md)
 * [Governance](Chain/governance.md)
+* [Setup](Chain/setup.md)
 
 ## Contracts
 
