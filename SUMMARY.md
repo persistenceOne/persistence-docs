@@ -2,14 +2,14 @@
 
 ## Intro
 
-* [Fundamentals]
-  * [What is Proof of Stake](intro/what-is-proof-of-stake.md)
-  * [What is Cosmos](intro/what-is-cosmos.md)
-  * [What is Liquid Staking](intro/what-is-liquid-staking.md)
-  * [What is DeFi](intro/what-is-defi.md)
+* [What is Proof of Stake](intro/what-is-proof-of-stake.md)
+* [What is Cosmos](intro/what-is-cosmos.md)
+* [What is Liquid Staking](intro/what-is-liquid-staking.md)
+* [What is DeFi](intro/what-is-defi.md)
 * [What is Persistence One?](README.md)
   * [Why Persistence?](intro/why-persistence.md)
   * [What is pSTAKE?](intro/what-is-pstake.md)
+  
 ## Networks
   * [Ethereum](networks/ethereum.md)
   * [Cosmos Assets](networks/cosmos-assets.md)
