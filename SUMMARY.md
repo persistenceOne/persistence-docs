@@ -2,14 +2,14 @@
 
 ## Intro
 
-* [What is Proof of Stake](intro/what-is-proof-of-stake.md)
-* [What is Cosmos](intro/what-is-cosmos.md)
-* [What is Liquid Staking](intro/what-is-liquid-staking.md)
-* [What is DeFi](intro/what-is-defi.md)
+* [What is Proof of Stake](Intro/what-is-proof-of-stake.md)
+* [What is Cosmos](Intro/what-is-cosmos.md)
+* [What is Liquid Staking](Intro/what-is-liquid-staking.md)
+* [What is DeFi](Intro/what-is-defi.md)
 * [What is Persistence One?](README.md)
-  * [Why Persistence?](intro/why-persistence.md)
-  * [What is pSTAKE?](intro/what-is-pstake.md)
-  
+  * [Why Persistence?](Intro/why-persistence.md)
+  * [What is pSTAKE?](Intro/what-is-pstake.md)
+
 ## Networks
   * [Ethereum](networks/ethereum.md)
   * [Cosmos Assets](networks/cosmos-assets.md)
@@ -19,15 +19,15 @@
 
 ## Chain
 
-* [Creating a Wallet](chain/creating-a-wallet.md)
-* [Governance](chain/governance.md)
-* [Setup](chain/setup.md)
+* [Creating a Wallet](Chain/creating-a-wallet.md)
+* [Governance](Chain/governance.md)
+* [Setup](Chain/setup.md)
 
 ## Contracts
 
-* [Overview](contracts/overview.md)
-* [Uploading a Contract](contracts/uploading-a-contract.md)
-* [Interacting with a Contract](contracts/interacting-with-contracts.md)
+* [Overview](Contracts/overview.md)
+* [Uploading a Contract](Contracts/uploading-a-contract.md)
+* [Interacting with a Contract](Contracts/interacting-with-contracts.md)
 
 ## 📘 Guides
 
