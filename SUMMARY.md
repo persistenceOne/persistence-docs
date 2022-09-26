@@ -2,20 +2,17 @@
 
 ## Intro
 
-* [What is Proof of Stake](Intro/what-is-proof-of-stake.md)
+* [What is Proof of Stake](README.md)
 * [What is Cosmos](Intro/what-is-cosmos.md)
 * [What is Liquid Staking](Intro/what-is-liquid-staking.md)
 * [What is DeFi](Intro/what-is-defi.md)
-* [What is Persistence One?](README.md)
+* [What is Persistence One?](<README (1).md>)
   * [Why Persistence?](Intro/why-persistence.md)
   * [What is pSTAKE?](Intro/what-is-pstake.md)
 
-## Networks
-  * [Ethereum](networks/ethereum.md)
-  * [Cosmos Assets](networks/cosmos-assets.md)
-  * [Binance Smart Chain](networks/binance-smart-chain.md)
-  * [Solana](networks/solana.md)
-  * [Avalanche](networks/avalanche.md)
+## pSTAKE
+
+* [Staked Cosmos Assets](pstake/cosmos-assets.md)
 
 ## Chain
 
@@ -32,7 +29,6 @@
 ## 📘 Guides
 
 * [Stake $XPRT](guides/stake-usdxprt.md)
-* [Use pSTAKE with Keplr](guides/use-pstake-with-keplr.md)
 * [Provide Liquidity](guides/provide-liquidity.md)
 
 ## 💻 Technology
@@ -51,6 +47,10 @@
 ## Links
 
 * [Website](https://persistence.one)
-* [pSTAKE WebApp](https://pstake.finance)
 * [Github](https://github.com/persistenceOne)
 * [Blog](https://medium.com/persistence-blog)
+
+## Ecosystem
+
+* [Bamboo](ecosystem/Dexter.md)
+* [Dexter](ecosystem/dexter.md)
