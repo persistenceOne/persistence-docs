@@ -19,6 +19,10 @@
 * [Creating a Wallet](Chain/creating-a-wallet.md)
 * [Governance](Chain/governance.md)
 * [Setup](Chain/setup.md)
+* [Mainnet Validator](Chain/mainnet-validator-setup.md)
+* [Testnet Validator](Chain/testnet-validator-setup.md)
+
+
 
 ## Contracts
 
