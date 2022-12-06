@@ -1,60 +1,71 @@
 # Table of contents
 
-## Intro
+* [👓 Overview](README.md)
 
-* [What is Proof of Stake](README.md)
-* [What is Cosmos](Intro/what-is-cosmos.md)
-* [What is Liquid Staking](Intro/what-is-liquid-staking.md)
-* [What is DeFi](Intro/what-is-defi.md)
-* [What is Persistence One?](<README (1).md>)
-  * [Why Persistence?](Intro/why-persistence.md)
-  * [What is pSTAKE?](Intro/what-is-pstake.md)
+## 📖 Learn
 
-## pSTAKE
+* [Introduction](learn/introduction.md)
+* [Ecosystem Overview](learn/ecosystem-overview.md)
+* [Persistence Foundation](learn/persistence-foundation.md)
+* [Persistence Labs](learn/persistence-labs.md)
+* [Fundamentals](learn/fundamentals/README.md)
+  * [What is Proof-of-Stake](learn/fundamentals/what-is-proof-of-stake.md)
+  * [What is Cosmos](learn/fundamentals/what-is-cosmos.md)
+  * [What is DeFi](learn/fundamentals/what-is-defi.md)
+  * [What is Liquid Staking](learn/fundamentals/what-is-liquid-staking.md)
 
-* [Staked Cosmos Assets](pstake/cosmos-assets.md)
+## 🔍 Participate & Explore <a href="#participate" id="participate"></a>
 
-## Chain
+* [$XPRT Token](participate/xprt/README.md)
+  * [Acquire](participate/xprt/acquire.md)
+  * [Stake](participate/xprt/stake.md)
+  * [Governance](participate/xprt/governance.md)
+  * [DeFi](participate/xprt/defi/README.md)
+    * [Provide Liquidity](participate/xprt/defi/provide-liquidity.md)
+    * [Liquid Stake](participate/xprt/defi/liquid-stake.md)
+    * [Borrow / Lend](participate/xprt/defi/borrow-lend.md)
+* [Wallets](participate/wallets.md)
+* [Explorers](participate/explorers.md)
+* [Analytics](participate/analytics.md)
+* [Bridges](participate/bridges.md)
 
-* [Creating a Wallet](Chain/creating-a-wallet.md)
-* [Governance](Chain/governance.md)
-* [Setup](Chain/setup.md)
-* [Mainnet Validator](Chain/mainnet-validator-setup.md)
-* [Testnet Validator](Chain/testnet-validator-setup.md)
+## ⚒ Build, Integrate, Validate <a href="#build" id="build"></a>
 
+* [Nodes & Endpoints](build/nodes-and-endpoints/README.md)
+  * [Public Infrastructure](build/nodes-and-endpoints/public-infrastructure.md)
+  * [Setup a node](build/nodes-and-endpoints/setup.md)
+  * [Set up a local testnet](build/nodes-and-endpoints/set-up-a-local-testnet.md)
+  * [Join Testnet](build/nodes-and-endpoints/join-testnet.md)
+  * [Join Mainnet](build/nodes-and-endpoints/join-mainnet.md)
+* [Validators](build/validators/README.md)
+  * [Validate on Mainnet](build/validators/mainnet-validator-setup.md)
+  * [Validate on Testnet](build/validators/testnet-validator-setup.md)
+  * [Validator Communication](build/validators/validator-communication.md)
+  * [Foundation Delegations](build/validators/foundation-delegations/README.md)
+    * [Round 1](build/validators/foundation-delegations/round-1.md)
+* [Relayers](build/relayers/README.md)
+  * [IBC Channels](build/relayers/ibc-channels.md)
+  * [IBC Relayers](build/relayers/ibc-relayers.md)
+  * [Relay on Mainnet](build/relayers/relay-on-mainnet.md)
+  * [Relay on Testnet](build/relayers/relay-on-testnet.md)
+* [Indexers](build/indexers/README.md)
+  * [Connect to a Subgraph](build/indexers/connect-to-a-subgraph.md)
+  * [Run a Subgraph](build/indexers/run-a-subgraph.md)
+  * [Run a Graph Firehose](build/indexers/run-a-graph-firehose.md)
+* [Smart Contracts](build/smart-contracts/README.md)
+  * [Overview](build/smart-contracts/overview.md)
+  * [Uploading a Contract](build/smart-contracts/uploading-a-contract.md)
+  * [CosmWasm](build/smart-contracts/cosmwasm.md)
+* [Modules](build/modules/README.md)
+  * [pSTAKE module](build/modules/pstake-module.md)
+  * [Epochs module](build/modules/epochs-module.md)
+* [Tools](build/tools/README.md)
+  * [Persistence JS](build/tools/persistence-js.md)
+  * [Persistence SDK](build/tools/persistence-sdk.md)
+  * [Persistence CLI](build/tools/persistence-cli.md)
+* [Contribute](build/contribute.md)
+* [Grants](build/grants.md)
 
+***
 
-## Contracts
-
-* [Overview](Contracts/overview.md)
-* [Uploading a Contract](Contracts/uploading-a-contract.md)
-* [Interacting with a Contract](Contracts/interacting-with-contracts.md)
-
-## 📘 Guides
-
-* [Stake $XPRT](guides/stake-usdxprt.md)
-* [Provide Liquidity](guides/provide-liquidity.md)
-
-## 💻 Technology
-
-* [Grants](technology/grants.md)
-* [Validators](technology/validators.md)
-* [Audits](technology/audits.md)
-* [Persistence SDK](technology/persistence-sdk.md)
-
-## 🪙 Tokens
-
-* [$XPRT](tokens/usdxprt.md)
-* [$PSTAKE](tokens/usdpstake.md)
-* [$XPRT-$PSTAKE Relationship](tokens/usdxprt-usdpstake-relationship.md)
-
-## Links
-
-* [Website](https://persistence.one)
-* [Github](https://github.com/persistenceOne)
-* [Blog](https://medium.com/persistence-blog)
-
-## Ecosystem
-
-* [Bamboo](ecosystem/Dexter.md)
-* [Dexter](ecosystem/dexter.md)
+* [😍 Connect & Follow](connect-and-follow.md)
