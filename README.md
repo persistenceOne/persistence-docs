@@ -1,6 +1,5 @@
 ---
 description: Understand, Explore and Build the Persistence Liquid Staking Hub
-layout: landing
 ---
 
 # 👓 Overview

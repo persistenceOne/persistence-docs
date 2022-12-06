@@ -1,7 +1,3 @@
----
-layout: landing
----
-
 # 😍 Connect & Follow
 
 ## Official pages and channels
