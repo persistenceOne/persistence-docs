@@ -18,3 +18,7 @@ by Smart Stake
 by Smart Stake
 {% endembed %}
 
+{% embed url="https://observatory.zone/persistence" %}
+by Rockaway Labs
+{% endembed %}
+
