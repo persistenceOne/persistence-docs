@@ -10,13 +10,13 @@ The following API's are recommended for development purposes. For maximum contro
 
 We provide following endpoints to help developers with integration
 
-| Protocol | Mainnet                                                                | Testnet     |
-| -------- | ---------------------------------------------------------------------- | ----------- |
-| Chain ID | core-1                                                                 | test-core-1 |
-| RPC      | [https://rpc.core.persistence.one](https://rpc.core.persistence.one)   |             |
-| REST     | [https://rest.core.persistence.one](https://rest.core.persistence.one) |             |
-| GRPC     | grpc://grpc.core.persistence.one                                       |             |
-| WSS      | wss://rpc.core.persistence.one:443/websocket                           |             |
+| Protocol | Mainnet                                                                | Testnet                                                                        |
+| -------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Chain ID | core-1                                                                 | test-core-1                                                                    |
+| RPC      | [https://rpc.core.persistence.one](https://rpc.core.persistence.one)   | [https://rpc.testnet.persistence.one/](https://rpc.testnet.persistence.one/)   |
+| REST     | [https://rest.core.persistence.one](https://rest.core.persistence.one) | [https://rest.testnet.persistence.one/](https://rest.testnet.persistence.one/) |
+| GRPC     | grpc://grpc.core.persistence.one                                       |                                                                                |
+| WSS      | wss://rpc.core.persistence.one:443/websocket                           |                                                                                |
 
 We also provide archival endpoints to retrieve historical data
 
