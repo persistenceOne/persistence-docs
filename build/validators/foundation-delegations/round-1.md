@@ -41,6 +41,7 @@ The following contributions are deemed valuable to the ecosystem and will earn p
 | Running IBC Relayers                                          |
 | Running ICA Relayers                                          |
 | Running Graph / subGraph Nodes                                |
+| Providing API/RPC services                                    |
 | Maintain tooling - Explorers, Wallet  Support, Analytics etc. |
 
 #### Testnet Contributions
@@ -51,6 +52,7 @@ The following contributions are deemed valuable to the ecosystem and will earn p
 | Run a Testnet Faucet                                                 |
 | Run Testnet IBC Relayers                                             |
 | Run Testnet ICA Relayers                                             |
+| Providing API/RPC services                                           |
 | Maintain Testnet tooling - Explorers, Wallet Support, Analytics etc. |
 
 #### Community Contributions
