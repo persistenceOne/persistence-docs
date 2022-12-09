@@ -4,6 +4,8 @@ description: The Native Token of the Persistence Ecosystem
 
 # $XPRT Token
 
+<figure><img src="../../.gitbook/assets/XPRT Token.png" alt=""><figcaption></figcaption></figure>
+
 ## Role
 
 $XPRT, the native staking token of the [Persistence Core-1 chain](https://www.mintscan.io/persistence), was launched in April 2021 with the vision to fuel a DeFi ecosystem creating innovative use-cases beyond the traditional DeFi primitives we see on most ecosystems today.

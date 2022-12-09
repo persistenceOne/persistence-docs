@@ -1,8 +1,6 @@
----
-description: Understand, Explore and Build the Persistence Liquid Staking Hub
----
-
 # 👓 Overview
+
+<figure><img src=".gitbook/assets/Overview.png" alt=""><figcaption></figcaption></figure>
 
 Welcome to Persistence Docs! Here you can find anything and everything related to the Persistence Liquid Staking Hub. We invite you to Learn, Participate, Explore, Build, Integrate, Validate and Connect with us on this journey.&#x20;
 
@@ -30,12 +28,6 @@ Technical Documentation for builders & validators
 
 ## Connect & Follow 😍
 
-Find all links to the Persistence official pages and channels [on this page](connect-and-follow.md)
-
-
-
-
-
-
+Find all links to the Persistence official pages and channels [on this page](connect-and-follow.md).
 
 **Disclaimer:** _While this docs page is provided and maintained as a collaborative effort between Persistence Labs & the Persistence Foundation, there is no guarantee that all presented information is up-to-date at all times. We invite the community to flag any errors or inaccuracies and contribute to keeping the docs up-to-date._&#x20;
