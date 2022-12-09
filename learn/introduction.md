@@ -4,7 +4,7 @@ description: The Liquid Staking Hub
 
 # Introduction
 
-> <mark style="color:green;">**persistence**</mark>\ <mark style="color:green;">****</mark>/pəˈsɪst(ə)ns/\
+> <mark style="color:red;">**Persistence**</mark>\ <mark style="color:green;">****</mark>/pəˈsɪst(ə)ns/\
 > _noun_
 >
 > **the fact of continuing in an opinion or course of action in spite of difficulty or opposition.**
