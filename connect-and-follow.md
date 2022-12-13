@@ -19,4 +19,5 @@
 | South-Korea       | Nonce                   | [https://t.me/PersistenceKorea](https://t.me/PersistenceKorea)           |
 | Turkey            | Wonder wasp             | [https://t.me/PersistenceOneTurkey](https://t.me/PersistenceOneTurkey)   |
 | Vietnam           | Megala                  | [https://t.me/PersistenceOneVietnam](https://t.me/PersistenceOneVietnam) |
+| Spain             | Cosmonaut Stakes        | [https://t.me/PersistenceOneESP](https://t.me/PersistenceOneESP)         |
 
