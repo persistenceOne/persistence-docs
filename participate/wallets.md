@@ -30,3 +30,10 @@ Note that the Persistence Ledger app will be deprecated.
 ## Coin 98
 
 {% embed url="https://wallet.coin98.com/" %}
+
+## Leap Cosmos
+
+{% embed url="https://www.leapwallet.io/" %}
+Leap Cosmos Wallet can be used via Android, iOS, and Chrome Extension in conjuction with Ledger. \
+Be aware that Leap Cosmos is in Beta.
+{% endembed %}
