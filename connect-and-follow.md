@@ -17,6 +17,7 @@
 | France            | StakeLab                | [https://t.me/PersistenceOneFrance](https://t.me/PersistenceOneFrance)   |
 | Russia            | PostHuman               | [https://t.me/PersistenceRussia](https://t.me/PersistenceRussia)         |
 | South-Korea       | Nonce                   | [https://t.me/PersistenceKorea](https://t.me/PersistenceKorea)           |
+| Spain             | Cosmonaut Stakes        | [https://t.me/PersistenceOneESP](https://t.me/PersistenceOneESP)         |
 | Turkey            | Wonder wasp             | [https://t.me/PersistenceOneTurkey](https://t.me/PersistenceOneTurkey)   |
 | Vietnam           | Megala                  | [https://t.me/PersistenceOneVietnam](https://t.me/PersistenceOneVietnam) |
 
