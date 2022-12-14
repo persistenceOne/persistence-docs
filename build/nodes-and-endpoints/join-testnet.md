@@ -6,13 +6,13 @@ The minimum and recommended requirements to run a Persistence Node increase as i
 Thus, there is no exact hardware requirements that are permanently sufficient. A node should always have redundant resources available.
  
 - **Minimal:**
-	- 8 GB RAM
-	- 100 GB SSD
+	- 2 GB RAM
+	- 25 GB SSD
 	- 2 CPU
 
 - **Recommended:**
-	- 16 GB RAM
-	- 500 GB SSD
+	- 4 GB RAM
+	- 100 GB SSD
 	- 4 CPU
 
 - **Operating System:**
