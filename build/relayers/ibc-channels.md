@@ -4,8 +4,8 @@
 
 | source channel | destination chain | destination chain-id | destination channel | known operators                                                                                |
 | -------------- | ----------------- | -------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
-| channel-6      | Osmosis           | osmosis-1            | channel-4           | CryptoCrew, bitszn, Stakin, Smart Stake, StakeWith.Us, Cephalopod, Imperator, Cosmonaut Stakes |
-| channel-37     | Juno              | juno-1               | channel-33          | Notional, CryptoCrew, Kleomedes, AUDIT.one, Smart Stake, Cosmonaut Stakes                      |
+| channel-6      | Osmosis           | osmosis-1            | channel-4           | CryptoCrew, bitszn, Stakin, Smart Stake, StakeWith.Us, Cephalopod, Imperator                   |
+| channel-37     | Juno              | juno-1               | channel-33          | Notional, CryptoCrew, Kleomedes, AUDIT.one, Smart Stake                                        |
 | channel-24     | Cosmos Hub        | cosmoshub-4          | channel-190         | Stakin, CryptoCrew                                                                             |
 | channel-38     | Gravity Bridge    | gravity-bridge-3     | channel-24          | CryptoCrew, bitszn, Stakin, Cosmonaut Stakes                                                   |
 | channel-41     | Injective         | injective-1          | channel-82          | Cros-nest, CryptoCrew, Smart Stake                                                             |
