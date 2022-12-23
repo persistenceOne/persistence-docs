@@ -1,4 +1,4 @@
-# Setting up a Persistence Testnet Node
+# How to Join the Testnet
 
 ## Hardware Requirements
 The minimum and recommended requirements to run a Persistence Node increase as it produces more blocks and more features are added. For instance, a chain enabling [CosmWasm](https://cosmwasm.com/) has higher hardware requirements.
@@ -26,48 +26,54 @@ We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on
 
 ### Install Go
 1. Remove any previous installation: 
-	```
+	```bash
 	rm -rf /usr/local/go
 	```
 2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
 3. Download the latest version of **Go** (1.19.4 as of time of writing):
-	```
+	```bash
 	wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
 	```
 4. Extract the contents of the archive into /usr/local: 
-	```
+	```bash
 	tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
 	```
 5. Check **Go** is installed correctly *(sample output: `go version go1.19.4 linux/amd64`)*: 
-	```
+	```bash
 	go version
 	```
 6. Set $GOPATH:
 
 	1.  Open the `.profile` file, where all your environment variables are stored:
-		```
+		```bash
 		nano ~/.profile
 		```
 	2. Scroll down to the end of the file and add the following line before `export $PATH`:
-		```
+		```bash
 		export GOPATH=$HOME/go
 		```
 	3. Add the following line to **PATH**  (i.e. `export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`):
-		```
+		```bash
 		$GOPATH/bin
 		```
 	4. Reload the **PATH** environment variable:
-		```
+		```bash
 		source ~/.profile
 		```
 	5. Create the directories we set in **PATH**:
-		```
+		```bash
 		mkdir -p $GOPATH/bin
 		```
 
 ### Install jq
-1. Install **jq**: `apt install jq`
-2. Verify **jq** is installed correctly: `jq --version` (sample output: `jq-1.6`)
+1. Install **jq**:
+```bash
+apt install jq
+```
+3. Verify **jq** is installed correctly:
+```bash
+jq --version # sample output: jq-1.6
+```
 
 ## Installation Steps
 ### Install the persistenceCore Binary
@@ -75,76 +81,76 @@ Depending on your operating system, you need to follow a specific installation p
 #### Ubuntu
 1. Check the latest version of the **persistenceCore** binary by visiting [this page](https://github.com/persistenceOne/persistenceCore/releases)
 2. Download the latest version *(5.0.0 as of time of writing)*: 
-	```
+	```bash
 	wget https://github.com/persistenceOne/persistenceCore/releases/download/v5.0.0/persistenceCore-v5.0.0-linux-amd64
 	```
 3. Make the file executable: 
-	```
+	```bash
 	chmod +x persistenceCore-v5.0.0-linux-amd64
 	```
 4. Move binary to **GOPATH** and rename it: 
-	```
+	```bash
 	mv persistenceCore-v5.0.0-linux-amd64 $GOPATH/bin/persistenceCore
 	```
 5. Verify installation (sample output: `v5.0.0`): 
-	```
+	```bash
 	persistenceCore version
 	```
 
 #### MacOS
 
 1. Some extra prerequisites are required to install persistenceCore on **MacOS**. Install **git**, **make**, and **gcc** by running the command below:
-	```
+	```bash
 	apt install git make gcc
 	```
 2.  Clone the **persistenceCore** repository:
-	```
+	```bash
 	git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
 	```
 3. Check the latest version of the  **persistenceCore**  binary by visiting  [this page](https://github.com/persistenceOne/persistenceCore/releases)
 4. Switch to the branch of the latest version *(5.0.0 as of time of writing)*: 
-	```
+	```bash
 	git checkout v5.0.0
 	```
 5. Install the **persistenceCore** binary:
-	```
+	```bash
 	make all
 	```
 6. Verify installation (sample output: `v5.0.0`): 
-	```
+	```bash
 	persistenceCore version
 	```
 
 ### Create or Import Key (XPRT Address)
 - Create **key** *(ensure you safely store the mnemonic seed phrase)*:
-	```
+	```bash
 	persistenceCore keys add <KEY_NAME>
 	```
 - Recover **key** *(you'll be required to input your mnemonic seed phrase)*: 
-	```
+	```bash
 	persistenceCore keys add <KEY_NAME> --recover
 	```
 - Verify the **key** was created successfully:
-	```
+	```bash
 	persistenceCore keys list
 	```
 
 ### Create and Sync the Node
 1. Initialize the **node** *(moniker = node name)*: 
-	```
+	```bash
 	persistenceCore init <MONIKER> # e.g. 'persistenceCore init "Persistence Node"'
 	```
 2. Download the **test-core-1 genesis** file: 
-	```
+	```bash
 	cd ~/.persistenceCore/config && wget -O genesis.json  https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-1/final_genesis.json
 	```
 3. Use **StateSync** to sync with the rest of the nodes. Follow the step-by-step guide below: 
 	- Run the following command and copy the values of `trust_height` and `trust_hash`. They are required in the next steps.
-		```
+		```bash
 		curl -s https://persistence-testnet-rpc.cosmonautstakes.com/status | jq '.result .sync_info | {trust_height: .latest_block_height, trust_hash: .latest_block_hash} | values'
 		```
 	- Open config:
-		```
+		```bash
 		nano +328 ~/.persistenceCore/config/config.toml
 		```
 	- Replace the existing settings in the opened file with the following:
@@ -160,12 +166,12 @@ Depending on your operating system, you need to follow a specific installation p
 		```
 	- Make sure you replace `trust_height` and `trust_hash` values with the ones you've copied in the previous step. 
 5. Open the `app.toml` file *(application-related configuration file)*:
-	```
+	```bash
 	nano ~/.persistenceCore/config/app.toml
 	```
 6. Change `minimum-gas-prices` to `minimum-gas-prices = "0.005uxprt"`
 7. Start the node:
-	```
+	```bash
 	persistenceCore start
 	```
 8. Because we used StateSync to sync with the other nodes, it shouldn't take more than 10 minutes to complete. In the meantime, a lot of output messages will pop one after another.
@@ -180,6 +186,6 @@ Depending on your operating system, you need to follow a specific installation p
 	11:28PM INF indexed block exents height=9305912 module=txindex
 	```
 	Alternatively, you can use the following command *(response must be `false`)*: 
-	```
+	```bash
 	curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
 	```
