@@ -19,6 +19,7 @@ To successfully run a Persistence Testnet Node, we need to install a few prerequ
 We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on your operating system, you might be required to install more prerequisites (**MacOS**).
 
 ### Install Go
+#### Ubuntu
 1. Remove any previous installation: 
 	```bash
 	rm -rf /usr/local/go
@@ -58,6 +59,20 @@ We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on
 		```bash
 		mkdir -p $GOPATH/bin
 		```
+
+#### macOS
+1. Dowload the latest version of **Go** for macOS:
+	```bash
+	wget https://go.dev/dl/go1.19.4.darwin-amd64.pkg
+	```
+3.  Open the package file you downloaded and follow the prompts to install **Go**.
+    
+    The package installs the **Go** distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your  `PATH`  environment variable. You may need to restart any open Terminal sessions for the change to take effect.
+    
+4.  Verify that you've installed **Go** by opening a command prompt and typing the following command  *(sample output: `go version go1.19.4`)*:
+	```
+	go version
+	```
 
 ### Install jq, git, gcc, and make
 1. Install:
