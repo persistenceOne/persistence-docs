@@ -1,14 +1,8 @@
-# How to Join the Testnet
-
+# Join the Testnet
 ## Hardware Requirements
-The minimum and recommended requirements to run a Persistence Node increase as it produces more blocks and more features are added. For instance, a chain enabling [CosmWasm](https://cosmwasm.com/) has higher hardware requirements.
+The minimum and recommended requirements to run a Testnet Persistence Node increase as it produces more blocks and more features are added. For instance, a chain enabling [CosmWasm](https://cosmwasm.com/) has higher hardware requirements.
 
-Thus, there is no exact hardware requirements that are permanently sufficient. A node should always have redundant resources available.
- 
-- **Minimal:**
-	- 4 GB RAM
-	- 25 GB SSD
-	- 2 CPU
+Thus, there is no exact hardware requirements that are permanently sufficient. A testnet node should always have redundant resources available.
 
 - **Recommended:**
 	- 8 GB RAM
@@ -20,7 +14,7 @@ Thus, there is no exact hardware requirements that are permanently sufficient. A
 	- **Others:** Windows/MacOS(x86)
 
 ## Prerequisites
-To successfully run a Persistence Node, we need to install a few prerequirements. Because running the Persistence software depends on them, prerequirements are also known as dependencies.
+To successfully run a Persistence Testnet Node, we need to install a few prerequirements. Because running the Persistence software depends on them, prerequirements are also known as dependencies.
 
 We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on your operating system, you might be required to install more prerequisites (**MacOS**).
 
@@ -65,58 +59,38 @@ We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on
 		mkdir -p $GOPATH/bin
 		```
 
-### Install jq
-1. Install **jq**:
-```bash
-apt install jq
-```
-3. Verify **jq** is installed correctly:
-```bash
-jq --version # sample output: jq-1.6
-```
+### Install jq, git, gcc, and make
+1. Install:
+	- **Ubuntu:** `apt install jq git gcc make`
+	- **macOS:** `brew install jq git gcc make`
+2. Verify Installations:
+	- Verify **jq**: `jq --version` (sample output: `jq-1.6`)
+	- Verify **gcc** : `gcc --version` (sample output: `gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0`)
+	- Verify **make**: `make --version` (sample output: `GNU Make 4.2.1`)
+	- Verify **git**: `git --version` (sample output: `git version 2.25.1`)
 
 ## Installation Steps
 ### Install the persistenceCore Binary
 Depending on your operating system, you need to follow a specific installation process. Please follow the relevant installation guide below (**Ubuntu** or **MacOS**).
-#### Ubuntu
-1. Check the latest version of the **persistenceCore** binary by visiting [this page](https://github.com/persistenceOne/persistenceCore/releases)
-2. Download the latest version *(5.0.0 as of time of writing)*: 
-	```bash
-	wget https://github.com/persistenceOne/persistenceCore/releases/download/v5.0.0/persistenceCore-v5.0.0-linux-amd64
-	```
-3. Make the file executable: 
-	```bash
-	chmod +x persistenceCore-v5.0.0-linux-amd64
-	```
-4. Move binary to **GOPATH** and rename it: 
-	```bash
-	mv persistenceCore-v5.0.0-linux-amd64 $GOPATH/bin/persistenceCore
-	```
-5. Verify installation (sample output: `v5.0.0`): 
-	```bash
-	persistenceCore version
-	```
 
-#### MacOS
+{% hint style="warning" %}
+The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the test-core-1 chain. To ensure you're running the correct version, join the [Discord Testnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
+{% endhint %}
 
-1. Some extra prerequisites are required to install persistenceCore on **MacOS**. Install **git**, **make**, and **gcc** by running the command below:
-	```bash
-	apt install git make gcc
-	```
-2.  Clone the **persistenceCore** repository:
+1.  Clone the **persistenceCore** repository:
 	```bash
 	git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
 	```
-3. Check the latest version of the  **persistenceCore**  binary by visiting  [this page](https://github.com/persistenceOne/persistenceCore/releases)
-4. Switch to the branch of the latest version *(5.0.0 as of time of writing)*: 
+2. Check what version is running on the test-core-1 chain by visiting the [Discord Testnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
+3. Switch to the branch of the latest version *(v6.0.0-rc5 as of time of writing)*: 
 	```bash
-	git checkout v5.0.0
+	git checkout v6.0.0-rc5
 	```
-5. Install the **persistenceCore** binary:
+4. Install the **persistenceCore** binary:
 	```bash
 	make all
 	```
-6. Verify installation (sample output: `v5.0.0`): 
+5. Verify installation (sample output: `v6.0.0-rc5`): 
 	```bash
 	persistenceCore version
 	```
@@ -138,7 +112,7 @@ Depending on your operating system, you need to follow a specific installation p
 ### Create and Sync the Node
 1. Initialize the **node** *(moniker = node name)*: 
 	```bash
-	persistenceCore init <MONIKER> # e.g. 'persistenceCore init "Persistence Node"'
+	persistenceCore init <MONIKER> --chain-id="test-core-1" # e.g. persistenceCore init "Persistence Node" --chain-id="test-core-1"
 	```
 2. Download the **test-core-1 genesis** file: 
 	```bash
