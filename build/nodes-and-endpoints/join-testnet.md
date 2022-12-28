@@ -16,7 +16,7 @@ Thus, there is no exact hardware requirements that are permanently sufficient. A
 ## Prerequisites
 To successfully run a Persistence Testnet Node, we need to install a few prerequirements. Because running the Persistence software depends on them, prerequirements are also known as dependencies.
 
-We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on your operating system, you might be required to install more prerequisites (**MacOS**).
+We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make**, and **git**.
 
 ### Install Go
 #### Ubuntu
@@ -86,7 +86,6 @@ We need to install and/or setup 2 dependencies - **Go** and **jq**. Depending on
 
 ## Installation Steps
 ### Install the persistenceCore Binary
-Depending on your operating system, you need to follow a specific installation process. Please follow the relevant installation guide below (**Ubuntu** or **MacOS**).
 
 {% hint style="warning" %}
 The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the test-core-1 chain. To ensure you're running the correct version, join the [Discord Testnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
