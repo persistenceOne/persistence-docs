@@ -104,3 +104,6 @@ Snapshots, addrbook
 Validator monitoring, Snapshots, RPC/Seed/Peer
 {% endembed %}
 
+{% embed url="https://quantnode.tech/persistance/" %}
+Public Nodes
+{% endembed %}
