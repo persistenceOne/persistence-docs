@@ -84,10 +84,10 @@ We need to install and setup one dependency - **Go**.
 ## Installation Steps
 ### 1. Install the Cosmos Relayer Binary
 
-The Cosmos Go Relayer code is available at the [Official GitHub Repository](https://github.com/cosmos/relayer). First, we must 'download' all the code locally by cloning the GitHub repository, choosing the latest version *(as of time of writing: v2.0.0-rc3)* and installing the binary into our GOPATH as explained in the [prerequisites section](#Install-Go) of this guide.
+The Cosmos Go Relayer code is available at the [Official GitHub Repository](https://github.com/cosmos/relayer). First, we must 'download' all the code locally by cloning the GitHub repository, choosing the latest version *(as of time of writing: v5.0.0)* and installing the binary into our GOPATH as explained in the [prerequisites section](#Install-Go) of this guide.
 ```bash
 git clone https://github.com/cosmos/relayer.git # Download all the code locally
-cd relayer && git checkout v2.0.0-rc3 # Choose the latest version
+cd relayer && git checkout v5.0.0 # Choose the latest version
 make install # Install the Cosmos Go Relayer (creates a binary in GOPATH)
 ```
 Next, verify the binary is correctly installed by running the following command.
