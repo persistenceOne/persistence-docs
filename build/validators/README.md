@@ -5,9 +5,9 @@ The Persistence Core-1 Chain is based on [Tendermint](https://github.com/tenderm
 **Validator's roles include but are not limited to the following:**
 
 1. **Be able to constantly run a correct version of the software:**  Validators must ensure that their servers are always online and their private keys are not compromised.
-2. **Actively participate in governance:**  Validators are required to vote on every proposal.
-3. **Active Community Members:** Validators are expected to be active members of the community
-4. **Stay up-to-date:** Validators must always be up-to-date with the current state of the ecosystem so that they can easily adapt to any change
+2. **Actively participate in governance:** Validators are encouraged to vote on every proposal. When a delegator doesn't vote, the delegator inherits the vote of their validator. However, delegators can override their validator's vote by sending one themselves.
+3. **Active Community Members:** Validators are expected to be active members of the community.
+4. **Stay up-to-date:** Validators must always be up-to-date with the current state of the ecosystem so that they can easily adapt to any change.
 
 More information about validators' security, FAQ, and others, is available [here](https://hub.cosmos.network/main/validators/).
 
