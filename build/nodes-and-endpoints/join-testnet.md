@@ -139,10 +139,13 @@ The latest version available in the [releases page](https://github.com/persisten
 		```
 	- Open config:
 		```bash
-		nano +328 ~/.persistenceCore/config/config.toml
+		nano ~/.persistenceCore/config/config.toml
 		```
 	- Replace the existing settings in the opened file with the following:
 		```
+		[p2p]
+		seeds = "b4237f8a7ca357d380ad119b76cbceec7e7e8a75@seed.testnet.persistence.one:26656"
+		
 		persistent_peers = "14ecdc5126ea8d93c7d3a863d9d38e380e46fc06@185.225.233.30:26656"
 
 		[statesync]
