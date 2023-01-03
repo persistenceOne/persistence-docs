@@ -1,9 +1,8 @@
 
 # Validate on Mainnet
 
-{% hint style="warning" %}
-**IMPORTANT:** Before creating a mainnet validator, ensure you have first followed the instructions on [how to join the mainnet](../nodes-and-endpoints/join-mainnet.md). Also, unless you have previous experience running Cosmos Validators, we highly recommend starting with learning [how to validate on testnet](https://docs.persistence.one/build/validators/testnet-validator-setup).
-{% endhint %}
+> **Warning**
+> Before creating a mainnet validator, ensure you have first followed the instructions on [how to join the mainnet](../nodes-and-endpoints/join-mainnet.md). Also, unless you have previous experience running Cosmos Validators, we highly recommend starting with learning [how to validate on testnet](https://docs.persistence.one/build/validators/testnet-validator-setup).
 
 ### Create Validator
 1. Ensure the **node is synced** *(response must be `false`)*: 
@@ -52,7 +51,7 @@
 		--security-contact="hello@persistence.one" \
 		--gas="auto" \
 		--gas-adjustment="1.5" \
-		--gas-prices="10uxprt"
+		--gas-prices="0.025uxprt"
 	```
 	**If you need further explanation for each of these command flags:**
 
@@ -82,7 +81,7 @@
 View the validator's information with this command:
 
 ```bash
-persistenceCore query staking validator <validator_address>
+persistenceCore query staking validator $(persistenceCore keys show <key_name> --bech=val -a)
 ```
 
 Here's an example of how the above command should be used:
@@ -111,9 +110,8 @@ persistenceCore tx staking edit-validator
   --commission-rate="0.10"
 ```
 
-{% hint style="warning" %}
-Please note that some parameters such as `commission-max-rate` and `commission-max-change-rate` cannot be changed once your validator is up and running.
-{% endhint %}
+> **Warning**
+> Please note that some parameters such as `commission-max-rate` and `commission-max-change-rate` cannot be changed once your validator is up and running.
 
 **Note**: The `commission-rate` value must adhere to the following rules:
 
@@ -158,9 +156,8 @@ You can find more advanced information about running a node or a validator on th
 
 This chain is currently running on persistenceCore [v5.0.0](https://github.com/persistenceOne/persistenceCore/releases/tag/v5.0.0) *(Commit Hash: `de671f5927b4d0b87e8db5940a99e03c7e512b58`)*
 
-{% hint style="warning" %}
-NOTE: If your node is running on an older version of the application, please update it to this version at the earliest to avoid being exposed to security vulnerabilities or defects.
-{% endhint %}
+> **Warning**
+> If your node is running on an older version of the application, please update it to this version at the earliest to avoid being exposed to security vulnerabilities or defects.
 
 ## Explorer
 
