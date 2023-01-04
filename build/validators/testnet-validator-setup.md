@@ -52,7 +52,7 @@
 		--security-contact="hello@persistence.one" \
 		--gas="auto" \
 		--gas-adjustment="1.5" \
-		--gas-prices="10uxprt"
+		--gas-prices="0.025uxprt"
 	```
 	**If you need further explanation for each of these command flags:**
 
