@@ -1,8 +1,7 @@
 # Relay on Mainnet
 
-{% hint style="note" %}
-This guide is based on the [Official Cosmos Relayer Setup Guide](https://github.com/cosmos/relayer/blob/main/README.md).
-{% endhint %}
+> **Note**
+> This guide is based on the [Official Cosmos Relayer Setup Guide](https://github.com/cosmos/relayer/blob/main/README.md).
 
 In IBC, blockchains do not directly pass messages to each other over the network. This is where a  `relayer`  comes in. A relayer process monitors for updates on opens paths between sets of  [IBC](https://ibcprotocol.org/)  enabled chains. The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
 
@@ -148,9 +147,8 @@ You can check available Gravity Bridge RPC endpoints [here](https://cosmos.direc
 ### 4. Import Keys OR Create Keys
 Next, you're required to add an existing key (a.k.a. address) or create a new one. An address is necessary to sign and relay transactions between chains *(in our case, Gravity Bridge <-> Persistence)*.
 
-{% hint style="note" %}
-**NOTE:** `key-name` is an identifier of your choosing. 
-{% endhint %}
+> **Note**
+> `key-name` is an identifier of your choosing.
 
 If you need to generate a new private key, use the following command. Remember to replace `key-name` -> e.g. `rly keys add persistence "MyRandomKeyName"`
 ```bash
@@ -207,9 +205,8 @@ rly query balance persistence
 
 We have the chain metadata configured, now we need path metadata. For more info on `path` terminology visit [here](https://github.com/cosmos/relayer/blob/main/docs/troubleshooting.md).  
 
-{% hint style="note" %}
-**NOTE:** Thinking of chains in the config as "source" and "destination" can be confusing. Be aware that most paths are bi-directional.
-{% endhint %}
+> **Note**
+> Thinking of chains in the config as "source" and "destination" can be confusing. Be aware that most paths are bi-directional.
 
 The following command will check for IBC path metadata from the [chain-registry](https://github.com/cosmos/chain-registry/tree/master/_IBC) and add these paths to your config file.
 
