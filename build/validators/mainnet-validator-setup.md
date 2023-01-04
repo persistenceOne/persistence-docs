@@ -31,7 +31,7 @@
 	--security-contact="[OPTIONAL]" \ # DELETE OR REPLACE
 	--gas="auto" \
 	--gas-adjustment="1.5" \
-	--gas-prices="10uxprt"
+	--gas-prices="0.025uxprt"
 	```
 	**Here's an example of how this command should look like when all the parameters are filled in correctly.**
 	```bash
