@@ -87,9 +87,8 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 ## Installation Steps
 ### Install the persistenceCore Binary
 
-{% hint style="warning" %}
-The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the core-1 chain. To ensure you're running the correct version, join the [Discord Mainnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1021758804410519594).
-{% endhint %}
+> **Note**
+> The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the core-1 chain. To ensure you're running the correct version, join the [Discord Mainnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1021758804410519594).
 
 1.  Clone the **persistenceCore** repository:
 	```bash
@@ -139,10 +138,13 @@ The latest version available in the [releases page](https://github.com/persisten
 		```
 	- Open config:
 		```bash
-		nano +328 ~/.persistenceCore/config/config.toml
+		nano ~/.persistenceCore/config/config.toml
 		```
 	- Replace the existing settings in the opened file with the following:
 		```
+		[p2p]
+		seeds = "08ab4552a74dd7e211fc79432918d35818a67189@52.69.58.231:26656"
+		
 		persistent_peers = "137818b03a705cf86622b4d97a074091f2f22589@185.225.233.30:26756"
 
 		[statesync]
