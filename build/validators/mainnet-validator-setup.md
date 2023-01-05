@@ -1,173 +1,92 @@
+
 # Validate on Mainnet
 
-<mark style="color:red;">To be reviewed and updated</mark>
+> **Warning**
+> Before creating a mainnet validator, ensure you have first followed the instructions on [how to join the mainnet](../nodes-and-endpoints/join-mainnet.md). Also, unless you have previous experience running Cosmos Validators, we highly recommend starting with learning [how to validate on testnet](https://docs.persistence.one/build/validators/testnet-validator-setup).
 
-## Synced Node
+### Create Validator
+1. Ensure the **node is synced** *(response must be `false`)*: 
+	```bash
+	curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
+	```
+2. Ensure you've got at least **~2+ XPRT** available in the wallet *(XPRT address created in [how to join the mainnet](../nodes-and-endpoints/join-mainnet.md))*. You can acquire **XPRT** by following [this guide](https://www.binance.com/en/how-to-buy/persistence).
+3.  **Create Validator**.
 
-Before creating a mainnet validator, ensure you have first followed the instructions on how to [join the mainnet](../nodes-and-endpoints/join-mainnet.md)
+	Before copying and pasting the command below, ensure you keep, replace, or delete certain options as highlighted in the command snippet below. We recommend copying the command in a notepad *(or other text editor)* and edit the parameters accordingly. 
 
-## Running a Validator
+	```bash
+	persistenceCore tx staking create-validator \
+	--from="[KEY_NAME]" \ # REPLACE
+	--amount="1000000uxprt" \
+	--pubkey="$(persistenceCore tendermint show-validator)" \
+	--chain-id="core-1" \
+	--moniker="[VALIDATOR_NAME]" \ # REPLACE
+	--commission-max-change-rate=0.05 \ # KEEP OR REPLACE
+	--commission-max-rate=0.20 \ # KEEP OR REPLACE
+	--commission-rate=0.10 \ # KEEP OR REPLACE
+	--min-self-delegation="1" \ # KEEP OR REPLACE
+	--website="[OPTIONAL]" \ # DELETE OR REPLACE
+	--identity="[OPTIONAL]" \ # DELETE OR REPLACE
+	--details="[OPTIONAL]" \ # DELETE OR REPLACE
+	--security-contact="[OPTIONAL]" \ # DELETE OR REPLACE
+	--gas="auto" \
+	--gas-adjustment="1.5" \
+	--gas-prices="0.025uxprt"
+	```
+	**Here's an example of how this command should look like when all the parameters are filled in correctly.**
+	```bash
+		persistenceCore tx staking create-validator \
+		--from="PersistenceOneValidatorKey" \
+		--amount="1000000uxprt" \
+		--pubkey="$(persistenceCore tendermint show-validator)" \
+		--chain-id="core-1" \
+		--moniker="PersistenceOneValidator" \
+		--commission-max-change-rate=0.05 \
+		--commission-max-rate=0.20 \
+		--commission-rate=0.10 \
+		--min-self-delegation="1" \
+		--website="https://persistence.one/" \
+		--identity="5C1159DB8957B5AA" \
+		--details="This is an explanation on why delegators should consider delegating with your validator. Keep it a short and sweet." \
+		--security-contact="hello@persistence.one" \
+		--gas="auto" \
+		--gas-adjustment="1.5" \
+		--gas-prices="0.025uxprt"
+	```
+	**If you need further explanation for each of these command flags:**
 
-Validators are responsible for committing new blocks to the blockchain through an automated voting process. A validator's stake is slashed if they become unavailable or sign blocks at the same height.
+	-   the  `from`  flag is the KEY_NAME you created when initializing the key on your keyring
+	-   the  `amount`  flag is the amount you will place in your own validator in uxprt (in the example, 1000000uxprt is 1xprt)
+	-   the  `pubkey`  is the validator public key `(persistenceCore tendermint show-validator)`
+	-   the  `moniker`  is a human readable name you choose for your validator
+	-   the  `security-contact`  is an email your delegates are able to contact you at
+	-   the  `chain-id`  is whatever chain-id you are working with (in the persistence mainnet case it is core-1)
+	-   the  `commission-rate`  is the rate you will charge your delegates (in the example above, 10 percent)
+	-   the  `commission-max-rate`  is the most you are allowed to charge your delegates (in the example above, 20 percent)
+	-   the  `commission-max-change-rate`  is how much you can increase your commission rate in a 24 hour period (in the example above, 5 percent per day until reaching the max rate)
+	-   the  `min-self-delegation`  is the lowest amount of personal funds the validator is required to have in their own validator to stay bonded (in the example above, 1xprt)
+	-   the  `gas-prices`  is the amount of gas used to send this create-validator transaction
 
-{% hint style="info" %}
-We suggest you try out validating on testnet first. Information on how to join the most recent testnet can be found [here](testnet-validator-setup.md).&#x20;
-{% endhint %}
+6. **Confirm your validator is running.** Your validator is active if the following command returns anything:
 
-### Hardware Requirements
+	```bash
+	persistenceCore query tendermint-validator-set | grep "$(persistenceCore tendermint show-address)"
+	```
 
-* **Minimal**
-  * 4 GB RAM
-  * 200 GB SSD
-  * x2 CPU
-* **Recommended**
-  * 8 GB RAM
-  * 500 GB SSD
-  * x4 CPU
+	You should now see your validator in [one of the Persistence explorers](https://www.mintscan.io/persistence/validators).
+7. **Congratulations!** You've just created a Persistence Mainnet Validator.
 
-{% hint style="warning" %}
-NOTE: low endurance (tbw) ssd are not supported
-{% endhint %}
+### View Validator Description
 
-### Operating System
+View the validator's information with this command:
 
-* Linux/Windows/MacOS(x86)
-* **Recommended**
-  * Linux(x86\_64)
-
-### Installation Steps
-
-> Prerequisite: go1.15+ required. [ref](https://golang.org/doc/install)
-
-> Prerequisite: git. [ref](https://github.com/git/git)
-
-> Optional requirement: GNU make. [ref](https://www.gnu.org/software/make/manual/html\_node/index.html)
-
-* Clone git repository
-
-```shell
-git clone https://github.com/persistenceOne/persistenceCore.git
+```bash
+persistenceCore query staking validator $(persistenceCore keys show <key_name> --bech=val -a)
 ```
 
-* Checkout release tag
-
-```shell
-cd persistenceCore
-git fetch --tags
-git checkout v3.1.1
-```
-
-* Install
-
-```shell
-make install
-```
-
-* Verify version
-
-```
-persistenceCore version
-```
-
-> The current version is `d557c8f`
-
-#### Generate keys
-
-`persistenceCore keys add [key_name]`
-
-or
-
-`persistenceCore keys add [key_name] --recover` to regenerate keys with your [BIP39](https://github.com/bitcoin/bips/tree/master/bip-0039) mnemonic
-
-### Validator setup
-
-#### Before genesis: CLOSED please refer to section [Post Genesis](mainnet-validator-setup.md#post-genesis)
-
-* [Install](mainnet-validator-setup.md#installation-steps) persistence core application
-* Initialize node
-
-```shell
-persistenceCore init {{NODE_NAME}} --chain-id core-1
-persistenceCore add-genesis-account {{KEY_NAME}} 1000000000uxprt
-persistenceCore gentx {{KEY_NAME}} 1000000000uxprt \
---chain-id core-1 \
---moniker="{{VALIDATOR_NAME}}" \
---commission-max-change-rate=0.01 \
---commission-max-rate=1.0 \
---commission-rate=0.07 \
---details="XXXXXXXX" \
---security-contact="XXXXXXXX" \
---website="XXXXXXXX"
-```
-
-* Copy the contents of `${HOME}/.persistenceCore/config/gentx/gentx-XXXXXXXX.json`.
-* Fork the [repository](https://github.com/persistenceOne/genesisTransactions)
-* Create a file `gentx-{{VALIDATOR_NAME}}.json` under the core-1/gentxs folder in the forked repo, paste the copied text into the file. Find reference file gentx-examplexxxxxxxx.json in the same folder.
-* Run `persistenceCore tendermint show-node-id` and copy your nodeID.
-* Run `ifconfig` or `curl ipinfo.io/ip` and copy your publicly reachable IP address.
-* Create a file `peers-{{VALIDATOR_NAME}}.json` under the core-1/peers folder in the forked repo, paste the copied text from the last two steps into the file. Find reference file peers-examplexxxxxxxx.json in the same folder.
-* Create a Pull Request to the `master` branch of the [repository](https://github.com/persistenceOne/genesisTransactions)
-
-> **NOTE:** the Pull Request will be merged by the maintainers to confirm the inclusion of the validator at the genesis. The final genesis file will be published under the file core-1/final\_genesis.json.
-
-* Replace the contents of your `${HOME}/.persistenceCore/config/genesis.json` with that of core-1/final\_genesis.json.
-* Add `persistent_peers` or `seeds` in `${HOME}/.persistenceCore/config/config.toml` from core-1/final\_peers.json.
-* Start node
-
-```shell
-persistenceCore start
-```
-
-#### Post genesis
-
-* [Install](mainnet-validator-setup.md#installation-steps) persistence core application
-* Initialize node
-
-```shell
-persistenceCore init {{NODE_NAME}} --chain-id core-1
-```
-
-* Replace the contents of your `${HOME}/.persistenceCore/config/genesis.json` with that of core-1/final\_genesis.json from the `master` branch of [repository](https://github.com/persistenceOne/genesisTransactions).
-* Verify checksum `sha265sum genesis.json` matches `673d30abd133a13210bf271d8a52aabc3f1b12c0864f543f4313f7f9589bdb53`
-* Inside file `${HOME}/.persistenceCore/config/config.toml`,
-  * set `seeds` to `"449a0f1b7dafc142cf23a1f6166bbbf035edfb10@13.232.85.66:26656,5b27a6d4cf33909c0e5b217789e7455e261941d1@15.223.104.135:26656"`.
-  * If your node has a public ip, set it in `external_address = "tcp://<public-ip>:26656"`, else leave the filed empty.
-* Set `minimum-gas-prices` in `${HOME}/.persistenceCore/config/app.toml` with the minimum price you want (example `0.005uxprt`) for the security of the network.
-* Start node
-
-```shell
-persistenceCore start
-```
-
-* Acquire $XPRT tokens to self delegate to your validator node. Minimum 1 XPRT is require to become a validator. You must send your XPRT to the address created in the Generate Keys step previosuly.
-* Wait for the blockchain to sync. You can check the sync status using the command
-
-```
-curl http://localhost:26657/status sync_info "catching_up": false
-```
-
-Once `"catching_up"` is `false`, the sync is complete. If this is a production validator, we recommend syncing from genesis to ensure security. However, for dev purposes, you can achieve a faster sync using snapshots. The latest snapshot is available at https://tendermint-snapshots.s3.ap-southeast-1.amazonaws.com/persistence/data.tar.lz4 . You will need to download this file, and unzip it in `~/.persistenceCore/data` using the command `lz4 -d data.tar.lz4 | tar -xv`. Remove the db files that are there currently. You can unpack this in flight with
-
-```
-curl -sSL https://tendermint-snapshots.s3.ap-southeast-1.amazonaws.com/persistence/data.tar.lz4 | tar -I lz4 -xf -
-```
-
-* To create your validator, just use the following command
-
-```
-persistenceCore tx staking create-validator \
---from {{KEY_NAME}} \
---amount XXXXXXXXuxprt \
---pubkey "$(persistenceCore tendermint show-validator)" \
---chain-id core-1 \
---moniker="{{VALIDATOR_NAME}}" \
---commission-max-change-rate=0.01 \
---commission-max-rate=1.0 \
---commission-rate=0.07 \
---min-self-delegation="1" \
---details="XXXXXXXX" \
---security-contact="XXXXXXXX" \
---website="XXXXXXXX"
+Here's an example of how the above command should be used:
+```bash
+persistenceCore query staking validator persistencevaloper1rzauu3undh97yvdnj7wu2wwstm9wj8heeq2vcz
 ```
 
 ### Edit Validator Description
@@ -178,7 +97,7 @@ The \<key\_name> specifies which validator you are editing. If you choose to not
 
 The `--identity` can be used as to verify identity with systems like Keybase or UPort. When using Keybase, `--identity` should be populated with a 16-digit string that is generated with a [keybase.io](https://keybase.io) account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
 
-```shell
+```bash
 persistenceCore tx staking edit-validator
   --moniker="choose a moniker" \
   --website="https://your-website.com" \
@@ -191,29 +110,26 @@ persistenceCore tx staking edit-validator
   --commission-rate="0.10"
 ```
 
-::: danger Warning Please note that some parameters such as `commission-max-rate` and `commission-max-change-rate` cannot be changed once your validator is up and running. :::
+> **Warning**
+> Please note that some parameters such as `commission-max-rate` and `commission-max-change-rate` cannot be changed once your validator is up and running.
 
 **Note**: The `commission-rate` value must adhere to the following rules:
 
 * Must be between 0 and the validator's `commission-max-rate`
 * Must not exceed the validator's `commission-max-change-rate` which is maximum % point change rate **per day**. In other words, a validator can only change its commission once per day and within `commission-max-change-rate` bounds.
 
-### View Validator Description
-
-View the validator's information with this command:
-
-```bash
-persistenceCore query staking validator <account_persistence>
-```
 
 ### Track Validator Signing Information
 
 In order to keep track of a validator's signatures in the past you can do so by using the `signing-info` command:
 
 ```bash
-persistenceCore query slashing signing-info <validator-pubkey>\
-  --chain-id core-1
+persistenceCore query slashing signing-info $(persistenceCore tendermint show-validator) --chain-id core-1
 ```
+
+### Halt Validator
+
+When attempting to perform routine maintenance or planning for an upcoming coordinated upgrade, it can be useful to have your validator systematically and gracefully halt. You can achieve this by either setting the `halt-height` to the height at which you want your node to shutdown *(available in `~/.persistenceCore/config/app.toml)`* or by passing the `--halt-height` flag to `persistenceCore`. The node will shutdown with a zero exit code at that given height after committing the block.
 
 ### Unjail Validator
 
@@ -225,38 +141,24 @@ persistenceCore tx slashing unjail \
 	--chain-id core-1
 ```
 
-### Confirm Your Validator is Running
-
-Your validator is active if the following command returns anything:
-
+Here's an example of how the above command should be used:
 ```bash
-persistenceCore query tendermint-validator-set | grep "$(persistenceCore tendermint show-address)"
+persistenceCore tx slashing unjail \
+	--from="PersistenceOneValidator" \
+	--chain-id core-1
 ```
-
-You should now see your validator in one of the Cosmos Hub explorers. You are looking for the `bech32` encoded `address` in the `~/.persistenceCore/config/priv_validator.json` file.
-
-### Halting Your Validator
-
-When attempting to perform routine maintenance or planning for an upcoming coordinated upgrade, it can be useful to have your validator systematically and gracefully halt. You can achieve this by either setting the `halt-height` to the height at which you want your node to shutdown or by passing the `--halt-height` flag to `persistenceCore`. The node will shutdown with a zero exit code at that given height after committing the block.
 
 ### Advanced configuration
 
 You can find more advanced information about running a node or a validator on the [Tendermint Core documentation](https://docs.tendermint.com/v0.34/tendermint-core/validators.html).
 
-### Version
+## Version
 
-This chain is currently running on persistenceCore [v3.1.1](https://github.com/persistenceOne/persistenceCore/releases/tag/v3.1.1) Commit Hash: `d557c8f98f2440f9fe82dcf5a30b05b714dee25a`
+This chain is currently running on persistenceCore [v5.0.0](https://github.com/persistenceOne/persistenceCore/releases/tag/v5.0.0) *(Commit Hash: `de671f5927b4d0b87e8db5940a99e03c7e512b58`)*
 
-> Note: If your node is running on an older version of the application, please update it to this version at the earliest to avoid being exposed to security vulnerabilities /defects.
+> **Warning**
+> If your node is running on an older version of the application, please update it to this version at the earliest to avoid being exposed to security vulnerabilities or defects.
 
-### Binary
+## Explorer
 
-The binary can be downloaded from [here](https://github.com/persistenceOne/persistenceCore/releases/tag/v3.1.1).
-
-### Explorer
-
-The explorer for this chain will hosted [here](https://explorer.persistence.one) after the chain goes live.
-
-### Wallet
-
-The wallet application for this chain is hosted [here](https://wallet.persistence.one).
+The explorer for this chain is accessible [here](https://www.mintscan.io/persistence).
