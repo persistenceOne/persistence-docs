@@ -87,9 +87,8 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 ## Installation Steps
 ### Install the persistenceCore Binary
 
-{% hint style="warning" %}
-The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the test-core-1 chain. To ensure you're running the correct version, join the [Discord Testnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
-{% endhint %}
+> **Note**
+> The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the test-core-1 chain. To ensure you're running the correct version, join the [Discord Testnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
 
 1.  Clone the **persistenceCore** repository:
 	```bash
