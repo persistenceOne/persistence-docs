@@ -1,75 +1,181 @@
-# Join Mainnet
+# Join the Mainnet
+## Hardware Requirements
+The minimum and recommended requirements to run a Mainnet Persistence Node increase as it produces more blocks and more features are added. For instance, a chain enabling [CosmWasm](https://cosmwasm.com/) has higher hardware requirements.
 
-<mark style="color:red;">To be reviewed &  updated</mark>
+Thus, there is no exact hardware requirements that are permanently sufficient. A Mainnet node should always have redundant resources available.
 
-****
+- **Recommended:**
+	- 16 GB RAM *(or more)*
+	- 500 GB SSD *(or more)*
+	- 4 CPU *(or more)*
+	- 100mbps Network Bandwidth *(or more)*
 
-**System Requirements**
+- **Operating System:**
+	- **Recommended:** Linux(x86\_64)
+	- **Others:** Windows/MacOS(x86)
 
-* Four or more CPU cores
-* At least 500 GB of disk storage
-* At least 8 GB of memory
-* At least 100 mbps of network bandwidth
+## Prerequisites
+To successfully run a Persistence Mainnet Node, we need to install a few prerequirements. Because running the Persistence software depends on them, prerequirements are also known as dependencies.
 
-\*\* HDD not recommended \*\*
+We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make**, and **git**.
 
-**Binaries**
+### Install Go
+#### Ubuntu
+1. Remove any previous installation: 
+	```bash
+	rm -rf /usr/local/go
+	```
+2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
+3. Download the latest version of **Go** (1.19.4 as of time of writing):
+	```bash
+	wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+	```
+4. Extract the contents of the archive into /usr/local: 
+	```bash
+	tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+	```
+5. Check **Go** is installed correctly *(sample output: `go version go1.19.4 linux/amd64`)*: 
+	```bash
+	go version
+	```
+6. Set $GOPATH:
 
-Download our binaries from [here](https://github.com/persistenceOne/persistenceCore/releases/tag/v0.2.3) and place it in your bin path
+	1.  Open the `.profile` file, where all your environment variables are stored:
+		```bash
+		nano ~/.profile
+		```
+	2. Scroll down to the end of the file and add the following line before `export $PATH`:
+		```bash
+		export GOPATH=$HOME/go
+		```
+	3. Add the following line to **PATH**  (i.e. `export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`):
+		```bash
+		$GOPATH/bin
+		```
+	4. Reload the **PATH** environment variable:
+		```bash
+		source ~/.profile
+		```
+	5. Create the directories we set in **PATH**:
+		```bash
+		mkdir -p $GOPATH/bin
+		```
+#### macOS
+1. Dowload the latest version of **Go** for macOS:
+	```bash
+	wget https://go.dev/dl/go1.19.4.darwin-amd64.pkg
+	```
+3.  Open the package file you downloaded and follow the prompts to install **Go**.
+    
+    The package installs the **Go** distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your  `PATH`  environment variable. You may need to restart any open Terminal sessions for the change to take effect.
+    
+4.  Verify that you've installed **Go** by opening a command prompt and typing the following command  *(sample output: `go version go1.19.4`)*:
+	```
+	go version
+	```
 
-**Generate keys**
+### Install jq, git, gcc, and make
+1. Install:
+	- **Ubuntu:** `apt install jq git gcc make`
+	- **macOS:** `brew install jq git gcc make`
+2. Verify Installations:
+	- Verify **jq**: `jq --version` (sample output: `jq-1.6`)
+	- Verify **gcc** : `gcc --version` (sample output: `gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0`)
+	- Verify **make**: `make --version` (sample output: `GNU Make 4.2.1`)
+	- Verify **git**: `git --version` (sample output: `git version 2.25.1`)
 
-```
-persistenceCore keys add [key_name]
-```
+## Installation Steps
+### Install the persistenceCore Binary
 
-or
+> **Note**
+> The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the core-1 chain. To ensure you're running the correct version, join the [Discord Mainnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1021758804410519594).
 
-```
-persistenceCore keys add [key_name]   --recover  
-```
+1.  Clone the **persistenceCore** repository:
+	```bash
+	git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
+	```
+2. Check what version is running on the core-1 chain by visiting the [Discord Mainnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1021758804410519594).
+3. Switch to the branch of the latest version *(v5.0.0 as of time of writing)*: 
+	```bash
+	git checkout v5.0.0
+	```
+4. Install the **persistenceCore** binary:
+	```bash
+	make all
+	```
+5. Verify installation (sample output: `v5.0.0`): 
+	```bash
+	persistenceCore version
+	```
 
-to regenerate keys with your BIP39 mnemonic
+### Create or Import Key (XPRT Address)
+- Create **key** *(ensure you safely store the mnemonic seed phrase)*:
+	```bash
+	persistenceCore keys add <KEY_NAME>
+	```
+- Recover **key** *(you'll be required to input your mnemonic seed phrase)*: 
+	```bash
+	persistenceCore keys add <KEY_NAME> --recover
+	```
+- Verify the **key** was created successfully:
+	```bash
+	persistenceCore keys list
+	```
 
-**Setting up a Node**
+### Create and Sync the Node
+1. Initialize the **node** *(moniker = node name)*: 
+	```bash
+	persistenceCore init <MONIKER> --chain-id="core-1" # e.g. persistenceCore init "Persistence Node" --chain-id="core-1"
+	```
+2. Download the **core-1 genesis** file: 
+	```bash
+	cd ~/.persistenceCore/config && wget -O genesis.json  https://raw.githubusercontent.com/persistenceOne/networks/master/core-1/final_genesis.json
+	```
+3. Use **StateSync** to sync with the rest of the nodes. Follow the step-by-step guide below: 
+	- Run the following command and copy the values of `trust_height` and `trust_hash`. They are required in the next steps.
+		```bash
+		curl -s https://persistence-mainnet-rpc.cosmonautstakes.com/status | jq '.result .sync_info | {trust_height: .latest_block_height, trust_hash: .latest_block_hash} | values'
+		```
+	- Open config:
+		```bash
+		nano ~/.persistenceCore/config/config.toml
+		```
+	- Replace the existing settings in the opened file with the following:
+		```
+		[p2p]
+		seeds = "08ab4552a74dd7e211fc79432918d35818a67189@52.69.58.231:26656"
+		
+		persistent_peers = "137818b03a705cf86622b4d97a074091f2f22589@185.225.233.30:26756"
 
-Following steps are rudimentary way of setting up a validator, For production we advise your [sentry architecture](https://forum.cosmos.network/t/sentry-node-architecture-overview/454) to create well defined process
-
-* [Install](https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md####Binaries) persistence core application
-*   Initialize node
-
-    ```
-     persistenceCore init {{NODE_NAME}} --chain-id core-1
-    ```
-* Replace the contents of your `${HOME}/.persistenceCore/con, exchangesfig/genesis.json` with that of core-1/final\_genesis.json from the `master` branch of [repository](https://github.com/persistenceOne/genesisTransactions).
-* Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `f90fb025e9b5b55c88730ab5ab762b121daa7808cde27d50f465e1fe3b3e5cad`
-* Inside file `${HOME}/.persistenceCore/config/config.toml`,
-  * set `seeds` to `"08ab4552a74dd7e211fc79432918d35818a67189@52.69.58.231:26656,449a0f1b7dafc142cf23a1f6166bbbf035edfb10@13.232.85.66:26656,5b27a6d4cf33909c0e5b217789e7455e261941d1@15.222.29.207:26656"`.
-  * If your node has a public ip, set it in `external_address = "tcp://<public-ip>:26656"`, else leave the filed empty.
-* Set `minimum-gas-prices` in `${HOME}/.persistenceCore/config/app.toml` with the minimum price you want (example `0.005uxprt`) for the security of the network.
-* \[OPTIONAL] if you want to speed things up, you can use our [backup](https://tendermint-snapshots.s3.ap-southeast-1.amazonaws.com/persistence/data.tar.lz4).
-  * Install `aria2` and `lz4`
-  *   Download our backup with
-
-      ```
-      aria2c -x 4 -x 4 -c  
-      ```
-  *   Extract the contents to persistenced home.
-
-      ```
-      tar -I lz4 -xf data.tar.lz4 -C (persistence home which defaults to ~/.persistenceCore/)
-      ```
-*   Start node
-
-    ```
-     persistenceCore start
-    ```
-* Acquire $XPRT tokens to self delegate to your validator node. Minimum 1 XPRT is require to become a validator. You must send your XPRT to the address created in the Generate Keys step previosuly.
-*   Wait for the blockchain to sync. You can check the sync status using the command
-
-    ```
-     curl http://localhost:26657/status sync_info "catching_up": false
-    ```
-* Once `"catching_up"` is `false`, the sync is complete.
-
-****
+		[statesync]
+		enable = true
+		rpc_servers = "https://persistence-mainnet-rpc.cosmonautstakes.com:443,https://persistence-mainnet-rpc.cosmonautstakes.com:443"
+		trust_height = XXXXXXX # Replace with the value copied in the previous step
+		trust_hash = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Replace with the value copied in the previous step
+		trust_period = "112h0m0s"
+		```
+	- Make sure you replace `trust_height` and `trust_hash` values with the ones you've copied in the previous step. 
+5. Open the `app.toml` file *(application-related configuration file)*:
+	```bash
+	nano ~/.persistenceCore/config/app.toml
+	```
+6. Change `minimum-gas-prices` to `minimum-gas-prices = "0.005uxprt"`
+7. Start the node:
+	```bash
+	persistenceCore start
+	```
+8. Because we used StateSync to sync with the other nodes, it shouldn't take more than 10 minutes to complete. In the meantime, a lot of output messages will pop one after another.
+9. When the node is completely synced, you should observe a similar output:
+	```
+	11:28PM INF received complete proposal block hash=AE7196316065BC778E2BA5AFD1626C06CA2113B4F67DB2F4052B98700FD4B982 height=9305912 module=consensus
+	11:28PM INF finalizing commit of block hash={} height=9305912 module=consensus num_txs=0 root=7B6B6A7C6D2CC68F266086794995E52F321B69FCA9530220093C47EC383278D0
+	11:28PM INF minted coins from module account amount=8173386uxprt from=mint module=x/bank
+	11:28PM INF executed block height=9305912 module=state num_invalid_txs=0 num_valid_txs=0
+	11:28PM INF commit synced commit=436F6D6D697449447B5B3235312031313220323236203434203735203139322031362036312031373620373020323138203130332031383220313233203134302032332031353620313032203133392033342031393020323220343920313230203137322038203130372032313720313835203135322038332036345D3A3844464633387D
+	11:28PM INF committed state app_hash=FB70E22C4BC0103DB046DA67B67B8C179C668B22BE163178AC086BD9B9985340 height=9305912 module=state num_txs=0
+	11:28PM INF indexed block exents height=9305912 module=txindex
+	```
+	Alternatively, you can use the following command *(response must be `false`)*: 
+	```bash
+	curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
+	```
