@@ -26,19 +26,15 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 	rm -rf /usr/local/go
 	```
 2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
-3. Download the latest version of **Go** (1.19.4 as of time of writing):
+3. Download the latest version of **Go** (1.19.5 as of time of writing):
 	```bash
-	wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+	wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
 	```
 4. Extract the contents of the archive into /usr/local: 
 	```bash
-	tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+	tar -C /usr/local -xzf go1.19.5.linux-amd64.tar.gz
 	```
-5. Check **Go** is installed correctly *(sample output: `go version go1.19.4 linux/amd64`)*: 
-	```bash
-	go version
-	```
-6. Set $GOPATH:
+5. Set $GOPATH:
 
 	1.  Open the `.profile` file, where all your environment variables are stored:
 		```bash
@@ -52,7 +48,11 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 		```bash
 		$GOPATH/bin
 		```
-	4. Reload the **PATH** environment variable:
+	4. Since **Go** is installed in `/usr/local`, it also needs to be added in the **PATH**. Your **PATH** should look similar to the following:
+		``` bash
+		export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+		```
+	6. Reload the **PATH** environment variable:
 		```bash
 		source ~/.profile
 		```
@@ -60,16 +60,21 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 		```bash
 		mkdir -p $GOPATH/bin
 		```
+6. Check **Go** is installed correctly *(sample output: `go version go1.19.5 linux/amd64`)*: 
+	```bash
+	go version
+	```
+
 #### macOS
 1. Dowload the latest version of **Go** for macOS:
 	```bash
-	wget https://go.dev/dl/go1.19.4.darwin-amd64.pkg
+	wget https://go.dev/dl/go1.19.5.darwin-amd64.pkg
 	```
 3.  Open the package file you downloaded and follow the prompts to install **Go**.
     
     The package installs the **Go** distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your  `PATH`  environment variable. You may need to restart any open Terminal sessions for the change to take effect.
     
-4.  Verify that you've installed **Go** by opening a command prompt and typing the following command  *(sample output: `go version go1.19.4`)*:
+4.  Verify that you've installed **Go** by opening a command prompt and typing the following command  *(sample output: `go version go1.19.5`)*:
 	```
 	go version
 	```
@@ -95,15 +100,15 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 	git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
 	```
 2. Check what version is running on the core-1 chain by visiting the [Discord Mainnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1021758804410519594).
-3. Switch to the branch of the latest version *(v5.0.0 as of time of writing)*: 
+3. Switch to the branch of the latest version *(v6.1.0 as of time of writing)*: 
 	```bash
-	git checkout v5.0.0
+	git checkout v6.1.0
 	```
 4. Install the **persistenceCore** binary:
 	```bash
 	make all
 	```
-5. Verify installation (sample output: `v5.0.0`): 
+5. Verify installation (sample output: `v6.1.0`): 
 	```bash
 	persistenceCore version
 	```
@@ -166,6 +171,7 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 	```
 8. Because we used StateSync to sync with the other nodes, it shouldn't take more than 10 minutes to complete. In the meantime, a lot of output messages will pop one after another.
 9. When the node is completely synced, you should observe a similar output:
+10. 
 	```
 	11:28PM INF received complete proposal block hash=AE7196316065BC778E2BA5AFD1626C06CA2113B4F67DB2F4052B98700FD4B982 height=9305912 module=consensus
 	11:28PM INF finalizing commit of block hash={} height=9305912 module=consensus num_txs=0 root=7B6B6A7C6D2CC68F266086794995E52F321B69FCA9530220093C47EC383278D0
