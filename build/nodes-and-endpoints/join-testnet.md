@@ -25,19 +25,15 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 	rm -rf /usr/local/go
 	```
 2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
-3. Download the latest version of **Go** (1.19.4 as of time of writing):
+3. Download the latest version of **Go** (1.19.5 as of time of writing):
 	```bash
-	wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+	wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
 	```
 4. Extract the contents of the archive into /usr/local: 
 	```bash
-	tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+	tar -C /usr/local -xzf go1.19.5.linux-amd64.tar.gz
 	```
-5. Check **Go** is installed correctly *(sample output: `go version go1.19.4 linux/amd64`)*: 
-	```bash
-	go version
-	```
-6. Set $GOPATH:
+5. Set $GOPATH:
 
 	1.  Open the `.profile` file, where all your environment variables are stored:
 		```bash
@@ -51,7 +47,11 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 		```bash
 		$GOPATH/bin
 		```
-	4. Reload the **PATH** environment variable:
+	4. Since **Go** is installed in `/usr/local`, it also needs to be added in the **PATH**. Your **PATH** should look similar to the following:
+		``` bash
+		export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+		```
+	6. Reload the **PATH** environment variable:
 		```bash
 		source ~/.profile
 		```
@@ -59,17 +59,21 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 		```bash
 		mkdir -p $GOPATH/bin
 		```
+6. Check **Go** is installed correctly *(sample output: `go version go1.19.5 linux/amd64`)*: 
+	```bash
+	go version
+	```
 
 #### macOS
 1. Dowload the latest version of **Go** for macOS:
 	```bash
-	wget https://go.dev/dl/go1.19.4.darwin-amd64.pkg
+	wget https://go.dev/dl/go1.19.5.darwin-amd64.pkg
 	```
 3.  Open the package file you downloaded and follow the prompts to install **Go**.
     
     The package installs the **Go** distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your  `PATH`  environment variable. You may need to restart any open Terminal sessions for the change to take effect.
     
-4.  Verify that you've installed **Go** by opening a command prompt and typing the following command  *(sample output: `go version go1.19.4`)*:
+4.  Verify that you've installed **Go** by opening a command prompt and typing the following command  *(sample output: `go version go1.19.5`)*:
 	```
 	go version
 	```
