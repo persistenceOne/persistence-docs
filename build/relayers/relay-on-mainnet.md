@@ -1,99 +1,116 @@
 # Relay on Mainnet
 
-> **Note**
-> This guide is based on the [Official Cosmos Relayer Setup Guide](https://github.com/cosmos/relayer/blob/main/README.md).
+> **Note** This guide is based on the [Official Cosmos Relayer Setup Guide](https://github.com/cosmos/relayer/blob/main/README.md).
 
-In IBC, blockchains do not directly pass messages to each other over the network. This is where a  `relayer`  comes in. A relayer process monitors for updates on opens paths between sets of  [IBC](https://ibcprotocol.org/)  enabled chains. The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
+In IBC, blockchains do not directly pass messages to each other over the network. This is where a `relayer` comes in. A relayer process monitors for updates on opens paths between sets of [IBC](https://ibcprotocol.org/) enabled chains. The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
 
 In addition to relaying packets, this relayer can open paths across chains, thus creating clients, connections and channels.
 
-Additional information on how IBC works can be found  [here](https://ibc.cosmos.network/).
+Additional information on how IBC works can be found [here](https://ibc.cosmos.network/).
 
 ## Hardware Requirements
 
-- **Minimal:**
-	- 4 GB RAM
-	- 50 GB SSD
-	- 2 CPU
-
-- **Recommended:**
-	- 8 GB RAM
-	- 100 GB SSD
-	- 4 CPU
-
-- **Operating System:**
-	- **Recommended:** Linux(x86\_64)
-	- **Others:** Windows/MacOS(x86)
+* **Minimal:**
+  * 4 GB RAM
+  * 50 GB SSD
+  * 2 CPU
+* **Recommended:**
+  * 8 GB RAM
+  * 100 GB SSD
+  * 4 CPU
+* **Operating System:**
+  * **Recommended:** Linux(x86\_64)
+  * **Others:** Windows/MacOS(x86)
 
 ## Prerequisites
+
 To successfully run a Cosmos Go Relayer, we need to install some prerequirements. Because running the Cosmos Go Relayer software depends on them, prerequirements are also known as dependencies.
 
 We need to install and setup one dependency - **Go**.
 
 ### Install Go
-1. Remove any previous installation: 
-	```bash
-	rm -rf /usr/local/go
-	```
-2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
-3. Download the latest version of **Go** (1.19.4 as of time of writing):
-	```bash
-	wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
-	```
-4. Extract the contents of the archive into /usr/local: 
-	```bash
-	tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
-	```
-5. Check **Go** is installed correctly *(sample output: `go version go1.19.4 linux/amd64`)*: 
-	```bash
-	go version
-	```
-6. Set $GOPATH:
 
-	1.  Open the `.profile` file, where all your environment variables are stored:
-		```bash
-		nano ~/.profile
-		```
-	2. Scroll down to the end of the file and add the following line before `export $PATH`:
-		```bash
-		export GOPATH=$HOME/go
-		```
-	3. Add the following line to **PATH**  (i.e. `export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`):
-		```bash
-		$GOPATH/bin
-		```
-	4. Reload the **PATH** environment variable:
-		```bash
-		source ~/.profile
-		```
-	5. Create the directories we set in **PATH**:
-		```bash
-		mkdir -p $GOPATH/bin
-		```
+1.  Remove any previous installation:
+
+    ```bash
+    rm -rf /usr/local/go
+    ```
+2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
+3.  Download the latest version of **Go** (1.19.4 as of time of writing):
+
+    ```bash
+    wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+    ```
+4.  Extract the contents of the archive into /usr/local:
+
+    ```bash
+    tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+    ```
+5.  Check **Go** is installed correctly _(sample output: `go version go1.19.4 linux/amd64`)_:
+
+    ```bash
+    go version
+    ```
+6. Set $GOPATH:
+   1.  Open the `.profile` file, where all your environment variables are stored:
+
+       ```bash
+       nano ~/.profile
+       ```
+   2.  Scroll down to the end of the file and add the following line before `export $PATH`:
+
+       ```bash
+       export GOPATH=$HOME/go
+       ```
+   3.  Add the following line to **PATH** (i.e. `export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`):
+
+       ```bash
+       $GOPATH/bin
+       ```
+   4.  Reload the **PATH** environment variable:
+
+       ```bash
+       source ~/.profile
+       ```
+   5.  Create the directories we set in **PATH**:
+
+       ```bash
+       mkdir -p $GOPATH/bin
+       ```
+
 ### Install Git
-1. Install **Git**: 
-	```bash
-	apt install git
-	```
-2. Verify **git** is installed correctly:
-	```bash
-	git --version # Sample Output: git version 2.34.1
-	```
-	
+
+1.  Install **Git**:
+
+    ```bash
+    apt install git
+    ```
+2.  Verify **git** is installed correctly:
+
+    ```bash
+    git --version # Sample Output: git version 2.34.1
+    ```
+
 ## Installation Steps
+
 ### 1. Install the Cosmos Relayer Binary
 
-The Cosmos Go Relayer code is available at the [Official GitHub Repository](https://github.com/cosmos/relayer). First, we must 'download' all the code locally by cloning the GitHub repository, choosing the latest version *(as of time of writing: v5.0.0)* and installing the binary into our GOPATH as explained in the [prerequisites section](#Install-Go) of this guide.
+The Cosmos Go Relayer code is available at the [Official GitHub Repository](https://github.com/cosmos/relayer). First, we must 'download' all the code locally by cloning the GitHub repository, choosing the latest version _(as of time of writing: v5.0.0)_ and installing the binary into our GOPATH as explained in the [prerequisites section](relay-on-mainnet.md#Install-Go) of this guide.
+
 ```bash
 git clone https://github.com/cosmos/relayer.git # Download all the code locally
 cd relayer && git checkout v5.0.0 # Choose the latest version
 make install # Install the Cosmos Go Relayer (creates a binary in GOPATH)
 ```
+
 Next, verify the binary is correctly installed by running the following command.
+
 ```bash
 rly version
 ```
-The command should output a similar message. If you're seeing an error, ensure you have correctly [installed and setup Go](#Install-Go).
+
+The command should output a similar message. If you're seeing an error, ensure you have correctly [installed and setup Go](relay-on-mainnet.md#Install-Go).
+
 ```bash
 version: v2.2.0-rc3
 commit: unknown
@@ -101,15 +118,19 @@ cosmos-sdk: v0.46.6
 go: go1.18.3 linux/amd64
 ```
 
-<br>
+\
+
 
 ### 2. Initialize the Relayer's Configuration Directory & File
-After the relayer binary is correctly installed, it needs to be locally initialized. The following command creates a configuration location *(available at `~/.relayer`)*, containing a `config/config.yaml` file specifying how the relayer should run *(chains, channels, etc.)*.
+
+After the relayer binary is correctly installed, it needs to be locally initialized. The following command creates a configuration location _(available at `~/.relayer`)_, containing a `config/config.yaml` file specifying how the relayer should run _(chains, channels, etc.)_.
 
 Later on, when the keys are added, an extra folder is created. This folder is available at `~/.relayer/keys`. This is the default keys storage location for all the chains you relay between.
+
 ```bash
 rly config init
 ```
+
 **Default config file location:** `~/.relayer/config/config.yaml`
 
 By default, transactions will be relayed with a memo of `rly(VERSION)` e.g. `rly(v2.0.0)`.
@@ -120,153 +141,171 @@ To customize the memo for all relaying, use the `--memo` flag when initializing 
 rly config init --memo "My custom memo"
 ```
 
-Custom memos will have `rly(VERSION)` appended. For example, a memo of `My custom memo` running on relayer version `v2.0.0` would result in a transaction memo of `My custom memo | rly(v2.0.0)`. 
-   
+Custom memos will have `rly(VERSION)` appended. For example, a memo of `My custom memo` running on relayer version `v2.0.0` would result in a transaction memo of `My custom memo | rly(v2.0.0)`.
+
 Aditionally, the memo can be changed anytime in the following file: `~/.relayer/config/config.yaml`
 
-<br>
+\
+
 
 ### 3. Configure the Chains to Relay Between
 
 In our example, we will configure the relayer to operate on the canonical path between Gravity Bridge and Persistence. These chains are chosen solely for the purpose of this guide.
 
 The following command fetches chain metadata from the [chain-registry](https://github.com/cosmos/chain-registry) and adds it to your config file.
+
 ```bash
 rly chains add gravitybridge persistence
 ```
 
-Adding chains from the chain-registry randomly selects an RPC address from the registry entry.  
-If you are running your own node, manually go into the config and adjust the `rpc-addr` setting.  
+Adding chains from the chain-registry randomly selects an RPC address from the registry entry.\
+If you are running your own node, manually go into the config and adjust the `rpc-addr` setting.
 
-**NOTE:** `rly chains add` will check the liveliness of the available RPC endpoints for that chain in the [chain-registry](https://github.com/cosmos/chain-registry). It is possible that the command will fail if none of these RPC endpoints are available. In this case, you will be required to manually change the RPC endpoints in `~/.relayer/config/config.yaml`. 
+**NOTE:** `rly chains add` will check the liveliness of the available RPC endpoints for that chain in the [chain-registry](https://github.com/cosmos/chain-registry). It is possible that the command will fail if none of these RPC endpoints are available. In this case, you will be required to manually change the RPC endpoints in `~/.relayer/config/config.yaml`.
 
 You can check available Gravity Bridge RPC endpoints [here](https://cosmos.directory/gravitybridge/nodes) and available Persistence RPC endpoints [here](https://cosmos.directory/persistence/nodes).
 
-<br>
+\
+
 
 ### 4. Import Keys OR Create Keys
-Next, you're required to add an existing key (a.k.a. address) or create a new one. An address is necessary to sign and relay transactions between chains *(in our case, Gravity Bridge <-> Persistence)*.
 
-> **Note**
-> `key-name` is an identifier of your choosing.
+Next, you're required to add an existing key (a.k.a. address) or create a new one. An address is necessary to sign and relay transactions between chains _(in our case, Gravity Bridge <-> Persistence)_.
+
+> **Note** `key-name` is an identifier of your choosing.
 
 If you need to generate a new private key, use the following command. Remember to replace `key-name` -> e.g. `rly keys add persistence "MyRandomKeyName"`
+
 ```bash
 rly keys add gravitybridge [key-name]
 rly keys add persistence [key-name]
 ```
+
 If you already have a private key and want to restore it from your mnemonic you can use the following command. Remember to replace `key-name`.
+
 ```bash
 rly keys restore gravitybridge [key-name] "mnemonic words here"
 rly keys restore persistence [key-name] "mnemonic words here"
 ```
+
 Before continuing, ensure your keys have been successfully added by running the following command. You can also check the `~/.relayer/keys` folder and observe the contents.
+
 ```bash
 rly keys list gravitybridge
 rly keys list persistence
 ```
 
-<br>
+\
+
 
 ### 5. Edit the Relayer Key Name in `config.yaml`
 
-**NOTE:** This step is necessary if you chose a `key-name` other than "default" in the [previous step](#Import-Keys-OR-Create-Keys). Be aware you need to replace the key names for both chains - Gravity Bridge and Persistence.
+**NOTE:** This step is necessary if you chose a `key-name` other than "default" in the [previous step](relay-on-mainnet.md#Import-Keys-OR-Create-Keys). Be aware you need to replace the key names for both chains - Gravity Bridge and Persistence.
 
 Example:
- ```yaml
- - type: cosmos
-    value:
-    key: YOUR-KEY-NAME-HERE # e.g.MyRandomKeyName
-    chain-id: core-1
-    rpc-addr: https://persistence-mainnet-rpc.cosmonautstakes.com:443
- ```
- 
- <br>
- 
+
+```yaml
+- type: cosmos
+   value:
+   key: YOUR-KEY-NAME-HERE # e.g.MyRandomKeyName
+   chain-id: core-1
+   rpc-addr: https://persistence-mainnet-rpc.cosmonautstakes.com:443
+```
+
+\
+
+
 ### 6. Ensure the Keys are Funded
 
-Your configured addresses will need to contain some of the respective native tokens for paying relayer fees.  You can buy XPRT and GRAV on the [Osmosis Decentralized Exchange](https://app.osmosis.zone/). After acquiring some tokens, you need to send them to the addresses obtained by running the following commands:
+Your configured addresses will need to contain some of the respective native tokens for paying relayer fees. You can buy XPRT and GRAV on the [Osmosis Decentralized Exchange](https://app.osmosis.zone/). After acquiring some tokens, you need to send them to the addresses obtained by running the following commands:
 
 ```bash
 rly keys list gravitybridge
 rly keys list persistence
 ```
 
-After sending some tokens, you can query the balance of each configured key by running:  
+After sending some tokens, you can query the balance of each configured key by running:
 
 ```bash
 rly query balance gravitybridge
 rly query balance persistence
 ```
 
-<br>
+\
+
 
 ### 7. Configure Path Metadata
 
-We have the chain metadata configured, now we need path metadata. For more info on `path` terminology visit [here](https://github.com/cosmos/relayer/blob/main/docs/troubleshooting.md).  
+We have the chain metadata configured, now we need path metadata. For more info on `path` terminology visit [here](https://github.com/cosmos/relayer/blob/main/docs/troubleshooting.md).
 
-> **Note**
-> Thinking of chains in the config as "source" and "destination" can be confusing. Be aware that most paths are bi-directional.
+> **Note** Thinking of chains in the config as "source" and "destination" can be confusing. Be aware that most paths are bi-directional.
 
-The following command will check for IBC path metadata from the [chain-registry](https://github.com/cosmos/chain-registry/tree/master/_IBC) and add these paths to your config file.
+The following command will check for IBC path metadata from the [chain-registry](https://github.com/cosmos/chain-registry/tree/master/\_IBC) and add these paths to your config file.
 
 ```bash
 rly paths fetch
 ```
 
-<br>
+\
+
 
 ### 8. Configure the Channel Filter
 
-By default, the relayer will relay packets over all channels on a given connection.  You can find all open IBC channels between Persistence and other chains [here](https://www.mintscan.io/persistence/relayers).
+By default, the relayer will relay packets over all channels on a given connection. You can find all open IBC channels between Persistence and other chains [here](https://www.mintscan.io/persistence/relayers).
 
-Each path has a `src-channel-filter` which you can utilize to specify which channels you would like to relay on.   
+Each path has a `src-channel-filter` which you can utilize to specify which channels you would like to relay on.
 
-The `rule` can be one of three values:  
-- `allowlist` which tells the relayer to relay on _ONLY_ the channels in `channel-list`
-- `denylist` which tells the relayer to relay on all channels _BESIDES_ the channels in `channel-list`
-- empty value, which is the default setting, and tells the relayer to relay on all channels    
+The `rule` can be one of three values:
 
-Since we are only worried about the canonical channel between the Gravity Bridge and Persistence our filter settings would look like the following.  
+* `allowlist` which tells the relayer to relay on _ONLY_ the channels in `channel-list`
+* `denylist` which tells the relayer to relay on all channels _BESIDES_ the channels in `channel-list`
+* empty value, which is the default setting, and tells the relayer to relay on all channels
 
+Since we are only worried about the canonical channel between the Gravity Bridge and Persistence our filter settings would look like the following.
 
-   ```yaml
-   gravitybridge-persistence:
-        src:
-            chain-id: gravity-bridge-3
-            client-id: 07-tendermint-39
-            connection-id: connection-50
-        dst:
-            chain-id: core-1
-            client-id: 07-tendermint-51
-            connection-id: connection-49
-        src-channel-filter:
-            rule: allowlist
-            channel-list: [channel-24]
-   ```
+```yaml
+gravitybridge-persistence:
+     src:
+         chain-id: gravity-bridge-3
+         client-id: 07-tendermint-39
+         connection-id: connection-50
+     dst:
+         chain-id: core-1
+         client-id: 07-tendermint-51
+         connection-id: connection-49
+     src-channel-filter:
+         rule: allowlist
+         channel-list: [channel-24]
+```
 
-Because two channels between chains are tightly coupled, there is no need to specify the **dst** channels. 
+Because two channels between chains are tightly coupled, there is no need to specify the **dst** channels.
 
-<br>
+\
+
 
 ### 9. Start Relayer
+
 The relayer will periodically update the clients and listen for IBC messages to relay.
 
-Since we have setup only one path *(Gravity Bridge <-> Persistence)*, we can start the relayer on the afore-mentioned path by running the following command
+Since we have setup only one path _(Gravity Bridge <-> Persistence)_, we can start the relayer on the afore-mentioned path by running the following command
+
 ```bash
 rly start
 ```
 
-If you have multiple paths available (to check run `rly chains list`), then you can start relaying on just one path *(Gravity Bridge <-> Persistence)* by running the following command:
+If you have multiple paths available (to check run `rly chains list`), then you can start relaying on just one path _(Gravity Bridge <-> Persistence)_ by running the following command:
+
 ```bash
 rly start gravitybridge-persistence
 ```
 
-When running multiple instances of `rly start`, you will need to use the `--debug-addr` flag and provide an address:port. You can also pass an empty string `''`  to turn off this feature or pass `localhost:0` to randomly select a port.
+When running multiple instances of `rly start`, you will need to use the `--debug-addr` flag and provide an address:port. You can also pass an empty string `''` to turn off this feature or pass `localhost:0` to randomly select a port.
 
-<br>
+\
+
 
 ### 10. How should `~/.relayer/config/config.yaml` look?
+
 To aid in the setup of the configuration file, we've provided an example on how a relayer configuration file should look.
 
 **Example:**
