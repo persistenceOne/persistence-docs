@@ -15,7 +15,7 @@ Operators supporting ICA transfers are marked with a ⚡️
 | channel-37     | Juno              | juno-1               | channel-33          | AUDIT.one, CryptoCrew, Kleomedes, Notional, Smart Stake, STC Capital                                                           |
 | channel-44     | Kujira            | kaiyo-1              | channel-13          | <p>Cros-nest <br><mark style="color:orange;">*looking for more operators*</mark></p>                                           |
 | channel-6      | Osmosis           | osmosis-1            | channel-4           | Architect Nodes, Baryon, bitszn, Cephalopod,Cros-nest ⚡️, CryptoCrew ⚡️, DSRV, Imperator, Smart Stake, StakeWith.Us ⚡️, Stakin |
-|                | Quicksilver       | quicksilver-2        |                     | <mark style="color:orange;">\*looking for operators\*</mark>                                                                   |
+| channel-8      | Quicksilver       | quicksilver-2        | channel-69          | <p>Cosmonaut Stakes<br><mark style="color:orange;">*looking for more operators*</mark></p>                                     |
 | channel-26     | Sifchain          | sifchain-1           | channel-7           | bitszn, Cephalopod, Notional                                                                                                   |
 | channel-67     | Stride            | stride-1             | channel-53          | <p>Cosmonaut Stakes<br><mark style="color:orange;">*looking for more operators*</mark></p>                                     |
 
