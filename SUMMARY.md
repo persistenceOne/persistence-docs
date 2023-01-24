@@ -74,3 +74,12 @@
 ***
 
 * [😍 Connect & Follow](connect-and-follow.md)
+* [⭕ Coin-type Migration from 750 to 118](coin-type-migration-from-750-to-118/README.md)
+  * [Persistence Wallet](coin-type-migration-from-750-to-118/persistence-wallet.md)
+  * [Keplr Wallet](coin-type-migration-from-750-to-118/keplr-wallet.md)
+  * [Cosmostation Wallet](coin-type-migration-from-750-to-118/cosmostation-wallet.md)
+  * [Coin98 Super Wallet](coin-type-migration-from-750-to-118/coin98-super-wallet.md)
+  * [Math Wallet](coin-type-migration-from-750-to-118/math-wallet.md)
+  * [Leap Wallet](coin-type-migration-from-750-to-118/leap-wallet.md)
+  * [Citadel Wallet](coin-type-migration-from-750-to-118/citadel-wallet.md)
+  * [Ledger Hardware Wallet](coin-type-migration-from-750-to-118/ledger-hardware-wallet.md)
