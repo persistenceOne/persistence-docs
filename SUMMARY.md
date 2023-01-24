@@ -73,7 +73,6 @@
 
 ***
 
-* [😍 Connect & Follow](connect-and-follow.md)
 * [⭕ Coin-type Migration from 750 to 118](coin-type-migration-from-750-to-118/README.md)
   * [Persistence Wallet](coin-type-migration-from-750-to-118/persistence-wallet.md)
   * [Keplr Wallet](coin-type-migration-from-750-to-118/keplr-wallet.md)
@@ -83,3 +82,4 @@
   * [Leap Wallet](coin-type-migration-from-750-to-118/leap-wallet.md)
   * [Citadel Wallet](coin-type-migration-from-750-to-118/citadel-wallet.md)
   * [Ledger Hardware Wallet](coin-type-migration-from-750-to-118/ledger-hardware-wallet.md)
+* [😍 Connect & Follow](connect-and-follow.md)
