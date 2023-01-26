@@ -1,2 +1,0 @@
-# pSTAKE for Cosmos
-
