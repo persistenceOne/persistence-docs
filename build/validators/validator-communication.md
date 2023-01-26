@@ -20,14 +20,12 @@ To improve coordination and interactions between the Persistence team and the va
 
 Join the public announcement channel [here](https://t.me/PersistenceValidatorsUpdates)
 
-If you prefer, we  can also create private Chat Groups with validators in which we can activate a bot for announcements. Contact someone from the Persistence team directly to set it up.&#x20;
-
+If you prefer, we can also create private Chat Groups with validators in which we can activate a bot for announcements. Contact someone from the Persistence team directly to set it up.&#x20;
 
 
 ## Email
 
 Contact someone from the Persistence team on Discord or Telegram in order to be added to the distribution list for validators announcements
-
 
 
 ## Your preferences
