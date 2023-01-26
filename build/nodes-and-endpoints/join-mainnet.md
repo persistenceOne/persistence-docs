@@ -29,59 +29,42 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     rm -rf /usr/local/go
     ```
 2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
-3.  Download the latest version of **Go** (1.19.4 as of time of writing):
+3.  Download the latest version of **Go** (1.19.5 as of time of writing):
 
     ```bash
-    wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+    wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
     ```
 4.  Extract the contents of the archive into /usr/local:
 
     ```bash
-    tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+    tar -C /usr/local -xzf go1.19.5.linux-amd64.tar.gz
     ```
-5.  Check **Go** is installed correctly _(sample output: `go version go1.19.4 linux/amd64`)_:
+5. Set **$GOPATH** by copying & pasting the following commands in your terminal:
+
+	```bash
+	echo "" >> ~/.profile
+	echo "export GOPATH=$HOME/go" >> ~/.profile
+	echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile	
+	source ~/.profile
+	mkdir -p $GOPATH/bin
+	```
+6.  Check **Go** is installed correctly _(sample output: `go version go1.19.5 linux/amd64`)_:
 
     ```bash
     go version
     ```
-6. Set $GOPATH:
-   1.  Open the `.profile` file, where all your environment variables are stored:
-
-       ```bash
-       nano ~/.profile
-       ```
-   2.  Scroll down to the end of the file and add the following line before `export $PATH`:
-
-       ```bash
-       export GOPATH=$HOME/go
-       ```
-   3.  Add the following line to **PATH** (i.e. `export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`):
-
-       ```bash
-       $GOPATH/bin
-       ```
-   4.  Reload the **PATH** environment variable:
-
-       ```bash
-       source ~/.profile
-       ```
-   5.  Create the directories we set in **PATH**:
-
-       ```bash
-       mkdir -p $GOPATH/bin
-       ```
 
 #### macOS
 
 1.  Dowload the latest version of **Go** for macOS:
 
     ```bash
-    wget https://go.dev/dl/go1.19.4.darwin-amd64.pkg
+    wget https://go.dev/dl/go1.19.5.darwin-amd64.pkg
     ```
 2.  Open the package file you downloaded and follow the prompts to install **Go**.
 
     The package installs the **Go** distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your `PATH` environment variable. You may need to restart any open Terminal sessions for the change to take effect.
-3.  Verify that you've installed **Go** by opening a command prompt and typing the following command _(sample output: `go version go1.19.4`)_:
+3.  Verify that you've installed **Go** by opening a command prompt and typing the following command _(sample output: `go version go1.19.5`)_:
 
     ```
     go version
@@ -110,17 +93,17 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
     ```
 2. Check what version is running on the core-1 chain by visiting the [Discord Mainnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1021758804410519594).
-3.  Switch to the branch of the latest version _(v5.0.0 as of time of writing)_:
+3.  Switch to the branch of the latest version _(v6.1.0 as of time of writing)_:
 
     ```bash
-    git checkout v5.0.0
+    git checkout v6.1.0
     ```
 4.  Install the **persistenceCore** binary:
 
     ```bash
     make all
     ```
-5.  Verify installation (sample output: `v5.0.0`):
+5.  Verify installation (sample output: `v6.1.0`):
 
     ```bash
     persistenceCore version
@@ -212,3 +195,163 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     ```bash
     curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
     ```
+
+
+## Run the Node in the Background
+
+While you've probably used the `persistenceCore start` command in a terminal, you might question yourself what happens if you exit the window, stop the node by mistake, or need to restart your server. The answer is **services**. Imagine a service as a container for processes. It allows the Persistence Core-1 node to run in the background while providing us with access to logs. Not to mention it's starting automatically on system (re)boot. In this section we will cover `systemd`.
+
+Running a service using `systemd` is straightforward. While `systemd` itself provides many configuration options, we only need a few to run the Persistence Core-1 node. Let's get started.
+
+1. Since `systemd` is installed by default, there are no installation steps.
+2. First, we need to create a service file in `/etc/systemd/system`. Let's name it `core-1.service`.
+	
+	```bash
+	touch /etc/systemd/system/core-1.service # create the file
+	nano /etc/systemd/system/core-1.service # open the file (to edit it)
+	```
+
+3. Now, with the file created and open, we need to populate it with the correct options to run the Persistence Core-1 Node.
+
+	```bash
+	[Unit]
+	Description=Persistence Mainnet Node # description of the process running inside the service
+	After=network-online.target # wait for internet connection before starting the process
+
+	[Service]
+	User=$USER # your system user name
+	ExecStart=$(which persistenceCore) start # command to execute (this will run the node)
+	Restart=always # always maintain the service running by restarting it in case it crashes
+	RestartSec=3 # seconds to wait before restarting
+	LimitNOFILE=4096 # maximum number of processes allowed to run in parallel
+
+	[Install]
+	WantedBy=multi-user.target # a special target unit for setting up a multi-user system
+	```
+
+4. Next, we need to reload systemd and enable the service.
+
+	```bash
+	systemctl daemon-reload
+	systemctl enable core-1.service
+	# output: Created symlink /etc/systemd/system/multi-user.target.wants/core-1.service → /etc/systemd/system/core-1.service
+	```
+
+5. All that's left to do is to start it.
+
+	```bash
+	systemctl start core-1.service
+	```
+
+6. Although you may think nothing has happened, the service is running in the background. To access its logs and see if it's running as it should use the following command:
+
+	```bash
+	journalctl -u core-1.service -f
+	```
+7. To check the status of the service, you can run:
+
+	```bash
+	service core-1.service status
+	```
+
+**Additional commands:**
+
+```bash
+systemctl stop core-1.service
+systemctl restart core-1.service
+```
+
+
+## Upgrade the Node's Software
+
+### Cosmovisor
+We highly recommend validators to use **Cosmovisor** to run their nodes. This will make low-downtime upgrades smoother, as validators don't have to manually upgrade binaries during the upgrade. Instead, they can pre-install new binaries, and **Cosmovisor** will automatically update them based on on-chain `SoftwareUpgrade` proposals.
+
+In summary **Cosmovisor** does two things:
+1. Run the Node
+2. Upgrade the node *(with our manual pre-installation)*
+
+For more information regarding **Cosmovisor** please visit https://docs.cosmos.network/v0.47/tooling/cosmovisor.
+
+#### Run the Node using Cosmovisor
+
+Before being able to update our nodes, **Cosmovisor** needs to be configured acccordingly so it can run our Persistence Core-1 node. Please continue with the following instructions:
+
+1. Install **Cosmovisor** (latest version):
+
+	```bash
+	go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
+	```
+
+2. After this, you must create the necessary **Cosmovisor** folders in your daemon home directory (`~/.persistenceCore`).
+	```bash
+	mkdir -p ~/.persistenceCore
+	mkdir -p ~/.persistenceCore/cosmovisor
+	mkdir -p ~/.persistenceCore/cosmovisor/genesis
+	mkdir -p ~/.persistenceCore/cosmovisor/genesis/bin
+	mkdir -p ~/.persistenceCore/cosmovisor/upgrades
+	```
+
+3. Copy the current persistenceCore binary into the cosmovisor/genesis folder and the folder (**ensure you replace `BINARY_VERSION` with the appropriate upgrade version**)
+
+	```bash
+	export BINARY_VERSION=vX.Y.Z # IMPORTANT: REPLACE THIS VERSION WITH CORRECT UPGRADE VERSION
+	cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/genesis/bin
+	mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+	cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+	```
+
+4. Set these environment variables. Copy and paste the following commands into your terminal.
+
+	```bash
+	echo "# Setup Cosmovisor" >> ~/.profile
+	echo "export DAEMON_NAME=persistenceCore" >> ~/.profile
+	echo "export DAEMON_HOME=$HOME/.persistenceCore" >> ~/.profile
+	echo "export DAEMON_ALLOW_DOWNLOAD_BINARIES=false" >> ~/.profile
+	echo "export DAEMON_LOG_BUFFER_SIZE=512" >> ~/.profile
+	echo "export DAEMON_RESTART_AFTER_UPGRADE=true" >> ~/.profile
+	echo "export UNSAFE_SKIP_BACKUP=true" >> ~/.profile
+	source ~/.profile
+	```
+
+5. Now you can start **Cosmovisor**.
+	```bash
+	cosmovisor run start
+	```
+
+Now, with **Cosmovisor** running our Persistence Core-1 Node, everything is set up correctly for when the next upgrade becomes available. Once an upgrade is available, please proceed to the following section **(Upgrade the Node)**.
+
+#### Upgrade the Node using Cosmovisor
+
+As soon as a software upgrade proposal is passed, the node operators can prepare **Cosmovisor** to automatically upgrade their nodes when the chain upgrade block height is reached. Thus, node operators don't need to manually intervene after the block height is reached, upgrade the node software, and start the node again. In summary, **Cosmovisor** eliminates human intervention and human error factors during node upgrades.
+
+To prepare **Cosmovisor** to upgrade your node, copy and paste the following commands in your terminal (**ensure you replace `BINARY_VERSION` with the appropriate upgrade version**)
+
+```bash
+export BINARY_VERSION=vX.Y.Z # IMPORTANT: REPLACE THIS VERSION WITH THE APPROPRIATE UPGRADE VERSION
+mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+cd $HOME/persistenceCore
+git pull
+git checkout $BINARY_VERSION
+make build
+cp build/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+```
+
+Now, at the upgrade height, **Cosmovisor** will upgrade swap the binaries.
+
+### Manual Option
+
+1. Wait for **persistenceCore** to reach the upgrade height.
+2. Look for a panic message, followed by endless peer logs, then **stop the daemon**.
+3. Run the following commands:
+
+	```bash
+	# ensure you replace `BINARY_VERSION` with the appropriate upgrade version
+	cd $HOME/persistenceCore
+	git pull
+	git checkout BINARY_VERSION # replace with the binary version
+	make build
+	cp build/persistenceCore <destination-binary> # destination binary SHOULD be at "~/go/bin/persistenceCore"
+	```
+	
+4. Start the **persistenceCore** daemon again, watch the upgrade happen, and then continue to hit blocks.
