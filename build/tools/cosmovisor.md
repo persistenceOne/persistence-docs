@@ -10,16 +10,16 @@ For detailed information related to cosmovisor, refer here: [cosmos-sdk doc](htt
 
 If the system administrator plans the Persistence chain upgrade using Cosmovisor, generally the upgrade and current binaries need to be manually placed on the disk before the upgrade happens.  
 
-Once the cosmovisor procsess is started, below folder structure is automatically created in the chain directory:-  
+Once the cosmovisor process is started, below folder structure is automatically created in the chain directory:-  
 
 ![alt text for screen readers](cosmo-visor-folder-layout.jpg)
 
-Before the chain upgrade, target version chain binary needs to be added under cosmovisor/upgrades/<upgrade-name>/bin directory manually.
+Before the chain upgrade, target version chain binary needs to be added under cosmovisor/upgrades/upgrade-name/bin directory manually.
 However, for people who don't need such control and want an automated setup to download binaries on all the validating nodes, there is an **auto-download** option.
 
 ### Steps to enable the Auto-Download feature
 1. Ensure to set environment variable **DAEMON_ALLOW_DOWNLOAD_BINARIES** to **true** before starting the cosmovisor process
-2. Create a github release for target version binary/tar for all required environments and calculate the checksum using sha256sum or sha512sum. The downloadable binary path with checksum can be drafted then as below:
+2. Create a Github release for target version binary/tar for all required environments and calculate the checksum using sha256sum or sha512sum. The downloadable binary path with checksum can be drafted then as below:
     ```   
     "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
     ```
@@ -28,13 +28,13 @@ However, for people who don't need such control and want an automated setup to d
     ```json
     {
       "binaries": {
-        "linux/amd64": "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
+        "linux/amd64": "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2",
         "linux/arm64": "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-arm64?checksum=sha256:a0afbbe35eda3d5e52a7907bcae296415e84b3ff6c7da97429d91f324004a5ab"
       }
     }
     ```
-    Host this JSON file(<any-upgrade-name>.JSON) to a target version github Release or create a separate gist/webpage.  
-    Lets say for example, we added it to Release downloads page like:- "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/v7_binaries.json"
+    Host this JSON file(<any-upgrade-name>.JSON) to a target version Github Release or create a separate gist/webpage.    
+    Let's say for example, we added it to Release downloads page like:- "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/v7_binaries.json"
    
 4. To download the target binary during upgrade, we need to provide full path for above raw JSON file into upgrade-info parameter while submitting upgrade proposal from each of the node in the current running chain.
 For example:-
