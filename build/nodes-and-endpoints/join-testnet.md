@@ -338,35 +338,40 @@ cp build/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/
 Now, at the upgrade height, **Cosmovisor** will upgrade swap the binaries.
 
 **2. Auto-download option**   
-Above manual option, still needs upgrade version binary to be manually added under cosmovisor/upgrades/upgrade-name/bin directory. 
+The above manual option still needs an upgrade version binary to be manually added under cosmovisor/upgrades/upgrade-name/bin directory. 
 For clarity, refer below folder layout for daemon home directory:-
 
 ![alt text for screen readers](cosmo-visor-folder-layout.jpg)
 
-However, for people who don't need such control and want an automated setup to download binaries on all the validating nodes, there is an **auto-download** option.   
+However, for people who don't need such control and want an automated setup to download binaries on their node, there is an **auto-download** option.   
+This might include scenarios like:-syncing a non-validating fullnode and/or performing a little maintenance.
 
-**NOTE**: We don't recommend using auto-download because it doesn't verify in advance if a binary is available. If there will be any issue with downloading a binary, the cosmovisor will stop and won't restart an App (which could lead to a chain halt). Therefore, it is every node operator's responsibility to analyze such risks and use cosmovisor as per requirement.
+**NOTE**: We advise to be cautious while opting for auto-download feature, because cosmovisor module doesn't verify in advance if an upgrade binary is available before cosmovisor restart. If there will be any issue with downloading a binary, the cosmovisor will stop and won't restart an App (which could lead to a daemon halt on the node). Therefore, it is every node operator's responsibility to analyze such risks and use cosmovisor as per requirement.
  
 #### Steps to enable the Auto-Download feature
-**Case A: When creating the governance proposal (skip if you're a node operator)**   
-1. Create a Github release for target version binary/tar for all required environments and calculate the checksum using sha256sum or sha512sum. The downloadable binary path with checksum can be drafted then as below:
+**Case A: When you want to activate the auto-download feature on your node**
+1. Ensure to set environment variable **DAEMON_ALLOW_DOWNLOAD_BINARIES** to **true** (refer to step.4 in the section "Run the Node using Cosmovisor" of this page) before starting the cosmovisor process (step 5)
+
+**Case B: When creating the governance proposal (skip if you're a node operator)**
+1. Ensure to set environment variable **DAEMON_ALLOW_DOWNLOAD_BINARIES** to **true** 
+2. Create a Github release for target version binary/tar for all required environments and calculate the checksum using sha256sum or sha512sum. The downloadable binary path with checksum can be drafted then as below:
     ```   
-    "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
+    "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
     ```
-2. Create a JSON file in format:- os/architecture -> binary URI map under the "binaries" key. Note that we can list multiple binaries for appropriate environments in this file.  
+3. Create a JSON file in format:- os/architecture -> binary URI map under the "binaries" key. Note that we can list multiple binaries for appropriate environments in this file.  
    For example:
     ```json
     {
       "binaries": {
-        "linux/amd64": "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2",
-        "linux/arm64": "https://github.com/cosmos/gaia/releases/download/v8.0.0/gaiad-v8.0.0-linux-arm64?checksum=sha256:a0afbbe35eda3d5e52a7907bcae296415e84b3ff6c7da97429d91f324004a5ab"
+        "linux/amd64": "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2",
+        "linux/arm64": "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0-linux-arm64?checksum=sha256:a0afbbe35eda3d5e52a7907bcae296415e84b3ff6c7da97429d91f324004a5ab"
       }
     }
     ```
    Host this JSON file(<any-upgrade-name>.JSON) to a target version Github Release or create a separate gist/webpage.    
    Let's say for example, we added it to Release downloads page like:- "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/v7_binaries.json"
 
-3. To download the target binary during upgrade, we need to provide full path for above raw JSON file into upgrade-info parameter while submitting upgrade proposal from each of the node in the current running chain.
+4. To download the target binary during upgrade, we need to provide full path for above raw JSON file into upgrade-info parameter while submitting upgrade proposal from each of the node in the current running chain.
    For example:-
     ```shell
     persistenceCore tx gov submit-proposal software-upgrade $UPGRADE_NAME --yes --title "$UPGRADE_NAME" --description "$UPGRADE_NAME" \
@@ -374,8 +379,6 @@ However, for people who don't need such control and want an automated setup to d
         --upgrade-info "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/raw/v7_binaries.json" \
         --fees 2000uxprt --gas auto --gas-adjustment 1.5 -b block -o json
     ```
-**Case B: When you want to activate the auto-download feature on your node**
-1. Ensure to set environment variable **DAEMON_ALLOW_DOWNLOAD_BINARIES** to **true** (refer to step.4 in the section "Run the Node using Cosmovisor" of this page) before starting the cosmovisor process (step 5)
 
 ### B. Upgrade by manually swapping the upgrade binary (without cosmovisor)
 
