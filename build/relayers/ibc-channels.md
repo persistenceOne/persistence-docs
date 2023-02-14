@@ -6,7 +6,7 @@ Operators supporting ICA transfers are marked with a ⚡️
 
 | source channel | destination chain | destination chain-id | destination channel | known operators                                                                                                                |
 | -------------- | ----------------- | -------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| channel-51     | Axelar            | axelar-dojo-1        | channel-42          | <p>AUDIT.one, Cros-nest, Polkachu </p><p><mark style="color:orange;">*looking for more operators*</mark></p>                   |
+| channel-51     | Axelar            | axelar-dojo-1        | channel-42          | AUDIT.one, Cros-nest, Polkachu, QuantNode                                                                                      |
 | channel-71     | Comdex            | comdex-1             | channel-57          | <p>Architect Nodes, Cros-nest, Paranormal Bros<br><mark style="color:orange;">*looking for more operators*</mark></p>          |
 | channel-24     | Cosmos Hub        | cosmoshub-4          | channel-190         | AUDIT.one ⚡, Architect Nodes ⚡️, Cros-nest ⚡️, CryptoCrew ⚡, DSRV, Stakin                                                      |
 | channel-68     | Crescent          | crescent-1           | channel-30          | <p>Simply Staking<br><mark style="color:orange;">*looking for more operators*</mark></p>                                       |
