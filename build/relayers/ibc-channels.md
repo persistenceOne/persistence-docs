@@ -25,7 +25,8 @@ Find more details on relayers via [Map of Zones](https://mapofzones.com/zones/co
 
 <mark style="color:red;">To be reviewed and updated</mark>
 
-| source channel | destination chain | destination-chain-id  | destination channel | known operators |
-| -------------- | ----------------- | --------------------- | ------------------- | --------------- |
-| channel-108    | Axelar            | axelar-testnet-lisbon | channel-97          | AUDIT.one       |
-|                | CosmosHub         |                       |                     |                 |
+| source channel | destination chain | destination-chain-id  | destination channel | known operators            |
+| -------------- | ----------------- | --------------------- | ------------------- | -------------------------- |
+| channel-108    | Axelar            | axelar-testnet-lisbon | channel-97          | AUDIT.one                  |
+| channel-105    | CosmosHub         | theta-testnet-001     | channel-667         | AUDIT.one, Paranormal Bros |
+|                |                   |                       |                     |                            |
