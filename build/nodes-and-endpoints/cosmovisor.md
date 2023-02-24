@@ -1,6 +1,7 @@
 # Using Cosmovisor
 
-We highly recommend validators to use **Cosmovisor** to run their nodes. This will make low-downtime upgrades smoother, as validators don't have to manually upgrade binaries during the upgrade. Instead, they can pre-install new binaries, and **Cosmovisor** will automatically update them based on on-chain `SoftwareUpgrade` proposals.
+We highly recommend validators to use **Cosmovisor** to run their nodes. This will make low-downtime upgrades smoother, as validators don't have to manually upgrade binaries during the upgrade. Instead, they can pre-install new binaries, and **Cosmovisor** will automatically update them based on on-chain `SoftwareUpgrade` proposals.   
+**Note**: However, all validators (including the ones using cosmovisor) should always be available during chain upgrades to resolve any potential issues that might occur.
 
 In summary **Cosmovisor** does two things:
 1. Run the Node
@@ -27,13 +28,14 @@ Before being able to update our nodes, **Cosmovisor** needs to be configured acc
    mkdir -p ~/.persistenceCore/cosmovisor/upgrades
    ```
 
-3. Copy the current persistenceCore binary into the cosmovisor/genesis folder and the folder (**ensure you replace `BINARY_VERSION` with the appropriate upgrade version**)
+3. Copy the current persistenceCore binary into the cosmovisor/genesis folder. **Ensure you replace `UPGRADE_NAME` with the appropriate upgrade-name.**   
+   The upgrade-name variable is the lowercased name of the upgrade as specified in the upgrade module plan. Also, the upgrade name path should be preferably normalized to be lowercased **major** version release name. For instance, V7.1.0 can be normalized to v7, and its path would be upgrades/v7.
 
    ```bash
-   export BINARY_VERSION=vX.Y.Z # IMPORTANT: REPLACE THIS VERSION WITH CORRECT UPGRADE VERSION
+   export UPGRADE_NAME=vX #IMPORTANT: REPLACE THIS VERSION WITH CORRECT UPGRADE NAME e.g. v7
    cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/genesis/bin
-   mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
-   cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+   mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
+   cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
    ```
 
 4. Set these environment variables. Copy and paste the following commands into your terminal.
@@ -60,16 +62,17 @@ Now, with **Cosmovisor** running our Persistence core-1 Node, everything is set 
 **1. Manual Option**   
 As soon as a software upgrade proposal is passed, the node operators can prepare **Cosmovisor** to automatically upgrade their nodes when the chain upgrade block height is reached. Thus, node operators don't need to manually intervene after the block height is reached, upgrade the node software, and start the node again. In summary, **Cosmovisor** eliminates human intervention and human error factors during node upgrades.
 
-To prepare **Cosmovisor** to upgrade your node, copy and paste the following commands in your terminal (**ensure you replace `BINARY_VERSION` with the appropriate upgrade version**)
+To prepare **Cosmovisor** to upgrade your node, copy and paste the following commands in your terminal (**ensure you replace `BINARY_VERSION` and `UPGRADE_NAME` with the appropriate values as specified above**)
 
 ```bash
 export BINARY_VERSION=vX.Y.Z # IMPORTANT: REPLACE THIS VERSION WITH THE APPROPRIATE UPGRADE VERSION
-mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+export UPGRADE_NAME=vX #IMPORTANT: REPLACE THIS VERSION WITH CORRECT UPGRADE NAME e.g. v7
+mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
 cd $HOME/persistenceCore
 git pull
 git checkout $BINARY_VERSION
 make build
-cp build/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
+cp build/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
 ```
 Now, at the upgrade height, **Cosmovisor** will upgrade swap the binaries.
 
