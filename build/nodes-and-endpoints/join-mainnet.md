@@ -39,15 +39,15 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     ```bash
     tar -C /usr/local -xzf go1.19.5.linux-amd64.tar.gz
     ```
-5. Set **$GOPATH** by copying & pasting the following commands in your terminal:
+5.  Set **$GOPATH** by copying & pasting the following commands in your terminal:
 
-	```bash
-	echo "" >> ~/.profile
-	echo "export GOPATH=$HOME/go" >> ~/.profile
-	echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile	
-	source ~/.profile
-	mkdir -p $GOPATH/bin
-	```
+    ```bash
+    echo "" >> ~/.profile
+    echo "export GOPATH=$HOME/go" >> ~/.profile
+    echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile	
+    source ~/.profile
+    mkdir -p $GOPATH/bin
+    ```
 6.  Check **Go** is installed correctly _(sample output: `go version go1.19.5 linux/amd64`)_:
 
     ```bash
@@ -139,7 +139,7 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     ```bash
     cd ~/.persistenceCore/config && wget -O genesis.json  https://raw.githubusercontent.com/persistenceOne/networks/master/core-1/final_genesis.json
     ```
-3. Use **StateSync** to sync with the rest of the nodes. Follow the step-by-step guide below:
+3. Use [**StateSync**](public-infrastructure.md) to sync with the rest of the nodes. Follow the step-by-step guide below:
    *   Run the following command and copy the values of `trust_height` and `trust_hash`. They are required in the next steps.
 
        ```bash
@@ -196,204 +196,15 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
     ```
 
+##
 
-## Run the Node in the Background
+## Node operations
 
-While you've probably used the `persistenceCore start` command in a terminal, you might question yourself what happens if you exit the window, stop the node by mistake, or need to restart your server. The answer is **services**. Imagine a service as a container for processes. It allows the Persistence Core-1 node to run in the background while providing us with access to logs. Not to mention it's starting automatically on system (re)boot. In this section we will cover `systemd`.
+### [Run your node in the background](node-operations/run-in-the-background.md)
 
-Running a service using `systemd` is straightforward. While `systemd` itself provides many configuration options, we only need a few to run the Persistence Core-1 node. Let's get started.
+### Upgrade the Node's Software
 
-1. Since `systemd` is installed by default, there are no installation steps.
-2. First, we need to create a service file in `/etc/systemd/system`. Let's name it `core-1.service`.
-	
-	```bash
-	touch /etc/systemd/system/core-1.service # create the file
-	nano /etc/systemd/system/core-1.service # open the file (to edit it)
-	```
+#### [Using Cosmovisor](node-operations/cosmovisor-upgrades.md)
 
-3. Now, with the file created and open, we need to populate it with the correct options to run the Persistence Core-1 Node.
+#### [Manually swap binaries](node-operations/manual-upgrades.md)
 
-	```bash
-	[Unit]
-	Description=Persistence Mainnet Node # description of the process running inside the service
-	After=network-online.target # wait for internet connection before starting the process
-
-	[Service]
-	User=$USER # your system user name
-	ExecStart=$(which persistenceCore) start # command to execute (this will run the node)
-	Restart=always # always maintain the service running by restarting it in case it crashes
-	RestartSec=3 # seconds to wait before restarting
-	LimitNOFILE=4096 # maximum number of processes allowed to run in parallel
-
-	[Install]
-	WantedBy=multi-user.target # a special target unit for setting up a multi-user system
-	```
-
-4. Next, we need to reload systemd and enable the service.
-
-	```bash
-	systemctl daemon-reload
-	systemctl enable core-1.service
-	# output: Created symlink /etc/systemd/system/multi-user.target.wants/core-1.service → /etc/systemd/system/core-1.service
-	```
-
-5. All that's left to do is to start it.
-
-	```bash
-	systemctl start core-1.service
-	```
-
-6. Although you may think nothing has happened, the service is running in the background. To access its logs and see if it's running as it should use the following command:
-
-	```bash
-	journalctl -u core-1.service -f
-	```
-7. To check the status of the service, you can run:
-
-	```bash
-	service core-1.service status
-	```
-
-**Additional commands:**
-
-```bash
-systemctl stop core-1.service
-systemctl restart core-1.service
-```
-
-
-## Upgrade the Node's Software
-
-### A. Using Cosmovisor
-We highly recommend validators to use **Cosmovisor** to run their nodes. This will make low-downtime upgrades smoother, as validators don't have to manually upgrade binaries during the upgrade. Instead, they can pre-install new binaries, and **Cosmovisor** will automatically update them based on on-chain `SoftwareUpgrade` proposals.
-
-In summary **Cosmovisor** does two things:
-1. Run the Node
-2. Upgrade the node *(with our manual pre-installation)*
-
-For more information regarding **Cosmovisor** please visit https://docs.cosmos.network/v0.47/tooling/cosmovisor.
-
-#### Run the Node using Cosmovisor
-
-Before being able to update our nodes, **Cosmovisor** needs to be configured accordingly, so it can run our Persistence core-1 node. Please continue with the following instructions:
-
-1. Install **Cosmovisor** (latest version):
-
-   ```bash
-   go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
-   ```
-
-2. After this, you must create the necessary **Cosmovisor** folders in your daemon home directory (`~/.persistenceCore`).
-   ```bash
-   mkdir -p ~/.persistenceCore
-   mkdir -p ~/.persistenceCore/cosmovisor
-   mkdir -p ~/.persistenceCore/cosmovisor/genesis
-   mkdir -p ~/.persistenceCore/cosmovisor/genesis/bin
-   mkdir -p ~/.persistenceCore/cosmovisor/upgrades
-   ```
-
-3. Copy the current persistenceCore binary into the cosmovisor/genesis folder and the folder (**ensure you replace `BINARY_VERSION` with the appropriate upgrade version**)
-
-   ```bash
-   export BINARY_VERSION=vX.Y.Z # IMPORTANT: REPLACE THIS VERSION WITH CORRECT UPGRADE VERSION
-   cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/genesis/bin
-   mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
-   cp $GOPATH/bin/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
-   ```
-
-4. Set these environment variables. Copy and paste the following commands into your terminal.
-
-   ```bash
-   echo "# Setup Cosmovisor" >> ~/.profile
-   echo "export DAEMON_NAME=persistenceCore" >> ~/.profile
-   echo "export DAEMON_HOME=$HOME/.persistenceCore" >> ~/.profile
-   echo "export DAEMON_ALLOW_DOWNLOAD_BINARIES=false" >> ~/.profile
-   echo "export DAEMON_LOG_BUFFER_SIZE=512" >> ~/.profile
-   echo "export DAEMON_RESTART_AFTER_UPGRADE=true" >> ~/.profile
-   echo "export UNSAFE_SKIP_BACKUP=true" >> ~/.profile
-   source ~/.profile
-   ```
-
-5. Now you can start **Cosmovisor**.
-   ```bash
-   cosmovisor run start
-   ```
-
-Now, with **Cosmovisor** running our Persistence core-1 Node, everything is set up correctly for when the next upgrade becomes available. Once an upgrade is available, please proceed to the following section **(Upgrade the Node)**.
-
-#### Upgrade the Node using Cosmovisor
-**1. Manual Option**   
-As soon as a software upgrade proposal is passed, the node operators can prepare **Cosmovisor** to automatically upgrade their nodes when the chain upgrade block height is reached. Thus, node operators don't need to manually intervene after the block height is reached, upgrade the node software, and start the node again. In summary, **Cosmovisor** eliminates human intervention and human error factors during node upgrades.
-
-To prepare **Cosmovisor** to upgrade your node, copy and paste the following commands in your terminal (**ensure you replace `BINARY_VERSION` with the appropriate upgrade version**)
-
-```bash
-export BINARY_VERSION=vX.Y.Z # IMPORTANT: REPLACE THIS VERSION WITH THE APPROPRIATE UPGRADE VERSION
-mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
-cd $HOME/persistenceCore
-git pull
-git checkout $BINARY_VERSION
-make build
-cp build/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$BINARY_VERSION/bin
-```
-Now, at the upgrade height, **Cosmovisor** will upgrade swap the binaries.
-
-**2. Auto-download option**   
-The above manual option still needs an upgrade version binary to be manually added under cosmovisor/upgrades/upgrade-name/bin directory.
-For clarity, refer below folder layout for daemon home directory:-
-
-![alt text for screen readers](cosmo-visor-folder-layout.jpg)
-
-However, for people who don't need such control and want an automated setup to download binaries on their node, there is an **auto-download** option.
-This might include scenarios like:-syncing a non-validating fullnode and/or performing a little maintenance.
-
-**NOTE**: We advise to be cautious while opting for auto-download feature, because cosmovisor module doesn't verify in advance if an upgrade binary is available before cosmovisor restart. If there will be any issue with downloading a binary, the cosmovisor will stop and won't restart an App (which could lead to a daemon halt on the node). Therefore, it is every node operator's responsibility to analyze such risks and use cosmovisor as per requirement.
-
-#### Steps to enable the Auto-Download feature
-**Case A: When you want to activate the auto-download feature on your node**
-1. Ensure to set environment variable **DAEMON_ALLOW_DOWNLOAD_BINARIES** to **true** (refer to step.4 in the section "Run the Node using Cosmovisor" of this page) before starting the cosmovisor process (step 5)   
-
-**Case B: When creating the governance proposal (skip if you're a node operator)**
-1. Ensure to set environment variable **DAEMON_ALLOW_DOWNLOAD_BINARIES** to **true**
-2. Create a Github release for target version binary/tar for all required environments and calculate the checksum using sha256sum or sha512sum. The downloadable binary path with checksum can be drafted then as below:
-    ```   
-    "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
-    ```
-3. Create a JSON file in format:- os/architecture -> binary URI map under the "binaries" key. Note that we can list multiple binaries for appropriate environments in this file.  
-   For example:
-    ```json
-    {
-      "binaries": {
-        "linux/amd64": "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2",
-        "linux/arm64": "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-arm64?checksum=sha256:a0afbbe35eda3d5e52a7907bcae296415e84b3ff6c7da97429d91f324004a5ab"
-      }
-    }
-    ```
-   Host this JSON file(<any-upgrade-name>.JSON) to a target version Github Release or create a separate gist/webpage.    
-   Let's say for example, we added it to Release downloads page like:- "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/v7_binaries.json"
-
-4. To download the target binary during upgrade, we need to provide full path for above raw JSON file into upgrade-info parameter while submitting upgrade proposal from each of the node in the current running chain.
-   For example:-
-    ```shell
-    persistenceCore tx gov submit-proposal software-upgrade $UPGRADE_NAME --yes --title "$UPGRADE_NAME" --description "$UPGRADE_NAME" \
-        --upgrade-height $UPGRADE_HEIGHT --from val1 --chain-id $CHAIN_ID --deposit 100uxprt \
-        --upgrade-info "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/raw/v7_binaries.json" \
-        --fees 2000uxprt --gas auto --gas-adjustment 1.5 -b block -o json
-    ```
-
-### B. Upgrade by manually swapping the upgrade binary (without cosmovisor)
-
-1. Wait for **persistenceCore** to reach the upgrade height.
-2. Look for a panic message, followed by endless peer logs, then **stop the daemon**.
-3. Run the following commands:
-
-   ```bash
-   # ensure you replace `BINARY_VERSION` with the appropriate upgrade version
-   cd $HOME/persistenceCore
-   git pull
-   git checkout BINARY_VERSION # replace with the binary version
-   make build
-   cp build/persistenceCore <destination-binary> # destination binary SHOULD be at "~/go/bin/persistenceCore"
-   ```
-
-4. Start the **persistenceCore** daemon again, watch the upgrade happen, and then continue to hit blocks.
