@@ -2,6 +2,8 @@
 
 ## Seed
 
+Seed nodes are used to provide a list of peers (other nodes) for new nodes within the network to connect to.
+
 | Provider              | Mainnet (core-1)                                                                      | Testnet (test-core-1)                                                                 |
 | --------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | AutoStake             | ebc272824924ea1a27ea3183dd0b9ba713494f83@persistence.mainnet.seed.autostake.net:26896 | 5c2a752c9b1952dbed075c56c600c3a79b58c395@persistence.testnet.seed.autostake.net:26896 |
@@ -11,7 +13,6 @@
 | Starsquid             | c16799ee5a236e08b1e49df62a545cf55d976dab@seed-persistence.starsquid.io:15607          |                                                                                       |
 | Allnodes.com          | e1b058e5cfa2b836ddaa496b10911da62dcf182e@persistence-seed-1.allnodes.me:26656         |                                                                                       |
 | Allnodes.com          | e726816f42831689eab9378d5d577f1d06d25716@persistence-seed-2.allnodes.me:26656         |                                                                                       |
-
 
 ## Peers
 
