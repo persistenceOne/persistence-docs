@@ -30,8 +30,9 @@ To aid with node syncing, the following snapshots are provided.&#x20;
     ```bash
     tar zxf ~/.persistenceCore/persistence_snapshot.tar.gz
     ```
-5. Copy & Paste the `priv_validator_state.json` backup back in `~/.persistenceCore/data/`.
-6. Start your node.
+5. **Important,** remove wasm cache which typically present at `~/.persistenceCore/wasm/wasm/cache/modules`
+6. Copy & Paste the `priv_validator_state.json` backup back in `~/.persistenceCore/data/`.
+7. Start your node.
 
 #### \[2] Method Two - following the provider's instructions
 
