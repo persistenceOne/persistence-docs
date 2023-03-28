@@ -8,8 +8,6 @@
 
 ## Telegram Communities
 
-
-
 | Country or Region | Moderator / Facilitator | Link                                                                     |
 | ----------------- | ----------------------- | ------------------------------------------------------------------------ |
 | Global            | Persistence             | [https://t.me/PersistenceOne](https://t.me/PersistenceOne)               |
@@ -21,3 +19,10 @@
 | Turkey            | Wonder wasp             | [https://t.me/PersistenceOneTurkey](https://t.me/PersistenceOneTurkey)   |
 | Vietnam           | Megala                  | [https://t.me/PersistenceOneVietnam](https://t.me/PersistenceOneVietnam) |
 
+
+
+## Twitter Database
+
+This embedded sheet shows all the tweets published on [@PersistenceOne](https://twitter.com/PersistenceOne) handle from **25th march 2023** onwards. &#x20;
+
+{% embed url="https://docs.google.com/spreadsheets/d/1RGWpc-z7qlbmMJ1PH4uRYvuITVf0-N140dQHm2YnsIQ/edit?usp=sharing" %}
