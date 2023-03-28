@@ -44,15 +44,15 @@ To help developers with integration, the following RPC-endpoints are provided
 
 ## gRPC
 
-| Provider         | Mainnet (core-1)                                        | Testnet (test-core-1)                       |
-| ---------------- | ------------------------------------------------------- | ------------------------------------------- |
-| Imperator        | grpc-persistence.imperator.co:2082                      |                                             |
-| Notional         | grpc-persistent-ia.cosmosia.notional.ventures:443       |                                             |
-| Persistence      | grpc.core.persistence.one:443                           |                                             |
-| Polkachu         | persistence-grpc.polkachu.com:15490                     | persistence-testnet-grpc.polkachu.com:15490 |
-| STC Capital      | <p>157.90.153.61:26657, </p><p>91.107.128.187:26657</p> |                                             |
-| QuantNode        | persistence-grpc.quantnode.tech:9090                    |                                             |
-| Architect Nodes  | grpc-persistence.architectnodes.com:1443                |                                             |
+| Provider         | Mainnet (core-1)                                        | Testnet (test-core-1)                            |
+| ---------------- | ------------------------------------------------------- | ------------------------------------------------ |
+| Imperator        | grpc-persistence.imperator.co:2082                      |                                                  |
+| Notional         | grpc-persistent-ia.cosmosia.notional.ventures:443       |                                                  |
+| Persistence      | grpc.core.persistence.one:443                           |                                                  |
+| Polkachu         | persistence-grpc.polkachu.com:15490                     | persistence-testnet-grpc.polkachu.com:15490      |
+| STC Capital      | <p>157.90.153.61:26657, </p><p>91.107.128.187:26657</p> |                                                  |
+| QuantNode        | persistence-grpc.quantnode.tech:9090                    |                                                  |
+| Architect Nodes  | grpc-persistence.architectnodes.com:1443                | grpc-testnet-persistence.architectnodes.com:1443 |
 
 ## WSS
 
