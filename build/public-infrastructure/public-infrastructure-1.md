@@ -13,6 +13,7 @@ To aid with node syncing, the following snapshots are provided.&#x20;
 | Paranormal Bros | https://snapshot.paranorm.pro/persistence\_snapshot.tar.gz |                                                      |
 | Polkachu        | https://polkachu.com/tendermint\_snapshots/persistence     | https://polkachu.com/testnets/persistence/snapshots  |
 | STC Capital     | https://stc.capital/snapshot/xprt                          |                                                      |
+| Bware Labs      | https://bwarelabs.com/snapshots                            | https://bwarelabs.com/snapshots                      |
 
 **How to use the backups:** Depending on the provider's snapshot, a specific URL above needs to follow a set of instructions. Each table URL has a number attached indicating the usage instructions.
 
