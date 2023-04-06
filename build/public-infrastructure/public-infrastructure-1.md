@@ -10,7 +10,7 @@ To aid with node syncing, the following snapshots are provided.&#x20;
 | BlueStake       | https://persistence.bluestake.net/                         |                                                      |
 | High Stakes     | https://tools.highstakes.ch/snapshots/persistence          |                                                      |
 | Imperator       | https://imperator.co/services/persistence                  |                                                      |
-| Paranormal Bros | https://snapshot.paranorm.pro/persistence\_snapshot.tar.gz |                                                      |
+| Paranormal Bros.| https://persistence.paranorm.pro/#snapshot                 |                                                      |
 | Polkachu        | https://polkachu.com/tendermint\_snapshots/persistence     | https://polkachu.com/testnets/persistence/snapshots  |
 | STC Capital     | https://stc.capital/snapshot/xprt                          |                                                      |
 

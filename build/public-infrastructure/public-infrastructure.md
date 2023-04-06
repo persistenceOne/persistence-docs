@@ -17,7 +17,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | Imperator           | https://rpc-persistence.imperator.co                  |                                                      |
 | Kleomedes           | https://persistence-rpc.kleomedes.network/            |                                                      |
 | Notional            | https://rpc-persistent-ia.cosmosia.notional.ventures/ |                                                      |
-| Paranormal Brothers | http://xprt.paranorm.pro/                             |                                                      |
+| Paranormal Bros.    | https://rpc.persistence.paranorm.pro                  | http://testnet-rpc.persistence.paranorm.pro:24657/   |
 | Persistence         | https://rpc.core.persistence.one/                     | https://rpc.testnet.persistence.one/                 |
 | Polkachu            | https://persistence-rpc.polkachu.com/                 | https://persistence-testnet-rpc.polkachu.com/        |
 | StakeMe             | http://persistence-api.stakeme.io:26657/              |                                                      |
@@ -36,6 +36,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | Imperator        | https://lcd-persistence.imperator.co                  |                                                       |
 | Kleomedes        | https://persistence-api.kleomedes.network/            |                                                       |
 | Notional         | https://api-persistent-ia.cosmosia.notional.ventures/ |                                                       |
+| Paranormal Bros. | https://api.persistence.paranorm.pro                  |                                                       |
 | Persistence      | https://rest.core.persistence.one/                    | https://rest.testnet.persistence.one/                 |
 | Polkachu         | https://persistence-api.polkachu.com/                 | https://persistence-testnet-api.polkachu.com/         |
 | StakeMe          | http://persistence-api.stakeme.io:1317/               |                                                       |
