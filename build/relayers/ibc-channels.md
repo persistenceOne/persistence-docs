@@ -34,7 +34,7 @@
 
 Find more details on relayers via [Map of Zones](https://mapofzones.com/zones/core-1/peers?columnKey=ibcVolumeIn\&period=30d) and via [this dashboard provided by Smart Stake](https://relayers.smartstake.io/network/XPRT)
 
-****
+
 
 ## **IBC Channels for Persistence Testnet (test-core-1)**
 

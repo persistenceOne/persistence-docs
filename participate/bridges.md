@@ -12,21 +12,27 @@ Transfer tokens from ERC-20 to Core-1 or vice versa using Persistence Bridge.
 
 Learn more here:
 
-{% content-ref url="persistence-bridge.md" %}
-[persistence-bridge.md](persistence-bridge.md)
+{% content-ref url="bridges/persistence-bridge.md" %}
+[persistence-bridge.md](bridges/persistence-bridge.md)
 {% endcontent-ref %}
 
 
 
 ### 2. Satellite (by Axelar)
 
-<mark style="color:red;">Coming Soon</mark>
+Transfer tokens from ERC-20 to Core-1 or vice versa using Satellite Bridge.
 
-<mark style="color:red;"></mark>
+Learn more here:
+
+{% content-ref url="bridges/satellite-bridge-by-axelar.md" %}
+[satellite-bridge-by-axelar.md](bridges/satellite-bridge-by-axelar.md)
+{% endcontent-ref %}
+
+
 
 ### 3. IBC
 
-While it's technically not a bridge but an Inter-Blockchain Communication Protocol, IBC enables any assets to flow easily between all IBC-enabled blockchains (which Persistence is), via so-called relayers. Find out [here](../../build/relayers/ibc-relayers.md) which relayers enable asset flows to and from the Persistence
+While it's technically not a bridge but an Inter-Blockchain Communication Protocol, IBC enables any assets to flow easily between all IBC-enabled blockchains (which Persistence is), via so-called relayers. Find out [here](../build/relayers/ibc-relayers.md) which relayers enable asset flows to and from the Persistence
 
 Find more information on the [IBC Protocol website](https://ibcprotocol.org/) and visualise connections and asset flows easily using the link below:&#x20;
 

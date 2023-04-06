@@ -6,7 +6,7 @@
 [https://github.com/persistenceOne/persistenceJS#readme](https://github.com/persistenceOne/persistenceJS#readme)
 {% endembed %}
 
-<mark style="color:red;">****</mark>
+
 
 ### Setup
 

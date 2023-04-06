@@ -1,4 +1,8 @@
-# 🌉 Persistence Bridge
+---
+description: https://bridge.persistence.one
+---
+
+# Persistence Bridge
 
 Supported Assets:&#x20;
 

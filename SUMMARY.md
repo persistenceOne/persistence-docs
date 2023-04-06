@@ -26,8 +26,9 @@
     * [Borrow / Lend](participate/xprt/defi/borrow-lend.md)
 * [Wallets](participate/wallets.md)
 * [Explorers](participate/explorers.md)
-* [Bridges](participate/bridges/README.md)
-  * [🌉 Persistence Bridge](participate/bridges/persistence-bridge.md)
+* [Bridges](participate/bridges.md)
+  * [Persistence Bridge](participate/bridges/persistence-bridge.md)
+  * [Satellite Bridge (by Axelar)](participate/bridges/satellite-bridge-by-axelar.md)
 * [Useful Tools](participate/useful-tools.md)
 
 ## ⚒ Build, Integrate, Validate <a href="#build" id="build"></a>

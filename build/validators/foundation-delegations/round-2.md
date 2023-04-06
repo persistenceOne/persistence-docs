@@ -54,8 +54,8 @@ To keep the FDP fair regardless of the chosen commission, delegations will be pr
 
 {% hint style="warning" %}
 **Validators who want to adjust their commission for Round 2, please do so between the 1st of April 2023 and the 7th of April 2023.** \
-****\
-****Validators who try to game the system by increasing their commission before the 1st of April, or by increasing their commission shortly after the Round 2 delegations have been made will see their foundation delegations reduced/removed and risk being blacklisted for future Rounds.
+\
+Validators who try to game the system by increasing their commission before the 1st of April, or by increasing their commission shortly after the Round 2 delegations have been made will see their foundation delegations reduced/removed and risk being blacklisted for future Rounds.
 {% endhint %}
 
 #### Slashing events
