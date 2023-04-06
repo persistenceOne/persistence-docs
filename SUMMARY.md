@@ -27,6 +27,8 @@
 * [Wallets](participate/wallets.md)
 * [Explorers](participate/explorers.md)
 * [Bridges](participate/bridges.md)
+  * [Persistence Bridge](participate/bridges/persistence-bridge.md)
+  * [Satellite Bridge (by Axelar)](participate/bridges/satellite-bridge-by-axelar.md)
 * [Useful Tools](participate/useful-tools.md)
 
 ## ⚒ Build, Integrate, Validate <a href="#build" id="build"></a>
@@ -51,7 +53,8 @@
   * [Validate on Mainnet](build/validators/mainnet-validator-setup.md)
   * [Validator Communication](build/validators/validator-communication.md)
   * [Foundation Delegations](build/validators/foundation-delegations/README.md)
-    * [Round 1](build/validators/foundation-delegations/round-1.md)
+    * [➡ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
+    * [➡ Round 2 - In Progress](build/validators/foundation-delegations/round-2.md)
 * [Relayers](build/relayers/README.md)
   * [IBC Channels](build/relayers/ibc-channels.md)
   * [IBC Relayers](build/relayers/ibc-relayers.md)

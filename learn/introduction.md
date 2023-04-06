@@ -4,7 +4,8 @@ description: The Liquid Staking Hub
 
 # Introduction
 
-> <mark style="color:red;">**Persistence**</mark>\ <mark style="color:green;">****</mark>/pəˈsɪst(ə)ns/\
+> <mark style="color:red;">**Persistence**</mark>\
+> /pəˈsɪst(ə)ns/\
 > _noun_
 >
 > **the fact of continuing in an opinion or course of action in spite of difficulty or opposition.**
@@ -19,7 +20,7 @@ The Persistence Core-1 chain facilitates the issuance and deployment of liquid-s
 
 ## Why Persistence
 
-****[**DeFi**](fundamentals/what-is-defi.md) **(decentralised finance**) has vastly enhanced opportunities for users across the financial landscape, offering accessible and highly attractive yield-generating vehicles to the majority of the global population through the blockchain.&#x20;
+[**DeFi**](fundamentals/what-is-defi.md) **(decentralised finance**) has vastly enhanced opportunities for users across the financial landscape, offering accessible and highly attractive yield-generating vehicles to the majority of the global population through the blockchain.&#x20;
 
 > At its peak in November 2021, DeFi [had grown to $240B+ TVL](https://defillama.com/) across various flourishing ecosystems.
 
