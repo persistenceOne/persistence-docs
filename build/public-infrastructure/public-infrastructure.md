@@ -23,6 +23,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | StakeMe             | http://persistence-api.stakeme.io:26657/              |                                                      |
 | QuantNode           | https://persistence-rpc.quantnode.tech/               |                                                      |
 | Zenscape            | https://persistence-rpc.zenscape.one/                 |                                                      |
+| Provalidator        | https://rpc-persistence-mainnet.provalidator.com      | https://rpc-persistence-testnet.provalidator.com     |
 
 ## REST
 
@@ -42,6 +43,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | StakeMe          | http://persistence-api.stakeme.io:1317/               |                                                       |
 | QuantNode        | https://persistence-lcd.quantnode.tech/               |                                                       |
 | Zenscape         | https://persistence-rest.zenscape.one/                |                                                       |
+| Provalidator     | https://lcd-persistence-mainnet.provalidator.com      | https://lcd-persistence-testnet.provalidator.com      |
 
 ## gRPC
 
@@ -54,6 +56,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | STC Capital      | <p>157.90.153.61:26657, </p><p>91.107.128.187:26657</p> |                                                  |
 | QuantNode        | persistence-grpc.quantnode.tech:9090                    |                                                  |
 | Architect Nodes  | grpc-persistence.architectnodes.com:1443                | grpc-testnet-persistence.architectnodes.com:1443 |
+| Provalidator     | grpc-persistence-mainnet.provalidator.com:9090          | grpc-persistence-testnet.provalidator.com:10057  |
 
 ## WSS
 
