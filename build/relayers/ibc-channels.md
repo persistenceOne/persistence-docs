@@ -21,7 +21,7 @@
 | channel-6      | Osmosis           | osmosis-1            | channel-4           | Architect Nodes, Baryon, bitszn, Cephalopod,Cros-nest, CryptoCrew, DSRV, Imperator, Smart Stake, StakeWith.Us, Stakin, Stakely        |
 | channel-73     | Quicksilver       | quicksilver-2        | channel-16          | <p>Cosmonaut Stakes, Polkachu</p><p><em><mark style="color:orange;">looking for more operators</mark></em></p>               |
 | channel-26     | Sifchain          | sifchain-1           | channel-7           | bitszn, Cephalopod, Notional                                                                                                 |
-| channel-67     | Stride            | stride-1             | channel-53          | <p>Architect Nodes, Cosmonaut Stakes, Polkachu<br><em><mark style="color:orange;">looking for more operators</mark></em></p> |
+| channel-67     | Stride            | stride-1             | channel-53          | <p>Architect Nodes, Cosmonaut Stakes, Polkachu, QuantNode<br><em><mark style="color:orange;">looking for more operators</mark></em></p> |
 
 ### ICA
 
