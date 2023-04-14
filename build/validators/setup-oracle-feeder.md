@@ -6,74 +6,94 @@ The `x/oracle` requires that all validators vote on the price of assets which go
 
 1. First, install the oracle-feeder:
 
-    - clone oracle-feeder: `git clone https://github.com/persistenceOne/orarcle-feeder`
+    a. Install the binary from [releases](https://github.com/persistenceOne/oracle-feeder/releases)
+    - Download the binary
+    - Make the binary executable: `chmod +x oracle-feeder`
+    - Move the binary to `/usr/local/bin`
+
+    b. Or install using source code
+    - clone oracle-feeder: `git clone https://github.com/persistenceOne/oracle-feeder`
     - install: `cd oracle-feeder && make install`
 
-2. Setup account
+1. Setup account
 
-    - It is recommended to use a separate delegated account for the price feeder instead of using the validator account
-    - Once the key is setup, delegate the feeder account
+    - Setup your keyring - checkout [this doc](https://docs.cosmos.network/v0.46/run-node/keyring.html)
+    - You can setup a separate key for oracle account or use the validator's key as the oracle account
 
-        ```sh
-        persistenceCore tx oracle delegate-feed-consent <validator-key> <feeder-account-address>
-        ```
+        > **Note**
+        > It is recommended to setup a separate key for oracle account, which will submit vote on behalf of validator
 
-3. Modify example config
-
-    - Copy the `price-feeder.example.toml`
+    - Delegate consent to the oracle account (Not needed if you are using validator's key as oracle account)
 
         ```sh
-        cp price-feeder.example.toml /usr/local/bin/price-feeder.toml
+        persistenceCore tx oracle delegate-feed-consent <validator-key> $(persistenceCore keys show <oracle-key> -a)
         ```
 
-    - Update the `[account]` information with correct chain-id (`core-` for mainnet, `test-core-1` for testnet), address and validator address from your keyring.
+1. Create config file
+
+    - Download the example config (or copy from source code)
+
+        ```sh
+        wget https://raw.githubusercontent.com/persistenceOne/oracle-feeder/main/price-feeder.example.toml
+        ```
+
+    - Update `[account]` information with correct chain-id (`core-1` for mainnet, `test-core-1` for testnet), address and validator address from your keyring
 
         ```toml
         [acount]
-        address = "persistence152nvc6f096v6n6tr5lg50xq22ak0chsr0ru7xc" # feeder address
+        address = "persistence152nvc6f096v6n6tr5lg50xq22ak0chsr0ru7xc" # oracle account address
         chain_id = "test-core-1"
         validator = "persistencevaloper1pkkayn066msg6kn33wnl5srhdt3tnu2v94kvz9"
         ```
 
-4. In order to get your feeder address & validator address, you can run:
+        In order to get your oracle address & validator address, you can run:
 
-    ```sh
-    persistenceCore keys show <feeder-key> -a
-    persistenceCore keys show <validator-key> -a --bech=val
-    ```
+        ```sh
+        persistenceCore keys show <oracle-key> -a
+        persistenceCore keys show <validator-key> -a --bech=val
+        ```
 
-5. Create a [systemd](https://systemd.io/) service file
+    - Update `[keyring]` information (learn about keyring backend [here](https://docs.cosmos.network/v0.46/run-node/keyring.html))
 
-    ```sh
-    sudo tee /etc/systemd/system/oracle-feeder.service > /dev/null <<EOF
-    [Unit]
-    Description=PersistenceOne Oracle Price Feeder
-    After=online.target[Service]
-    StartLimitIntervalSec=0
-    StartLimitBurst=0
+        ```toml
+        [keyring]
+        backend="os"
+        dir="<path to .persistenceCore dir>"
+        ```
 
-    [Service]
-    Type=simple
-    User=$USER
-    WorkingDirectory=/usr/local/bin
-    ExecStart=bash -c 'echo "\n" | oracle-feeder price-feeder.toml --log-level debug'
-    Restart=on-failure
-    RestartSec=5s
-    LimitNOFILE=65535
+1. Create a [systemd](https://systemd.io/) service file
 
-    [Install]
-    WantedBy=multi-user.target
-    EOF
-    ```
+    - Run this command to create `oracle-feeder.service`, make sure to update the config path.
 
-    Note: The price feeder hits a lot of endpoints to get prices for assets. Sometimes the websocket connections disconnect and cannot reconnect. If this is happening, set up the service file to restart the process after a few hours:
+        ```sh
+        sudo tee /etc/systemd/system/oracle-feeder.service > /dev/null <<EOF
+        [Unit]
+        Description=PersistenceOne Oracle Price Feeder
+        After=online.target[Service]
+        StartLimitIntervalSec=0
+        StartLimitBurst=0
 
-    ```sh
-    Restart=always
-    RuntimeMaxSec=14400s # 4h
-    ```
+        [Service]
+        Type=simple
+        User=$USER
+        ExecStart=bash -c 'echo "\n" | oracle-feeder <path/to/oracle/config.toml> --log-level debug'
+        Restart=on-failure
+        RestartSec=5s
+        LimitNOFILE=65535
 
-6. Start your service
+        [Install]
+        WantedBy=multi-user.target
+        EOF
+        ```
+
+        > **Note**  
+        > The price feeder hits a lot of endpoints to get prices for assets. Sometimes the websocket connections disconnect and cannot reconnect. If this is happening, set up the service file to restart the process after a few hours
+        > ```toml
+        > Restart=always
+        > RuntimeMaxSec=14400s # 4h
+        > ```
+
+1. Start your service
 
     ```sh
     sudo systemctl daemon-reload
@@ -81,7 +101,7 @@ The `x/oracle` requires that all validators vote on the price of assets which go
     sudo systemctl start oracle-feeder
     ```
 
-7. Please check to make sure your oracle feeder is running successfully
+1. Please check to make sure your oracle feeder is running successfully
 
     ```sh
     sudo journalctl -u oracle-feeder.service -f
