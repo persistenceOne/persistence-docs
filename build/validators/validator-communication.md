@@ -28,7 +28,7 @@ To improve coordination and interactions between the Persistence team and the va
 
 ## Email
 
-Contact someone from the Persistence team on Discord or Telegram in order to be added to the distribution list for validators announcements.
+Join our Email list from[ here](http://eepurl.com/idRmrT) or contact someone from the Persistence team on Discord or Telegram in order to be added to the distribution list for validators announcements.&#x20;
 
 
 
