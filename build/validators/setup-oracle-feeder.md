@@ -88,7 +88,8 @@ The `x/oracle` requires that all validators vote on the price of assets which go
 
         > **Note**  
         > The price feeder hits a lot of endpoints to get prices for assets. Sometimes the websocket connections disconnect and cannot reconnect. If this is happening, set up the service file to restart the process after a few hours
-        > ```toml
+        >
+        > ```yaml
         > Restart=always
         > RuntimeMaxSec=14400s # 4h
         > ```
