@@ -26,7 +26,7 @@ The `x/oracle` requires that all validators vote on the price of assets which go
     - Delegate consent to the oracle account (Not needed if you are using validator's key as oracle account)
 
         ```sh
-        persistenceCore tx oracle delegate-feed-consent <validator-key> $(persistenceCore keys show <oracle-key> -a)
+        persistenceCore tx oracle delegate-feed-consent <validator-key> $(persistenceCore keys show <oracle-key> -a --keyring-backend file) --keyring-backend file
         ```
 
 1. Create config file
@@ -49,17 +49,25 @@ The `x/oracle` requires that all validators vote on the price of assets which go
         In order to get your oracle address & validator address, you can run:
 
         ```sh
-        persistenceCore keys show <oracle-key> -a
-        persistenceCore keys show <validator-key> -a --bech=val
+        persistenceCore keys show <oracle-key> -a --keyring-backend file
+        persistenceCore keys show <validator-key> -a --bech=val --keyring-backend file
         ```
 
     - Update `[keyring]` information (learn about keyring backend [here](https://docs.cosmos.network/v0.46/run-node/keyring.html))
 
         ```toml
         [keyring]
-        backend="os"
+        backend="file"
         dir="<path to .persistenceCore dir>"
+        passphrase="xxxx"
         ```
+
+        > **Note**
+        > Passphrase can be provided via environment variable as well
+        >
+        > ```sh
+        > export ORACLE_FEEDER_KEY_PASSPHRASE=xxxx
+        > ```
 
 1. Create a [systemd](https://systemd.io/) service file
 
@@ -74,6 +82,7 @@ The `x/oracle` requires that all validators vote on the price of assets which go
         StartLimitBurst=0
 
         [Service]
+        Environment="ORACLE_FEEDER_KEY_PASSPHRASE=xxxx" # remove this line, if not using env variable
         Type=simple
         User=$USER
         ExecStart=bash -c 'echo "\n" | oracle-feeder <path/to/oracle/config.toml> --log-level debug'
