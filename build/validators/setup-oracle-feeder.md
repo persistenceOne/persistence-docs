@@ -85,7 +85,7 @@ The `x/oracle` requires that all validators vote on the price of assets which go
         Environment="ORACLE_FEEDER_KEY_PASSPHRASE=xxxx" # remove this line, if not using env variable
         Type=simple
         User=$USER
-        ExecStart=bash -c 'echo "\n" | oracle-feeder <path/to/oracle/config.toml> --log-level debug'
+        ExecStart=$(which oracle-feeder) <path/to/oracle/config.toml> --log-level=debug
         Restart=on-failure
         RestartSec=5s
         LimitNOFILE=65535
