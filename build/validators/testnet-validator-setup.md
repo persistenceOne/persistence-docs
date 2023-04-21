@@ -153,6 +153,13 @@ persistenceCore tx slashing unjail \
 
 You can find more advanced information about running a node or a validator on the [Tendermint Core documentation](https://docs.tendermint.com/v0.34/tendermint-core/validators.html).
 
+### Oracle Price Feeder
+
+With version v8 `x/oracle` module has been added to persistenceCore.  
+The validators are required to run oracle price feeder along with the validator node.
+
+Please read [this guide](./setup-oracle-feeder.md) to setup price feeder.
+
 ## Version
 
 This chain is currently running on persistenceCore [v6.0.0-rc5](https://github.com/persistenceOne/persistenceCore/releases/tag/v6.0.0-rc5) *(Commit Hash: `b60bbcf5e1928f57cebffb69676419ed03c014c9`)*
