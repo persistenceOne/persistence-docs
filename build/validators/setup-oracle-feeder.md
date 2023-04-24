@@ -20,8 +20,9 @@ The `x/oracle` requires that all validators vote on the price of assets which go
     - Setup your keyring - checkout [this doc](https://docs.cosmos.network/v0.46/run-node/keyring.html)
     - You can setup a separate key for oracle account or use the validator's key as the oracle account
 
-        > **Note**
-        > It is recommended to setup a separate key for oracle account, which will submit vote on behalf of validator
+        > **Note**  
+        > It is recommended to setup a separate key for oracle account, which will submit vote on behalf of validator.  
+        > Make sure you have some tokens in this account to be able to submit pre-vote & vote txs, `100xprt` should be enough for `~1M` txs
 
     - Delegate consent to the oracle account (Not needed if you are using validator's key as oracle account)
 
