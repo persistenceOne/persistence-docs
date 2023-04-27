@@ -25,7 +25,6 @@
 	--commission-max-change-rate=0.05 \ # KEEP OR REPLACE
 	--commission-max-rate=0.20 \ # KEEP OR REPLACE
 	--commission-rate=0.10 \ # KEEP OR REPLACE
-	--min-self-delegation="1" \ # KEEP OR REPLACE
 	--website="[OPTIONAL]" \ # DELETE OR REPLACE
 	--identity="[OPTIONAL]" \ # DELETE OR REPLACE
 	--details="[OPTIONAL]" \ # DELETE OR REPLACE
@@ -45,7 +44,6 @@
 		--commission-max-change-rate=0.05 \
 		--commission-max-rate=0.20 \
 		--commission-rate=0.10 \
-		--min-self-delegation="1" \
 		--website="https://persistence.one/" \
 		--identity="5C1159DB8957B5AA" \
 		--details="This is an explanation on why delegators should consider delegating with your validator. Keep it a short and sweet." \
@@ -65,7 +63,6 @@
 	-   the  `commission-rate`  is the rate you will charge your delegates (in the example above, 10 percent)
 	-   the  `commission-max-rate`  is the most you are allowed to charge your delegates (in the example above, 20 percent)
 	-   the  `commission-max-change-rate`  is how much you can increase your commission rate in a 24 hour period (in the example above, 5 percent per day until reaching the max rate)
-	-   the  `min-self-delegation`  is the lowest amount of personal funds the validator is required to have in their own validator to stay bonded (in the example above, 1xprt)
 	-   the  `gas-prices`  is the amount of gas used to send this create-validator transaction
 
 6. **Confirm your validator is running.** Your validator is active if the following command returns anything:
