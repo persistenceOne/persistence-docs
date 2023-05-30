@@ -23,7 +23,7 @@
 | channel-26     | Sifchain          | sifchain-1           | channel-7           | bitszn, Cephalopod, Notional                                                                                                   |
 | channel-82     | Secret Network    | secret-4             | channel-64          | Cosmonaut Stakes, _<mark style="color:orange;">looking for more operators</mark>_                                              |
 | channel-67     | Stride            | stride-1             | channel-53          | Architect Nodes, Cosmonaut Stakes, Polkachu, QuantNode                                                                         |
-| channel-81     | Umee              | umee-1               | channel-51          | Cosmostake, Genesis Lab, Polkachu, QuantNode                                                                                   |
+| channel-81     | Umee              | umee-1               | channel-51          | Cosmostake, Stakeflow, Polkachu, QuantNode                                                                                   |
 
 ### ICA
 

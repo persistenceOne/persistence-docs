@@ -24,7 +24,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | QuantNode           | https://persistence-rpc.quantnode.tech/               |                                                      |
 | Zenscape            | https://persistence-rpc.zenscape.one/                 |                                                      |
 | Provalidator        | https://rpc-persistence-mainnet.provalidator.com      | https://rpc-persistence-testnet.provalidator.com     |
-| Genesis Lab        | [https://rpc-persistence-01.stakeflow.io](https://rpc-persistence-01.stakeflow.io)      | [https://rpc-persistence-testnet-01.stakeflow.io/](https://rpc-persistence-testnet-01.stakeflow.io/)     |
+| Stakeflow        | [https://rpc-persistence-01.stakeflow.io](https://rpc-persistence-01.stakeflow.io)      | [https://rpc-persistence-testnet-01.stakeflow.io/](https://rpc-persistence-testnet-01.stakeflow.io/)     |
 
 ## REST
 
@@ -45,7 +45,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | QuantNode        | https://persistence-lcd.quantnode.tech/               |                                                       |
 | Zenscape         | https://persistence-rest.zenscape.one/                |                                                       |
 | Provalidator     | https://lcd-persistence-mainnet.provalidator.com      | https://lcd-persistence-testnet.provalidator.com      |
-| Genesis Lab     | [https://api-persistence-01.stakeflow.io](https://api-persistence-01.stakeflow.io)      | [https://api-persistence-testnet-01.stakeflow.io/](https://api-persistence-testnet-01.stakeflow.io/)      |
+| Stakeflow     | [https://api-persistence-01.stakeflow.io](https://api-persistence-01.stakeflow.io)      | [https://api-persistence-testnet-01.stakeflow.io/](https://api-persistence-testnet-01.stakeflow.io/)      |
 
 ## gRPC
 
@@ -59,7 +59,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | QuantNode        | persistence-grpc.quantnode.tech:9090                    |                                                  |
 | Architect Nodes  | grpc-persistence.architectnodes.com:1443                | grpc-testnet-persistence.architectnodes.com:1443 |
 | Provalidator     | grpc-persistence-mainnet.provalidator.com:9090          | grpc-persistence-testnet.provalidator.com:10057  |
-| Genesis Lab     | grpc-persistence-01.stakeflow.io:49090          | grpc-persistence-testnet-01.stakeflow.io:19002  |
+| Stakeflow     | grpc-persistence-01.stakeflow.io:49090          | grpc-persistence-testnet-01.stakeflow.io:19002  |
 
 ## WSS
 
@@ -67,7 +67,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | ----------- | -------------------------------------------- | --------------------- |
 | Imperator   | ws://rpc-persistence.imperator.co/wss        |                       |
 | Persistence | wss://rpc.core.persistence.one:443/websocket |                       |
-| Genesis Lab | wss://rpc-persistence-01.stakeflow.io/websocket | wss://rpc-persistence-testnet-01.stakeflow.io/websocket                       |
+| Stakeflow | wss://rpc-persistence-01.stakeflow.io/websocket | wss://rpc-persistence-testnet-01.stakeflow.io/websocket                       |
 
 
 
