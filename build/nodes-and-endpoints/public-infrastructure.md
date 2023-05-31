@@ -1,14 +1,16 @@
 # State Sync
 
+{% hint style="warning" %}
+**On June 15th, 2023**, test-core`-1` will be deprecated. The new official testnet will be test-core-2. Would request all the current validators to migrate their nodes before that!
+{% endhint %}
+
+
+
 ## State Sync
 
 To aid with node syncing, the following State Sync endpoints are provided.
 
-| Provider         | Mainnet (core-1)                                        | Testnet (test-core-1)                                   |
-| ---------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| Cosmonaut Stakes | https://persistence-mainnet-rpc.cosmonautstakes.com:443 | https://persistence-testnet-rpc.cosmonautstakes.com:443 |
-| Persistence      | https://rpc.core.persistence.one:443                    | https://rpc.testnet.persistence.one:443                 |
-| Polkachu         | https://persistence-rpc.polkachu.com:443                | https://persistence-testnet-rpc.polkachu.com:443        |
+<table><thead><tr><th width="213.33333333333331">Provider</th><th width="267">Mainnet (core-1)</th><th width="176">Testnet (test-core-1)</th><th>Testnet (test-core-1)</th></tr></thead><tbody><tr><td>Cosmonaut Stakes</td><td>https://persistence-mainnet-rpc.cosmonautstakes.com:443</td><td></td><td>https://persistence-testnet-rpc.cosmonautstakes.com:443</td></tr><tr><td>Persistence</td><td>https://rpc.core.persistence.one:443</td><td></td><td>https://rpc.testnet.persistence.one:443</td></tr><tr><td>Polkachu</td><td>https://persistence-rpc.polkachu.com:443</td><td></td><td>https://persistence-testnet-rpc.polkachu.com:443</td></tr></tbody></table>
 
 To use State Sync change the following under `config.toml`. Choose at least 2 providers for the `rpc_servers` parameters from the table above.
 
