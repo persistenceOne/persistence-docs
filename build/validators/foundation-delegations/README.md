@@ -14,11 +14,7 @@ The goals of the new Persistence Foundation Delegation Program are:&#x20;
 
 The Foundation Delegation Program will iterate through continuous rounds, which can last anywhere between 4 to 12 weeks. **Updated indicative** timelines for the first 3 rounds are:&#x20;
 
-| Round                               | Application deadline  | Delegation period       |
-| ----------------------------------- | --------------------- | ----------------------- |
-| [Round 1](round-1.md) (CLOSED)      | 30/12/2022 - 23.59UTC | 20/01/2023 - 19/04/2023 |
-| [Round 2](round-2.md) (In progress) | 07/04/2023 - 23.59UTC | 20/04/2023 - 19/07/2023 |
-| Round 3                             | 16/06/2023 - 23.59UTC | 20/07/2023 - 19/10/2023 |
+<table><thead><tr><th width="249.33333333333331">Round</th><th>Application deadline</th><th>Delegation period</th></tr></thead><tbody><tr><td><a href="round-1.md">Round 1</a> (CLOSED)</td><td>30/12/2022 - 23.59UTC</td><td>20/01/2023 - 19/04/2023</td></tr><tr><td><a href="round-2.md">Round 2</a> (In progress)</td><td>07/04/2023 - 23.59UTC</td><td>20/04/2023 - To be communicated</td></tr><tr><td>Round 3 </td><td>-</td><td>-</td></tr></tbody></table>
 
 The criteria and calculation methods are subject to change from round to round, depending on the current state and requirements of the persistence ecosystem as defined by the foundation, with inputs from the community.&#x20;
 
