@@ -84,14 +84,14 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 
 ### Install the persistenceCore Binary
 
-> **Note** The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the test-core-1 chain. To ensure you're running the correct version, join the [Discord Testnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
+> **Note** The latest version available in the [releases page](https://github.com/persistenceOne/persistenceCore/releases) might not be the one running on the test-core-2 chain. To ensure you're running the correct version, join the [Discord Testnet Validator Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
 
 1.  Clone the **persistenceCore** repository:
 
     ```bash
     git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
     ```
-2. Check what version is running on the test-core-1 chain by visiting the [Discord Testnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
+2. Check what version is running on the test-core-2 chain by visiting the [Discord Testnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
 3.  Switch to the branch of the latest version _(v6.0.0-rc5 as of time of writing)_:
 
     ```bash
@@ -131,12 +131,12 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 1.  Initialize the **node** _(moniker = node name)_:
 
     ```bash
-    persistenceCore init <MONIKER> --chain-id="test-core-1" # e.g. persistenceCore init "Persistence Node" --chain-id="test-core-1"
+    persistenceCore init <MONIKER> --chain-id="test-core-2" # e.g. persistenceCore init "Persistence Node" --chain-id="test-core-2"
     ```
-2.  Download the **test-core-1 genesis** file:
+2.  Download the **test-core-2 genesis** file:
 
     ```bash
-    cd ~/.persistenceCore/config && wget -O genesis.json  https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-1/final_genesis.json
+    cd ~/.persistenceCore/config && wget -O genesis.json  https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-2/final_genesis.json
     ```
 3. Use **StateSync** to sync with the rest of the nodes. Follow the step-by-step guide below:
    *   Run the following command and copy the values of `trust_height` and `trust_hash`. They are required in the next steps.
