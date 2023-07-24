@@ -11,7 +11,8 @@
     cd $HOME/persistenceCore
     git pull
     git checkout BINARY_VERSION # replace with the binary version
+    mkdir bin
     make build
-    cp build/persistenceCore <destination-binary> # destination binary SHOULD be at "~/go/bin/persistenceCore"
+    cp bin/persistenceCore <destination-binary> # destination binary SHOULD be at "~/go/bin/persistenceCore"
     ```
 4. Start the **persistenceCore** daemon again, watch the upgrade happen, and then continue to hit blocks.
