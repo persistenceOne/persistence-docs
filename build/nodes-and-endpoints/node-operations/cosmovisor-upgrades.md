@@ -73,8 +73,9 @@ mkdir -p ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
 cd $HOME/persistenceCore
 git pull
 git checkout $BINARY_VERSION
+mkdir bin
 make build
-cp build/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
+cp bin/persistenceCore ~/.persistenceCore/cosmovisor/upgrades/$UPGRADE_NAME/bin
 ```
 
 Now, at the upgrade height, **Cosmovisor** will upgrade swap the binaries.
@@ -100,7 +101,7 @@ However, for people who don't need such control and want an automated setup to d
 2.  Create a Github release for target version binary/tar for all required environments and calculate the checksum using sha256sum or sha512sum. The downloadable binary path with checksum can be drafted then as below:
 
     ```
-    "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
+    "https://github.com/persistenceOne/persistenceCore/releases/download/v8.0.0/persistenceCore-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2"
     ```
 3.  Create a JSON file in format:- os/architecture -> binary URI map under the "binaries" key. Note that we can list multiple binaries for appropriate environments in this file.\
     For example:
@@ -108,19 +109,19 @@ However, for people who don't need such control and want an automated setup to d
     ```json
     {
       "binaries": {
-        "linux/amd64": "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2",
-        "linux/arm64": "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-arm64?checksum=sha256:a0afbbe35eda3d5e52a7907bcae296415e84b3ff6c7da97429d91f324004a5ab"
+        "linux/amd64": "https://github.com/persistenceOne/persistenceCore/releases/download/v8.0.0/persistenceCore-v8.0.0-linux-amd64?checksum=sha256:6d0c123e246a8b56ba534f70dd5dc72058b00fd5e5dde5ea40509ff51efc42e2",
+        "linux/arm64": "https://github.com/persistenceOne/persistenceCore/releases/download/v8.0.0/persistenceCore-v8.0.0-linux-arm64?checksum=sha256:a0afbbe35eda3d5e52a7907bcae296415e84b3ff6c7da97429d91f324004a5ab"
       }
     }
     ```
 
     Host this JSON file(.JSON) to a target version Github Release or create a separate gist/webpage.\
-    Let's say for example, we added it to Release downloads page like:- "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/v7\_binaries.json"
+    Let's say for example, we added it to Release downloads page like:- "https://github.com/persistenceOne/persistenceCore/releases/download/v8.0.0/v8\_binaries.json"
 4.  To download the target binary during upgrade, we need to provide full path for above raw JSON file into upgrade-info parameter while submitting upgrade proposal from each of the node in the current running chain. For example:-
 
     ```shell
     persistenceCore tx gov submit-proposal software-upgrade $UPGRADE_NAME --yes --title "$UPGRADE_NAME" --description "$UPGRADE_NAME" \
         --upgrade-height $UPGRADE_HEIGHT --from val1 --chain-id $CHAIN_ID --deposit 100uxprt \
-        --upgrade-info "https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/raw/v7_binaries.json" \
+        --upgrade-info "https://github.com/persistenceOne/persistenceCore/releases/download/v8.0.0/raw/v8_binaries.json" \
         --fees 2000uxprt --gas auto --gas-adjustment 1.5 -b block -o json
     ```
