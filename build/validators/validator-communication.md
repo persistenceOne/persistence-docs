@@ -30,23 +30,19 @@ To improve coordination and interactions between the Persistence team and the va
 
 <summary>🙇‍♂️ Amelia (Persistence Super Bot) for Telegram</summary>
 
-Persistence chain has 100+and 40+ validators group on telegram for mainnet & testnet respectively. Sending chain updates to all the groups manually becomes a tedious task and is comparatively slow at a time of emergency (Chain halt, Emergency Upgrade etc).
+Persistence chain has 100+ and 40+ validator groups on telegram for mainnet & testnet respectively. Sending chain updates to all the groups manually becomes a tedious task and is comparatively slow at an emergency (Chain halt, Emergency Upgrade, exploit etc).
 
-Hence, we launched a telegram bot (Amelia) which can relay the following details in much faster way:&#x20;
+Hence, we launched a telegram bot (Amelia) which can relay the following details in a much faster way:&#x20;
 
 1. Broadcasts important announcement for Mainnet & Testnet.
 2. Chain updates - Missing blocks, commission change, etc
-3. Reminders - Automatically sents reminder for voting 24 hour prior to end time only for validators who haven't voted.&#x20;
+3. Reminders - Automatically sents reminder for voting 24 hours prior to end time for validators who haven't voted.&#x20;
 
-Looks appealing? Contact team if you don't have it on our group already.&#x20;
+**Looks appealing?** [Contact team](../../connect-and-follow.md) if you don't have it installed on our group already.&#x20;
 
-PS:&#x20;
+**PS:** This bot will not be used for spams or marketing announcements. Pinky Promise!
 
 </details>
-
-&#x20;
-
-
 
 ## Email
 
