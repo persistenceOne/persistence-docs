@@ -26,6 +26,28 @@ To improve coordination and interactions between the Persistence team and the va
 
 
 
+<details>
+
+<summary>🙇‍♂️ Amelia (Persistence Super Bot) for Telegram</summary>
+
+Persistence chain has 100+and 40+ validators group on telegram for mainnet & testnet respectively. Sending chain updates to all the groups manually becomes a tedious task and is comparatively slow at a time of emergency (Chain halt, Emergency Upgrade etc).
+
+Hence, we launched a telegram bot (Amelia) which can relay the following details in much faster way:&#x20;
+
+1. Broadcasts important announcement for Mainnet & Testnet.
+2. Chain updates - Missing blocks, commission change, etc
+3. Reminders - Automatically sents reminder for voting 24 hour prior to end time only for validators who haven't voted.&#x20;
+
+Looks appealing? Contact team if you don't have it on our group already.&#x20;
+
+PS:&#x20;
+
+</details>
+
+&#x20;
+
+
+
 ## Email
 
 Join our Email list from[ here](http://eepurl.com/idRmrT) or contact someone from the Persistence team on Discord or Telegram in order to be added to the distribution list for validators announcements.&#x20;
