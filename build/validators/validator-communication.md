@@ -34,9 +34,9 @@ Persistence chain has 100+ and 40+ validator groups on telegram for mainnet & te
 
 Hence, we launched a telegram bot (Amelia) which can relay the following details in a much faster way:&#x20;
 
-1. Broadcasts important announcement for Mainnet & Testnet.
+1. Broadcast important announcement for Mainnet & Testnet.
 2. Chain updates - Missing blocks, commission change, etc
-3. Reminders - Automatically sents reminder for voting 24 hours prior to end time for validators who haven't voted.&#x20;
+3. Reminders - Automatically sends reminder for voting 24 hours prior to end time for validators who haven't voted.&#x20;
 
 **Looks appealing?** [Contact team](../../connect-and-follow.md) if you don't have it installed on our group already.&#x20;
 
