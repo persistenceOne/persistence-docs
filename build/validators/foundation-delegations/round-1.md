@@ -36,46 +36,19 @@ The following contributions are deemed valuable to the ecosystem and will earn p
 
 #### Mainnet Contributions
 
-| Contribution                                                  |
-| ------------------------------------------------------------- |
-| Running IBC Relayers                                          |
-| Running ICA Relayers                                          |
-| Running Graph / subGraph Nodes                                |
-| Providing API/RPC services                                    |
-| Maintain tooling - Explorers, Wallet  Support, Analytics etc. |
+<table><thead><tr><th width="596">Contribution</th></tr></thead><tbody><tr><td>Running IBC Relayers</td></tr><tr><td>Running ICA Relayers</td></tr><tr><td>Running Graph / subGraph Nodes</td></tr><tr><td>Providing API/RPC services</td></tr><tr><td>Maintain tooling - Explorers, Wallet  Support, Analytics etc.</td></tr></tbody></table>
 
 #### Testnet Contributions
 
-| Contribution                                                         |
-| -------------------------------------------------------------------- |
-| Run a Testnet Validator (95% uptime + fast responses)                |
-| Run a Testnet Faucet                                                 |
-| Run Testnet IBC Relayers                                             |
-| Run Testnet ICA Relayers                                             |
-| Providing API/RPC services                                           |
-| Maintain Testnet tooling - Explorers, Wallet Support, Analytics etc. |
+<table><thead><tr><th width="599">Contribution</th></tr></thead><tbody><tr><td>Run a Testnet Validator (95% uptime + fast responses)</td></tr><tr><td>Run a Testnet Faucet</td></tr><tr><td>Run Testnet IBC Relayers</td></tr><tr><td>Run Testnet ICA Relayers</td></tr><tr><td>Providing API/RPC services</td></tr><tr><td>Maintain Testnet tooling - Explorers, Wallet Support, Analytics etc.</td></tr></tbody></table>
 
 #### Community Contributions
 
-| Contribution                                       |
-| -------------------------------------------------- |
-| Educational Content                                |
-| Marketing                                          |
-| Host events                                        |
-| Research Reports                                   |
-| Create and manage regional Persistence Communities |
-| Official Community Moderation                      |
+<table><thead><tr><th width="598">Contribution</th></tr></thead><tbody><tr><td>Educational Content</td></tr><tr><td>Marketing</td></tr><tr><td>Host events</td></tr><tr><td>Research Reports</td></tr><tr><td>Create and manage regional Persistence Communities</td></tr><tr><td>Official Community Moderation</td></tr></tbody></table>
 
 #### Other Contributions
 
-| Contribution                                                |
-| ----------------------------------------------------------- |
-| Contributions to Persistence Github                         |
-| Contributions to Persistence Documentation                  |
-| Provide validator support (articles, videos, onboarding)    |
-| Successful Talent Referrals                                 |
-| Successful Partnership Referrals (Investors, LPs, Projects) |
-| Other\*                                                     |
+<table><thead><tr><th width="597">Contribution</th></tr></thead><tbody><tr><td>Contributions to Persistence Github</td></tr><tr><td>Contributions to Persistence Documentation</td></tr><tr><td>Provide validator support (articles, videos, onboarding)</td></tr><tr><td>Successful Talent Referrals</td></tr><tr><td>Successful Partnership Referrals (Investors, LPs, Projects)</td></tr><tr><td>Other*</td></tr></tbody></table>
 
 \*To include contributions that are not listed into this Round, please make your case in the Discord channel ‘validators-discussion’.&#x20;
 

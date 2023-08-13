@@ -90,55 +90,19 @@ The following contributions are deemed valuable to the ecosystem and will earn p
 
 #### Mainnet Contributions
 
-| Contribution                                                 |
-| ------------------------------------------------------------ |
-| Providing endpoints (RPC, gRPC, REST, WSS, statesync)        |
-| Providing seeds & peers                                      |
-| Running an archival node                                     |
-| Running IBC Relayers                                         |
-| Having ICA configs set up on your IBC relayer                |
-| Running indexing infrastructure                              |
-| Providing snapshots                                          |
-| Maintain tooling - Explorers, Wallet, Faucet, Analytics etc. |
-| Mainnet relayer monitoring & scoring \*\*\*\*\*              |
+<table><thead><tr><th width="596">Contribution</th></tr></thead><tbody><tr><td>Providing endpoints (RPC, gRPC, REST, WSS, statesync)</td></tr><tr><td>Providing seeds &#x26; peers</td></tr><tr><td>Running an archival node</td></tr><tr><td>Running IBC Relayers</td></tr><tr><td>Having ICA configs set up on your IBC relayer</td></tr><tr><td>Running indexing infrastructure</td></tr><tr><td>Providing snapshots</td></tr><tr><td>Maintain tooling - Explorers, Wallet, Faucet, Analytics etc.</td></tr><tr><td>Mainnet relayer monitoring &#x26; scoring *****</td></tr></tbody></table>
 
 #### Testnet Contributions
 
-| Contribution                                                 |
-| ------------------------------------------------------------ |
-| Run a Testnet Validator (95% uptime + fast responses)        |
-| Providing endpoints (RPC, gRPC, REST, WSS, statesync)        |
-| Providing seeds & peers                                      |
-| Running an archival node                                     |
-| Running IBC Relayers                                         |
-| Having ICA configs set up on your IBC relayer                |
-| Running indexing infrastructure                              |
-| Providing snapshots                                          |
-| Maintain tooling - Explorers, Wallet, Faucet, Analytics etc. |
-| Testnet relayer monitoring & scoring \*\*\*\*\*              |
+<table><thead><tr><th width="599">Contribution</th></tr></thead><tbody><tr><td>Run a Testnet Validator (95% uptime + fast responses)</td></tr><tr><td>Providing endpoints (RPC, gRPC, REST, WSS, statesync)</td></tr><tr><td>Providing seeds &#x26; peers</td></tr><tr><td>Running an archival node</td></tr><tr><td>Running IBC Relayers</td></tr><tr><td>Having ICA configs set up on your IBC relayer</td></tr><tr><td>Running indexing infrastructure</td></tr><tr><td>Providing snapshots</td></tr><tr><td>Maintain tooling - Explorers, Wallet, Faucet, Analytics etc.</td></tr><tr><td>Testnet relayer monitoring &#x26; scoring *****</td></tr></tbody></table>
 
 #### Community Contributions
 
-| Contribution                                       |
-| -------------------------------------------------- |
-| Educational Content                                |
-| Marketing                                          |
-| Host events                                        |
-| Create and manage regional Persistence Communities |
-| Official Community Moderation                      |
+<table><thead><tr><th width="598">Contribution</th></tr></thead><tbody><tr><td>Educational Content</td></tr><tr><td>Marketing</td></tr><tr><td>Host events</td></tr><tr><td>Create and manage regional Persistence Communities</td></tr><tr><td>Official Community Moderation</td></tr></tbody></table>
 
 #### Other Contributions
 
-| Contribution                                                |
-| ----------------------------------------------------------- |
-| Contributions to code repos on Github                       |
-| Contributions to Persistence Documentation                  |
-| Research Reports                                            |
-| Provide validator support (articles, videos, onboarding)    |
-| Successful Talent Referrals                                 |
-| Successful Partnership Referrals (Investors, LPs, Projects) |
-| pSTAKE support                                              |
-| Other tools or contributions \*\*\*\*\*\*                   |
+<table><thead><tr><th width="597">Contribution</th></tr></thead><tbody><tr><td>Contributions to code repos on Github</td></tr><tr><td>Contributions to Persistence Documentation</td></tr><tr><td>Research Reports</td></tr><tr><td>Provide validator support (articles, videos, onboarding)</td></tr><tr><td>Successful Talent Referrals</td></tr><tr><td>Successful Partnership Referrals (Investors, LPs, Projects)</td></tr><tr><td>pSTAKE support</td></tr><tr><td>Other tools or contributions ******</td></tr></tbody></table>
 
 \*\*\*\*\* Relayers play an important part in the vision of building persistence as a Liquid Staking Hub, and some relayer operators are more specialized than others. To ensure relayer operators receive delegations in line with their performance, we want to introduce a monitoring and scoring system for relayers. If you want to help us build this, please reach out to the team directly to discuss it.
 

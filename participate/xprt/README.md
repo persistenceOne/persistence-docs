@@ -19,7 +19,7 @@ $XPRT derives its utility from the wider Persistence ecosystem:&#x20;
 * Modular apps (e.g. pSTAKE) and dApps built using smart contracts (e.g. DEXter) will leverage the core-1 chain infrastructure, and hence $XPRT, to build use-cases for staked assets.&#x20;
 * As various apps in the ecosystem will attract staked assets from different ecosystems to the Persistence Chain, the core-1 chain will act as the IBC hub of the Persistence Ecosystem. &#x20;
 
-<figure><img src="../../.gitbook/assets/XPRT Role.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/XPRT Role (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

@@ -1,10 +1,10 @@
 # Snapshots & Archival Nodes
 
 {% hint style="warning" %}
-**On June 15th, 2023**, test-core`-1` will be deprecated. The new official testnet will be test-core-2. Would request all the current validators to migrate their nodes before that!
+**On Aug 15th, 2023**, test-core`-1` will be deprecated. The new official testnet will be test-core-2. Would request all the current validators to migrate their nodes before that!
 {% endhint %}
 
-##
+
 
 ## Snapshots
 

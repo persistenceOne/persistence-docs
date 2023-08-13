@@ -2,10 +2,7 @@
 
 ## How do you use your ledger?
 
-|         Variation        | 118 Coin-type | 750 Coin-type | Migration Required? | Default       |
-| :----------------------: | :-----------: | :-----------: | :-----------------: | ------------- |
-|      Keplr + Ledger      |   Supported   | Not Supported |          No         | 118 Coin-type |
-| Persistence App + Ledger | Not Supported |   Supported   |         Yes         | 750 Coin-type |
+<table><thead><tr><th align="center">Variation</th><th width="205" align="center">118 Coin-type</th><th align="center">750 Coin-type</th><th>Migration Required?</th><th align="center">Default</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">Supported</td><td align="center">Not Supported</td><td>No</td><td align="center">118 Coin-type</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">Not Supported</td><td align="center">Supported</td><td>Yes</td><td align="center">750 Coin-type</td></tr></tbody></table>
 
 ## Migration
 

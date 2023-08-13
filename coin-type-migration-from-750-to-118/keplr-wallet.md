@@ -1,10 +1,6 @@
 # Keplr Wallet
 
-| When was the wallet created? | Default Coin-type | Migration Required?                                                                  |
-| ---------------------------- | ----------------- | ------------------------------------------------------------------------------------ |
-| After 7 October 2022         | 118               | No 🎉                                                                                |
-| Before 7 October 2022        | 750               | Yes                                                                                  |
-| Don't remember               | -                 | [Refer here](keplr-wallet.md#q1.-i-dont-remember-when-my-keplr-account-was-created.) |
+<table><thead><tr><th width="294.66666666666663">When was the wallet created?</th><th width="172">Default Coin-type</th><th>Migration Required?</th></tr></thead><tbody><tr><td>After 7 October 2022</td><td>118 </td><td>No 🎉</td></tr><tr><td>Before 7 October 2022</td><td>750</td><td>Yes</td></tr><tr><td>Don't remember</td><td>-</td><td><a href="keplr-wallet.md#q1.-i-dont-remember-when-my-keplr-account-was-created.">Refer here</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 Both coin-type wallet addresses are supported by keplr. Hence both of the addresses can be used simultaneously.
