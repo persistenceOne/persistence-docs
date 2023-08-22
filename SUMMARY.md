@@ -44,6 +44,7 @@
     * [Manual upgrades](build/nodes-and-endpoints/node-operations/manual-upgrades.md)
   * [Seed & Peers](build/nodes-and-endpoints/seed-and-peers.md)
 * [Public Infrastructure](build/public-infrastructure/README.md)
+  * [Persistence Testnet](build/public-infrastructure/persistence-testnet.md)
   * [Endpoints](build/public-infrastructure/public-infrastructure.md)
   * [Snapshots & Archival Nodes](build/public-infrastructure/public-infrastructure-1.md)
   * [Faucets](build/public-infrastructure/faucets.md)

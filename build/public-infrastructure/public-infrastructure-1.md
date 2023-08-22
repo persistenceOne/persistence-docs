@@ -1,26 +1,20 @@
 # Snapshots & Archival Nodes
 
-{% hint style="warning" %}
-**On Aug 15th, 2023**, test-core`-1` will be deprecated. The new official testnet will be test-core-2. Would request all the current validators to migrate their nodes before that!
-{% endhint %}
-
-
-
 ## Snapshots
 
 To aid with node syncing, the following snapshots are provided.
 
-| Provider         | Mainnet (core-1)                                       | Testnet (test-core-2)                                                                                                                                                                            | Testnet (test-core-1)                               |
-| ---------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| Auto Stake       | https://snapshots.autostake.net/core-1/                | [https://snapshots.autostake.com/test-core-2/](https://snapshots.autostake.com/test-core-2/)                                                                                                     | https://snapshots.autostake.net/test-core-1/        |
-| BlueStake        | https://persistence.bluestake.net/                     |                                                                                                                                                                                                  |                                                     |
-| Bware Labs       | https://bwarelabs.com/snapshots                        |                                                                                                                                                                                                  | https://bwarelabs.com/snapshots                     |
-| High Stakes      | https://tools.highstakes.ch/snapshots/persistence      |                                                                                                                                                                                                  |                                                     |
-| Imperator        | https://imperator.co/services/persistence              |                                                                                                                                                                                                  |                                                     |
-| Paranormal Bros. | https://persistence.paranorm.pro/#snapshot             |                                                                                                                                                                                                  |                                                     |
-| Polkachu         | https://polkachu.com/tendermint\_snapshots/persistence | [https://polkachu.com/testnets/persistence/snapshots](https://polkachu.com/testnets/persistence/snapshots)                                                                                       | https://polkachu.com/testnets/persistence/snapshots |
-| STC Capital      | https://stc.capital/snapshot/xprt                      |                                                                                                                                                                                                  |                                                     |
-| YTWOFUND         |                                                        | [https://github.com/YTWOFUND/PersistenceCore-service/blob/main/PersistenceCoreTestnet/README.md](https://github.com/YTWOFUND/PersistenceCore-service/blob/main/PersistenceCoreTestnet/README.md) |                                                     |
+| Provider         | Mainnet (core-1)                                       | Testnet (test-core-2)                                                                                                                                                                            |
+| ---------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Auto Stake       | https://snapshots.autostake.net/core-1/                | [https://snapshots.autostake.com/test-core-2/](https://snapshots.autostake.com/test-core-2/)                                                                                                     |
+| BlueStake        | https://persistence.bluestake.net/                     |                                                                                                                                                                                                  |
+| Bware Labs       | https://bwarelabs.com/snapshots                        |                                                                                                                                                                                                  |
+| High Stakes      | https://tools.highstakes.ch/snapshots/persistence      |                                                                                                                                                                                                  |
+| Imperator        | https://imperator.co/services/persistence              |                                                                                                                                                                                                  |
+| Paranormal Bros. | https://persistence.paranorm.pro/#snapshot             |                                                                                                                                                                                                  |
+| Polkachu         | https://polkachu.com/tendermint\_snapshots/persistence | [https://polkachu.com/testnets/persistence/snapshots](https://polkachu.com/testnets/persistence/snapshots)                                                                                       |
+| STC Capital      | https://stc.capital/snapshot/xprt                      |                                                                                                                                                                                                  |
+| YTWOFUND         |                                                        | [https://github.com/YTWOFUND/PersistenceCore-service/blob/main/PersistenceCoreTestnet/README.md](https://github.com/YTWOFUND/PersistenceCore-service/blob/main/PersistenceCoreTestnet/README.md) |
 
 **How to use the backups:** Depending on the provider's snapshot, a specific URL above needs to follow a set of instructions. Each table URL has a number attached indicating the usage instructions.
 

@@ -34,18 +34,11 @@
 
 Find more details on relayers via [Map of Zones](https://mapofzones.com/zones/core-1/peers?columnKey=ibcVolumeIn\&period=30d) and via [this dashboard provided by Smart Stake](https://relayers.smartstake.io/network/XPRT)
 
-## **IBC Channels for Persistence Testnet (test-core-1)**
+## **IBC Channels for Persistence Testnet (test-core-2)**
 
 ### Transfers
 
-| source channel | destination chain | destination-chain-id  | destination channel | known operators            |
-| -------------- | ----------------- | --------------------- | ------------------- | -------------------------- |
-| channel-108    | Axelar            | axelar-testnet-lisbon | channel-97          | AUDIT.one                  |
-| channel-105    | Cosmos Hub        | theta-testnet-001     | channel-667         | AUDIT.one, Paranormal Bros |
-
-### ICA
-
-| source-channel | destination | destination-chain-id | destination-channel | port                                                | known operators |
-| -------------- | ----------- | -------------------- | ------------------- | --------------------------------------------------- | --------------- |
-| channel-107    | Cosmos Hub  | theta-testnet-001    | channel-671         | icacontroller-lscosmos\_pstake\_reward\_account     | AUDIT.one       |
-| channel-116    | Cosmos Hub  | theta-testnet-001    | channel-1536        | icacontroller-lscosmos\_pstake\_delegation\_account | AUDIT.one       |
+| source channel | destination chain | destination-chain-id  | destination channel | known operators  |
+| -------------- | ----------------- | --------------------- | ------------------- | ---------------- |
+| channel-0      | Axelar            | axelar-testnet-lisbon | channel-261         | Cosmonaut Stakes |
+| channel-1      | Cosmos Hub        | theta-testnet-001     | channel-2447        | Paranormal Bros  |
