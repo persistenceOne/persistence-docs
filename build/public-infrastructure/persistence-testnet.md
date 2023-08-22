@@ -25,14 +25,14 @@ Browse alternative endpoints from [here](public-infrastructure.md).
 
 ***
 
-### 🌏 Join the testnet
+### 🌏 Join the Testnet
 
 Join the testnet following the instructions on [Run a Testnet Node](../nodes-and-endpoints/join-testnet.md).
 
 ***
 
-### 🆘 Issues and support
+### 🆘 Issues and Support
 
-If you encounter any issues while joining the Osmosis network or have questions about the process, please don't hesitate to reach out for support.
+If you encounter any issues while joining the Persistence network or have questions about the process, please don't hesitate to reach out for support.
 
 For general questions and community support, join the [Persistence Discord](https://discord.persistence.one) and ask in the `#testnet-validators-discussion` channel.
