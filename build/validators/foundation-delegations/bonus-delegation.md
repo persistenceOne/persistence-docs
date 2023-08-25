@@ -2,7 +2,7 @@
 description: Bonus Delegation for Validators Moving Out of High-Density Regions and ISPs!
 ---
 
-# Bonus Delegation
+# ⭐ Bonus Delegation
 
 We are thrilled to announce a special bonus delegation opportunity for all validators who choose to relocate their nodes out of high-density regions and Internet Service Providers (ISPs).&#x20;
 
