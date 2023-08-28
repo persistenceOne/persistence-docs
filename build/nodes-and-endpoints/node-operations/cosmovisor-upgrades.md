@@ -93,7 +93,8 @@ However, for people who don't need such control and want an automated setup to d
 
 **Case A: When you want to activate the auto-download feature on your node**
 
-1. Ensure to set environment variable **DAEMON\_ALLOW\_DOWNLOAD\_BINARIES** to **true** (refer to step.4 in the section "Run the Node using Cosmovisor" of this page) before starting the cosmovisor process (step 5)
+1. Ensure to set environment variable **DAEMON\_ALLOW\_DOWNLOAD\_BINARIES** to **true** (refer to step.4 in the section "Run the Node using Cosmovisor" of this page) before starting the cosmovisor process (step 5)  
+Also make sure cosmovisor has write permission to `~/.persistenceCore/cosmovisor` dir.
 
 **Case B: When creating the governance proposal (skip if you're a node operator)**
 
