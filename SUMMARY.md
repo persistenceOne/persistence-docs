@@ -73,7 +73,7 @@
 * [Modules](build/modules/README.md)
   * [pSTAKE module](build/modules/pstake-module.md)
   * [Epochs module](build/modules/epochs-module.md)
-  * [LSM Module](build/modules/lsm-module.md)
+  * [Liquid Staking Module](build/modules/liquid-staking-module.md)
 * [Developer Tools](build/tools/README.md)
   * [Persistence JS](build/tools/persistence-js.md)
   * [Persistence SDK](build/tools/persistence-sdk.md)

@@ -1,4 +1,4 @@
-# LSM Module
+# Liquid Staking Module
 
 #### Background
 
@@ -38,8 +38,6 @@ Check the wallet wise migration steps [here](https://docs.persistence.one/coin-t
 **Note:** The feature is only available using [pWALLET](http://wallet.persistence.one).
 
 </details>
-
-
 
 ***
 
@@ -109,4 +107,46 @@ delegation_responses:
 
 
 ***
+
+### FAQs
+
+<details>
+
+<summary>How much should I validator bond?</summary>
+
+For every 1 XPRT you validator-bond, you will be eligible to receive up to 250 XPRT tokenized shares from delegators.&#x20;
+
+For example, if you validator bond 1,000 XPRT, you will be eligible for 250,000 XPRT tokensized shares.&#x20;
+
+
+
+We built a tool that recommends how much you should validator bond.&#x20;
+
+👉 [Recommended Validator Bond Tool](https://docs.google.com/spreadsheets/d/13XXa3cHDoDsbXg7cjBRk8i0SBUBG3YoNmtKgUXCXNcI/edit#gid=83969709) 👈
+
+</details>
+
+<details>
+
+<summary>When do I need to validator bond?</summary>
+
+We recommend validator bonding immediately as users (Delgators on your validator) will attempt to migrate their wallet address coin-type from 750 to 118.
+
+At that time, if a validator does not have sufficient validator bond, delegators will not be able to migrate. In this condition delegators can also redelegate the tokens first to a validator which has validator-bond in order to continue the migration process.&#x20;
+
+This acts as an advance for validators to attract more delegation from users in the long run.
+
+</details>
+
+<details>
+
+<summary>Is validator bond different that </summary>
+
+
+
+</details>
+
+
+
+
 
