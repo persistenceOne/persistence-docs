@@ -69,8 +69,21 @@ persistenceCore tx staking validator-bond ValidatorAddress --from mykey
 
 Here’s an example of a successful validator bond transaction on core-1:&#x20;
 
-* First, we must delegate to a validator from a new account: [https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5](https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5)
-* Then, we validator bond from that account: [https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5](https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5)
+* First, we must delegate to a validator from a new account:&#x20;
+
+{% code overflow="wrap" %}
+```url
+https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5
+```
+{% endcode %}
+
+* Then, we validator bond from that account:&#x20;
+
+{% code overflow="wrap" %}
+```url
+https://www.mintscan.io/persistence/transactions/36E58CAAA55BAA9CBC59E7CD0C1F78355AE5268331DB6C23DDC5AB79E001DF0E?height=13165160
+```
+{% endcode %}
 
 
 
