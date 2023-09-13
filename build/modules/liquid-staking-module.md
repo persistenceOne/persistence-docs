@@ -59,6 +59,10 @@ total_liquid_stake_on_validator.amount / Sum(every_delegation_where[bond=True].a
 ```
 {% endcode %}
 
+**Note:** We built a tool that recommends how much you should validator bond.&#x20;
+
+👉 [Recommended Validator Bond Tool](https://docs.google.com/spreadsheets/d/13XXa3cHDoDsbXg7cjBRk8i0SBUBG3YoNmtKgUXCXNcI/edit#gid=83969709)&#x20;
+
 ### How to Validator Bond (Detailed Instructions)
 
 A delegator (or validator operator) can convert a delegation into Validator Bond by signing a ValidatorBond message. The ValidatorBond message is exposed by the staking module and can be executed as follows:
@@ -153,13 +157,70 @@ This acts as an advance for validators to attract more delegation from users in 
 
 <details>
 
-<summary>Is validator bond different that </summary>
+<summary>Which wallet should I validator bond from?</summary>
 
+We recommend validators create a new wallet to validator bond. This can be a new seed phrase, or a wallet derived using an existing seed phrase and a new account index. New wallets are preferred for separation of delegations marked validator bond and regular delegations. There are no partial Validator Bonds: when a delegator or validator converts delegation to a particular validator into Validator Bond, their entire delegation to that validator is converted to Validator Bond.&#x20;
 
+By creating a new wallet to validator bond, an existing delegator can mark part of their delegation as validator bond (by transferring those funds to the new address and marking it as validator bond from that address), while leaving their existing delegation unchanged.
 
 </details>
 
+<details>
 
+<summary>What if I don’t validator bond?</summary>
 
+If a validator has not validator bonded, they will be ineligible for coin-type migration using LSM.&#x20;
 
+Their delegates who wish to migrate their delegated tokens may redelegate away to a validator-bonded validator, in order to migrate their tokens.&#x20;
 
+</details>
+
+<details>
+
+<summary>Can I un-delegate my validator bond?</summary>
+
+To convert validator bond back into standard delegation, simply unbond or redelegate the shares. Unbonding or redelegating a validator bond reduces the amount of validator bond associated with a validator.&#x20;
+
+The following question outlines a case when delegating your validator bond. If unbonding or redelegating a delegator’s validator bond would cause the number of tokens delegated to that validator to exceed 250 times the validator’s resulting validator bond, then the unbonding or redelegation will fail.&#x20;
+
+In this case, the delegator will not be able to unbond until the amount of delegated XPRT shares to the validator decreases, or the amount of validator bond to the validator increases.
+
+</details>
+
+<details>
+
+<summary>Are there any risks associated with validator bond?</summary>
+
+In the event of a slash, validator bond delegations are slashed at the same rate as standard delegations.
+
+</details>
+
+<details>
+
+<summary>Is validator bond a centralizing force?</summary>
+
+Hopefully not! Validators with less voting power require lower amounts of validator bond.&#x20;
+
+The validator bond factor multiplier of 250 also means that the absolute size of the validator bond required isn’t too large, especially relative to the revenue validators can earn from additional delegations they receive from liquid staking providers.
+
+</details>
+
+<details>
+
+<summary>Are validator bonded tokens the same thing as self-bonded tokens?</summary>
+
+No, they are different.&#x20;
+
+Self-bonded tokens are delegations made by a validator operator to their own validator node. Validator bonded tokens are delegations made from any delegator to a validator node, that have been marked as Validator Bond with the validator-bond message.&#x20;
+
+Validator bond delegations have additional unbonding restrictions (see above: “Can I undelegate my validator bond?”) relative to validator bond.
+
+</details>
+
+<details>
+
+<summary>Do self-bonded tokens turn into validator-bond?</summary>
+
+No, they do not. To designate a delegation as validator bond, the delegator must sign a validator-bond message.
+
+</details>
