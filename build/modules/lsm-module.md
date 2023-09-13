@@ -71,64 +71,42 @@ persistenceCore tx staking validator-bond ValidatorAddress --from mykey
 
 Here’s an example of a successful validator bond transaction on core-1:&#x20;
 
-* First, we must delegate to a validator from a new account:&#x20;
-* Then, we validator bond from that account: [https://testnet.mintscan.io/cosmoshub-testnet/txs/BA5B4DEB80DB4105B55D8A196D5D7DC07B178E8776C0B9E16B27CF0F1F154B7E](https://testnet.mintscan.io/cosmoshub-testnet/txs/BA5B4DEB80DB4105B55D8A196D5D7DC07B178E8776C0B9E16B27CF0F1F154B7E)&#x20;
+* First, we must delegate to a validator from a new account: [https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5](https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5)
+* Then, we validator bond from that account: [https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5](https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5)
 
-\
 
 
 Here’s the transaction that was submitted on the command line:
 
-\
-
-
-gaiad tx staking validator-bond ValidatorAddress&#x20;
-
-&#x20; \--from MyKey&#x20;
-
-&#x20; \--fees 1000uatom&#x20;
-
-&#x20; \--chain-id theta-testnet-001
-
-&#x20; \--node https://rpc.sentry-01.theta-testnet.polypore.xyz:443
-
-\
-
+{% code overflow="wrap" fullWidth="false" %}
+```
+ persistenceCore tx staking validator-bond ValidatorAddress 
+ 
+  --from MyKey 
+  --fees 1000uxprt
+  --chain-id core-1
+  --node https://rpc.core.persistence.one:443
+```
+{% endcode %}
 
 You can confirm your conversion to a validator bond succeeded by querying the delegation.&#x20;
 
-\
-\
-\
+```
+persistenceCore q staking delegations DelegatorAddress
 
 
-\> gaiad q staking delegations DelegatorAddress
-
-\
-
-
-delegation\_responses:
-
-\- balance:
-
-&#x20;   amount: "N"
-
-&#x20;   denom: uatom
-
-&#x20; delegation:
-
-&#x20;   delegator\_address: cosmos123...ABC
-
-&#x20;   shares: "1.000000000000000000"
-
-&#x20;   validator\_address: cosmosvaloper123...XYZ
-
-&#x20;   validator\_bond: true  <---- You should see this field = true :)
-
-\
-\
-\
-\
+delegation_responses:
+- balance:
+    amount: "N"
+    denom: uxprt
+  delegation:
+    delegator_address: persistence123...ABC
+    shares: "1.000000000000000000"
+    validator_address: persistencevaloper123...XYZ
+    validator_bond: true  <---- You should see this field = true :)
+```
 
 
-\
+
+***
+
