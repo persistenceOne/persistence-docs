@@ -1,7 +1,5 @@
 # Persistence Wallet
 
-<table><thead><tr><th width="294.66666666666663">When was the wallet created?</th><th width="172">Default Coin-type</th><th>Migration Required?</th></tr></thead><tbody><tr><td>After 8 September 2022</td><td>118 </td><td>No 🎉</td></tr><tr><td>Before 8 Septemeber 2022</td><td>750</td><td>Yes</td></tr><tr><td>Don't remember</td><td>-</td><td><a href="persistence-wallet.md#1.-manual-migration">Complete step 1 &#x26; step 2</a></td></tr></tbody></table>
-
 {% hint style="success" %}
 Both coin-type wallet addresses are supported by keplr. Hence both of the addresses can be used simultaneously.
 {% endhint %}
@@ -63,11 +61,45 @@ Note: If you have multiple tokens in 750 coin-type wallet persistence address, y
 
 {% embed url="https://www.youtube.com/watch?v=d78MfjOPf5I" %}
 
-### 2. Automated Migration
+### 2. Migration using LSM (Without 21-Days un-delegating period)
 
-{% hint style="warning" %}
-Under Development
-{% endhint %}
+<details>
+
+<summary>Step 1: Press 'Token Migration' button</summary>
+
+![](<../.gitbook/assets/Screenshot 2023-09-19 at 1.41.00 AM.png>)
+
+</details>
+
+<details>
+
+<summary>Step 2: Enter the amount &#x26; new address you want to transfer to</summary>
+
+<img src="../.gitbook/assets/Screenshot 2023-09-19 at 1.44.48 AM.png" alt="" data-size="original">
+
+</details>
+
+<details>
+
+<summary>Step 3: Initate migration and follow the on screen steps</summary>
+
+<img src="../.gitbook/assets/Screenshot 2023-09-19 at 1.47.20 AM.png" alt="" data-size="original">
+
+</details>
+
+<details>
+
+<summary>Step 4: Redeem your migrated tokens</summary>
+
+Login into the address where you transferred the tokens and 'redeem' your tokens under 'Tokenized shares' page
+
+<img src="../.gitbook/assets/Screenshot 2023-09-19 at 1.51.41 AM.png" alt="" data-size="original">
+
+
+
+</details>
+
+Voila! your tokens are now migrated to the new address 🎉
 
 ## FAQs
 
