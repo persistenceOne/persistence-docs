@@ -74,7 +74,7 @@
   * [pSTAKE module](build/modules/pstake-module.md)
   * [Epochs module](build/modules/epochs-module.md)
   * [Liquid Staking Module](build/modules/liquid-staking-module/README.md)
-    * [For Validators](build/modules/liquid-staking-module/for-validators.md)
+    * [For Validators](build/modules/liquid-staking-module.md)
 * [Developer Tools](build/tools/README.md)
   * [Persistence JS](build/tools/persistence-js.md)
   * [Persistence SDK](build/tools/persistence-sdk.md)
