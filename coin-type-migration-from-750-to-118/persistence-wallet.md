@@ -1,105 +1,120 @@
 # Persistence Wallet
 
-{% hint style="success" %}
-Both coin-type wallet addresses are supported by keplr. Hence both of the addresses can be used simultaneously.
-{% endhint %}
+### TLDR
 
-## Migration
+This guide is for users who have logged into **pWALLET** using Keystore or Mnemonic/Seed-Phrase & want to migrate their 750 coin-type wallet address to 118 coin-type wallet address.
+
+
+
+## Step 1: Check which coin-type you're using
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 10.31.06 AM.png" alt=""><figcaption></figcaption></figure>
+
+If you already have all your tokens on 118 coin-type wallet address then no migration is needed. However if you have funds in your 750 coin-toye wallet address then you need to proceed with the migration (i.e move to [Step 2](persistence-wallet.md#step-2-migrate-all-the-available-tokens-in-your-wallet)).
+
+***
+
+## Step 2: Migrate all the available tokens in your wallet
 
 {% hint style="info" %}
-If you are looking for Persistence + Ledger wallet addresses, kindly refer to this [page](broken-reference).
+This step will migrate all the available tokens from 750 coin-type address to 118 coin-type address. If you have staked/delegated tokens in your wallet, we'll migrate them in the _step 3_.
 {% endhint %}
 
-_Note: Migration is only required if you are using 750 Coin-type wallet address._
+A. Claim all the pending staking rewards rewards.
 
-### 1. Manual Migration
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.08.05 AM.png" alt=""><figcaption></figcaption></figure>
 
-<details>
+B. Click on **'Migrate Tokens from 750 to 118'**
 
-<summary>Step 1: Download Keystore File for your persistence wallet address</summary>
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 10.43.56 AM.png" alt=""><figcaption></figcaption></figure>
 
-1. Visit Wallet (https://wallet.persistence.one)
-2. From top right hand corner select account icon and download Keystore file
+C. Hit '**Migrate**' button
 
-![](broken-reference)
+{% hint style="info" %}
+By default, all the available tokens and your 118 coin-type wallet address will be pre-filled
+{% endhint %}
 
-</details>
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.04.33 AM (2).png" alt=""><figcaption></figcaption></figure>
 
-<details>
-
-<summary>Step 2: Login using Keystore file</summary>
-
-1. Visit Wallet (https://wallet.persistence.one)
-2. Click "Sign in" from top right corner
-3. Select "Use KeyStore File"
-4. Upload your keystore file and set a password.
-5. Both the coin-type addresses will be displayed and then press "Login"
-6. check if both the coin-types are visible in your account
-
-![](broken-reference)
-
-</details>
-
-<details>
-
-<summary>Step 3: Manually transfer funds from 118 to 750 coin-type address</summary>
-
-1. Copy the new/118 coin-type wallet persistence address from dropdown as shown in step 2.
-2. Go to old/750 coin-type wallet persistence address
-3. Press "Send" and paste the new/118 coin-type wallet address. Select the full amount and hit "Send".&#x20;
-
-Note: If you have multiple tokens in 750 coin-type wallet persistence address, you will have to repeat this step individually for all tokens.
-
-**Do you have staked $XPRT in your wallet address?**
-
-* **Immediate solution:** Unbond your XPRT and migrate to the newly created coin-type 118 wallet address. (21 days unbonding period)
-* **Suggested Migration:** After the launch of the Liquid Staking Module by Iqlusion (Timeline not yet confirmed), the stake can be directly transferred to the new coin-type 118 wallet address without unbonding.
-
-</details>
-
-#### Tutorial:
-
-{% embed url="https://www.youtube.com/watch?v=d78MfjOPf5I" %}
-
-### 2. Migration using LSM (Without 21-Days un-delegating period)
-
-<details>
-
-<summary>Step 1: Press 'Token Migration' button</summary>
-
-![](<../.gitbook/assets/Screenshot 2023-09-19 at 1.41.00 AM.png>)
-
-</details>
-
-<details>
-
-<summary>Step 2: Enter the amount &#x26; new address you want to transfer to</summary>
-
-<img src="../.gitbook/assets/Screenshot 2023-09-19 at 1.44.48 AM.png" alt="" data-size="original">
-
-</details>
-
-<details>
-
-<summary>Step 3: Initate migration and follow the on screen steps</summary>
-
-<img src="../.gitbook/assets/Screenshot 2023-09-19 at 1.47.20 AM.png" alt="" data-size="original">
-
-</details>
-
-<details>
-
-<summary>Step 4: Redeem your migrated tokens</summary>
-
-Login into the address where you transferred the tokens and 'redeem' your tokens under 'Tokenized shares' page
-
-<img src="../.gitbook/assets/Screenshot 2023-09-19 at 1.51.41 AM.png" alt="" data-size="original">
+**Voila!** All of your available tokens are migrated. Now move to step 3, if you have any staked/Delegated Tokens.
 
 
 
-</details>
+***
 
-Voila! your tokens are now migrated to the new address 🎉
+## Step 3: Migrate all the staked/delegated tokens in your wallet
+
+
+
+A. Go to '**Staking**' page and select '**Delegated**' from the sub-menu
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.16.39 AM.png" alt=""><figcaption></figcaption></figure>
+
+B. Check if the validator where you stake/delegate your tokens have enough capacity (i.e Validator Bond) to migrate your tokens (using[ Smartstake](https://analytics.smartstake.io/persistence/valbonds) dashboard)
+
+{% hint style="info" %}
+Eg: As I delegate \~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for the tokens. As in my case the validator has the capacity, we can move forward with the migation process.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.21.56 AM.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+**Note:** If your validator doesn't have enough capacity, ask your validator to increase it or redelegate your staked/delegated tokens to a validator which has enough capacity for your tokens.
+{% endhint %}
+
+
+
+C. Click on '**Actions**'
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.30.27 AM (1).png" alt=""><figcaption></figcaption></figure>
+
+D. Click on '**Transfer Delegation**'
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.32.19 AM.png" alt=""><figcaption></figcaption></figure>
+
+E. Enter the amount and your 118 coin-type wallet address
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.34.15 AM.png" alt=""><figcaption></figcaption></figure>
+
+F. There will be 2 transactions, first to 'tokenise' your tokens & then to 'transfer' them to new address.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.40.57 AM.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+Note: If the transaction fails due to gas issue, increase the gas to 750000. using the 'Advanced' button.
+
+&#x20;<img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.45.45 AM.png" alt="" data-size="original">
+{% endhint %}
+
+
+
+G. Your tokens are now transferred to the 118 coin-type wallet address from 750 coin-type wallet address.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.41.47 AM.png" alt=""><figcaption></figcaption></figure>
+
+H. Toggle to your 118 coin-type wallet address
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.49.51 AM.png" alt=""><figcaption></figcaption></figure>
+
+I. Go to 'Staking' tab, select 'Tokenized Shares' & click on 'Redeem'
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.51.33 AM.png" alt=""><figcaption></figcaption></figure>
+
+J. Click on 'Redeem Shares' & Redeem your tokens.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.53.59 AM.png" alt=""><figcaption></figcaption></figure>
+
+K. Migration done, your staked/delegated tokens will now be visible in the 'Delegated' Section like before.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.59.20 AM.png" alt=""><figcaption></figcaption></figure>
+
+***
+
+## Step 4: Sit back and Relax! 😉
+
+The migration from 750 coin-type to 118 coin-type has been completed successfully.
+
+***
 
 ## FAQs
 
@@ -107,7 +122,7 @@ Voila! your tokens are now migrated to the new address 🎉
 
 <summary>I can't see coin-types in my persistence wallet</summary>
 
-To see both coin-type addresses in your persistence wallet, you need to login using Keystore. [Refer here](persistence-wallet.md#step-1-download-keystore-file-for-your-persistence-wallet-address) on how to download keystore file for your persistence wallet.&#x20;
+To see both coin-type addresses in your persistence wallet, you need to login using Keystore file.
 
 </details>
 
@@ -115,7 +130,7 @@ To see both coin-type addresses in your persistence wallet, you need to login us
 
 <summary>Is there any limit to transfer my tokens?</summary>
 
-No, there is no limit.
+No, there is no limit.&#x20;
 
 </details>
 
@@ -124,6 +139,22 @@ No, there is no limit.
 <summary>URL for Persistence Wallet</summary>
 
 This is the correct URL: https://wallet.persistence.one
+
+</details>
+
+<details>
+
+<summary>I have provided liquidity on Dexter. Will that be transferred too?</summary>
+
+No, this process does not transfer your liquidity. You need to first remove the bonded tokens on dexter, migrate using the above steps & then provide the liquidity again.
+
+</details>
+
+<details>
+
+<summary>Do i need to create a new wallet?</summary>
+
+No, by default both the coin-type will be visible in your wallet
 
 </details>
 

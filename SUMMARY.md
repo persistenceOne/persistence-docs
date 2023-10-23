@@ -96,5 +96,3 @@
 * [😍 Connect & Follow](connect-and-follow.md)
 
 ## Tutorials
-
-* [Coin-type migration for pWALLET](tutorials/coin-type-migration-for-pwallet.md)
