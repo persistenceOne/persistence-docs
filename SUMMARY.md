@@ -94,3 +94,7 @@
   * [Citadel Wallet](coin-type-migration-from-750-to-118/citadel-wallet.md)
   * [Ledger Hardware Wallet](coin-type-migration-from-750-to-118/ledger-hardware-wallet.md)
 * [😍 Connect & Follow](connect-and-follow.md)
+
+## Tutorials
+
+* [Coin-type migration for pWALLET](tutorials/coin-type-migration-for-pwallet.md)
