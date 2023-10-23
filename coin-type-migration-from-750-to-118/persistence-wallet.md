@@ -10,14 +10,14 @@ This guide is for users who have logged into **pWALLET** using Keystore or Mnemo
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 10.31.06 AM.png" alt=""><figcaption></figcaption></figure>
 
-If you already have all your tokens on 118 coin-type wallet address then no migration is needed. However if you have funds in your 750 coin-toye wallet address then you need to proceed with the migration (i.e move to [Step 2](persistence-wallet.md#step-2-migrate-all-the-available-tokens-in-your-wallet)).
+If you already have all your tokens on 118 coin-type wallet address then no migration is needed. However if you have funds in your 750 coin-type wallet address then you need to proceed with the migration (i.e move to [Step 2](persistence-wallet.md#step-2-migrate-all-the-available-tokens-in-your-wallet)).
 
 ***
 
 ## Step 2: Migrate all the available tokens in your wallet
 
 {% hint style="info" %}
-This step will migrate all the available tokens from 750 coin-type address to 118 coin-type address. If you have staked/delegated tokens in your wallet, we'll migrate them in the _step 3_.
+This step will migrate all the available tokens from 750 coin-type address to 118 coin-type address. If you have staked/delegated tokens in your wallet, we'll migrate them in the [_Step 3_](persistence-wallet.md#step-3-migrate-all-the-staked-delegated-tokens-in-your-wallet).
 {% endhint %}
 
 A. Claim all the pending staking rewards rewards.
@@ -38,8 +38,6 @@ By default, all the available tokens and your 118 coin-type wallet address will 
 
 **Voila!** All of your available tokens are migrated. Now move to step 3, if you have any staked/Delegated Tokens.
 
-
-
 ***
 
 ## Step 3: Migrate all the staked/delegated tokens in your wallet
@@ -53,7 +51,7 @@ A. Go to '**Staking**' page and select '**Delegated**' from the sub-menu
 B. Check if the validator where you stake/delegate your tokens have enough capacity (i.e Validator Bond) to migrate your tokens (using[ Smartstake](https://analytics.smartstake.io/persistence/valbonds) dashboard)
 
 {% hint style="info" %}
-Eg: As I delegate \~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for the tokens. As in my case the validator has the capacity, we can move forward with the migation process.
+Eg: As I delegate \~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migation process.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.21.56 AM.png" alt=""><figcaption></figcaption></figure>
@@ -96,11 +94,11 @@ H. Toggle to your 118 coin-type wallet address
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.49.51 AM.png" alt=""><figcaption></figcaption></figure>
 
-I. Go to 'Staking' tab, select 'Tokenized Shares' & click on 'Redeem'
+I. Go to '**Staking**' tab, select '**Tokenized Shares**' & click on '**Redeem**'
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.51.33 AM.png" alt=""><figcaption></figcaption></figure>
 
-J. Click on 'Redeem Shares' & Redeem your tokens.
+J. Click on '**Redeem Shares**' & Redeem your tokens.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.53.59 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -110,7 +108,7 @@ K. Migration done, your staked/delegated tokens will now be visible in the 'Dele
 
 ***
 
-## Step 4: Sit back and Relax! 😉
+## Step 4: Sit back and Relax! 🎉
 
 The migration from 750 coin-type to 118 coin-type has been completed successfully.
 
