@@ -1,6 +1,6 @@
 # ⭕ Coin-type Migration from 750 to 118
 
-<img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 1.01.40 PM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Currently both 118 & 750 coin-type addresses are supported by the Persistence Core-1 chain and will work as normal.&#x20;
