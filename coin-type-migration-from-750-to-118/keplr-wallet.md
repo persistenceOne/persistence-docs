@@ -1,10 +1,84 @@
 # Keplr Wallet
 
+### TLDR
+
+This guide is for users who use [Keplr wallet](https://keplr.app/) & want to migrate their 750 coin-type wallet address to 118 coin-type wallet address.
+
+***
+
+### Is migration for my wallet address needed?
+
 <table><thead><tr><th width="294.66666666666663">When was the wallet created?</th><th width="172">Default Coin-type</th><th>Migration Required?</th></tr></thead><tbody><tr><td>After 7 October 2022</td><td>118 </td><td>No 🎉</td></tr><tr><td>Before 7 October 2022</td><td>750</td><td>Yes</td></tr><tr><td>Don't remember</td><td>-</td><td><a href="keplr-wallet.md#q1.-i-dont-remember-when-my-keplr-account-was-created.">Refer here</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 Both coin-type wallet addresses are supported by keplr. Hence both of the addresses can be used simultaneously.
 {% endhint %}
+
+<details>
+
+<summary>How to check wallet's coin-type</summary>
+
+
+
+
+
+
+
+</details>
+
+
+
+## Step 1: Check which coin-type you're using
+
+<details>
+
+<summary>Add your wallet again in keplr</summary>
+
+
+
+<img src="../.gitbook/assets/Screenshot 2023-11-01 at 11.55.16 PM.png" alt="" data-size="original">
+
+<img src="../.gitbook/assets/Screenshot 2023-11-01 at 11.55.25 PM.png" alt="" data-size="original">
+
+![](<../.gitbook/assets/Screenshot 2023-11-01 at 11.55.34 PM.png>)
+
+![](<../.gitbook/assets/Screenshot 2023-11-01 at 11.56.01 PM.png>)
+
+Note: Name this wallet as "Wallet 2"
+
+</details>
+
+<details>
+
+<summary>Select derivation path</summary>
+
+
+
+
+
+You'll be given an option to select the coin-type
+
+![](<../.gitbook/assets/Screenshot 2023-11-01 at 11.56.52 PM.png>)
+
+</details>
+
+{% hint style="success" %}
+**Note:** If you didn't get the option to select your coin-type, that means that you are already on 118 coin-type & no migration is needed.
+{% endhint %}
+
+## Step 2: Make sure you have both the coin-types (750 & 118) wallet addresses added in keplr.&#x20;
+
+In this documentation, we will be denoting <mark style="color:orange;">Wallet 1</mark> as the wallet with 750 coin-type wallet address and <mark style="color:green;">Wallet 2</mark> as the wallet with 118 coin-type wallet address.&#x20;
+
+Hence in this process, we have to move tokens from <mark style="color:orange;">Wallet 1</mark> to <mark style="color:green;">Wallet 2</mark>.
+
+## Step 3: Login to pWALLET with keplr & copy the wallet address&#x20;
+
+* Select <mark style="color:orange;">Wallet 1</mark> from the Keplr Extention
+
+
+
+*
 
 ## Migration
 
@@ -60,8 +134,6 @@ Do you have staked $XPRT in your wallet address?
 </details>
 
 #### Step-by-step tutorial:
-
-{% embed url="https://www.youtube.com/watch?embeds_euri=https://cdn.iframe.ly/&feature=emb_logo&v=eFfxKeKtcDM" %}
 
 <details>
 
