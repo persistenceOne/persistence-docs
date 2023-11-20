@@ -20,7 +20,7 @@ If you already have all your tokens on 118 coin-type wallet address then no migr
 This step will migrate all the available tokens from 750 coin-type address to 118 coin-type address. If you have staked/delegated tokens in your wallet, we'll migrate them in the [_Step 3_](persistence-wallet.md#step-3-migrate-all-the-staked-delegated-tokens-in-your-wallet).
 {% endhint %}
 
-A. Claim all the pending staking rewards rewards.
+A. Claim all the pending staking rewards.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.08.05 AM.png" alt=""><figcaption></figcaption></figure>
 
