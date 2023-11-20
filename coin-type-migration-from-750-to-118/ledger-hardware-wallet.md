@@ -9,7 +9,8 @@
 ### 1. Persistence App + Ledger
 
 {% hint style="warning" %}
-Currently under development. Please circle back later or fill out the [form](https://forms.gle/mTKhEH4zBGH2zLMp9) to receive timely update once the integration is complete.&#x20;
+We're revamping this doc. Kindly revisit this page by 23rd Nov 2023. \
+For urgent queries feel free to contact us on our official channels.&#x20;
 {% endhint %}
 
 <details>
