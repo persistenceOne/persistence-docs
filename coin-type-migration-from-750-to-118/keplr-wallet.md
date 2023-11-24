@@ -14,10 +14,6 @@ This guide is for users who use [Keplr wallet](https://keplr.app/) & want to mig
 Both coin-type wallet addresses are supported by keplr. Hence both of the addresses can be used simultaneously.
 {% endhint %}
 
-{% hint style="info" %}
-Same steps can be used when migrating keplr with Ledger wallet
-{% endhint %}
-
 ## Step 1: Check which coin-type you're using
 
 <details>
@@ -41,10 +37,6 @@ Note: Name this wallet as "Wallet 2"
 <details>
 
 <summary>Select derivation path</summary>
-
-
-
-
 
 You'll be given an option to select the coin-type
 
