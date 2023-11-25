@@ -6,7 +6,7 @@ This guide is for users who use Ledger Hardware Wallet & want to migrate their 7
 
 ## How do you use your ledger?
 
-<table><thead><tr><th align="center">Variation</th><th width="205" align="center">118 Coin-type</th><th align="center">750 Coin-type</th><th>Migration Required?</th><th align="center">Default</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">Supported</td><td align="center">Not Supported</td><td>No 🎉</td><td align="center">118 Coin-type</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">Not Supported</td><td align="center">Supported</td><td>Yes</td><td align="center">750 Coin-type</td></tr></tbody></table>
+<table><thead><tr><th width="156" align="center">Variation</th><th width="152" align="center">Default</th><th data-hidden width="145" align="center">118 Coin-type</th><th data-hidden width="146" align="center">750 Coin-type</th><th data-hidden width="192">Migration Required?</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">118 Coin-type</td><td align="center">Supported</td><td align="center">Not Supported</td><td>No 🎉</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">750 Coin-type</td><td align="center">Not Supported</td><td align="center">Supported</td><td>Yes</td></tr></tbody></table>
 
 <details>
 
@@ -36,7 +36,7 @@ If you login into pWALLET using cosmos ledger app, then you're on 118 coin-type 
 ### 1. Persistence App + Ledger
 
 {% hint style="warning" %}
-We're revamping this doc. Kindly revisit this page by 23rd Nov 2023. \
+We're revamping this doc. Kindly revisit this page by 11:59 UTC on 25th Nov 2023. \
 For urgent queries feel free to contact us on our official channels.&#x20;
 {% endhint %}
 
