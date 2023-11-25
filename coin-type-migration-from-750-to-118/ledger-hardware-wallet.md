@@ -6,7 +6,14 @@ This guide is for users who use Ledger Hardware Wallet & want to migrate their 7
 
 ## How do you use your ledger?
 
-<table><thead><tr><th width="156" align="center">Variation</th><th width="152" align="center">Default</th><th data-hidden width="145" align="center">118 Coin-type</th><th data-hidden width="146" align="center">750 Coin-type</th><th data-hidden width="192">Migration Required?</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">118 Coin-type</td><td align="center">Supported</td><td align="center">Not Supported</td><td>No 🎉</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">750 Coin-type</td><td align="center">Not Supported</td><td align="center">Supported</td><td>Yes</td></tr></tbody></table>
+
+
+<table data-header-hidden><thead><tr><th width="174">Variation</th><th width="146">118 Coin-type</th><th width="152">750 Coin-type</th><th width="188">Migration Required?</th><th data-hidden>Default</th></tr></thead><tbody><tr><td>Keplr + Ledger</td><td>Supported</td><td>Not Supported</td><td>No 🎉</td><td>118 Coin-type</td></tr><tr><td>Persistence App + Ledger</td><td>Not Supported</td><td>Supported</td><td>Yes</td><td>750 Coin-type</td></tr></tbody></table>
+
+\
+
+
+<table><thead><tr><th width="156" align="center">Variation</th><th width="152" align="center">Default</th><th data-hidden align="center">118 Coin-type</th><th data-hidden align="center">750 Coin-type</th><th data-hidden>Migration Required?</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">118 Coin-type</td><td align="center">Supported</td><td align="center">Not Supported</td><td>No 🎉</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">750 Coin-type</td><td align="center">Not Supported</td><td align="center">Supported</td><td>Yes</td></tr></tbody></table>
 
 <details>
 
