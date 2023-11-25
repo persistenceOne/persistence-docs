@@ -1,15 +1,12 @@
 # Ledger Hardware Wallet
 
-We're revamping this doc. Kindly revisit this page by 11:59 UTC on 25th Nov 2023. \
-For urgent queries feel free to contact us on our official channels.&#x20;
-
 ### TLDR
 
 This guide is for users who use Ledger using Persistence Ledger App & want to migrate their 750 coin-type wallet address to 118 coin-type wallet address.
 
 ## How do you use your ledger?
 
-<table><thead><tr><th width="159" align="center">Variation</th><th width="205" align="center">118 Coin-type</th><th align="center">750 Coin-type</th><th width="185">Migration Required?</th><th align="center">Default</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">Supported</td><td align="center">Not Supported</td><td>No 🎉</td><td align="center">118 Coin-type</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">Not Supported</td><td align="center">Supported</td><td>Yes</td><td align="center">750 Coin-type</td></tr></tbody></table>
+<table><thead><tr><th width="159" align="center">Variation</th><th data-hidden align="center">118 Coin-type</th><th data-hidden align="center">Default</th><th data-hidden align="center">750 Coin-type</th><th data-hidden>Migration Required?</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">Supported</td><td align="center">118 Coin-type</td><td align="center">Not Supported</td><td>No 🎉</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">Not Supported</td><td align="center">750 Coin-type</td><td align="center">Supported</td><td>Yes</td></tr></tbody></table>
 
 <details>
 
@@ -216,6 +213,34 @@ C. Migration done, your staked/delegated tokens will now be visible in the 'Dele
 ## Step 7: Sit back and Relax! 🎉
 
 The migration from 750 coin-type to 118 coin-type has been completed successfully.
+
+
+
+## FAQs
+
+<details>
+
+<summary>Is there any limit to transfer my tokens?</summary>
+
+No, there is no limit.&#x20;
+
+</details>
+
+<details>
+
+<summary>URL for Persistence Wallet</summary>
+
+This is the correct URL: https://wallet.persistence.one
+
+</details>
+
+<details>
+
+<summary>I have provided liquidity on Dexter. Will that be transferred too?</summary>
+
+No, this process does not transfer your liquidity. You need to first remove the bonded tokens on dexter, migrate using the above steps & then provide the liquidity again.
+
+</details>
 
 <details>
 

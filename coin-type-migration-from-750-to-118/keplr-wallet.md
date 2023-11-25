@@ -167,3 +167,42 @@ C. Migration done, your staked/delegated tokens will now be visible in the 'Dele
 ## Step 5: Sit back and Relax! 🎉
 
 The migration from 750 coin-type to 118 coin-type has been completed successfully.
+
+
+
+## FAQs
+
+<details>
+
+<summary>Is there any limit to transfer my tokens?</summary>
+
+No, there is no limit.&#x20;
+
+</details>
+
+<details>
+
+<summary>URL for Persistence Wallet</summary>
+
+This is the correct URL: https://wallet.persistence.one
+
+</details>
+
+<details>
+
+<summary>I have provided liquidity on Dexter. Will that be transferred too?</summary>
+
+No, this process does not transfer your liquidity. You need to first remove the bonded tokens on dexter, migrate using the above steps & then provide the liquidity again.
+
+</details>
+
+<details>
+
+<summary>⚠️Things to Remember</summary>
+
+1. No one from the persistence team will contact you to help you migrate your tokens.&#x20;
+2. Never share your seed/keystore with anyone.&#x20;
+3. Always make sure that you are using the correct and SSL enabled URL.
+4. The only way to contact persistence team is by messaging on the verified [Peristence community chat on Telegram](https://t.me/PersistenceOneChat).&#x20;
+
+</details>
