@@ -6,19 +6,19 @@ This guide is for users who use Ledger using Persistence Ledger App & want to mi
 
 ## How do you use your ledger?
 
-<table><thead><tr><th width="159" align="center">Variation</th><th data-hidden align="center">118 Coin-type</th><th data-hidden align="center">Default</th><th data-hidden align="center">750 Coin-type</th><th data-hidden>Migration Required?</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td align="center">Supported</td><td align="center">118 Coin-type</td><td align="center">Not Supported</td><td>No 🎉</td></tr><tr><td align="center">Persistence App + Ledger</td><td align="center">Not Supported</td><td align="center">750 Coin-type</td><td align="center">Supported</td><td>Yes</td></tr></tbody></table>
+<table><thead><tr><th align="center">Variation</th><th>Migration Required?</th><th align="center">750 Coin-type</th><th data-hidden align="center">118 Coin-type</th><th data-hidden align="center">Default</th></tr></thead><tbody><tr><td align="center">Keplr + Ledger</td><td>No 🎉</td><td align="center">Not Supported</td><td align="center">Supported</td><td align="center">118 Coin-type</td></tr><tr><td align="center">Persistence App + Ledger</td><td>Yes</td><td align="center">Supported</td><td align="center">Not Supported</td><td align="center">750 Coin-type</td></tr></tbody></table>
 
 <details>
 
 <summary>What do you mean by variation? </summary>
 
-1. Keplr + Ledger
+1. **Keplr (With Cosmos Ledger App) + Ledger**
 
 Keplr by default only support 118 coin-type address derivation path for all the addresses generated through keplr since the beginning. Hence if you have always used keplr for your persistence address then you **don't** need wallet migration.&#x20;
 
-2. Persistence App (pWallet) + Ledger
+2. **pWallet (With Persistence Ledger App) + Ledger**
 
-pWALLET by default only support 750 coin-type address derivation path for all the addresses generated through pWALLET since the beginning. Hence if you have always used keplr for your persistence address then you need wallet migration. \
+pWALLET (When connected with Persistence Ledger App) by default only support 750 coin-type address derivation path for all the addresses generated through pWALLET since the beginning. Hence if you have always used pWALLET (with Persistence Ledger App) for your persistence address then you need coin-type  wallet migration.\
 **Note:** As pWALLET only supports 750 coin-type derivation path, so in this migration you'll have to add your ledger wallet in keplr. Steps are mentioned in the next steps.
 
 </details>
