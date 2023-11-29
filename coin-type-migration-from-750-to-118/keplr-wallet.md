@@ -113,7 +113,9 @@ F. There will be 2 transactions, first to 'tokenise' your tokens & then to 'tran
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 11.40.57 AM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-Note: If the transaction fails due to gas issue, increase the gas to 750000. using the 'Advanced' button.
+Note: If the transaction fails due to gas issue, increase the gas to 750000 and select 'Zero' Option. using the 'Advanced' button.\
+\
+Once you process this transaction, it can take upto 1-2 mins for the transaction to complete. To cross check, refresh the wallet and check for your balance.&#x20;
 
 &#x20;![](<../.gitbook/assets/Screenshot 2023-11-02 at 12.56.03 AM.png>)
 {% endhint %}
