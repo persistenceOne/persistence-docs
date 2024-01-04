@@ -96,4 +96,5 @@
   * [Math Wallet](coin-type-migration-from-750-to-118/math-wallet.md)
   * [Leap Wallet](coin-type-migration-from-750-to-118/leap-wallet.md)
   * [Citadel Wallet](coin-type-migration-from-750-to-118/citadel-wallet.md)
+* [🌎 Geofencing on Persistence](geofencing-on-persistence.md)
 * [😍 Connect & Follow](connect-and-follow.md)
