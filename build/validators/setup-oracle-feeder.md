@@ -41,7 +41,7 @@ The `x/oracle` requires that all validators vote on the price of assets which go
     - Update `[account]` information with correct chain-id (`core-1` for mainnet, `test-core-1` for testnet), address and validator address from your keyring
 
         ```toml
-        [acount]
+        [account]
         address = "persistence152nvc6f096v6n6tr5lg50xq22ak0chsr0ru7xc" # oracle account address
         chain_id = "test-core-1"
         validator = "persistencevaloper1pkkayn066msg6kn33wnl5srhdt3tnu2v94kvz9"

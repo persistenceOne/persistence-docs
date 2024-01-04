@@ -56,7 +56,7 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 
 #### macOS
 
-1.  Dowload the latest version of **Go** for macOS:
+1.  Download the latest version of **Go** for macOS:
 
     ```bash
     wget https://go.dev/dl/go1.19.5.darwin-amd64.pkg

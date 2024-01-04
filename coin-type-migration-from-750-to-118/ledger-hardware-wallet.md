@@ -103,7 +103,7 @@ A. Click on 'Sign In'
 B. Connect using 'Use Keplr'
 
 {% hint style="info" %}
-Make sure your Ledger wallet is selected in your keplr extention.&#x20;
+Make sure your Ledger wallet is selected in your keplr extension.&#x20;
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-25 at 3.31.24 PM.png" alt=""><figcaption></figcaption></figure>
@@ -193,7 +193,7 @@ C. Send all the tokens to your new coin-type wallet address which you copied.
 ### Step 6: Sign into pWallet back with Keplr app
 
 {% hint style="info" %}
-Make sure your Ledger wallet is selected in your keplr extention.&#x20;
+Make sure your Ledger wallet is selected in your keplr extension.&#x20;
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-25 at 3.31.24 PM.png" alt=""><figcaption></figcaption></figure>
@@ -251,6 +251,6 @@ No, this process does not transfer your liquidity. You need to first remove the 
 1. No one from the persistence team will contact you to help you migrate your tokens.&#x20;
 2. Never share your seed with anyone.&#x20;
 3. Always make sure that you are using the correct and SSL enabled URL.
-4. The only way to contact persistence team is by messaging on the verified [Peristence community chat on Telegram](https://t.me/PersistenceOneChat).&#x20;
+4. The only way to contact persistence team is by messaging on the verified [Persistence community chat on Telegram](https://t.me/PersistenceOneChat).&#x20;
 
 </details>

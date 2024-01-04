@@ -165,6 +165,6 @@ No, by default both the coin-type will be visible in your wallet
 1. No one from the persistence team will contact you to help you migrate your tokens.&#x20;
 2. Never share your seed/keystore with anyone.&#x20;
 3. Always make sure that you are using the correct and SSL enabled URL.
-4. The only way to contact persistence team is by messaging on the verified [Peristence community chat on Telegram](https://t.me/PersistenceOneChat).&#x20;
+4. The only way to contact persistence team is by messaging on the verified [Persistence community chat on Telegram](https://t.me/PersistenceOneChat).&#x20;
 
 </details>

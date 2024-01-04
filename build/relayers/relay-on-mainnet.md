@@ -143,7 +143,7 @@ rly config init --memo "My custom memo"
 
 Custom memos will have `rly(VERSION)` appended. For example, a memo of `My custom memo` running on relayer version `v2.0.0` would result in a transaction memo of `My custom memo | rly(v2.0.0)`.
 
-Aditionally, the memo can be changed anytime in the following file: `~/.relayer/config/config.yaml`
+Additionally, the memo can be changed anytime in the following file: `~/.relayer/config/config.yaml`
 
 \
 
