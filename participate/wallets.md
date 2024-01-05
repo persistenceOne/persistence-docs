@@ -54,7 +54,7 @@ Tutorial/Guide:
 ## Leap Cosmos
 
 {% embed url="https://www.leapwallet.io/" %}
-Leap Cosmos Wallet can be used via Android, iOS, and Chrome Extension in conjuction with Ledger.\
+Leap Cosmos Wallet can be used via Android, iOS, and Chrome Extension in conjunction with Ledger.\
 Be aware that Leap Cosmos is in Beta.
 {% endembed %}
 

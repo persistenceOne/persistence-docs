@@ -30,7 +30,7 @@ proposal vote period:
 
 ### 3. Instantiate Contract
 
-Once the above proposal passes your code will be submitted to the chain, and you will recieve your codeId. You wont get your contract address yet. CodeId is used for initiating the contract after which you will receive the contract address and use it for the intended purpose.
+Once the above proposal passes your code will be submitted to the chain, and you will receive your codeId. You won't get your contract address yet. CodeId is used for initiating the contract after which you will receive the contract address and use it for the intended purpose.
 
 Find a reference on [how to submit a proposal for initiating contract?](uploading-a-contract.md#initiate-contract)
 

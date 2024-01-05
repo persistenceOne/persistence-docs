@@ -16,7 +16,7 @@ npm install persistenceonejs
 
 ### Usage
 
-PersistenceClient consistes of a `signingStargateClient` and a `SigningCowsmWasmClient`, refered to as core and wasm respectively.
+PersistenceClient consists of a `signingStargateClient` and a `SigningCowsmWasmClient`, referred to as core and wasm respectively.
 
 For querying use PersistenceClient.query, this gives you a `tmclient`. Usage for a tmclient for querying is based on `cosmos-sdk` i.e. query path is taken from module locations.
 

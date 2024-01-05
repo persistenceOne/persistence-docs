@@ -3,7 +3,7 @@ These are etiquetts for contributing to the documentation related to persistence
 
 1. For requesting or adding a new documentation consider the following things:
     - If a new documentation is requested, then raise an issue on this repo. This will provide a good platform for discussion, it can also be resolved easily if an existing resource (blog or otherwise exists) can help you.
-    - If you want to change an already existing docuentation, please check the issues again to see if it is being addressed or has been closed before.
+    - If you want to change an already existing documentation, please check the issues again to see if it is being addressed or has been closed before.
     - If the documentation in concern belongs to another repository then consider the above points and reference the issue on the said repository in your [Pull request](#pull-request).
     - If you are having a discussion on an issue, please consider researching other related documentations like [Cosmos-sdk](https://docs.cosmos.network/) or [CosmWasm](https://docs.cosmwasm.com/docs/1.0/) to see if you can find a related problem or solutions.
 

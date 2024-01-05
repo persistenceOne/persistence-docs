@@ -4,7 +4,7 @@ description: Earn Trading Fees by providing Liquidity
 
 # Provide Liquidity
 
-Liquidity is a crucial element of DeFi, and providing liquidity can therefor be a lucrative opportunity as you can earn a percentage of the trading fees, and often also incentives. There are various places where you can put your $XPRT tokens to work in Liquidity Pools, but do keep in mind the risks associated, including [Impermanent Loss](https://academy.binance.com/en/articles/impermanent-loss-explained).
+Liquidity is a crucial element of DeFi, and providing liquidity can therefore be a lucrative opportunity as you can earn a percentage of the trading fees, and often also incentives. There are various places where you can put your $XPRT tokens to work in Liquidity Pools, but do keep in mind the risks associated, including [Impermanent Loss](https://academy.binance.com/en/articles/impermanent-loss-explained).
 
 ## LP on Osmosis
 

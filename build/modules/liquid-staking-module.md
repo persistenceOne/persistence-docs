@@ -115,7 +115,7 @@ We built a tool that recommends how much you should validator bond.&#x20;
 
 <summary>When do I need to validator bond?</summary>
 
-We recommend validator bonding immediately as users (Delgators on your validator) will attempt to migrate their wallet address coin-type from 750 to 118.
+We recommend validator bonding immediately as users (Delegators on your validator) will attempt to migrate their wallet address coin-type from 750 to 118.
 
 At that time, if a validator does not have sufficient validator bond, delegators will not be able to migrate. In this condition delegators can also redelegate the tokens first to a validator which has validator-bond in order to continue the migration process.&#x20;
 
