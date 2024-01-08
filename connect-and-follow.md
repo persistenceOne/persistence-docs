@@ -9,11 +9,3 @@
 ## Telegram Communities
 
 <table><thead><tr><th width="204">Country or Region</th><th width="214.33333333333331">Moderator / Facilitator</th><th width="381.6666666666667">Link</th></tr></thead><tbody><tr><td>Global</td><td>Persistence</td><td><a href="https://t.me/PersistenceOne">https://t.me/PersistenceOne</a></td></tr><tr><td>China</td><td></td><td><a href="https://t.me/PersistenceOneChina">https://t.me/PersistenceOneChina</a></td></tr><tr><td>France</td><td>StakeLab</td><td><a href="https://t.me/PersistenceOneFrance">https://t.me/PersistenceOneFrance</a></td></tr><tr><td>Russia</td><td>PostHuman</td><td><a href="https://t.me/PersistenceRussia">https://t.me/PersistenceRussia</a></td></tr><tr><td>South-Korea</td><td>Nonce</td><td><a href="https://t.me/PersistenceKorea">https://t.me/PersistenceKorea</a></td></tr><tr><td>Spain</td><td>Cosmonaut Stakes</td><td><a href="https://t.me/PersistenceOneESP">https://t.me/PersistenceOneESP</a></td></tr><tr><td>Turkey</td><td>Wonder wasp</td><td><a href="https://t.me/PersistenceOneTurkey">https://t.me/PersistenceOneTurkey</a></td></tr><tr><td>Vietnam</td><td>Megala</td><td><a href="https://t.me/PersistenceOneVietnam">https://t.me/PersistenceOneVietnam</a></td></tr></tbody></table>
-
-
-
-## Twitter Database
-
-This embedded sheet shows all the tweets published on [@PersistenceOne](https://twitter.com/PersistenceOne) handle from **25th march 2023** onwards. &#x20;
-
-{% embed url="https://docs.google.com/spreadsheets/d/1RGWpc-z7qlbmMJ1PH4uRYvuITVf0-N140dQHm2YnsIQ/edit?usp=sharing" %}
