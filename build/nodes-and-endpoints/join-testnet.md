@@ -27,27 +27,39 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     ```bash
     rm -rf /usr/local/go
     ```
-2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
-3.  Download the latest version of **Go** (1.19.5 as of time of writing):
+2.  Add the Go PPA to Your System:
+
+    First, add the `longsleep/golang-backports` PPA to your system. This repository contains the latest version of Go. You can add it by running the following command in your terminal:
 
     ```bash
-    wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
+    sudo add-apt-repository ppa:longsleep/golang-backports
     ```
-4.  Extract the contents of the archive into /usr/local:
+3.  **Update Your Package List**:
+
+    After adding the PPA, update your package list to include the latest packages available in the repository:
 
     ```bash
-    tar -C /usr/local -xzf go1.19.5.linux-amd64.tar.gz
+    sudo apt update
     ```
-5.  Set **$GOPATH** by copying & pasting the following commands in your terminal:
+4.  **Install Go**:
+
+    Now, install Go using the `apt` package manager. This command will install the latest version of Go available in the PPA:
+
+    ```bash
+    sudo apt install golang-go
+    ```
+5.  **Set Up Your Go Environment**:\
+    After installation, set up your Go workspace and add Go binaries to your PATH. You can do this by adding the following lines to your `~/.profile` file:
 
     ```bash
     echo "" >> ~/.profile
     echo "export GOPATH=$HOME/go" >> ~/.profile
-    echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile	
+    echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
     source ~/.profile
-    mkdir -p $GOPATH/bin
     ```
-6.  Check **Go** is installed correctly _(sample output: `go version go1.19.5 linux/amd64`)_:
+6.  **Verify the Installation**:
+
+    Finally, verify that Go has been installed correctly by checking its version. You should see the latest version of Go as the output:
 
     ```bash
     go version
@@ -136,35 +148,39 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 2.  Download the **test-core-2 genesis** file:
 
     ```bash
-    cd ~/.persistenceCore/config && wget -O genesis.json  https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-2/final_genesis.json
+    wget -O genesis.json https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-2/genesis.json
     ```
-3. Use **StateSync** to sync with the rest of the nodes. Follow the step-by-step guide below:
-   *   Run the following command and copy the values of `trust_height` and `trust_hash`. They are required in the next steps.
+3.  Use **StateSync** to sync with the rest of the nodes. Follow the step-by-step guide below:
 
-       ```bash
-       curl -s https://persistence-testnet-rpc.cosmonautstakes.com/status | jq '.result .sync_info | {trust_height: .latest_block_height, trust_hash: .latest_block_hash} | values'
-       ```
-   *   Open config:
+    *   Run the following command and copy the values of `trust_height` and `trust_hash`. They are required in the next steps.
 
-       ```bash
-       nano ~/.persistenceCore/config/config.toml
-       ```
-   *   Replace the existing settings in the opened file with the following:
+        ```bash
+        curl -s https://persistence-testnet-rpc.cosmonautstakes.com/status | jq '.result .sync_info | {trust_height: .latest_block_height, trust_hash: .latest_block_hash} | values'
+        ```
+    *   Open config:
 
-       ```
-       [p2p]
-       seeds = "b4237f8a7ca357d380ad119b76cbceec7e7e8a75@seed.testnet.persistence.one:26656"
+        ```bash
+        nano ~/.persistenceCore/config/config.toml
+        ```
+    *   Replace the existing settings in the opened file with the following:
 
-       persistent_peers = "14ecdc5126ea8d93c7d3a863d9d38e380e46fc06@185.225.233.30:26656"
+        ```
+        [p2p]
+        seeds = "b4237f8a7ca357d380ad119b76cbceec7e7e8a75@seed.testnet.persistence.one:26656"
 
-       [statesync]
-       enable = true
-       rpc_servers = "https://persistence-testnet-rpc.cosmonautstakes.com:443,https://persistence-testnet-rpc.cosmonautstakes.com:443"
-       trust_height = XXXXXXX # Replace with the value copied in the previous step
-       trust_hash = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Replace with the value copied in the previous step
-       trust_period = "112h0m0s"
-       ```
-   * Make sure you replace `trust_height` and `trust_hash` values with the ones you've copied in the previous step.
+        persistent_peers = "14ecdc5126ea8d93c7d3a863d9d38e380e46fc06@185.225.233.30:26656"
+
+        [statesync]
+        enable = true
+        rpc_servers = "https://persistence-testnet-rpc.cosmonautstakes.com:443,https://persistence-testnet-rpc.cosmonautstakes.com:443"
+        trust_height = XXXXXXX # Replace with the value copied in the previous step
+        trust_hash = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Replace with the value copied in the previous step
+        trust_period = "112h0m0s"
+        ```
+    * Make sure you replace `trust_height` and `trust_hash` values with the ones you've copied in the previous step.
+
+    Note: Refer to peers here: [peers.json](https://github.com/persistenceOne/networks/blob/auditOne/test-core-2/test-core-2/peers.json) . \
+    &#x20;          For additional helpful values like seeds, refer here: [polkachu](https://polkachu.com/testnets/persistence) .
 4.  Open the `app.toml` file _(application-related configuration file)_:
 
     ```bash
