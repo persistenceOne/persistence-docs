@@ -2,15 +2,15 @@
 
 > **Note** This guide is based on the [Official Cosmos Relayer Setup Guide](https://github.com/cosmos/relayer/blob/main/README.md).
 
-In IBC, blockchains do not directly pass messages to each other over the network. This is where a `relayer` comes in. A relayer process monitors for updates on opens paths between sets of [IBC](https://ibcprotocol.org/) enabled chains. The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
+The Inter-Blockchain Communication (IBC) protocol enables different blockchains to communicate and transfer assets seamlessly. Relayers serve as intermediaries that facilitate this communication by relaying packets of data between interconnected chains. A relayer process monitors for updates on opens paths between sets of [IBC](https://ibcprotocol.org/) enabled chains. The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
 
-In addition to relaying packets, this relayer can open paths across chains, thus creating clients, connections and channels.
+In addition to packet relaying, relayers play a vital role in establishing and managing connections, channels, and clients between various blockchains. This functionality fosters seamless interoperability and facilitates asset transfers across different networks.
 
 Additional information on how IBC works can be found [here](https://ibc.cosmos.network/).
 
 ## Hardware Requirements
 
-* **Minimal:**
+* **Minimum RAM requirement:**
   * 4 GB RAM
   * 50 GB SSD
   * 2 CPU
@@ -19,12 +19,12 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
   * 100 GB SSD
   * 4 CPU
 * **Operating System:**
-  * **Recommended:** Linux(x86\_64)
+  * **Recommended OS:** Linux(x86\_64)
   * **Others:** Windows/MacOS(x86)
 
 ## Prerequisites
 
-To successfully run a Cosmos Go Relayer, we need to install some prerequirements. Because running the Cosmos Go Relayer software depends on them, prerequirements are also known as dependencies.
+Ensure you have installed the required prerequisites before setting up the Cosmos Go Relayer. Because running the Cosmos Go Relayer software depends on them, prerequirements are also known as dependencies.
 
 We need to install and setup one dependency - **Go**.
 
@@ -35,16 +35,26 @@ We need to install and setup one dependency - **Go**.
     ```bash
     rm -rf /usr/local/go
     ```
-2. Make sure you're installing the latest **Go** version by visiting [this page](https://go.dev/doc/install)
-3.  Download the latest version of **Go** (1.19.4 as of time of writing):
+2.  Add the Go PPA to Your System:
+
+    First, add the `longsleep/golang-backports` PPA to your system. This repository contains the latest version of Go. You can add it by running the following command in your terminal:
 
     ```bash
-    wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+    sudo add-apt-repository ppa:longsleep/golang-backports
     ```
-4.  Extract the contents of the archive into /usr/local:
+3.  **Update Your Package List**:
+
+    After adding the PPA, update your package list to include the latest packages available in the repository:
 
     ```bash
-    tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+    sudo apt update
+    ```
+4.  **Install Go**:
+
+    Now, install Go using the `apt` package manager. This command will install the latest version of Go available in the PPA:
+
+    ```bash
+    sudo apt install golang-go
     ```
 5.  Check **Go** is installed correctly _(sample output: `go version go1.19.4 linux/amd64`)_:
 
@@ -103,7 +113,7 @@ cd relayer && git checkout v5.0.0 # Choose the latest version
 make install # Install the Cosmos Go Relayer (creates a binary in GOPATH)
 ```
 
-Next, verify the binary is correctly installed by running the following command.
+After installing the binary, verify its installation by executing the following command.
 
 ```bash
 rly version
@@ -118,8 +128,7 @@ cosmos-sdk: v0.46.6
 go: go1.18.3 linux/amd64
 ```
 
-\
-
+\\
 
 ### 2. Initialize the Relayer's Configuration Directory & File
 
@@ -145,7 +154,6 @@ Custom memos will have `rly(VERSION)` appended. For example, a memo of `My custo
 
 Additionally, the memo can be changed anytime in the following file: `~/.relayer/config/config.yaml`
 
-\
 
 
 ### 3. Configure the Chains to Relay Between
@@ -165,7 +173,6 @@ If you are running your own node, manually go into the config and adjust the `rp
 
 You can check available Gravity Bridge RPC endpoints [here](https://cosmos.directory/gravitybridge/nodes) and available Persistence RPC endpoints [here](https://cosmos.directory/persistence/nodes).
 
-\
 
 
 ### 4. Import Keys OR Create Keys
@@ -195,7 +202,6 @@ rly keys list gravitybridge
 rly keys list persistence
 ```
 
-\
 
 
 ### 5. Edit the Relayer Key Name in `config.yaml`
@@ -212,7 +218,6 @@ Example:
    rpc-addr: https://persistence-mainnet-rpc.cosmonautstakes.com:443
 ```
 
-\
 
 
 ### 6. Ensure the Keys are Funded
@@ -231,7 +236,6 @@ rly query balance gravitybridge
 rly query balance persistence
 ```
 
-\
 
 
 ### 7. Configure Path Metadata
@@ -240,13 +244,12 @@ We have the chain metadata configured, now we need path metadata. For more info 
 
 > **Note** Thinking of chains in the config as "source" and "destination" can be confusing. Be aware that most paths are bi-directional.
 
-The following command will check for IBC path metadata from the [chain-registry](https://github.com/cosmos/chain-registry/tree/master/\_IBC) and add these paths to your config file.
+Use the following command to retrieve IBC path metadata from the [chain-registry](https://github.com/cosmos/chain-registry/tree/master/\_IBC) and add these paths to your config file.
 
 ```bash
 rly paths fetch
 ```
 
-\
 
 
 ### 8. Configure the Channel Filter
@@ -280,7 +283,6 @@ gravitybridge-persistence:
 
 Because two channels between chains are tightly coupled, there is no need to specify the **dst** channels.
 
-\
 
 
 ### 9. Start Relayer
@@ -301,7 +303,6 @@ rly start gravitybridge-persistence
 
 When running multiple instances of `rly start`, you will need to use the `--debug-addr` flag and provide an address:port. You can also pass an empty string `''` to turn off this feature or pass `localhost:0` to randomly select a port.
 
-\
 
 
 ### 10. How should `~/.relayer/config/config.yaml` look?

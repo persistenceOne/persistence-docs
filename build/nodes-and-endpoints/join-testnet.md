@@ -67,15 +67,14 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 
 #### macOS
 
-1.  Download the latest version of **Go** for macOS:
+1. Install Homebrew (if not already installed): If you don't have Homebrew on your macOS, you need to install it first. Visit the [Homebrew website](https://brew.sh/) for installation instructions.
+2.  Install Go using Homebrew: \
+    Open a terminal and run the following command:
 
     ```bash
-    wget https://go.dev/dl/go1.19.5.darwin-amd64.pkg
+    brew install go
     ```
-2.  Open the package file you downloaded and follow the prompts to install **Go**.
-
-    The package installs the **Go** distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your `PATH` environment variable. You may need to restart any open Terminal sessions for the change to take effect.
-3.  Verify that you've installed **Go** by opening a command prompt and typing the following command _(sample output: `go version go1.19.5`)_:
+3.  To ensure Go is installed correctly, check its version. In the terminal, type:
 
     ```
     go version
@@ -179,7 +178,8 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
         ```
     * Make sure you replace `trust_height` and `trust_hash` values with the ones you've copied in the previous step.
 
-    Note: Refer to peers here: [peers.json](https://github.com/persistenceOne/networks/blob/auditOne/test-core-2/test-core-2/peers.json) . \
+    Note: For an automated script for **StateSync**, follow the instructions on this [link](https://polkachu.com/testnets/persistence/state\_sync).\
+    &#x20;          Refer to peers here: [peers.json](https://github.com/persistenceOne/networks/blob/auditOne/test-core-2/test-core-2/peers.json) . \
     &#x20;          For additional helpful values like seeds, refer here: [polkachu](https://polkachu.com/testnets/persistence) .
 4.  Open the `app.toml` file _(application-related configuration file)_:
 
