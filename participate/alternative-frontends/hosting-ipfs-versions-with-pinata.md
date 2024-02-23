@@ -46,9 +46,11 @@ From the release notes in the respective frontend GitHub repositories, find CIDv
 
 Host the latest hashes for Persistence products under your domain, such as:
 
-* [_https://ipfs._](https://ipfs/)_\<your\_validator\_domain>.\<top\_level\_domain>/pwallet_
-* [_https://ipfs._](https://ipfs/)_\<your\_validator\_domain>.\<top\_level\_domain>/dexter_
-* [_https://ipfs._](https://ipfs/)_\<your\_validator\_domain>.\<top\_level\_domain>/pstake_
+* _https://ipfs.\<your\_validator\_domain>.\<top\_level\_domain>/pwallet_
+* _https://ipfs.\<your\_validator\_domain>.\<top\_level\_domain>/pstake_
+* _https://ipfs.\<your\_validator\_domain>.\<top\_level\_domain>/dexter_
+
+Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [https://ipfs.kitkat.zone/pstake](https://ipfs.kitkat.zone/pstake), [https://ipfs.kitkat.zone/dexter](https://ipfs.kitkat.zone/dexter)
 
 #### 2.2 Create CNAME Record
 
@@ -78,7 +80,7 @@ Host the latest hashes for Persistence products under your domain, such as:
 **Last Updated:** 22nd Feb, 2024
 {% endhint %}
 
-#### pWallet
+#### pWALLET ([https://wallet.persistence.one/](https://wallet.persistence.one/))
 
 * CIDv0: QmSadqPuSnAJWNkqnk11Rv1ED3UHLYGZbaJj8ZAZwia1YM
 * CIDv1: bafybeib7apr7gig7nelchxs4xhd4tnlq6tu5xrsuaxh62p6d4sqwobxkci
@@ -86,7 +88,7 @@ Host the latest hashes for Persistence products under your domain, such as:
   * [CF-IPFS](https://bafybeib7apr7gig7nelchxs4xhd4tnlq6tu5xrsuaxh62p6d4sqwobxkci.ipfs.cf-ipfs.com/)
   * [DWeb Link](https://bafybeib7apr7gig7nelchxs4xhd4tnlq6tu5xrsuaxh62p6d4sqwobxkci.ipfs.dweb.link/)
 
-#### pSTAKE
+#### pSTAKE ([https://app.pstake.finance/](https://app.pstake.finance/))
 
 * CIDv0: QmPMTswVoBvmgW9vJ5adurw74KxpcWv9pZWfWXbixhExA3
 * CIDv1: bafybeiapcecy4zmo2hdhfbi53cqmlf4hbcsmegb422vk76txy3v66xsn6a
@@ -94,7 +96,7 @@ Host the latest hashes for Persistence products under your domain, such as:
   * [CF-IPFS](https://bafybeiapcecy4zmo2hdhfbi53cqmlf4hbcsmegb422vk76txy3v66xsn6a.ipfs.cf-ipfs.com/)
   * [DWeb Link](https://bafybeiapcecy4zmo2hdhfbi53cqmlf4hbcsmegb422vk76txy3v66xsn6a.ipfs.dweb.link/)
 
-#### Dexter
+#### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
 * CIDv0: QmPafb7ZzUUFEmEGVFiwrkUwxsyXbGeQwZ4GfYmDTUkgBb
 * CIDv1: bafybeiasoliasblu5ucj6mnznsr7dw3fij23qgf3k4cu3g2zz6jyho4cri

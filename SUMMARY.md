@@ -24,8 +24,8 @@
     * [Provide Liquidity](participate/xprt/defi/provide-liquidity.md)
     * [Liquid Stake](participate/xprt/defi/liquid-stake.md)
     * [Borrow / Lend](participate/xprt/defi/borrow-lend.md)
-* [Decentralized Frontends](participate/decentralized-frontends/README.md)
-  * [Hosting IPFS Versions with Pinata](participate/decentralized-frontends/hosting-ipfs-versions-with-pinata.md)
+* [Alternative Frontends](participate/alternative-frontends/README.md)
+  * [Hosting IPFS Versions with Pinata](participate/alternative-frontends/hosting-ipfs-versions-with-pinata.md)
 * [Wallets](participate/wallets.md)
 * [Explorers](participate/explorers.md)
 * [Bridges](participate/bridges.md)
@@ -33,7 +33,7 @@
   * [Satellite Bridge (by Axelar)](participate/bridges/satellite-bridge-by-axelar.md)
 * [Useful Tools](participate/useful-tools.md)
 
-## ⚒ Build, Integrate, Validate <a href="#build" id="build"></a>
+## ⚒️ Build, Integrate, Validate <a href="#build" id="build"></a>
 
 * [Running Nodes](build/nodes-and-endpoints/README.md)
   * [Run a Local Node](build/nodes-and-endpoints/setup.md)
@@ -56,8 +56,8 @@
   * [Validate on Mainnet](build/validators/mainnet-validator-setup.md)
   * [Validator Communication](build/validators/validator-communication.md)
   * [Foundation Delegations](build/validators/foundation-delegations/README.md)
-    * [➡ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
-    * [➡ Round 2 - In Progress](build/validators/foundation-delegations/round-2.md)
+    * [➡️ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
+    * [➡️ Round 2 - In Progress](build/validators/foundation-delegations/round-2.md)
     * [⭐ Bonus Delegation](build/validators/foundation-delegations/bonus-delegation.md)
 * [Relayers](build/relayers/README.md)
   * [IBC Channels](build/relayers/ibc-channels.md)
