@@ -24,6 +24,8 @@
     * [Provide Liquidity](participate/xprt/defi/provide-liquidity.md)
     * [Liquid Stake](participate/xprt/defi/liquid-stake.md)
     * [Borrow / Lend](participate/xprt/defi/borrow-lend.md)
+* [Decentralized Frontends](participate/decentralized-frontends/README.md)
+  * [Hosting IPFS Versions with Pinata](participate/decentralized-frontends/hosting-ipfs-versions-with-pinata.md)
 * [Wallets](participate/wallets.md)
 * [Explorers](participate/explorers.md)
 * [Bridges](participate/bridges.md)
