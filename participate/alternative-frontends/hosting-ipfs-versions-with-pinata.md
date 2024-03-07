@@ -90,16 +90,16 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 
 #### pSTAKE ([https://app.pstake.finance/](https://app.pstake.finance/))
 
-* CIDv0: QmWkP2MZuctkM2AUJDndKMAFSHAczm7Ba4Y17ZrsnuEiBU
-* CIDv1: bafybeid46gzqoopemsdjkwqtnycozu7yqssjxgv65byjkggwpdn6iy5erm
+* CIDv0: QmY86RzXMjwYEMQ8sV5bQXBpvjuFGMS8cBEgWUaRnVfZrg
+* CIDv1: bafybeierlvtsit5z6hyvfxlvn7aqsjtof47p4w5vstsjl37ukwde4a2oce
 * Public Gateways:
-  * [CF-IPFS](https://bafybeid46gzqoopemsdjkwqtnycozu7yqssjxgv65byjkggwpdn6iy5erm.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeid46gzqoopemsdjkwqtnycozu7yqssjxgv65byjkggwpdn6iy5erm.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeierlvtsit5z6hyvfxlvn7aqsjtof47p4w5vstsjl37ukwde4a2oce.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeierlvtsit5z6hyvfxlvn7aqsjtof47p4w5vstsjl37ukwde4a2oce.ipfs.dweb.link/)
 
 #### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
-* CIDv0: QmdcZQAxDffS64MkuGN6rpk3fFcTwtKhLxxAgkzsm8D2bh
-* CIDv1: bafybeihc6kl7y7sanu3oiq22zxumjdunoyfohz662dnloqi5qcpvc5t52a
+* CIDv0: Qmbafrt4spC1gGmjXAtzDnCUhS5qTPepmeNGmA8S2t1A9m
+* CIDv1: bafybeigex5opmvyh6con5xo2yftnf7lj766owab7s2xkrf5nrceyu5zc2a
 * Public Gateways:
-  * [CF-IPFS](https://bafybeihc6kl7y7sanu3oiq22zxumjdunoyfohz662dnloqi5qcpvc5t52a.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeihc6kl7y7sanu3oiq22zxumjdunoyfohz662dnloqi5qcpvc5t52a.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeigex5opmvyh6con5xo2yftnf7lj766owab7s2xkrf5nrceyu5zc2a.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeigex5opmvyh6con5xo2yftnf7lj766owab7s2xkrf5nrceyu5zc2a.ipfs.dweb.link/)
