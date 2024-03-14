@@ -4,6 +4,13 @@ description: Bonus Delegation for Validators Moving Out of High-Density Regions 
 
 # ⭐ Bonus Delegation
 
+| Status        | Start Date | End Date   |
+| ------------- | ---------- | ---------- |
+| Bonus Cycle 1 | 25/08/2023 | 14/03/2024 |
+| Bonus Cycle 2 | TBA        | TBA        |
+
+
+
 We are thrilled to announce a special bonus delegation opportunity for all validators who choose to relocate their nodes out of high-density regions and Internet Service Providers (ISPs).&#x20;
 
 At our core, we believe in decentralization, and with 100 validators active set, this initiative aligns perfectly with our mission to distribute network nodes across a wider geographic area.

@@ -57,7 +57,7 @@
   * [Validator Communication](build/validators/validator-communication.md)
   * [Foundation Delegations](build/validators/foundation-delegations/README.md)
     * [➡️ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
-    * [➡️ Round 2 - In Progress](build/validators/foundation-delegations/round-2.md)
+    * [➡️ Round 2 - Closed](build/validators/foundation-delegations/round-2.md)
     * [⭐ Bonus Delegation](build/validators/foundation-delegations/bonus-delegation.md)
 * [Relayers](build/relayers/README.md)
   * [IBC Channels](build/relayers/ibc-channels.md)
