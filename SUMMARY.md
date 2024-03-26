@@ -26,6 +26,7 @@
     * [Borrow / Lend](participate/xprt/defi/borrow-lend.md)
 * [Alternative Frontends](participate/alternative-frontends/README.md)
   * [Hosting IPFS Versions with Pinata](participate/alternative-frontends/hosting-ipfs-versions-with-pinata.md)
+  * [IPFS Automation](participate/alternative-frontends/ipfs-automation.md)
 * [Wallets](participate/wallets.md)
 * [Explorers](participate/explorers.md)
 * [Bridges](participate/bridges.md)

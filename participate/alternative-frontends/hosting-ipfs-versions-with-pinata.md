@@ -77,7 +77,7 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 ### 3. Latest Hashes
 
 {% hint style="success" %}
-**Last Updated**: 7 March, 2024
+**Last Updated**: 26 March, 2024
 {% endhint %}
 
 #### pWALLET ([https://wallet.persistence.one/](https://wallet.persistence.one/))
