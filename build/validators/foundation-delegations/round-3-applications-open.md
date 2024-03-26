@@ -93,11 +93,11 @@ The following contributions are deemed valuable to the ecosystem and will earn p
 
 #### Community Contributions
 
-<table><thead><tr><th width="598">Contribution</th></tr></thead><tbody><tr><td>Educational Content</td></tr><tr><td>Marketing</td></tr><tr><td>Host events</td></tr><tr><td>Create and manage regional Persistence Communities</td></tr><tr><td>Official Community Moderation</td></tr></tbody></table>
+<table><thead><tr><th width="598">Contribution</th></tr></thead><tbody><tr><td>Educational Content</td></tr><tr><td>Marketing</td></tr><tr><td>Host events</td></tr><tr><td>Create and manage regional Persistence One Communities</td></tr><tr><td>Official Community Moderation</td></tr></tbody></table>
 
 #### Other Contributions
 
-<table><thead><tr><th width="597">Contribution</th></tr></thead><tbody><tr><td>Contributions to code repos on Github</td></tr><tr><td>Contributions to Persistence Documentation</td></tr><tr><td>Research Reports</td></tr><tr><td>Provide validator support (articles, videos, onboarding)</td></tr><tr><td>Successful Talent Referrals</td></tr><tr><td>Successful Partnership Referrals (Investors, LPs, Projects)</td></tr><tr><td>Other tools or contributions ******</td></tr></tbody></table>
+<table><thead><tr><th width="597">Contribution</th></tr></thead><tbody><tr><td>Contributions to code repos on Github</td></tr><tr><td>Contributions to Persistence One Documentation</td></tr><tr><td>Research Reports</td></tr><tr><td>Provide validator support (articles, videos, onboarding)</td></tr><tr><td>Successful Talent Referrals</td></tr><tr><td>Successful Partnership Referrals (Investors, LPs, Projects)</td></tr><tr><td>Other tools or contributions ******</td></tr></tbody></table>
 
 \*\*\*\*\*\* To include contributions that are not listed in this Round, please make your case in the Discord channel ‘validators-discussion’.&#x20;
 

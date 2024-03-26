@@ -1,14 +1,14 @@
 # Foundation Delegations
 
-The Persistence Foundation Delegation Program -launched in December 2022- is designed to improve the health of the Persistence network and the overall ecosystem by supporting contributing validators in the form of foundation delegations.&#x20;
+The Persistence One Foundation Delegation Program -launched in December 2022- is designed to improve the health of the Persistence One network and the overall ecosystem by supporting contributing validators in the form of foundation delegations.&#x20;
 
 ## Objectives
 
-The goals of the new Persistence Foundation Delegation Program are:&#x20;
+The goals of the new Persistence One Foundation Delegation Program are:&#x20;
 
-* Further decentralise the Persistence Network (distribute stake more evenly across validators, countries, ISPs) & make the network more robust.
+* Further decentralise the Persistence One Network (distribute stake more evenly across validators, countries, ISPs) & make the network more robust.
 * Improve ecosystem documentation, connectivity, tooling and support by encouraging validator ecosystem contributions&#x20;
-* Improve the Persistence Testnet setup and participation
+* Improve the Persistence One Testnet setup and participation
 
 ## Rounds
 
@@ -31,7 +31,7 @@ The criteria and delegations are split up as follows:
 
 ## Calculations
 
-For every round, the Persistence Foundation has reserved an amount of XPRT, which will be split into 2 parts:&#x20;
+For every round, the Persistence One Foundation has reserved an amount of XPRT, which will be split into 2 parts:&#x20;
 
 #### Amount reserved for baseline delegations
 
