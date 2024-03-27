@@ -2,6 +2,10 @@
 
 This guide has instructions to set up workflow which will run automatically to pin the latest hashes and create/update the transform rules set in Cloudflare whenever new version releases will be published across all apps.
 
+{% hint style="info" %}
+**Note:** This tool is open-sourced by [Kitkat Validator](https://kitkat.zone/).
+{% endhint %}
+
 ### Releases:
 
 * _**pWallet**_ - [https://github.com/persistenceOne/persistenceWallet](https://github.com/persistenceOne/persistenceWallet)
