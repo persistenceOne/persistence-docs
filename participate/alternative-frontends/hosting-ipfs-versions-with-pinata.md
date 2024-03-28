@@ -77,16 +77,16 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 ### 3. Latest Hashes
 
 {% hint style="success" %}
-**Last Updated**: 27 March, 2024
+**Last Updated**: 28 March, 2024
 {% endhint %}
 
 #### pWALLET ([https://wallet.persistence.one/](https://wallet.persistence.one/))
 
-* CIDv0: QmSadqPuSnAJWNkqnk11Rv1ED3UHLYGZbaJj8ZAZwia1YM
-* CIDv1: bafybeib7apr7gig7nelchxs4xhd4tnlq6tu5xrsuaxh62p6d4sqwobxkci
+* CIDv0: QmU2JRJGTpvpkBpQUZffGtSypzBrxntCRvYNSGpvxVWhcy
+* CIDv1: bafybeicuok42t7svyd5dscdwfayc5h5coz5cazz2m7izsovkzuigd62nfy
 * Public Gateways:
-  * [CF-IPFS](https://bafybeib7apr7gig7nelchxs4xhd4tnlq6tu5xrsuaxh62p6d4sqwobxkci.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeib7apr7gig7nelchxs4xhd4tnlq6tu5xrsuaxh62p6d4sqwobxkci.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeicuok42t7svyd5dscdwfayc5h5coz5cazz2m7izsovkzuigd62nfy.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeicuok42t7svyd5dscdwfayc5h5coz5cazz2m7izsovkzuigd62nfy.ipfs.dweb.link/)
 
 #### pSTAKE ([https://app.pstake.finance/](https://app.pstake.finance/))
 
