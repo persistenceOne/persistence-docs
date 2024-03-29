@@ -44,7 +44,7 @@ If any of the above criteria are no longer met, the foundation delegation will b
 
 2.  #### Commission
 
-    To keep the FDP fair regardless of the chosen commission, delegations will be pro-rated based on the set commission. If validator A (5% commission) and validator B (10% commission) both meet the baseline criteria, and have accumulated the same amount of bonus contribution points, validator B will only receive half of the delegation compared to validator A, and hence they'll earn the same amount of total commission. \
+    To keep the FDP fair, validators should keep their commission equal to or less than 10% during the delegation period.\
 
 
     {% hint style="warning" %}
