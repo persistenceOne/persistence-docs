@@ -60,7 +60,7 @@
     * [➡️ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
     * [➡️ Round 2 - Closed](build/validators/foundation-delegations/round-2.md)
     * [⭐ Bonus Delegation](build/validators/foundation-delegations/bonus-delegation.md)
-    * [➡️ Round 3 - Applications closed](build/validators/foundation-delegations/round-3-applications-closed.md)
+    * [➡️ Round 3 - Applications Open!](build/validators/foundation-delegations/round-3-applications-open.md)
 * [Relayers](build/relayers/README.md)
   * [IBC Channels](build/relayers/ibc-channels.md)
   * [IBC Relayers](build/relayers/ibc-relayers.md)

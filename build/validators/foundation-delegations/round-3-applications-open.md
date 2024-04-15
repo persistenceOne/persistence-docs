@@ -1,4 +1,4 @@
-# ➡️ Round 3 - Applications closed
+# ➡️ Round 3 - Applications Open!
 
 {% hint style="warning" %}
 In order to receive foundation delegations for this round, it is required to apply via the [FDP App](https://fdp.persistence.one) before the **15th April 2024 - 23.59UTC** \[[Save to calendar](https://calendar.google.com/calendar/event?action=TEMPLATE\&tmeid=M3NvdmU2MjhraWM1czl2NnQ3cHJycDFuajAgbWFkaHVyQHBlcnNpc3RlbmNlLm9uZQ\&tmsrc=madhur%40persistence.one)].
@@ -12,7 +12,7 @@ Minimum requirements to be met in order to be eligible for any foundation delega
 
 #### On-chain:
 
-* [x] Be in the active set at all times ([New validator?](round-3-applications-closed.md#pointers))
+* [x] Be in the active set at all times ([New validator?](round-3-applications-open.md#pointers))
 * [x] Voting Power: ≤2.5%
 * [x] Self-Stake: ≥ 1,000 XPRT
 * [x] Commission: 5% ≤ x ≤ 10%
