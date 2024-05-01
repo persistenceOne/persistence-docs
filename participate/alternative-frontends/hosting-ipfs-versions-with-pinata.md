@@ -82,11 +82,15 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 
 #### pWALLET ([https://wallet.persistence.one/](https://wallet.persistence.one/))
 
-* CIDv0: QmU2JRJGTpvpkBpQUZffGtSypzBrxntCRvYNSGpvxVWhcy
-* CIDv1: bafybeicuok42t7svyd5dscdwfayc5h5coz5cazz2m7izsovkzuigd62nfy
+* CIDv0: QmbGeud9uMjUQH1makvoJngoSwofHZzRJUrz5xush1xxsF
+* CIDv1: bafybeigaehknfid4v6rtugaf7qh7kdibhglvpxl4kttb5hq7jeutjbetgy
 * Public Gateways:
-  * [CF-IPFS](https://bafybeicuok42t7svyd5dscdwfayc5h5coz5cazz2m7izsovkzuigd62nfy.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeicuok42t7svyd5dscdwfayc5h5coz5cazz2m7izsovkzuigd62nfy.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeigaehknfid4v6rtugaf7qh7kdibhglvpxl4kttb5hq7jeutjbetgy.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeigaehknfid4v6rtugaf7qh7kdibhglvpxl4kttb5hq7jeutjbetgy.ipfs.dweb.link/)
+
+{% hint style="success" %}
+**Last Updated**: 1 May, 2024
+{% endhint %}
 
 #### pSTAKE ([https://app.pstake.finance/](https://app.pstake.finance/))
 
@@ -95,6 +99,10 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 * Public Gateways:
   * [CF-IPFS](https://bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou.ipfs.cf-ipfs.com/)
   * [DWeb Link](https://bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou.ipfs.dweb.link/)
+
+{% hint style="success" %}
+**Last Updated**: 1 May, 2024
+{% endhint %}
 
 #### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
