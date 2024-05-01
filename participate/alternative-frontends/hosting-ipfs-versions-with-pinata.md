@@ -77,7 +77,7 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 ### 3. Latest Hashes
 
 {% hint style="success" %}
-**Last Updated**: 28 March, 2024
+**Last Updated**: 1 May, 2024
 {% endhint %}
 
 #### pWALLET ([https://wallet.persistence.one/](https://wallet.persistence.one/))
@@ -90,16 +90,16 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 
 #### pSTAKE ([https://app.pstake.finance/](https://app.pstake.finance/))
 
-* CIDv0: QmcXxmYxAK9uz1ZStqvRGBxhndKjDFXrxGJit4tdC1YEDq
-* CIDv1: bafybeigs5fwpuuwuhoums3rd645x52x377co7rlfwscitemk72phr3kl6q
+* CIDv0: QmZ4csaauexbuZAt2WFZBFjppMQ5wmzZRNtLY14VRW22NQ
+* CIDv1: bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou
 * Public Gateways:
-  * [CF-IPFS](https://bafybeigs5fwpuuwuhoums3rd645x52x377co7rlfwscitemk72phr3kl6q.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeigs5fwpuuwuhoums3rd645x52x377co7rlfwscitemk72phr3kl6q.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou.ipfs.dweb.link/)
 
 #### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
-* CIDv0: QmdJr1832VxJSeSuibn5br9VtrFfTe64BrqvwkioZnKzn3
-* CIDv1: bafybeig6nduwoo5bpfwh6xruxrvdeic2cnilvgdhyqrhq2pqzt5btxng3a
+* CIDv0: QmTcG9L6QFntMW9kLHnF1izQufP7DmSVBmKHJ3Fw9xDgRt
+* CIDv1: bafybeicoji3i6frjzerbgkcnmq2kavukw5zvsgkub6p4rn2isw3pudxl54
 * Public Gateways:
-  * [CF-IPFS](https://bafybeig6nduwoo5bpfwh6xruxrvdeic2cnilvgdhyqrhq2pqzt5btxng3a.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeig6nduwoo5bpfwh6xruxrvdeic2cnilvgdhyqrhq2pqzt5btxng3a.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeicoji3i6frjzerbgkcnmq2kavukw5zvsgkub6p4rn2isw3pudxl54.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeicoji3i6frjzerbgkcnmq2kavukw5zvsgkub6p4rn2isw3pudxl54.ipfs.dweb.link/)
