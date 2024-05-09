@@ -89,25 +89,25 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
   * [DWeb Link](https://bafybeigaehknfid4v6rtugaf7qh7kdibhglvpxl4kttb5hq7jeutjbetgy.ipfs.dweb.link/)
 
 {% hint style="success" %}
-**Last Updated**: 1 May, 2024
+**Last Updated**: 10 May, 2024
 {% endhint %}
 
 #### pSTAKE ([https://app.pstake.finance/](https://app.pstake.finance/))
 
-* CIDv0: QmZ4csaauexbuZAt2WFZBFjppMQ5wmzZRNtLY14VRW22NQ
-* CIDv1: bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou
+* CIDv0: QmYZtNQtRFEG8L6Q8sddSuWKfpsg73A39dBa1sfe5MfNkw
+* CIDv1: bafybeiex7doz5almx6mihqnwdzwtidk4tpqouoehxjxdfjy3pl5lmkgx3a
 * Public Gateways:
-  * [CF-IPFS](https://bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeie7kux37eoodttotchxk5ijqg4v63uy7qkzpvmchch765vi7kewou.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeiex7doz5almx6mihqnwdzwtidk4tpqouoehxjxdfjy3pl5lmkgx3a.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeiex7doz5almx6mihqnwdzwtidk4tpqouoehxjxdfjy3pl5lmkgx3a.ipfs.dweb.link/)
 
 {% hint style="success" %}
-**Last Updated**: 1 May, 2024
+**Last Updated**: 10 May, 2024
 {% endhint %}
 
 #### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
-* CIDv0: QmTcG9L6QFntMW9kLHnF1izQufP7DmSVBmKHJ3Fw9xDgRt
-* CIDv1: bafybeicoji3i6frjzerbgkcnmq2kavukw5zvsgkub6p4rn2isw3pudxl54
+* CIDv0: QmWytbZxPyFr3nbvDtSAAQmg4wrrb3q9N44FypB2gw2CAt
+* CIDv1: bafybeieam6ybakpgovec2jl4alyr2snbyfa6nuhptq2sc4tz3vqsyvah6e
 * Public Gateways:
-  * [CF-IPFS](https://bafybeicoji3i6frjzerbgkcnmq2kavukw5zvsgkub6p4rn2isw3pudxl54.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeicoji3i6frjzerbgkcnmq2kavukw5zvsgkub6p4rn2isw3pudxl54.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeieam6ybakpgovec2jl4alyr2snbyfa6nuhptq2sc4tz3vqsyvah6e.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeieam6ybakpgovec2jl4alyr2snbyfa6nuhptq2sc4tz3vqsyvah6e.ipfs.dweb.link/)
