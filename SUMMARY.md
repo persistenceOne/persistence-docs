@@ -17,6 +17,7 @@
 ## 🔍 Participate & Explore <a href="#participate" id="participate"></a>
 
 * [$XPRT Token](participate/xprt/README.md)
+  * [Token Contract Metadata](participate/xprt/token-contract-metadata.md)
   * [Acquire](participate/xprt/acquire.md)
   * [Stake](participate/xprt/stake.md)
   * [Governance](participate/xprt/governance.md)
