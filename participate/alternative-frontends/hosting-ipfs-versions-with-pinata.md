@@ -101,13 +101,13 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
   * [DWeb Link](https://bafybeic5cpk5yoyor64oar5nyd5uhkg5nvt7bfo6vzkovjncdo7o7mypfy.ipfs.dweb.link/)
 
 {% hint style="success" %}
-**Last Updated**: 28 May, 2024
+**Last Updated**: 4 June, 2024
 {% endhint %}
 
 #### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
-* CIDv0: QmTirh7La2JhcL2QEhj9XMAwDfhiBedqi4fp972V78eqka
-* CIDv1: bafybeicp7lbo4lvqtcjq3k26gffdnonm5grnvrxhqlzkxuoepgybcnxrc4
+* CIDv0: QmaRdnhDg3CedocoAuB1raNGMmTjpocgYeHTa3TQyQ7XmV
+* CIDv1: bafybeiftsmnrxsjffmmewvpbde6ziu34zjup6wixqtlax7jos5jfjgunnq
 * Public Gateways:
-  * [CF-IPFS](https://bafybeicp7lbo4lvqtcjq3k26gffdnonm5grnvrxhqlzkxuoepgybcnxrc4.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeicp7lbo4lvqtcjq3k26gffdnonm5grnvrxhqlzkxuoepgybcnxrc4.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeiftsmnrxsjffmmewvpbde6ziu34zjup6wixqtlax7jos5jfjgunnq.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeiftsmnrxsjffmmewvpbde6ziu34zjup6wixqtlax7jos5jfjgunnq.ipfs.dweb.link/)
