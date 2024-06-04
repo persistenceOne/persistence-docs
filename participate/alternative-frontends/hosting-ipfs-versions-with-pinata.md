@@ -106,8 +106,8 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
 
 #### Dexter ([https://app.dexter.zone/](https://app.dexter.zone/))
 
-* CIDv0: QmaRdnhDg3CedocoAuB1raNGMmTjpocgYeHTa3TQyQ7XmV
-* CIDv1: bafybeiftsmnrxsjffmmewvpbde6ziu34zjup6wixqtlax7jos5jfjgunnq
+* CIDv0: QmXPVirjD73FGbnC1CwLCGM4Upxq35DafhDonA6HN4Huyp
+* CIDv1: bafybeiegopbvs3sfovnyknev55j7wjxfbjsrnuqt7ffnzw7idixca3dtp4
 * Public Gateways:
-  * [CF-IPFS](https://bafybeiftsmnrxsjffmmewvpbde6ziu34zjup6wixqtlax7jos5jfjgunnq.ipfs.cf-ipfs.com/)
-  * [DWeb Link](https://bafybeiftsmnrxsjffmmewvpbde6ziu34zjup6wixqtlax7jos5jfjgunnq.ipfs.dweb.link/)
+  * [CF-IPFS](https://bafybeiegopbvs3sfovnyknev55j7wjxfbjsrnuqt7ffnzw7idixca3dtp4.ipfs.cf-ipfs.com/)
+  * [DWeb Link](https://bafybeiegopbvs3sfovnyknev55j7wjxfbjsrnuqt7ffnzw7idixca3dtp4.ipfs.dweb.link/)
