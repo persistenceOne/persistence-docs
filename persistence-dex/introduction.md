@@ -2,7 +2,9 @@
 
 Persistence DEX is a decentralized exchange for BTC and Liquid Staked Tokens (LSTs).&#x20;
 
-Trade efficiently or provide liquidity to earn from swap fees and LP rewards 👉🏻 [app.persistence one](https://app.gitbook.com/o/hVvJKSHKLqEyI1jNR7p9/s/zqEDbkqVwj1RBD7uriK5/)
+Trade efficiently or provide liquidity to earn from swap fees and LP rewards 👉🏻[https://app.persistence.one](https://app.persistence.one)
+
+**Read the announcement:** [https://blog.persistence.one/2024/06/11/rebranding-dexter-introducing-persistence-dex-and-enhancing-ecosystem-alignment/](https://blog.persistence.one/2024/06/11/rebranding-dexter-introducing-persistence-dex-and-enhancing-ecosystem-alignment/)
 
 {% hint style="danger" %}
 **Note:** Persistence DEX's docs are currently in the draft stage. We apologise for any missing information and welcome contributions to enhance its quality. If you have any queries, please don't hesitate to contact our team
