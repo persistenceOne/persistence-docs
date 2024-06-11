@@ -19,16 +19,16 @@ From the release notes in the respective frontend GitHub repositories, find CIDv
 
 1. Go to [Pinata](https://app.pinata.cloud/pinmanager) and click on "Pin by CID."
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 2. Enter CIDv0 in the IPFS CID field and use the release name and version in the name field.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. After successful pinning, navigate to the Gateways Tab.
 4. Add a custom domain to the gateway (e.g., ipfs.\<your\_validator\_domain>.\<top\_level\_domain>).
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note:** A paid plan (Picnic plan) on Pinata will be required.

@@ -14,6 +14,28 @@
   * [What is DeFi](learn/fundamentals/what-is-defi.md)
   * [What is Liquid Staking](learn/fundamentals/what-is-liquid-staking.md)
 
+## 🔄 Persistence DEX
+
+* [Introduction](persistence-dex/introduction.md)
+* [Pools](persistence-dex/pools.md)
+* [Fees](persistence-dex/fees.md)
+* [Rewards](persistence-dex/rewards.md)
+* [Tradooor Rebate Program](persistence-dex/tradooor-rebate-program.md)
+* [Instant LP Unbonding](persistence-dex/instant-lp-unbonding.md)
+* [Contracts](persistence-dex/contracts/README.md)
+  * [Technical Architecture](persistence-dex/contracts/technical-architecture.md)
+  * [Security](persistence-dex/contracts/security.md)
+* [Guides](persistence-dex/guides/README.md)
+  * [Managing Assets](persistence-dex/guides/managing-assets.md)
+  * [Trading Assets](persistence-dex/guides/trading-assets.md)
+  * [Providing Liquidity](persistence-dex/guides/providing-liquidity.md)
+  * [Bonding/Unbonding Tokens](persistence-dex/guides/bonding-unbonding-tokens.md)
+  * [Claiming Rewards](persistence-dex/guides/claiming-rewards.md)
+  * [Creating New Pool](persistence-dex/guides/creating-new-pool/README.md)
+    * [Metastable Pool](persistence-dex/guides/creating-new-pool/metastable-pool.md)
+    * [Weighted Pool](persistence-dex/guides/creating-new-pool/weighted-pool.md)
+    * [Stable Swap Pool](persistence-dex/guides/creating-new-pool/stable-swap-pool.md)
+
 ## 🔍 Participate & Explore <a href="#participate" id="participate"></a>
 
 * [$XPRT Token](participate/xprt/README.md)

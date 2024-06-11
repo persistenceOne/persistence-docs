@@ -83,7 +83,7 @@ Now, at the upgrade height, **Cosmovisor** will upgrade swap the binaries.
 **2. Auto-download option**\
 The above manual option still needs an upgrade version binary to be manually added under cosmovisor/upgrades/upgrade-name/bin directory. For clarity, refer below folder layout for daemon home directory:-
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 However, for people who don't need such control and want an automated setup to download binaries on their node, there is an **auto-download** option. This might include scenarios like:-syncing a non-validating fullnode and/or performing a little maintenance.
 
