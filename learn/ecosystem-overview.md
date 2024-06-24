@@ -10,7 +10,7 @@ The Persistence Ecosystem is growing as it transforms into a Liquid Staking Hub,
 
 ## The Persistence Foundation
 
-The [Persistence Foundation](persistence-foundation.md) is committed to driving utility for the Persistence ecosystem’s fuel – XPRT. The foundation will engage with all stakeholders to ensure incentive alignment and direct collective efforts toward the ecosystem vision.
+The Persistence Foundation is committed to driving utility for the Persistence ecosystem’s fuel – XPRT. The foundation will engage with all stakeholders to ensure incentive alignment and direct collective efforts toward the ecosystem vision.
 
 The ultimate goal for the foundation is the welfare of the XPRT holders and Stakers by driving utility for the asset.
 
@@ -18,7 +18,7 @@ The ultimate goal for the foundation is the welfare of the XPRT holders and Stak
 
 ## Persistence Labs
 
-[Persistence Labs](persistence-labs.md) is committed to building products, applications, and other tools/services on the Persistence network to further the growth of the Persistence liquid staking ecosystem. Persistence labs will also support and/or incubate external teams to build on the Persistence network, provided such teams align with the vision of the Persistence ecosystem.
+Persistence Labs is committed to building products, applications, and other tools/services on the Persistence network to further the growth of the Persistence liquid staking ecosystem. Persistence labs will also support and/or incubate external teams to build on the Persistence network, provided such teams align with the vision of the Persistence ecosystem.
 
 The two main pillars of Persistence Labs are:&#x20;
 
@@ -40,9 +40,9 @@ A multi-chain Liquid Staking Provider, allowing users to unlock liquidity of sta
 
 ## Other Projects
 
-The following projects and teams are building on top of the Persistence chain, thereby becoming a part of the wider ecosystem. While they are able to get support via [Persistence Labs](persistence-labs.md), these projects are driven **externally**.&#x20;
+The following projects and teams are building on top of the Persistence chain, thereby becoming a part of the wider ecosystem. While they are able to get support via Persistence Labs, these projects are driven **externally**.&#x20;
 
-#### [DEXter](https://dexter.zone)
+#### [Persistence DEX](https://app.persistence.one/)
 
 An interchain DEX for yield-generating assets.
 
@@ -60,13 +60,13 @@ A set of 100 validators, an absolute critical part to keep the Persistence Ecosy
 
 <mark style="color:red;">In the pipeline, more information will be announced soon</mark>
 
-<mark style="color:red;"></mark>
+
 
 ## Community DAO
 
 <mark style="color:red;">In the pipeline, more information will be announced soon</mark>
 
-<mark style="color:red;"></mark>
+
 
 
 

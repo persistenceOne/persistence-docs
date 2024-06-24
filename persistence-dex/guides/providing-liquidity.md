@@ -30,11 +30,11 @@ Congratulations! You have added liquidity to the desired pool, a confirmation me
 
 ## Withdrawing Liquidity <a href="#withdrawing-liquidity" id="withdrawing-liquidity"></a>
 
-* Step 1 - Select the pool from the "My Pools" section on the pools page ([https://app.persistence.one/pools](https://app.persistence.one/pools))
+* **Step 1** - Select the pool from the "My Pools" section on the pools page ([https://app.persistence.one/pools](https://app.persistence.one/pools))
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FRPpuIzQvozaDMBTGFsrx%252FScreenshot%25202023-03-26%2520at%25202.58.15%2520PM.png%3Falt%3Dmedia%26token%3D1daa4b71-fcf5-4aa6-a6db-0023abc0472d&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=d20966a1c739e41d316031a9ddefc23b2c74bcff8918a0f36c0d3931eeab3eb9" alt=""><figcaption></figcaption></figure>
 
-* Step 2 - Enter the number of LP shares to withdraw and click "Remove Liquidity"
+* **Step 2** - Enter the number of LP shares to withdraw and click "Remove Liquidity"
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FgvWZ3PL29xJb3EEsKJiT%252FScreenshot%25202023-03-26%2520at%25203.02.11%2520PM.png%3Falt%3Dmedia%26token%3Db48d568a-dffc-4c49-ab2d-b021390c23b1&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=64055724ea71b436e3693c5d9b418f142214f516526b9e38cea2cfb078a34c0f" alt=""><figcaption></figcaption></figure>
 
