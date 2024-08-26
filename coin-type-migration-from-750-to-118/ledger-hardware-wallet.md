@@ -212,7 +212,7 @@ C. Migration done, your staked/delegated tokens will now be visible in the 'Dele
 
 ***
 
-## Step 7: Sit back and Relax! 🎉
+### Step 7: Sit back and Relax! 🎉
 
 The migration from 750 coin-type to 118 coin-type has been completed successfully.
 
