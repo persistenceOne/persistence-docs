@@ -14,7 +14,7 @@ The goals of the new Persistence One Foundation Delegation Program are:&#x20;
 
 The Foundation Delegation Program will iterate through continuous rounds, which can last anywhere between 4 to 12 weeks. **Updated indicative** timelines for the first 3 rounds are:&#x20;
 
-<table><thead><tr><th width="249.33333333333331">Round</th><th>Application deadline</th><th>Delegation period</th></tr></thead><tbody><tr><td><a href="round-1.md">Round 1</a></td><td>30/12/2022 - 23.59UTC</td><td>20/01/2023 - 19/04/2023</td></tr><tr><td><a href="round-2.md">Round 2</a></td><td>07/04/2023 - 23.59UTC</td><td>20/04/2023 - 14/03/2024</td></tr><tr><td><a href="round-3-applications-closed.md">Round 3</a> (ONGOING)</td><td>15/04/2024 - 23.59UTC</td><td>Tentative delegations are scheduled for june. Once made, it will be valid for 3 months.</td></tr></tbody></table>
+<table><thead><tr><th width="249.33333333333331">Round</th><th>Application deadline</th><th>Delegation period</th></tr></thead><tbody><tr><td><a href="round-1.md">Round 1</a></td><td>30/12/2022 - 23.59UTC</td><td>20/01/2023 - 19/04/2023</td></tr><tr><td><a href="round-2.md">Round 2</a></td><td>07/04/2023 - 23.59UTC</td><td>20/04/2023 - 14/03/2024</td></tr><tr><td><a href="round-3-delegation-period-active.md">Round 3</a></td><td>15/04/2024 - 23.59UTC</td><td>28/08/2024- 28/11/2024</td></tr></tbody></table>
 
 The criteria and calculation methods are subject to change from round to round, depending on the current state and requirements of the persistence ecosystem as defined by the foundation, with inputs from the community.&#x20;
 
