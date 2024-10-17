@@ -4,7 +4,7 @@ description: Stake with a validator of your choice and help to secure the networ
 
 # Stake
 
-As the Persistence chain runs on a delegated [Proof-of-Stake](../../learn/fundamentals/what-is-proof-of-stake.md) based Tendermint PBFT consensus engine, staking is integral to ensuring a secure and robust network.&#x20;
+As the Persistence chain runs on a delegated [Proof-of-Stake](broken-reference) based Tendermint PBFT consensus engine, staking is integral to ensuring a secure and robust network.&#x20;
 
 This means that [XPRT](./) token holders will be able to delegate their tokens to one of the networks' validators for staking. Stakers will receive [staking rewards](https://www.stakingrewards.com/earn/persistence/) in the form of XPRT in return for contributing to the security of the network.&#x20;
 

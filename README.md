@@ -1,18 +1,20 @@
 # 👓 Overview
 
-<figure><img src=".gitbook/assets/Overview.png" alt=""><figcaption></figcaption></figure>
-
-Welcome to Persistence Docs! Here you can find anything and everything related to the Persistence Liquid Staking Hub. We invite you to Learn, Participate, Explore, Build, Integrate, Validate and Connect with us on this journey.&#x20;
-
 {% hint style="warning" %}
 <mark style="color:red;">Note: This new Persistence Docs is still in a draft stage. We apologise if the information you're looking for is not yet available. Feel free to contribute to make it better, or please reach out to the team directly with any questions you might have.</mark>&#x20;
 {% endhint %}
+
+<figure><img src=".gitbook/assets/Overview.png" alt=""><figcaption></figcaption></figure>
+
+Welcome to Persistence Docs! Here you can find anything and everything related to the Persistence One.&#x20;
+
+We invite you to Learn, Participate, Explore, Build, Integrate, Validate and Connect with us on this journey.&#x20;
 
 ## Learn 📖
 
 The perfect place to build context in case you're just getting started
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>Introduction</strong></td><td>About Persistence, the why, the problem statement and the offered solutions</td><td><a href="learn/introduction.md">introduction.md</a></td><td></td></tr><tr><td align="center"><strong>Ecosystem Overview</strong></td><td>Explore the various parts of the Liquid Staking Hub</td><td><a href="learn/ecosystem-overview.md">ecosystem-overview.md</a></td><td></td></tr><tr><td align="center"><strong>Foundation</strong></td><td>To foster a flourishing Liquid Staking Ecosystem by driving utility to $XPRT</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Labs</strong></td><td>Driving product innovation, applications and tools for the Persistence Network. </td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Fundamentals</strong></td><td>Some basic concepts to get you started</td><td><a href="learn/fundamentals/">fundamentals</a></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>Introduction</strong></td><td>About Persistence, the why, the problem statement and the offered solutions</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Ecosystem Overview</strong></td><td>Explore the various parts of the Liquid Staking Hub</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Foundation</strong></td><td>To foster a flourishing Liquid Staking Ecosystem by driving utility to $XPRT</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Labs</strong></td><td>Driving product innovation, applications and tools for the Persistence Network. </td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Fundamentals</strong></td><td>Some basic concepts to get you started</td><td><a href="broken-reference">Broken link</a></td><td></td></tr></tbody></table>
 
 ## Participate & Explore 🔍
 

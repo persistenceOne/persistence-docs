@@ -3,9 +3,7 @@
 <figure><img src="../.gitbook/assets/Screenshot 2023-10-23 at 1.01.40 PM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Currently both 118 & 750 coin-type addresses are supported by the Persistence Core-1 chain and will work as normal.&#x20;
-
-However the support for 750 coin-type wallets is proposed to deprecate in _December 2024._
+Currently both 118 & 750 coin-type addresses are supported by the Persistence Core-1 chain and will work as normal. Coin-type migration deadline from 750 to 118 has been extended by 6 months from 31st Dec, 2024 (earlier) to 30th June, 2025 (new). Refer to the [announcement here.](https://x.com/PersistenceOne/status/1840701305163321719)
 {% endhint %}
 
 ## Summary
@@ -14,7 +12,7 @@ When Persistence Core-1 chain [launched](https://blog.persistence.one/2021/03/29
 
 After the introduction of IBC, the Cosmos ecosystem exploded, and we saw thousands of transactions executing across multiple IBC channels. IBC presented a whole new dimension of technological possibilities, but one aspect was vastly missed – user experience.
 
-Therefore migration was planned during Persistence Core-1 chain upgrade v3. You can deep dive in the full migration context from blog attached below:&#x20;
+Therefore migration was planned during Persistence Core-1 chain upgrade v3. You can deep dive in the full migration context from blog attached below:
 
 {% embed url="https://blog.persistence.one/2022/07/14/coin-type-migration-from-750-to-118-for-persistence-core-1-chain-xprt/" %}
 
@@ -23,8 +21,6 @@ Therefore migration was planned during Persistence Core-1 chain upgrade v3. You 
 The goal of coin-type migration is to facilitate the best user experience for the Persistence ecosystem community members. As the project matures, we strive to deliver user-centric products, and it requires constantly evolving.
 
 We will be able to achieve our goals only with the constant feedback, support, and efforts of our community, validators, and partner projects. Every step towards a better user experience pushes us closer to becoming the liquid staking hub for the PoS ecosystem.
-
-
 
 ## Persistence Core-1 Chain Supported Wallets
 
@@ -38,8 +34,6 @@ We will be able to achieve our goals only with the constant feedback, support, a
 |       Leap Wallet      |            Yes           |            Yes           |
 |     Citadel Wallet     |            No            |            Yes           |
 | Ledger Hardware Wallet |            Yes           |            Yes           |
-
-
 
 ## Step-by-Step Guides:
 
@@ -59,9 +53,9 @@ Yes, all the IBC enabled tokens will work as usual including $PSTAKE. Kindly vis
 
 <summary>⚠️Things to Remember</summary>
 
-1. No one from the persistence team will contact you to help you migrate your tokens.&#x20;
-2. Never share your seed with anyone.&#x20;
+1. No one from the persistence team will contact you to help you migrate your tokens.
+2. Never share your seed with anyone.
 3. Always make sure that you are using the correct and SSL enabled URL.
-4. The only way to contact persistence team is by messaging on the verified [Persistence community chat on Telegram](https://t.me/PersistenceOneChat).&#x20;
+4. The only way to contact persistence team is by messaging on the verified [Persistence community chat on Telegram](https://t.me/PersistenceOneChat).
 
 </details>

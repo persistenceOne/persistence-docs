@@ -2,16 +2,6 @@
 
 * [👓 Overview](README.md)
 
-## 📖 Learn
-
-* [Introduction](learn/introduction.md)
-* [Ecosystem Overview](learn/ecosystem-overview.md)
-* [Fundamentals](learn/fundamentals/README.md)
-  * [What is Proof-of-Stake](learn/fundamentals/what-is-proof-of-stake.md)
-  * [What is Cosmos](learn/fundamentals/what-is-cosmos.md)
-  * [What is DeFi](learn/fundamentals/what-is-defi.md)
-  * [What is Liquid Staking](learn/fundamentals/what-is-liquid-staking.md)
-
 ## 🔄 Persistence DEX
 
 * [Introduction](persistence-dex/introduction.md)

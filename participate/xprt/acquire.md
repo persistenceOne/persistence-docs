@@ -7,7 +7,7 @@ description: Not Investment Advice
 Users can acquire $XPRT either on Centralised or Decentralised Exchanges. The references below are just for informational purposes, they don't form an endorsement to the particular exchange, nor do they incorporate any financial or investment advice.&#x20;
 
 {% hint style="warning" %}
-Before you proceed, ensure to understand [the XPRT Token](./), what [Proof-of-Stake](../../learn/fundamentals/what-is-proof-of-stake.md) is, and which [wallets](../wallets.md) can be used.&#x20;
+Before you proceed, ensure to understand [the XPRT Token](./), what [Proof-of-Stake](broken-reference) is, and which [wallets](../wallets.md) can be used.&#x20;
 {% endhint %}
 
 ## Decentralized Exchanges
