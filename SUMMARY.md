@@ -38,7 +38,6 @@
 * [Explorers](participate/explorers.md)
 * [Bridges](participate/bridges.md)
   * [Persistence Bridge](participate/bridges/persistence-bridge.md)
-  * [Satellite Bridge (by Axelar)](participate/bridges/satellite-bridge-by-axelar.md)
 * [Useful Tools](participate/useful-tools.md)
 
 ## ⚒️ Build, Integrate, Validate <a href="#build" id="build"></a>
@@ -93,7 +92,6 @@
   * [Persistence JS](build/tools/persistence-js.md)
   * [Persistence SDK](build/tools/persistence-sdk.md)
   * [Persistence CLI](build/tools/persistence-cli.md)
-* [Contribute](build/contribute.md)
 * [Grants](build/grants.md)
 
 ***

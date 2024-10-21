@@ -1,12 +1,10 @@
 # 👓 Overview
 
 {% hint style="warning" %}
-<mark style="color:red;">Note: This new Persistence Docs is still in a draft stage. We apologise if the information you're looking for is not yet available. Feel free to contribute to make it better, or please reach out to the team directly with any questions you might have.</mark>&#x20;
+<mark style="color:red;">Note: This Docs is still in a draft stage. We apologise if the information you're looking for is not yet available. Feel free to contribute to make it better, or please reach out to the team directly with any questions you might have.</mark>&#x20;
 {% endhint %}
 
-<figure><img src=".gitbook/assets/Overview.png" alt=""><figcaption></figcaption></figure>
-
-Welcome to Persistence Docs! Here you can find anything and everything related to the Persistence One.&#x20;
+Welcome to Persistence One Docs! Here you can find anything and everything related to the Persistence One.&#x20;
 
 We invite you to Learn, Participate, Explore, Build, Integrate, Validate and Connect with us on this journey.&#x20;
 
@@ -26,7 +24,7 @@ Your participation matters! Read all about how you can participate in the Persis
 
 Technical Documentation for builders & validators
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Running Nodes</strong></td><td>How to run a node locally, on testnet or on mainnet</td><td><a href="build/nodes-and-endpoints/">nodes-and-endpoints</a></td></tr><tr><td align="center"><strong>Validators</strong></td><td>How to become a validator on testnet or mainnet</td><td><a href="build/validators/">validators</a></td></tr><tr><td align="center"><strong>Relayers</strong></td><td>Which relayers are maintained, and how to run one yourself</td><td><a href="build/relayers/">relayers</a></td></tr><tr><td align="center"><strong>Indexers</strong></td><td>How to connect to and even run Graph Nodes</td><td><a href="build/indexers/">indexers</a></td></tr><tr><td align="center"><strong>Smart Contracts</strong></td><td>How to build Dapps on top of the Persistence Chain via CosmWasm</td><td><a href="build/smart-contracts/">smart-contracts</a></td></tr><tr><td align="center"><strong>Modules</strong></td><td>Understand the current modules and how to leverage them</td><td><a href="build/modules/">modules</a></td></tr><tr><td align="center"><strong>Tools</strong></td><td>Find all tools that have been built for the ecosystem</td><td><a href="build/tools/">tools</a></td></tr><tr><td align="center"><strong>Contribute</strong></td><td>How to contribute to the persistence ecosystem</td><td><a href="build/contribute.md">contribute.md</a></td></tr><tr><td align="center"><strong>Grants</strong></td><td>How to get support &#x26; funding from the Foundation</td><td><a href="build/grants.md">grants.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Running Nodes</strong></td><td>How to run a node locally, on testnet or on mainnet</td><td><a href="build/nodes-and-endpoints/">nodes-and-endpoints</a></td></tr><tr><td align="center"><strong>Validators</strong></td><td>How to become a validator on testnet or mainnet</td><td><a href="build/validators/">validators</a></td></tr><tr><td align="center"><strong>Relayers</strong></td><td>Which relayers are maintained, and how to run one yourself</td><td><a href="build/relayers/">relayers</a></td></tr><tr><td align="center"><strong>Indexers</strong></td><td>How to connect to and even run Graph Nodes</td><td><a href="build/indexers/">indexers</a></td></tr><tr><td align="center"><strong>Smart Contracts</strong></td><td>How to build Dapps on top of the Persistence Chain via CosmWasm</td><td><a href="build/smart-contracts/">smart-contracts</a></td></tr><tr><td align="center"><strong>Modules</strong></td><td>Understand the current modules and how to leverage them</td><td><a href="build/modules/">modules</a></td></tr><tr><td align="center"><strong>Tools</strong></td><td>Find all tools that have been built for the ecosystem</td><td><a href="build/tools/">tools</a></td></tr><tr><td align="center"><strong>Grants</strong></td><td>How to get support &#x26; funding from the Foundation</td><td><a href="build/grants.md">grants.md</a></td></tr></tbody></table>
 
 ## Connect & Follow 😍
 

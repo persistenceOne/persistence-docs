@@ -18,5 +18,3 @@ description: List of explorers supporting the Persistence Chain
 | Stakeflow (by Genesis Lab) | [https://stakeflow.io/persistence](https://stakeflow.io/persistence)                         | [https://stakeflow.io/persistence-testnet](https://stakeflow.io/persistence-testnet)               | [https://stakeflow.io/persistence-testnet](https://stakeflow.io/persistence-testnet) |
 | Kitkat                     | [https://explorer.kitkat.zone](https://explorer.kitkat.zone)                                 |                                                                                                    | [https://testnetexplorer.kitkat.zone](https://testnetexplorer.kitkat.zone)           |
 | Baryon                     |                                                                                              | [https://testnet-explorer.baryon.dev/test-core-2](https://testnet-explorer.baryon.dev/test-core-2) |                                                                                      |
-
-##
