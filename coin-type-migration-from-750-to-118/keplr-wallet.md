@@ -66,7 +66,7 @@ Hence in this process, we have to move tokens from <mark style="color:orange;">W
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-02 at 12.36.07 AM.png" alt=""><figcaption></figcaption></figure>
 
-## Step 3: Sign into pWALLET with <mark style="color:orange;">Wallet 1</mark> & Migrate Tokens
+## Step 4: Sign into pWALLET with <mark style="color:orange;">Wallet 1</mark> & Migrate Tokens
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-11-02 at 12.47.54 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -136,7 +136,7 @@ B. Go to 'Wallet' page and select 'Send'
 
 C. Send all the tokens to your new coin-type wallet address.
 
-## Step 4: Sign into pWALLET with <mark style="color:green;">Wallet 2</mark>
+## Step 5: Sign into pWALLET with <mark style="color:green;">Wallet 2</mark>
 
 A. Go to '**Staking**' tab, select '**Tokenized Shares**' & click on '**Redeem**'
 
@@ -152,7 +152,7 @@ C. Migration done, your staked/delegated tokens will now be visible in the 'Dele
 
 ***
 
-## Step 5: Sit back and Relax! 🎉
+## Step 6: Sit back and Relax! 🎉
 
 The migration from 750 coin-type to 118 coin-type has been completed successfully.
 
