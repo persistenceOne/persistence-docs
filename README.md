@@ -36,11 +36,7 @@ Whether you’re a developer, trader, or blockchain enthusiast, this documentati
 
 We invite you to Learn, Participate, Explore, Build, Integrate, Validate, and Connect with us on this journey. [Lets dive in ->](persistence-ecosystem.md)
 
-## Learn 📖
 
-The perfect place to build context in case you're just getting started
-
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><strong>Introduction</strong></td><td>About Persistence, the why, the problem statement and the offered solutions</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Ecosystem Overview</strong></td><td>Explore the various parts of the Liquid Staking Hub</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Foundation</strong></td><td>To foster a flourishing Liquid Staking Ecosystem by driving utility to $XPRT</td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Labs</strong></td><td>Driving product innovation, applications and tools for the Persistence Network. </td><td><a href="broken-reference">Broken link</a></td><td></td></tr><tr><td align="center"><strong>Fundamentals</strong></td><td>Some basic concepts to get you started</td><td><a href="broken-reference">Broken link</a></td><td></td></tr></tbody></table>
 
 ## Participate & Explore 🔍
 
