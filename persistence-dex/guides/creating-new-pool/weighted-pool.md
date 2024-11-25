@@ -6,7 +6,7 @@ description: Suits all assets
 
 A custom weighted pool AMM mechanism inspired by Balancer, which allows users to create a custom pool of assets and choose their weightage for each asset, such as pools with 60/40 or 60/20/20 weightage, in contrast to the constant product AMM mechanism, which only offers 50/50 weightage. This pool type supports up to 8 assets in a single pool.
 
-For an in-depth explanation of Weighted Pools by Persistence DEX, [click here.](https://app.gitbook.com/o/hVvJKSHKLqEyI1jNR7p9/s/msiEudvUiaeJSMheQiRX/\~/changes/189/persistence-dex/pools)
+For an in-depth explanation of Weighted Pools by Persistence DEX, [click here.](https://app.gitbook.com/o/hVvJKSHKLqEyI1jNR7p9/s/msiEudvUiaeJSMheQiRX/~/changes/189/persistence-dex/pools)
 
 **How to create Weighted Pool on Persistence DEX.**
 
@@ -42,7 +42,7 @@ The default settings for Swap Fee follows protocol recommendations but can be mo
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FX8BuIsohPYZ03Q6Xhrz9%252FScreenshot%25202023-12-20%2520at%252012.49.38%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3D33248432-9c53-4f62-880e-5eea36b428db&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=369df58d4d6761705b3a3b1a71d510497498afe769bb2b22e703a7e19f2ea6d0" alt=""><figcaption></figcaption></figure>
 
-* _**\[Optional]**_** Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
+* _**\[Optional]**_**&#x20;Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
 
 {% hint style="info" %}
 If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
@@ -50,7 +50,7 @@ If there's an insufficient balance for any assets, users can deposit those asset
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252Fyybjl4aieHiq5vCFwyl8%252FScreenshot%25202023-12-20%2520at%252012.52.01%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3Dd8b02959-c31c-4f51-85c7-0c07a7771d09&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=f8c7c96f5d4e244b22aab171ecf51c1b14ecb0b8beb24250c71c14499a7abc9c" alt=""><figcaption></figcaption></figure>
 
-* _**\[Optional]**_** Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
+* _**\[Optional]**_**&#x20;Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
 
 {% hint style="info" %}
 Setting up the rewards schedule is optional and can be done post-pool creation. To set a rewards schedule for pool, click this link.

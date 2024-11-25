@@ -51,7 +51,7 @@ The rules can have any values for now as our application will fix them for us. W
 
 #### Step 6: Copy the `src/utils/config.sample.ts` file and rename it to `src/utils/config.ts`
 
-1. Add the _**appUUID**, **transformedURL**, **transformedURL**_** inside **_**cloudflareRuleExpression**_, _**cloudflareZoneId**, **cloudflareRulesetId**_ and _**cloudflareRuleId**_ for each of the apps. You can obtain the _**cloudflareZoneId**_ by following the instructions in the [Cloudflare documentation](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/). \
+1. Add the _**appUUID**, **transformedURL**, **transformedURL**_**&#x20;inside&#x20;**_**cloudflareRuleExpression**_, _**cloudflareZoneId**, **cloudflareRulesetId**_ and _**cloudflareRuleId**_ for each of the apps. You can obtain the _**cloudflareZoneId**_ by following the instructions in the [Cloudflare documentation](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/). \
    \
    The **cloudflareRulesetId** and **cloudflareRuleId** can be obtained by following the instructions on [this page](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view/).\
 

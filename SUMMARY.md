@@ -1,6 +1,16 @@
 # Table of contents
 
 * [👓 Overview](README.md)
+* [🌐 Persistence Ecosystem](persistence-ecosystem.md)
+* [⛓️ Bitcoin Cross-Chain Swaps](bitcoin-cross-chain-swaps/README.md)
+  * [🌟 Introduction](bitcoin-cross-chain-swaps/introduction.md)
+  * [📚 Fundamentals](bitcoin-cross-chain-swaps/fundamentals/README.md)
+    * [💱 BTCfi](bitcoin-cross-chain-swaps/fundamentals/btcfi.md)
+    * [🌉 Bitcoin Layer 2s](bitcoin-cross-chain-swaps/fundamentals/bitcoin-layer-2s.md)
+    * [Interoperability for BTCfi](bitcoin-cross-chain-swaps/fundamentals/interoperability-for-btcfi.md)
+    * [💡 Intents for Blockchain Interoperability](bitcoin-cross-chain-swaps/fundamentals/intents-for-blockchain-interoperability.md)
+  * [🔀 Traditional Bridges vs. Intent-Based Swaps](bitcoin-cross-chain-swaps/traditional-bridges-vs.-intent-based-swaps.md)
+  * [⚙️ Product Mechanism](bitcoin-cross-chain-swaps/product-mechanism.md)
 
 ## 🔄 Persistence DEX
 

@@ -40,7 +40,7 @@ If any of the above criteria are no longer met, the foundation delegation will b
 
     New validators who find it challenging to enter the active set independently have the opportunity to receive a small initial delegation from the foundation to kickstart their journey and secure a position in the active set. \
     As a pre-requisite they need to run a validator on the testnet (test-core-2) chain for a minimum of one month and make a few substantial bonus contributions. \
-    _**Note:** This support initiative will remain accessible throughout the delegation period._\
+    &#xNAN;_**Note:** This support initiative will remain accessible throughout the delegation period._\
 
 2.  #### Commission
 

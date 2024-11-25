@@ -1,12 +1,40 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # 👓 Overview
+
+<figure><img src=".gitbook/assets/Frame.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 <mark style="color:red;">Note: This Docs is still in a draft stage. We apologise if the information you're looking for is not yet available. Feel free to contribute to make it better, or please reach out to the team directly with any questions you might have.</mark>&#x20;
 {% endhint %}
 
-Welcome to Persistence One Docs! Here you can find anything and everything related to the Persistence One.&#x20;
+Welcome to the **Persistence Documentation Hub**! Here, you’ll find everything you need to learn, participate, and build within the Persistence ecosystem.
 
-We invite you to Learn, Participate, Explore, Build, Integrate, Validate and Connect with us on this journey.&#x20;
+## What’s New? ✨
+
+As part of our mission to simplify BTCfi interoperability and overcome fragmented liquidity, Persistence has undergone a strategic pivot to focus on Bitcoin cross-chain swaps.
+
+Our updated ecosystem now includes:
+
+* **Bitcoin Cross-Chain Swaps:** A cutting-edge solution for fast, zero-slippage Bitcoin Cross-Chain Swaps.
+* **Persistence DEX:** A decentralized exchange for seamless trading and liquidity provision.
+* **Persistence Core-1 Chain:** The robust Cosmos-based chain powering the Persistence ecosystem.
+
+Whether you’re a developer, trader, or blockchain enthusiast, this documentation will guide you in exploring and utilizing our products.
+
+We invite you to Learn, Participate, Explore, Build, Integrate, Validate, and Connect with us on this journey. [Lets dive in ->](persistence-ecosystem.md)
 
 ## Learn 📖
 

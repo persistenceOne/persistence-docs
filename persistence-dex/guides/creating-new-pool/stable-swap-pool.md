@@ -38,13 +38,13 @@ The default settings for Swap Fee, AMP Factor, and Max Spread Limit follow proto
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FGPjWiu3yUJrxIgPHGKLz%252Fimage.png%3Falt%3Dmedia%26token%3D6bbfcee1-4e70-4373-ae85-532eb40ac906&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=05564c26160e36f32c7741f2e707c2f501dba333f6ac1b8627c94cce2a9af905" alt=""><figcaption></figcaption></figure>
 
-* _**\[Optional]**_** Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
+* _**\[Optional]**_**&#x20;Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
 
 If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252F7rXbVc4O1dfP6UQKJZeN%252Fimage.png%3Falt%3Dmedia%26token%3Da4a2ae0a-07ef-46e0-90cd-8eae0d320f19&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=0b8ce471e3a5e97c68e10a2b4853223dedba9cf09680b61495f3e8e7c2b6be08" alt=""><figcaption></figcaption></figure>
 
-_**\[Optional]**_** Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
+_**\[Optional]**_**&#x20;Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
 
 Setting up the rewards schedule is optional and can be done post pool creation. To create set rewards schedule for pool, click this link.
 

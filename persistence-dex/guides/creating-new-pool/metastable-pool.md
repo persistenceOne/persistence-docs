@@ -46,7 +46,7 @@ Scaling factor adjustment: Kindly contact the Persistence DEX team on [discord](
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FEx8xYg53ZAXuxqTA5yc1%252FScreenshot%25202023-12-20%2520at%252011.54.35%25E2%2580%25AFAM.png%3Falt%3Dmedia%26token%3Dc920047f-cfb8-4f06-84dd-8e80827c600f&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=2a4d5e78f3c9c090c92a98750a3cbdf82af2dbb0fedbf935ea40ebb01c52f12a" alt=""><figcaption></figcaption></figure>
 
-* _**\[Optional]**_** Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
+* _**\[Optional]**_**&#x20;Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
 
 {% hint style="info" %}
 If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
@@ -54,7 +54,7 @@ If there's an insufficient balance for any assets, users can deposit those asset
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FFLbGoK4eo4f5M24lFp6l%252FScreenshot%25202023-12-20%2520at%252011.58.08%25E2%2580%25AFAM.png%3Falt%3Dmedia%26token%3D134d0f63-6469-4b81-804b-f74452bce5d1&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=8a8e5275031034ef217e1f111574363f169e3b575dff4eedc141505e75d6fb0c" alt=""><figcaption></figcaption></figure>
 
-* _**\[Optional]**_** Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
+* _**\[Optional]**_**&#x20;Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
 
 {% hint style="info" %}
 Setting up the rewards schedule is optional and can be done post pool creation. To set a rewards schedule for the pool, click this link.
