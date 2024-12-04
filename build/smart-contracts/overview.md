@@ -1,7 +1,5 @@
 # Overview
 
-<mark style="color:red;">To be reviewed and updated</mark>
-
 ## Workflow
 
 For you to upload contract on persistence chain you would have to go through the following steps.

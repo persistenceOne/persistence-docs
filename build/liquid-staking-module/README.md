@@ -4,6 +4,3 @@ Developed by [Iqlusion 44](https://twitter.com/iqlusioninc), the LSM (Liquid sta
 
 As a main feature, this module enables XPRT delegators to swiftly migrate from (old) 750 coin-type to (new) 118 coin-type without waiting for 21-days undelegating period.&#x20;
 
-{% hint style="warning" %}
-This page is a _work in progress,_ more details to be added soon.
-{% endhint %}

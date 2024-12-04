@@ -14,7 +14,7 @@ layout:
 
 # 👓 Overview
 
-<figure><img src=".gitbook/assets/Frame.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-12-04 at 6.00.05 PM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 <mark style="color:red;">Note: This Docs is still in a draft stage. We apologise if the information you're looking for is not yet available. Feel free to contribute to make it better, or please reach out to the team directly with any questions you might have.</mark>&#x20;
@@ -22,21 +22,15 @@ layout:
 
 Welcome to the **Persistence Documentation Hub**! Here, you’ll find everything you need to learn, participate, and build within the Persistence ecosystem.
 
-## What’s New? ✨
+## Basics ✨
 
-As part of our mission to simplify BTCfi interoperability and overcome fragmented liquidity, Persistence has undergone a strategic pivot to focus on Bitcoin cross-chain swaps.
+**Persistence One** is building the BTCFi Liquidity Hub, enabling fast, near zero-slippage swaps for XPRT, BTC-variants, and BTCfi tokens on **Persistence DEX**.
 
-Our updated ecosystem now includes:
-
-* **Bitcoin Cross-Chain Swaps:** A cutting-edge solution for fast, zero-slippage Bitcoin Cross-Chain Swaps.
-* **Persistence DEX:** A decentralized exchange for seamless trading and liquidity provision.
-* **Persistence Core-1 Chain:** The robust Cosmos-based chain powering the Persistence ecosystem.
+**BTCFi**’s rapid growth has created multiple BTC-related assets, making fragmentation a big challenge. Persistence One will provide a single liquidity hub, simplifying value transfer across the Bitcoin ecosystem.
 
 Whether you’re a developer, trader, or blockchain enthusiast, this documentation will guide you in exploring and utilizing our products.
 
 We invite you to Learn, Participate, Explore, Build, Integrate, Validate, and Connect with us on this journey. [Lets dive in ->](persistence-ecosystem.md)
-
-
 
 ## Participate & Explore 🔍
 
@@ -48,7 +42,7 @@ Your participation matters! Read all about how you can participate in the Persis
 
 Technical Documentation for builders & validators
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Running Nodes</strong></td><td>How to run a node locally, on testnet or on mainnet</td><td><a href="build/nodes-and-endpoints/">nodes-and-endpoints</a></td></tr><tr><td align="center"><strong>Validators</strong></td><td>How to become a validator on testnet or mainnet</td><td><a href="build/validators/">validators</a></td></tr><tr><td align="center"><strong>Relayers</strong></td><td>Which relayers are maintained, and how to run one yourself</td><td><a href="build/relayers/">relayers</a></td></tr><tr><td align="center"><strong>Indexers</strong></td><td>How to connect to and even run Graph Nodes</td><td><a href="build/indexers/">indexers</a></td></tr><tr><td align="center"><strong>Smart Contracts</strong></td><td>How to build Dapps on top of the Persistence Chain via CosmWasm</td><td><a href="build/smart-contracts/">smart-contracts</a></td></tr><tr><td align="center"><strong>Modules</strong></td><td>Understand the current modules and how to leverage them</td><td><a href="build/modules/">modules</a></td></tr><tr><td align="center"><strong>Tools</strong></td><td>Find all tools that have been built for the ecosystem</td><td><a href="build/tools/">tools</a></td></tr><tr><td align="center"><strong>Grants</strong></td><td>How to get support &#x26; funding from the Foundation</td><td><a href="build/grants.md">grants.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Running Nodes</strong></td><td>How to run a node locally, on testnet or on mainnet</td><td><a href="build/nodes-and-endpoints/">nodes-and-endpoints</a></td></tr><tr><td align="center"><strong>Validators</strong></td><td>How to become a validator on testnet or mainnet</td><td><a href="build/validators/">validators</a></td></tr><tr><td align="center"><strong>Relayers</strong></td><td>Which relayers are maintained, and how to run one yourself</td><td><a href="build/relayers/">relayers</a></td></tr><tr><td align="center"><strong>Indexers</strong></td><td>How to connect to and even run Graph Nodes</td><td><a href="build/indexers/">indexers</a></td></tr><tr><td align="center"><strong>Smart Contracts</strong></td><td>How to build Dapps on top of the Persistence Chain via CosmWasm</td><td><a href="build/smart-contracts/">smart-contracts</a></td></tr><tr><td align="center"><strong>Modules</strong></td><td>Understand the current modules and how to leverage them</td><td><a href="broken-reference">Broken link</a></td></tr><tr><td align="center"><strong>Tools</strong></td><td>Find all tools that have been built for the ecosystem</td><td><a href="build/tools/">tools</a></td></tr><tr><td align="center"><strong>Grants</strong></td><td>How to get support &#x26; funding from the Foundation</td><td><a href="build/grants.md">grants.md</a></td></tr></tbody></table>
 
 ## Connect & Follow 😍
 

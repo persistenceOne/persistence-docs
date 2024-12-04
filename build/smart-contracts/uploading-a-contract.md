@@ -1,7 +1,5 @@
 # Uploading a Contract
 
-<mark style="color:red;">To be reviewed and updated</mark>
-
 These are the steps to upload and instantiate a contract
 
 * Submit the upload proposal
