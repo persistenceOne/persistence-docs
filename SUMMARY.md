@@ -37,7 +37,6 @@
 ## 🔍 Participate & Explore <a href="#participate" id="participate"></a>
 
 * [$XPRT Token](participate/xprt/README.md)
-  * [Token Contract Metadata](participate/xprt/token-contract-metadata.md)
   * [Acquire](participate/xprt/acquire.md)
   * [Stake](participate/xprt/stake.md)
   * [Governance](participate/xprt/governance.md)
@@ -48,9 +47,9 @@
 * [Explorers](participate/explorers.md)
 * [Bridges](participate/bridges.md)
   * [Persistence Bridge](participate/bridges/persistence-bridge.md)
-* [Useful Tools](participate/useful-tools.md)
+* [Grants](participate/grants.md)
 
-## ⚒️ Build, Integrate, Validate <a href="#build" id="build"></a>
+## ⛓️ Persistence Core-1 Chain <a href="#build" id="build"></a>
 
 * [Running Nodes](build/nodes-and-endpoints/README.md)
   * [Run a Local Node](build/nodes-and-endpoints/setup.md)
@@ -98,7 +97,7 @@
 * [Developer Tools](build/tools/README.md)
   * [Persistence JS](build/tools/persistence-js.md)
   * [Persistence SDK](build/tools/persistence-sdk.md)
-* [Grants](build/grants.md)
+* [Community Tools](build/useful-tools.md)
 
 ***
 

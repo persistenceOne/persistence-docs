@@ -11,6 +11,3 @@ Supported Assets:&#x20;
 | $PSTAKE | Ethereum    | Persistence |
 | $PSTAKE | Persistence | Ethereum    |
 
-### Tutorial
-
-{% embed url="https://www.youtube.com/watch?v=Bhq-53C114Q" %}
