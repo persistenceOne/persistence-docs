@@ -4,5 +4,5 @@ description: >-
   and zero-slippage swaps across Bitcoin Layer 2s and sidechains.
 ---
 
-# ⛓️ Bitcoin Cross-Chain Swaps
+# Bitcoin Cross-Chain Swaps (V2)
 

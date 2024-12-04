@@ -14,7 +14,7 @@ Our flagship product focused on fast, zero-slippage swaps across Bitcoin L2s.
 * Powered by Intents.
 * Secured by Bitcoin.
 
-👉 [Learn more about Bitcoin Cross-Chain Swaps](persistence-dex/bitcoin-cross-chain-swaps-v2/)
+👉 [Learn more about Bitcoin Cross-Chain Swaps](bitcoin-cross-chain-swaps-v2/)
 
 
 

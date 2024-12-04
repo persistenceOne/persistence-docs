@@ -1,12 +1,12 @@
 # Pools
 
-Persistence has travelled far and wide and knows a lot about AMMs, and now brings all the wisdom into building his AMM based on Persistence Core. Let’s dive into the blueprints!
+Persistence has travelled far and wide and knows a lot about AMMs, and now brings all the wisdom into building his AMM based on Persistence Core-1 chain. Let’s dive into the blueprints!
 
 AMMs have revolutionized markets by allowing users to trade anytime without needing a counterparty. Pioneered by Uniswap in 2018, they serve as an essential building block in DeFi.
 
 Persistence DEX will bring tried and tested AMM mechanisms to the Interchain, inspired by the best innovations in all of DeFi, and will support assets from other IBC-enabled chains.
 
-At launch, Persistence DEX would feature the following types of AMMs :
+Persistence DEX features the following types of AMMs :
 
 * Stableswap Invariant Pool (Upto 5 Assets) - Inspired by Curve
 * Weighted Pool - Inspired by Balancer
@@ -14,7 +14,7 @@ At launch, Persistence DEX would feature the following types of AMMs :
 
 ## Stableswap
 
-<figure><img src="../.gitbook/assets/image.avif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image.avif" alt=""><figcaption></figcaption></figure>
 
 A stableswap is an automated market maker (AMM) optimized for similarly priced tokens and provides minimum slippage and efficient liquidity provision.
 
@@ -40,21 +40,21 @@ For example - stkATOM/stATOM/qATOM
 
 ## Weighted Pools
 
-<figure><img src="../.gitbook/assets/image (1).avif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).avif" alt=""><figcaption></figcaption></figure>
 
-Persistence DEX will support a custom weighted pool AMM mechanism inspired by Balancer, which allows users to create a custom pool of assets and choose their weightage for each asset, such as pools with 60/40 or 60/20/20 weightage, in contrast to the constant product AMM mechanism, which only offers 50/50 weightage. This pool type supports up to 8 assets in a single pool.
+Persistence DEX supports a custom weighted pool AMM mechanism inspired by Balancer, which allows users to create a custom pool of assets and choose their weightage for each asset, such as pools with 60/40 or 60/20/20 weightage, in contrast to the constant product AMM mechanism, which only offers 50/50 weightage. This pool type supports up to 8 assets in a single pool.
 
 Pools that weigh one token heavily significantly improve impermanent loss to the user compared to 50-50 pools. Impermanent loss is significantly less for highly imbalanced pools like 95/5, but this leads to high slippage due to low liquidity for one of the assets. Weighted pools allow users to customize their exposure to assets and maintain a balance in impermanent loss.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Weighted pools with more than two assets would allow traders to trade multiple combinations of assets on a single pool, saving them the swap fees to be paid on multiple swaps.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Metastable Pools
 
-<figure><img src="../.gitbook/assets/image (2).avif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2).avif" alt=""><figcaption></figcaption></figure>
 
 A metastable pool is suited for assets that follow an exchange rate with a base asset, like liquid-staked assets such as stkATOM and interest-bearing tokens from lending protocols such as cDAI.
 

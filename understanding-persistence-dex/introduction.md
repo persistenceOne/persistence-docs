@@ -14,42 +14,42 @@ Trade efficiently or provide liquidity to earn from swap fees and LP rewards ğŸ‘
 
 Learn the fundamentals of Persistence DEX to get a better understanding of our main features:
 
-{% content-ref url="pools.md" %}
-[pools.md](pools.md)
+{% content-ref url="../pools.md" %}
+[pools.md](../pools.md)
 {% endcontent-ref %}
 
-{% content-ref url="fees.md" %}
-[fees.md](fees.md)
+{% content-ref url="../fees.md" %}
+[fees.md](../fees.md)
 {% endcontent-ref %}
 
 ## Dive a little deeper
 
 Take a glance over the code behind Persistence DEX.
 
-{% content-ref url="contracts/technical-architecture.md" %}
-[technical-architecture.md](contracts/technical-architecture.md)
+{% content-ref url="../technical-architecture.md" %}
+[technical-architecture.md](../technical-architecture.md)
 {% endcontent-ref %}
 
 ## Guides
 
 Take a walkthrough of using Persistence DEX
 
-{% content-ref url="guides/managing-assets.md" %}
-[managing-assets.md](guides/managing-assets.md)
+{% content-ref url="../guides/managing-assets.md" %}
+[managing-assets.md](../guides/managing-assets.md)
 {% endcontent-ref %}
 
-{% content-ref url="guides/trading-assets.md" %}
-[trading-assets.md](guides/trading-assets.md)
+{% content-ref url="../guides/trading-assets.md" %}
+[trading-assets.md](../guides/trading-assets.md)
 {% endcontent-ref %}
 
-{% content-ref url="guides/providing-liquidity.md" %}
-[providing-liquidity.md](guides/providing-liquidity.md)
+{% content-ref url="../guides/providing-liquidity.md" %}
+[providing-liquidity.md](../guides/providing-liquidity.md)
 {% endcontent-ref %}
 
-{% content-ref url="guides/bonding-unbonding-tokens.md" %}
-[bonding-unbonding-tokens.md](guides/bonding-unbonding-tokens.md)
+{% content-ref url="../guides/bonding-unbonding-tokens.md" %}
+[bonding-unbonding-tokens.md](../guides/bonding-unbonding-tokens.md)
 {% endcontent-ref %}
 
-{% content-ref url="guides/claiming-rewards.md" %}
-[claiming-rewards.md](guides/claiming-rewards.md)
+{% content-ref url="../guides/claiming-rewards.md" %}
+[claiming-rewards.md](../guides/claiming-rewards.md)
 {% endcontent-ref %}

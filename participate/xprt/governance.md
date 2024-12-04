@@ -24,4 +24,3 @@ The easiest way to vote currently is via the Keplr Dashboard, the link below wil
 Keplr Dashboard for Persistence Governance
 {% endembed %}
 
-<mark style="color:red;">More detailed documentation around Governance will follow soon</mark>
