@@ -2,15 +2,6 @@
 
 * [👓 Overview](README.md)
 * [🌐 Persistence Ecosystem](persistence-ecosystem.md)
-* [⛓️ Bitcoin Cross-Chain Swaps](bitcoin-cross-chain-swaps/README.md)
-  * [🌟 Introduction](bitcoin-cross-chain-swaps/introduction.md)
-  * [📚 Fundamentals](bitcoin-cross-chain-swaps/fundamentals/README.md)
-    * [💱 BTCfi](bitcoin-cross-chain-swaps/fundamentals/btcfi.md)
-    * [🌉 Bitcoin Layer 2s](bitcoin-cross-chain-swaps/fundamentals/bitcoin-layer-2s.md)
-    * [Interoperability for BTCfi](bitcoin-cross-chain-swaps/fundamentals/interoperability-for-btcfi.md)
-    * [💡 Intents for Blockchain Interoperability](bitcoin-cross-chain-swaps/fundamentals/intents-for-blockchain-interoperability.md)
-  * [🔀 Traditional Bridges vs. Intent-Based Swaps](bitcoin-cross-chain-swaps/traditional-bridges-vs.-intent-based-swaps.md)
-  * [⚙️ Product Mechanism](bitcoin-cross-chain-swaps/product-mechanism.md)
 
 ## 🔄 Persistence DEX
 
@@ -33,6 +24,15 @@
     * [Metastable Pool](persistence-dex/guides/creating-new-pool/metastable-pool.md)
     * [Weighted Pool](persistence-dex/guides/creating-new-pool/weighted-pool.md)
     * [Stable Swap Pool](persistence-dex/guides/creating-new-pool/stable-swap-pool.md)
+* [⛓️ Bitcoin Cross-Chain Swaps (V2)](persistence-dex/bitcoin-cross-chain-swaps-v2/README.md)
+  * [🌟 Introduction](persistence-dex/bitcoin-cross-chain-swaps-v2/introduction.md)
+  * [📚 Fundamentals](persistence-dex/bitcoin-cross-chain-swaps-v2/fundamentals/README.md)
+    * [💱 BTCfi](persistence-dex/bitcoin-cross-chain-swaps-v2/fundamentals/btcfi.md)
+    * [🌉 Bitcoin Layer 2s](persistence-dex/bitcoin-cross-chain-swaps-v2/fundamentals/bitcoin-layer-2s.md)
+    * [Interoperability for BTCfi](persistence-dex/bitcoin-cross-chain-swaps-v2/fundamentals/interoperability-for-btcfi.md)
+    * [💡 Intents for Blockchain Interoperability](persistence-dex/bitcoin-cross-chain-swaps-v2/fundamentals/intents-for-blockchain-interoperability.md)
+  * [🔀 Traditional Bridges vs. Intent-Based Swaps](persistence-dex/bitcoin-cross-chain-swaps-v2/traditional-bridges-vs.-intent-based-swaps.md)
+  * [⚙️ Product Mechanism](persistence-dex/bitcoin-cross-chain-swaps-v2/product-mechanism.md)
 
 ## 🔍 Participate & Explore <a href="#participate" id="participate"></a>
 

@@ -1,6 +1,6 @@
 # ⚙️ Product Mechanism
 
-<figure><img src="../.gitbook/assets/unnamed.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/unnamed.png" alt=""><figcaption></figcaption></figure>
 
 ### How Persistence One's Bitcoin Cross-Chain Swap Works
 
