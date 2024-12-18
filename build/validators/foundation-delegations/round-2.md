@@ -1,4 +1,4 @@
-# ➡ Round 2 - In Progress
+# ➡️ Round 2 - Closed
 
 {% hint style="warning" %}
 In order to receive foundation delegations for this round, it is required to apply via the [FDP App](https://fdp.persistence.one) before the **7th of April 2023 - 23.59UTC** ([Save to calendar](https://calendar.google.com/calendar/event?action=TEMPLATE\&tmeid=MzF0cDYzNzUxcHN1cXBnYjRjZ3ZxMmNqc2sgbWFkaHVyQHBlcnNpc3RlbmNlLm9uZQ\&tmsrc=madhur%40persistence.one)).

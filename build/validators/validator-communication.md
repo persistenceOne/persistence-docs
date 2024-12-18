@@ -52,7 +52,7 @@ Join our Email list from[ here](http://eepurl.com/idRmrT) or contact someone fro
 
 ## Your contact details
 
-To ensure communication is always smooth, please ensure to have provided your latest contact details. To do so, please register your contact details via [the FDP-app](https://fdp.persistence.one). Note that you can provide your contact details without applying for the [Foundation Delegation Program](../../community-and-support/foundation-delegations/), just complete step 1 in the FDP-app.&#x20;
+To ensure communication is always smooth, please ensure to have provided your latest contact details. To do so, please register your contact details via [the FDP-app](https://fdp.persistence.one). Note that you can provide your contact details without applying for the [Foundation Delegation Program](foundation-delegations/), just complete step 1 in the FDP-app.&#x20;
 
 ## Monitoring
 

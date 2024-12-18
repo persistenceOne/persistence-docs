@@ -1,4 +1,4 @@
-# ➡ Round 1 - Closed
+# ➡️ Round 1 - Closed
 
 {% hint style="warning" %}
 In order to receive foundation delegations for this round, it is required to apply through [this form](https://forms.gle/NZnGe6iw3ev6qrwt7) before 30/12/2022 - 23.59UTC
