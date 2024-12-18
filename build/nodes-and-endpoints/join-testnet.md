@@ -178,7 +178,7 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
         ```
     * Make sure you replace `trust_height` and `trust_hash` values with the ones you've copied in the previous step.
 
-    Note: For an automated script for **StateSync**, follow the instructions on this [link](https://polkachu.com/testnets/persistence/state\_sync).\
+    Note: For an automated script for **StateSync**, follow the instructions on this [link](https://polkachu.com/testnets/persistence/state_sync).\
     &#x20;          Refer to peers here: [peers.json](https://github.com/persistenceOne/networks/blob/auditOne/test-core-2/test-core-2/peers.json) . \
     &#x20;          For additional helpful values like seeds, refer here: [polkachu](https://polkachu.com/testnets/persistence) .
 4.  Open the `app.toml` file _(application-related configuration file)_:
@@ -210,8 +210,6 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     ```bash
     curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
     ```
-
-##
 
 ## Node operations
 

@@ -1,4 +1,4 @@
-# Foundation Delegations
+# 🇹🇰 Foundation Delegations
 
 The Persistence One Foundation Delegation Program -launched in December 2022- is designed to improve the health of the Persistence One network and the overall ecosystem by supporting contributing validators in the form of foundation delegations.&#x20;
 

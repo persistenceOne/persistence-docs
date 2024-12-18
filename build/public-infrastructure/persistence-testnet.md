@@ -4,10 +4,10 @@ description: This page contains information on Persistence public testnets
 
 # Persistence Testnet
 
-| Chain ID    | Type    | Status  | Version                                                                         | Notes                                                |
-| ----------- | ------- | ------- | ------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| Test-core-2 | Testnet | Active  | v8.0.0 ([Releases](https://github.com/persistenceOne/persistenceCore/releases)) | Current Testnet                                      |
-| Test-core-1 | Testnet | Deleted | v8.0.0-rc5                                                                      | Deprecated on 15th June 2023, Deleted on 22 Aug 2023 |
+| Chain ID    | Type    | Status               | Version                                                                      | Notes                                                |
+| ----------- | ------- | -------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------- |
+| test-core-2 | Testnet | Active               | Check [Releases](https://github.com/persistenceOne/persistenceCore/releases) | Current Testnet                                      |
+| test-core-1 | Testnet | Deprecated & Deleted | v8.0.0-rc5                                                                   | Deprecated on 15th June 2023, Deleted on 22 Aug 2023 |
 
 Testnets are a type of blockchain used exclusively for testing purposes. They function as a sandbox environment, allowing developers to test new code and functionalities without worrying about affecting the live blockchain (Mainnet). They are persistent environments, meaning that they remain active for extended periods of time.
 

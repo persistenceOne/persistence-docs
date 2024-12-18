@@ -81,11 +81,6 @@
   * [Validate on Testnet](build/validators/testnet-validator-setup.md)
   * [Validate on Mainnet](build/validators/mainnet-validator-setup.md)
   * [Validator Communication](build/validators/validator-communication.md)
-  * [Foundation Delegations](build/validators/foundation-delegations/README.md)
-    * [➡️ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
-    * [➡️ Round 2 - Closed](build/validators/foundation-delegations/round-2.md)
-    * [⭐ Bonus Delegation](build/validators/foundation-delegations/bonus-delegation.md)
-    * [➡️ Round 3 - Delegation Period Active](build/validators/foundation-delegations/round-3-delegation-period-active.md)
 * [📡 Relayers](build/relayers/README.md)
   * [IBC Channels](build/relayers/ibc-channels.md)
   * [IBC Relayers](build/relayers/ibc-relayers.md)
@@ -111,8 +106,11 @@
 
 ## Community & Support
 
-* [😍 Connect & Follow](community-and-support/connect-and-follow.md)
-* [🌎 Geofencing on Persistence](community-and-support/geofencing-on-persistence.md)
+* [🇹🇰 Foundation Delegations](community-and-support/foundation-delegations/README.md)
+  * [➡️ Round 1 - Closed](community-and-support/foundation-delegations/round-1.md)
+  * [➡️ Round 2 - Closed](community-and-support/foundation-delegations/round-2.md)
+  * [⭐ Bonus Delegation](community-and-support/foundation-delegations/bonus-delegation.md)
+  * [➡️ Round 3 - Delegation Period Active](community-and-support/foundation-delegations/round-3-delegation-period-active.md)
 * [⭕ Coin-type Migration from 750 to 118](community-and-support/coin-type-migration-from-750-to-118/README.md)
   * [Persistence Wallet](community-and-support/coin-type-migration-from-750-to-118/persistence-wallet.md)
   * [Keplr Wallet](community-and-support/coin-type-migration-from-750-to-118/keplr-wallet.md)
@@ -122,3 +120,5 @@
   * [Math Wallet](community-and-support/coin-type-migration-from-750-to-118/math-wallet.md)
   * [Leap Wallet](community-and-support/coin-type-migration-from-750-to-118/leap-wallet.md)
   * [Citadel Wallet](community-and-support/coin-type-migration-from-750-to-118/citadel-wallet.md)
+* [🌎 Geofencing on Persistence](community-and-support/geofencing-on-persistence.md)
+* [😍 Connect & Follow](community-and-support/connect-and-follow.md)
