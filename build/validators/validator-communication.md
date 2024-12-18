@@ -38,7 +38,7 @@ Hence, we launched a telegram bot (Amelia) which can relay the following details
 2. Chain updates - Missing blocks, commission change, etc
 3. Reminders - Automatically sends reminder for voting 24 hours prior to end time for validators who haven't voted.&#x20;
 
-**Looks appealing?** [Contact team](../../connect-and-follow.md) if you don't have it installed on our group already.&#x20;
+**Looks appealing?** [Contact team](../../community-and-support/connect-and-follow.md) if you don't have it installed on our group already.&#x20;
 
 **PS:** This bot will not be used for spams or marketing announcements. Pinky Promise!
 

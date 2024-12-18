@@ -2,7 +2,7 @@
 description: Token holders decide on the future of the Ecosystem
 ---
 
-# Governance
+# 🏛️ Governance
 
 ## Off-chain Discussions
 

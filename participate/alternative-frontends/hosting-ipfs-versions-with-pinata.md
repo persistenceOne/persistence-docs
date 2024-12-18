@@ -5,7 +5,7 @@ description: >-
   IPNS/ENS), and high uptime.
 ---
 
-# Hosting IPFS Versions with Pinata
+# 🔃 Hosting IPFS Versions with Pinata
 
 This guide provides step-by-step instructions for community members or Validators to pin and host IPFS versions of the frontends for Persistence products on their respective domains. The example uses Pinata as the pinning service and Cloudflare for DNS management.
 

@@ -1,4 +1,4 @@
-# Smart Contracts
+# 📄 Smart Contracts
 
 <mark style="color:red;">Section to be reviewed and updated</mark>
 

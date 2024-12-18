@@ -2,14 +2,14 @@
 description: Explore alternative frontends for pWALLET, pSTAKE App, and Dexter App.
 ---
 
-# Alternative Frontends
+# 🖥️ Alternative Frontends
 
 {% hint style="success" %}
 **Important:** Before utilizing any alternative frontends, it is crucial to verify the provided links for authenticity and security. Always ensure the accuracy of the links from this repository to maintain a secure and reliable user experience.
 {% endhint %}
 
 {% hint style="info" %}
-_**If you are hosting an alternative frontend & not included in the below list,**_ [_**reach out**_](../../connect-and-follow.md) _**to the Persistence One team, and we will ensure its addition.**_
+_**If you are hosting an alternative frontend & not included in the below list,**_ [_**reach out**_](../../community-and-support/connect-and-follow.md) _**to the Persistence One team, and we will ensure its addition.**_
 {% endhint %}
 
 ## pWALLET

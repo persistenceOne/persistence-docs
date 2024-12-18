@@ -2,7 +2,7 @@
 description: Not Investment Advice
 ---
 
-# Acquire
+# 🛒 Acquire
 
 Users can acquire $XPRT either on Centralised or Decentralised Exchanges. The references below are just for informational purposes, they don't form an endorsement to the particular exchange, nor do they incorporate any financial or investment advice.&#x20;
 

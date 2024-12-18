@@ -1,13 +1,14 @@
-# Relayers
+# 📡 Relayers
 
 In IBC, blockchains do not directly pass messages to each other over the network. This is where relayers comes in. A relayer process monitors for updates on opens paths between sets of [IBC enabled chains](https://mapofzones.com/). The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
 
 In addition to relaying packets, this relayer can open paths across chains, thus creating clients, connections and channels.
 
 Additional Resources:
-- [Cosmos Docs](https://tutorials.cosmos.network/)
-- [Relayers](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/2-relayer-intro.html)
-- [IBC](https://ibc.cosmos.network/)
+
+* [Cosmos Docs](https://tutorials.cosmos.network/)
+* [Relayers](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/2-relayer-intro.html)
+* [IBC](https://ibc.cosmos.network/)
 
 The following pages show the established relayers between the Persistence Core-1 Chain and other IBC-enabled chains. It also contains information for operators who want to set up additional relayers.
 

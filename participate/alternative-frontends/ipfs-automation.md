@@ -1,4 +1,4 @@
-# IPFS Automation
+# 🤖 IPFS Automation
 
 This guide has instructions to set up workflow which will run automatically to pin the latest hashes and create/update the transform rules set in Cloudflare whenever new version releases will be published across all apps.
 

@@ -2,6 +2,8 @@
 description: >-
   This documentation contains all the IBC Denom or Token Contract for XPRT on
   the respective chains.
+icon: coin
+coverY: 0
 ---
 
 # $XPRT Token

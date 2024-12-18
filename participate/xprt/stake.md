@@ -2,7 +2,7 @@
 description: Stake with a validator of your choice and help to secure the network
 ---
 
-# Stake
+# 📈 Stake
 
 As the Persistence chain runs on a delegated [Proof-of-Stake](broken-reference) based Tendermint PBFT consensus engine, staking is integral to ensuring a secure and robust network.&#x20;
 
