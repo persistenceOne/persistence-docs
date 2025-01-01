@@ -26,8 +26,8 @@ Learn the fundamentals of Persistence DEX to get a better understanding of our m
 
 Take a glance over the code behind Persistence DEX.
 
-{% content-ref url="technical-documentation/technical-architecture.md" %}
-[technical-architecture.md](technical-documentation/technical-architecture.md)
+{% content-ref url="technical-architecture.md" %}
+[technical-architecture.md](technical-architecture.md)
 {% endcontent-ref %}
 
 ## Guides

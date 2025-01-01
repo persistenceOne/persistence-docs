@@ -1,12 +1,8 @@
 # Persistence JS
 
-<mark style="color:red;">To be reviewed and updated</mark>
-
 {% embed url="https://github.com/persistenceOne/persistenceJS#readme" %}
 [https://github.com/persistenceOne/persistenceJS#readme](https://github.com/persistenceOne/persistenceJS#readme)
 {% endembed %}
-
-
 
 ### Setup
 

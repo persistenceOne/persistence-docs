@@ -1,10 +1,10 @@
-# ➡️ Round 3 - Delegation Period Active
+# ➡️ Round 3 - Delegation Period Over
 
 {% hint style="warning" %}
 In order to receive foundation delegations for this round, it is required to apply via the [FDP App](https://fdp.persistence.one) before the **15th April 2024 - 23.59UTC** \[[Save to calendar](https://calendar.google.com/calendar/event?action=TEMPLATE\&tmeid=M3NvdmU2MjhraWM1czl2NnQ3cHJycDFuajAgbWFkaHVyQHBlcnNpc3RlbmNlLm9uZQ\&tmsrc=madhur%40persistence.one)].
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/photo_2024-03-21 18.08.57.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/photo_2024-03-21 18.08.57.jpeg" alt=""><figcaption></figcaption></figure>
 
 ## Baseline Delegation
 
@@ -12,7 +12,7 @@ Minimum requirements to be met in order to be eligible for any foundation delega
 
 #### On-chain:
 
-* [x] Be in the active set at all times ([New validator?](round-3-delegation-period-active.md#pointers))
+* [x] Be in the active set at all times ([New validator?](round-3-delegation-period-over.md#pointers))
 * [x] Voting Power: ≤2.5%
 * [x] Self-Stake: ≥ 1,000 XPRT
 * [x] Commission: 5% ≤ x ≤ 10%

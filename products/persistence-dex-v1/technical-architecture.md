@@ -1,4 +1,4 @@
-# Technical Architecture
+# ⚙️ Technical Architecture
 
 Persistence DEX's base is made up of the following contracts:
 
@@ -16,7 +16,7 @@ Persistence DEX's base is made up of the following contracts:
 
 The Vault is the core of Persistence DEX; it is a smart contract that holds and manages all tokens in each Persistence DEX Pool. It is also the portal through which most Persistence DEX operations (swaps/joins/exits) occur.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/vault](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/vault)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/vault](https://github.com/dexter-zone/dexter_core/tree/main/contracts/vault)
 
 | Contract | Address                                                                |
 | -------- | ---------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/vault](ht
 
 The Keeper contract accounts for all the protocol fees collected by the Persistence DEX Vault. The fee charged during swaps by the Persistence DEX Vault is transferred to the keeper contract.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/keeper](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/keeper)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/keeper](https://github.com/dexter-zone/dexter_core/tree/main/contracts/keeper)
 
 | Contract | Address                                                                |
 | -------- | ---------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/keeper](h
 
 A router contract is a helper contract that facilitates multi-hop swaps via Persistence DEX pools.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/router](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/router)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/router](https://github.com/dexter-zone/dexter_core/tree/main/contracts/router)
 
 | Contract | Address                                                                |
 | -------- | ---------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ Persistence DEX allows projects/teams to incentivize liquidity by rewarding liqu
 
 The Multistaking contract is used to provide incentives to LPs of the protocol. Incentivizers can propose rewards for a particular LP token for a given period of time, and LPs can bond their LP tokens with the multistaking contract to earn those rewards during the reward’s schedule. The implementation is similar to the [Anchor Staking Contract](https://github.com/Anchor-Protocol/anchor-token-contracts/tree/main/contracts/staking) but differs in the sense that it supports multiple LP tokens and multiple rewards per LP token.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/multi\_staking](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/multi\_staking)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/multi\_staking](https://github.com/dexter-zone/dexter_core/tree/main/contracts/multi_staking)
 
 | Contract     | Address                                                                |
 | ------------ | ---------------------------------------------------------------------- |
@@ -58,16 +58,16 @@ Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/multi\_st
 
 The Stable Pool contract implements the curve’s stableswap invariant for up to 5 assets in the pool and implements compute calculations on Liquidity provision/withdrawal and swaps. In addition, it also supports liquid staking derivatives by the use of a scaling factor.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/pools/stable\_pool](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/pools/stable\_pool)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/pools/stable\_pool](https://github.com/dexter-zone/dexter_core/tree/main/contracts/pools/stable_pool)
 
 ## Weighted Pool
 
 The Weighted Pool contract is based on a particular N-dimensional surface which defines a cost function for the exchange of any pair of tokens held in a Pool which was introduced by Balancer. Persistence DEX's weighted pool accepts a maximum of 8 tokens and the weights cannot be updated once the pool has been initialized.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/pools/weighted\_pool](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/pools/weighted\_pool)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/pools/weighted\_pool](https://github.com/dexter-zone/dexter_core/tree/main/contracts/pools/weighted_pool)
 
 ## LP Token
 
 The LP token contract is the standard cw-20 token contract used for LP tokens minted when liquidity is provided to the Persistence DEX pools.
 
-Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/lp\_token](https://github.com/dexter-zone/dexter\_core/tree/main/contracts/lp\_token)
+Code: [https://github.com/dexter-zone/dexter\_core/tree/main/contracts/lp\_token](https://github.com/dexter-zone/dexter_core/tree/main/contracts/lp_token)

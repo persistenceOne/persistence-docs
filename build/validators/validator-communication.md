@@ -30,7 +30,7 @@ To improve coordination and interactions between the Persistence team and the va
 
 <summary>🙇‍♂️ Amelia (Persistence Super Bot) for Telegram</summary>
 
-Persistence chain has 100+ and 40+ validator groups on telegram for mainnet & testnet respectively. Sending chain updates to all the groups manually becomes a tedious task and is comparatively slow at an emergency (Chain halt, Emergency Upgrade, exploit etc).
+Persistence chain has 100+ and 50+ validator groups on telegram for mainnet & testnet respectively. Sending chain updates to all the groups manually becomes a tedious task and is comparatively slow at an emergency (Chain halt, Emergency Upgrade, exploit etc).
 
 Hence, we launched a telegram bot (Amelia) which can relay the following details in a much faster way:&#x20;
 

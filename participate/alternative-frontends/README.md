@@ -16,14 +16,14 @@ _**If you are hosting an alternative frontend & not included in the below list,*
 
 | Provider         | Link                                                                                 |
 | ---------------- | ------------------------------------------------------------------------------------ |
-| Kitkat           | [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet)                 |
 | Baryan           | [https://pwallet.baryon.guru/](https://pwallet.baryon.guru/)                         |
 | Cosmonaut Stakes | [https://ipfs.cosmonautstakes.com/pwallet](https://ipfs.cosmonautstakes.com/pwallet) |
 | ATOM Staking     | [https://ipfs.atomstaking.org/pwallet](https://ipfs.atomstaking.org/pwallet)         |
 | Stake & Relax    | [https://ipfs.stakeandrelax.net/pwallet](https://ipfs.stakeandrelax.net/pwallet)     |
+| Kitkat           | [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet)                 |
 | Kleomedes        | [https://ipfs.kleomedes.network/pwallet](https://ipfs.kleomedes.network/pwallet)     |
 
-##
+
 
 ***
 
@@ -31,24 +31,24 @@ _**If you are hosting an alternative frontend & not included in the below list,*
 
 | Provider         | Link                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------- |
-| Kitkat           | [https://ipfs.kitkat.zone/pstake](https://ipfs.kitkat.zone/pstake)                 |
 | Baryan           | [https://pstake.baryon.guru/](https://pstake.baryon.guru/)                         |
 | Cosmonaut Stakes | [https://ipfs.cosmonautstakes.com/pstake](https://ipfs.cosmonautstakes.com/pstake) |
 | ATOM Staking     | [https://ipfs.atomstaking.org/pstake](https://ipfs.atomstaking.org/pstake)         |
 | Stake & Relax    | [https://ipfs.stakeandrelax.net/pstake](https://ipfs.stakeandrelax.net/pstake)     |
+| Kitkat           | [https://ipfs.kitkat.zone/pstake](https://ipfs.kitkat.zone/pstake)                 |
 | Kleomedes        | [https://ipfs.kleomedes.network/pstake](https://ipfs.kleomedes.network/pstake)     |
 
 
 
 ***
 
-## Dexter App
+## Persisence DEX App
 
 | Provider         | Link                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------- |
-| Kitkat           | [https://ipfs.kitkat.zone/dexter](https://ipfs.kitkat.zone/dexter)                 |
 | Baryan           | [https://dexter.baryon.guru/](https://dexter.baryon.guru/)                         |
 | Cosmonaut Stakes | [https://ipfs.cosmonautstakes.com/dexter](https://ipfs.cosmonautstakes.com/dexter) |
 | ATOM Staking     | [https://ipfs.atomstaking.org/dexter](https://ipfs.atomstaking.org/dexter)         |
 | Stake & Relax    | [https://ipfs.stakeandrelax.net/dexter](https://ipfs.stakeandrelax.net/dexter)     |
+| Kitkat           | [https://ipfs.kitkat.zone/dexter](https://ipfs.kitkat.zone/dexter)                 |
 | Kleomedes        | [https://ipfs.kleomedes.network/dexter](https://ipfs.kleomedes.network/dexter)     |

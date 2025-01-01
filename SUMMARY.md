@@ -8,7 +8,7 @@
 ## Begin & Explore
 
 * [🌠 Getting Started](begin-and-explore/getting-started.md)
-* [🦊 Wallet Setup](begin-and-explore/wallet-setup.md)
+* [🔏 Wallet Setup](begin-and-explore/wallet-setup.md)
 * [📓 Getting Your Persistence Address](begin-and-explore/getting-your-persistence-address.md)
 * [💰 Acquiring $XPRT Tokens](begin-and-explore/acquiring-usdxprt-tokens.md)
 
@@ -31,9 +31,7 @@
   * [🎁 Tradooor Rebate Program](products/persistence-dex-v1/tradooor-rebate-program.md)
   * [💰 Fees](products/persistence-dex-v1/fees.md)
   * [🏆 Rewards](products/persistence-dex-v1/rewards.md)
-  * [⚙️ Technical Documentation](products/persistence-dex-v1/technical-documentation/README.md)
-    * [Technical Architecture](products/persistence-dex-v1/technical-documentation/technical-architecture.md)
-    * [Security](products/persistence-dex-v1/technical-documentation/security.md)
+  * [⚙️ Technical Architecture](products/persistence-dex-v1/technical-architecture.md)
 * [Bitcoin Cross-Chain Swaps (V2)](products/bitcoin-cross-chain-swaps-v2/README.md)
   * [🌟 Introduction](products/bitcoin-cross-chain-swaps-v2/introduction.md)
   * [📚 Fundamentals](products/bitcoin-cross-chain-swaps-v2/fundamentals/README.md)
@@ -43,6 +41,10 @@
     * [💡 Intents for Blockchain Interoperability](products/bitcoin-cross-chain-swaps-v2/fundamentals/intents-for-blockchain-interoperability.md)
   * [🔀 Traditional Bridges vs. Intent-Based Swaps](products/bitcoin-cross-chain-swaps-v2/traditional-bridges-vs.-intent-based-swaps.md)
   * [⚙️ Product Mechanism](products/bitcoin-cross-chain-swaps-v2/product-mechanism.md)
+
+## 💂 Security
+
+* [📖 Audits](security/audits.md)
 
 ## Participate & Explore <a href="#participate" id="participate"></a>
 
@@ -110,7 +112,7 @@
   * [➡️ Round 1 - Closed](build/validators/foundation-delegations/round-1.md)
   * [➡️ Round 2 - Closed](build/validators/foundation-delegations/round-2.md)
   * [⭐ Bonus Delegation](build/validators/foundation-delegations/bonus-delegation.md)
-  * [➡️ Round 3 - Delegation Period Active](build/validators/foundation-delegations/round-3-delegation-period-active.md)
+  * [➡️ Round 3 - Delegation Period Over](community-and-support/foundation-delegations/round-3-delegation-period-over.md)
 * [⭕ Coin-type Migration from 750 to 118](community-and-support/coin-type-migration-from-750-to-118/README.md)
   * [Persistence Wallet](community-and-support/coin-type-migration-from-750-to-118/persistence-wallet.md)
   * [Keplr Wallet](community-and-support/coin-type-migration-from-750-to-118/keplr-wallet.md)
