@@ -1,9 +1,9 @@
-# ⭕ Coin-type Migration from 750 to 118
+# Coin-type Migration from 750 to 118
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-10-23 at 1.01.40 PM.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-Currently both 118 & 750 coin-type addresses are supported by the Persistence Core-1 chain and will work as normal. Coin-type migration deadline from 750 to 118 has been extended by 6 months from 31st Dec, 2024 (earlier) to 30th June, 2025 (new). Refer to the [announcement here.](https://x.com/PersistenceOne/status/1840701305163321719)
+{% hint style="warning" %}
+**Currently, both 118 and 750 coin-type addresses are supported by the Persistence Core-1 chain and will continue to function normally.** The coin-type migration **deadline** from 750 to 118 has been extended by 6 months from the previous deadline of 30th June 2025 (earlier) to **31st December 2025** (new), as a few users are still pending migration.
 {% endhint %}
 
 ## Summary
