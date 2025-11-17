@@ -11,7 +11,7 @@ The references provided below are solely for informational purposes. They do not
 {% endhint %}
 
 {% hint style="warning" %}
-Before you proceed, ensure you understand [the XPRT Token](./), what [Proof-of-Stake](broken-reference) is, and which [wallets](../wallets.md) are supported.
+Before you proceed, ensure you understand [the XPRT Token](./), what [Proof-of-Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp) is, and which [wallets](../wallets.md) are supported.
 {% endhint %}
 
 {% embed url="https://blog.persistence.one/2024/12/05/how-to-acquire-xprt-from-cexs-and-dexs/" %}

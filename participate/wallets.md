@@ -4,9 +4,11 @@ description: List of wallets supporting XPRT
 
 # Wallets
 
-{% hint style="info" %}
-**Recommended Options:** Keplr & Persistence Wallet
+{% hint style="success" %}
+**Recommended options: I**nclude Keplr and Persistence Wallet. Please refer to the updated guide linked below.
 {% endhint %}
+
+## [wallet-setup.md](../begin-and-explore/wallet-setup.md "mention")
 
 ## Keplr
 
@@ -63,7 +65,8 @@ Tutorial/Guide:
 {% embed url="https://everstake.one/blog/how-to-stake-persistence-xprt-using-the-leap-wallet" %}
 
 {% hint style="warning" %}
-Note: As part of the Persistence v3 chain upgrade, the default coin-type was changed from 750 to 118. Read all about it [here](https://blog.persistence.one/2022/07/14/coin-type-migration-from-750-to-118-for-persistence-core-1-chain-xprt/)
+Note: As part of the Persistence v3 chain upgrade, the default coin type was changed from 750 to 118. Read all about it [here](https://blog.persistence.one/2022/07/14/coin-type-migration-from-750-to-118-for-persistence-core-1-chain-xprt/).
 
-* If you're creating a new wallet on keplr or Persistence Wallet then no changes are required.
+* If you're creating a new wallet on keplr or Persistence Wallet, then no changes are required.
 {% endhint %}
+

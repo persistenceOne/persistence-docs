@@ -1,54 +1,27 @@
 ---
-description: Explore alternative frontends for pWALLET, pSTAKE App, and Dexter App.
+description: Explore alternative frontends for Persistence Wallet and Persistence DEX app.
 ---
 
 # Alternative Frontends
 
 {% hint style="success" %}
-**Important:** Before utilizing any alternative frontends, it is crucial to verify the provided links for authenticity and security. Always ensure the accuracy of the links from this repository to maintain a secure and reliable user experience.
+**Important:** Before utilising any alternative frontends, it is crucial to verify the provided links for authenticity and security. Always ensure the accuracy of the links from this repository to maintain a secure and reliable user experience.
 {% endhint %}
 
 {% hint style="info" %}
-_**If you are hosting an alternative frontend & not included in the below list,**_ [_**reach out**_](../../community-and-support/connect-and-follow.md) _**to the Persistence One team, and we will ensure its addition.**_
+If you are hosting an alternative frontend & not included in the list below, [reach out](../../community-and-support/connect-and-follow.md) to the Persistence One team, and we will ensure its addition.
 {% endhint %}
 
-## pWALLET
+## Persistence Wallet (pWallet)
 
-| Provider         | Link                                                                                 |
-| ---------------- | ------------------------------------------------------------------------------------ |
-| Baryan           | [https://pwallet.baryon.guru/](https://pwallet.baryon.guru/)                         |
-| Cosmonaut Stakes | [https://ipfs.cosmonautstakes.com/pwallet](https://ipfs.cosmonautstakes.com/pwallet) |
-| ATOM Staking     | [https://ipfs.atomstaking.org/pwallet](https://ipfs.atomstaking.org/pwallet)         |
-| Stake & Relax    | [https://ipfs.stakeandrelax.net/pwallet](https://ipfs.stakeandrelax.net/pwallet)     |
-| Kitkat           | [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet)                 |
-| Kleomedes        | [https://ipfs.kleomedes.network/pwallet](https://ipfs.kleomedes.network/pwallet)     |
-
-
+| Provider  | Link                                                                             |
+| --------- | -------------------------------------------------------------------------------- |
+| Kleomedes | [https://ipfs.kleomedes.network/pwallet](https://ipfs.kleomedes.network/pwallet) |
 
 ***
 
-## pSTAKE App
+## Persistence DEX
 
-| Provider         | Link                                                                               |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Baryan           | [https://pstake.baryon.guru/](https://pstake.baryon.guru/)                         |
-| Cosmonaut Stakes | [https://ipfs.cosmonautstakes.com/pstake](https://ipfs.cosmonautstakes.com/pstake) |
-| ATOM Staking     | [https://ipfs.atomstaking.org/pstake](https://ipfs.atomstaking.org/pstake)         |
-| Stake & Relax    | [https://ipfs.stakeandrelax.net/pstake](https://ipfs.stakeandrelax.net/pstake)     |
-| Kitkat           | [https://ipfs.kitkat.zone/pstake](https://ipfs.kitkat.zone/pstake)                 |
-| Kleomedes        | [https://ipfs.kleomedes.network/pstake](https://ipfs.kleomedes.network/pstake)     |
-
-
-
-***
-
-## Persisence DEX App
-
-| Provider         | Link                                                                               |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| Baryan           | [https://dexter.baryon.guru/](https://dexter.baryon.guru/)                         |
-| Cosmonaut Stakes | [https://ipfs.cosmonautstakes.com/dexter](https://ipfs.cosmonautstakes.com/dexter) |
-| ATOM Staking     | [https://ipfs.atomstaking.org/dexter](https://ipfs.atomstaking.org/dexter)         |
-| Stake & Relax    | [https://ipfs.stakeandrelax.net/dexter](https://ipfs.stakeandrelax.net/dexter)     |
-| Kitkat           | [https://ipfs.kitkat.zone/dexter](https://ipfs.kitkat.zone/dexter)                 |
-| Kleomedes        | [https://ipfs.kleomedes.network/dexter](https://ipfs.kleomedes.network/dexter)     |
+| Provider  | Link                                                                           |
+| --------- | ------------------------------------------------------------------------------ |
+| Kleomedes | [https://ipfs.kleomedes.network/dexter](https://ipfs.kleomedes.network/dexter) |

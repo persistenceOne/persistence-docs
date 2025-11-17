@@ -1,5 +1,6 @@
 ---
 description: Get support from the Foundation to build in the Persistence Ecosystem
+hidden: true
 ---
 
 # Grants

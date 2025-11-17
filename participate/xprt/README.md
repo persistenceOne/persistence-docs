@@ -25,7 +25,7 @@ layout:
 
 # $XPRT Token
 
-<figure><img src="../../.gitbook/assets/Image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/XPRT.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 **Note:** For your safety, always verify the contract addresses when bridging your tokens to other ecosystems. Using an incorrect token contract address may result in the loss of funds.
