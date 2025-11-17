@@ -1,4 +1,4 @@
-# 🏆 Rewards
+# Rewards
 
 LPs(Liquidity Providers) can earn rewards for facilitating trades on Persistence DEX. A part of the swap fees is distributed to LPs as a reward. In addition, teams and projects can incentivize LPs with additional incentives for maintaining liquidity for their tokens.
 

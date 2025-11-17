@@ -1,4 +1,4 @@
-# 🏗️ Creating New Pool
+# Creating New Pool
 
 This page is intended to guide integrating teams on setting up pools for their tokens on Persistence DEX.
 

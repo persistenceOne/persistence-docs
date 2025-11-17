@@ -4,7 +4,7 @@ description: >-
   and generate real yield for the LPs.
 ---
 
-# 🎁 Tradooor Rebate Program
+# Tradooor Rebate Program
 
 <figure><img src="../../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
 

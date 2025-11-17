@@ -5,7 +5,7 @@ description: >-
 hidden: true
 ---
 
-# 🌉 Bridges
+# Bridges
 
 ### 1. Persistence Bridge
 

@@ -2,7 +2,7 @@
 description: Best suited for similarly priced tokens like stablecoins.
 ---
 
-# 🧊 Stable Swap Pool
+# Stable Swap Pool
 
 A stableswap is an automated market maker (AMM) optimised for similarly priced tokens and provides minimum slippage and efficient liquidity provision.
 

@@ -1,4 +1,4 @@
-# 💱 BTCfi
+# BTCfi
 
 ### What is BTCfi?
 

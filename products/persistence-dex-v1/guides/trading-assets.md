@@ -1,4 +1,4 @@
-# 💱 Trading Assets
+# Trading Assets
 
 Follow the steps below to perform a swap between assets on Persistence DEX:
 

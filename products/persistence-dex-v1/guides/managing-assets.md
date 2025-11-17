@@ -1,4 +1,4 @@
-# 👨‍💼 Managing Assets
+# Managing Assets
 
 ## Managing Assets
 

@@ -1,4 +1,4 @@
-# 🛡️ Validators
+# Validators
 
 The Persistence Core-1 Chain is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), that relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes that contain cryptographic signatures signed by each validator's private key.
 

@@ -2,7 +2,7 @@
 description: Get support from the Foundation to build in the Persistence Ecosystem
 ---
 
-# 💸 Grants
+# Grants
 
 ## Introduction
 

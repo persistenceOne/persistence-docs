@@ -1,4 +1,4 @@
-# 📡 Relayers
+# Relayers
 
 In IBC, blockchains do not directly pass messages to each other over the network. This is where relayers comes in. A relayer process monitors for updates on opens paths between sets of [IBC enabled chains](https://mapofzones.com/). The relayer submits these updates in the form of specific message types to the counterparty chain. Clients are then used to track and verify the consensus state.
 

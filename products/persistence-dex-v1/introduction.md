@@ -1,4 +1,4 @@
-# 📘 Introduction
+# Introduction
 
 Persistence DEX is a decentralized exchange for BTC and Liquid Staked Tokens (LSTs).&#x20;
 

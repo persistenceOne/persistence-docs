@@ -4,7 +4,7 @@ description: >-
   contributes to our mission of creating seamless cross-chain solutions.
 ---
 
-# 🌐 Persistence Ecosystem
+# Persistence Ecosystem
 
 ### 🛠️ Persistence DEX(V1)
 

@@ -1,4 +1,4 @@
-# 📖 Audits
+# Audits
 
 Persistence DEX takes the security of its base very seriously, and keeping user funds safe is a top priority.
 

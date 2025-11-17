@@ -1,4 +1,4 @@
-# 🫗 Liquid Staking Module
+# Liquid Staking Module
 
 Developed by [Iqlusion 44](https://twitter.com/iqlusioninc), the LSM (Liquid staking module) is enabled (in [v8 Pacaya upgrade](https://www.mintscan.io/persistence/proposals/42)) to safely and efficiently help facilitate multiple features for the `Core-1` chain.&#x20;
 

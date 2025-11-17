@@ -1,4 +1,4 @@
-# ⚡ Instant LP Unbonding
+# Instant LP Unbonding
 
 ## Overview
 

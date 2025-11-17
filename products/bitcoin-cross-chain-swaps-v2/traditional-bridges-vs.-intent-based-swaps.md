@@ -1,4 +1,4 @@
-# 🔀 Traditional Bridges vs. Intent-Based Swaps
+# Traditional Bridges vs. Intent-Based Swaps
 
 | Feature                  | Traditional Bridges 🏗️                         | Intent-Based Swaps ⚡                                      |
 | ------------------------ | ----------------------------------------------- | --------------------------------------------------------- |

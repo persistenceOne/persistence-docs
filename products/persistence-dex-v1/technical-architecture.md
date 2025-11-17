@@ -1,4 +1,4 @@
-# ⚙️ Technical Architecture
+# Technical Architecture
 
 Persistence DEX's base is made up of the following contracts:
 

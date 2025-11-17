@@ -2,7 +2,7 @@
 description: List of wallets supporting XPRT
 ---
 
-# 💼 Wallets
+# Wallets
 
 {% hint style="info" %}
 **Recommended Options:** Keplr & Persistence Wallet

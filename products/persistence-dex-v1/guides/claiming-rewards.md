@@ -1,4 +1,4 @@
-# 🎉 Claiming Rewards
+# Claiming Rewards
 
 Liquidity providers can claim rewards in real-time on Persistence DEX, unlike on an epoch basis on most DEXs.
 

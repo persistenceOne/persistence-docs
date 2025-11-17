@@ -1,4 +1,4 @@
-# 💰 Fees
+# Fees
 
 #### There are two kinds of fees users pay on Persistence DEX: <a href="#there-are-two-kinds-of-fees-users-pay-on-dexter" id="there-are-two-kinds-of-fees-users-pay-on-dexter"></a>
 

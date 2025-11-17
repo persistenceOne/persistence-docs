@@ -1,4 +1,4 @@
-# 📖 Guides
+# Guides
 
 ## Get Started by connecting to Persistence DEX.
 

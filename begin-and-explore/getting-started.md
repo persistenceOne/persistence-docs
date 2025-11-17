@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# 🌠 Getting Started
+# Getting Started
 
 Let's get you started with Persistence One! Whether you’re new to blockchain or experienced, this guide will help you get up and running with the Persistence ecosystem in no time.w
 

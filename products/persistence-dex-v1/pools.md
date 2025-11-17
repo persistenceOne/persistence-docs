@@ -1,4 +1,4 @@
-# 🏊‍♂️ Pools
+# Pools
 
 Persistence has travelled far and wide and knows a lot about AMMs, and now brings all the wisdom into building his AMM based on Persistence Core-1 chain. Let’s dive into the blueprints!
 

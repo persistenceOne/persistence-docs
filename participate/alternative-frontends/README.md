@@ -2,7 +2,7 @@
 description: Explore alternative frontends for pWALLET, pSTAKE App, and Dexter App.
 ---
 
-# 🖥️ Alternative Frontends
+# Alternative Frontends
 
 {% hint style="success" %}
 **Important:** Before utilizing any alternative frontends, it is crucial to verify the provided links for authenticity and security. Always ensure the accuracy of the links from this repository to maintain a secure and reliable user experience.

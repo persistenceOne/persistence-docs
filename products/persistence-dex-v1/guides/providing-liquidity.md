@@ -1,4 +1,4 @@
-# 🚰 Providing Liquidity
+# Providing Liquidity
 
 * **Step 1** - Head over to the Pools page on Persistence DEX ([https://app.persistence.one/pools](https://app.persistence.one/pools)).
 

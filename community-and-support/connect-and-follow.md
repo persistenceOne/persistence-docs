@@ -1,4 +1,4 @@
-# 😍 Connect & Follow
+# Connect & Follow
 
 ## Official pages and channels
 

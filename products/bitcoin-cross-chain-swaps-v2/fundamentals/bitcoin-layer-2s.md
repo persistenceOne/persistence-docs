@@ -1,4 +1,4 @@
-# 🌉 Bitcoin Layer 2s
+# Bitcoin Layer 2s
 
 ### What are Bitcoin Layer 2s?
 

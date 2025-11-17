@@ -2,7 +2,7 @@
 description: Suits all assets
 ---
 
-# ⚖️ Weighted Pool
+# Weighted Pool
 
 A custom weighted pool AMM mechanism inspired by Balancer, which allows users to create a custom pool of assets and choose their weightage for each asset, such as pools with 60/40 or 60/20/20 weightage, in contrast to the constant product AMM mechanism, which only offers 50/50 weightage. This pool type supports up to 8 assets in a single pool.
 

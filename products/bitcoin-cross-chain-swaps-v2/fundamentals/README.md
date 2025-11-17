@@ -5,5 +5,5 @@ description: >-
   interoperability.
 ---
 
-# 📚 Fundamentals
+# Fundamentals
 

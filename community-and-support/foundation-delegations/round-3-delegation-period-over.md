@@ -1,4 +1,4 @@
-# ➡️ Round 3 - Delegation Period Over
+# Round 3 - Delegation Period Over
 
 {% hint style="warning" %}
 In order to receive foundation delegations for this round, it is required to apply via the [FDP App](https://fdp.persistence.one) before the **15th April 2024 - 23.59UTC** \[[Save to calendar](https://calendar.google.com/calendar/event?action=TEMPLATE\&tmeid=M3NvdmU2MjhraWM1czl2NnQ3cHJycDFuajAgbWFkaHVyQHBlcnNpc3RlbmNlLm9uZQ\&tmsrc=madhur%40persistence.one)].

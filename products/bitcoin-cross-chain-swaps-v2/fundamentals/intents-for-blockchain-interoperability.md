@@ -1,4 +1,4 @@
-# 💡 Intents for Blockchain Interoperability
+# Intents for Blockchain Interoperability
 
 ### What are Intents?
 

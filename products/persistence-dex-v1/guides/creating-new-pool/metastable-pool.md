@@ -4,7 +4,7 @@ description: >-
   tokens.
 ---
 
-# 🌀 Metastable Pool
+# Metastable Pool
 
 Metastable pool is suited for assets that follow an exchange rate with a base asset, like liquid-staked assets such as stkATOM and interest-bearing tokens. They fix a problem in Stableswap where it assumes a 1:1 ratio between assets, even when their values change. Metastable pools adjust to these changes, keeping trades accurate and helping those who provide liquidity to do so more effectively.
 

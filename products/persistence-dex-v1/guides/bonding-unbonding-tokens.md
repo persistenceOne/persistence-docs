@@ -1,4 +1,4 @@
-# ⛓️ Bonding/Unbonding Tokens
+# Bonding/Unbonding Tokens
 
 Users need to bond LP Tokens for a period of **7 days** to be eligible for external incentives on Persistence DEX.
 

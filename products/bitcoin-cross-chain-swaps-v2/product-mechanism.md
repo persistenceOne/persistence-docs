@@ -1,4 +1,4 @@
-# ⚙️ Product Mechanism
+# Product Mechanism
 
 <figure><img src="../../.gitbook/assets/unnamed.png" alt=""><figcaption></figcaption></figure>
 

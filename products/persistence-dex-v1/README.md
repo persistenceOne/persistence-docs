@@ -4,5 +4,5 @@ description: >-
   Persistence ecosystem.
 ---
 
-# 🦾 Persistence DEX (V1)
+# Persistence DEX (V1)
 

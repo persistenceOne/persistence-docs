@@ -9,8 +9,8 @@
 
 * [Getting Started](begin-and-explore/getting-started.md)
 * [Wallet Setup](begin-and-explore/wallet-setup.md)
-* [Getting Your Persistence Address](begin-and-explore/getting-your-persistence-address.md)
-* [Acquiring $XPRT Tokens](begin-and-explore/acquiring-usdxprt-tokens.md)
+* [Creating Your Persistence Address](begin-and-explore/getting-your-persistence-address.md)
+* [Acquiring XPRT Tokens](begin-and-explore/acquiring-usdxprt-tokens.md)
 
 ## Products
 

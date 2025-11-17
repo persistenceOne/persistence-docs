@@ -2,7 +2,7 @@
 description: Bonus Delegation for Validators Moving Out of High-Density Regions and ISPs!
 ---
 
-# ⭐ Bonus Delegation
+# Bonus Delegation
 
 | Status        | Start Date | End Date   |
 | ------------- | ---------- | ---------- |
