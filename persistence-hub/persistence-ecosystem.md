@@ -2,6 +2,7 @@
 description: >-
   Explore the building blocks of Persistence One and how each component
   contributes to our mission of creating seamless cross-chain solutions.
+icon: rotate
 ---
 
 # Persistence Ecosystem

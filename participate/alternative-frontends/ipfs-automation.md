@@ -9,8 +9,7 @@ This guide has instructions to set up workflow which will run automatically to p
 ### Releases:
 
 * _**pWallet**_ - [https://github.com/persistenceOne/persistenceWallet](https://github.com/persistenceOne/persistenceWallet)
-* _**pStake**_ - [https://github.com/persistenceOne/pstake-frontend-releases/releases](https://github.com/persistenceOne/pstake-frontend-releases/releases)
-* _**Dexter**_ - [https://github.com/dexter-zone/dexter-frontend-releases/releases](https://github.com/dexter-zone/dexter-frontend-releases/releases)
+* _**Persistence DEX**_ - [https://github.com/dexter-zone/dexter-frontend-releases/releases](https://github.com/dexter-zone/dexter-frontend-releases/releases)
 
 ***
 

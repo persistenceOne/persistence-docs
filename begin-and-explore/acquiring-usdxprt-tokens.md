@@ -1,3 +1,7 @@
+---
+icon: handshake-simple
+---
+
 # Acquiring XPRT Tokens
 
 $XPRT is the native token of the Persistence ecosystem. It powers the network through staking and governance. Here’s how you can acquire $XPRT tokens:

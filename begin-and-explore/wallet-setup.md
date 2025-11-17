@@ -1,3 +1,7 @@
+---
+icon: wallet
+---
+
 # Wallet Setup
 
 To interact with the Persistence ecosystem, you'll need a supported wallet. Follow the instructions to set up one of the recommended wallets, and you’ll be ready to start trading, staking, and participating in governance.

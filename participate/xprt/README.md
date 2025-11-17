@@ -2,7 +2,7 @@
 description: >-
   This documentation contains all the IBC Denom or Token Contract for XPRT on
   the respective chains.
-icon: coin
+icon: coin-vertical
 coverY: 0
 layout:
   width: default
@@ -23,7 +23,7 @@ layout:
     visible: true
 ---
 
-# $XPRT Token
+# XPRT Token
 
 <figure><img src="../../.gitbook/assets/XPRT.jpg" alt=""><figcaption></figcaption></figure>
 

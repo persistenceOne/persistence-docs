@@ -9,7 +9,7 @@
 
 * [Getting Started](begin-and-explore/getting-started.md)
 * [Wallet Setup](begin-and-explore/wallet-setup.md)
-* [Creating Your Persistence Address](begin-and-explore/getting-your-persistence-address.md)
+* [🦾 Create Your Persistence Address](begin-and-explore/getting-your-persistence-address.md)
 * [Acquiring XPRT Tokens](begin-and-explore/acquiring-usdxprt-tokens.md)
 
 ## Products
@@ -48,7 +48,7 @@
 
 ## Participate & Explore <a href="#participate" id="participate"></a>
 
-* [$XPRT Token](participate/xprt/README.md)
+* [XPRT Token](participate/xprt/README.md)
   * [Acquire](participate/xprt/acquire.md)
   * [Stake](participate/xprt/stake.md)
   * [Governance](participate/xprt/governance.md)

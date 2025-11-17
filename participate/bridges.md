@@ -3,6 +3,7 @@ description: >-
   List of bridges and possible asset transfers between Persistence and other
   chains
 hidden: true
+icon: bridge-suspension
 ---
 
 # Bridges

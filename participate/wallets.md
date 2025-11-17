@@ -1,11 +1,12 @@
 ---
 description: List of wallets supporting XPRT
+icon: wallet
 ---
 
 # Wallets
 
 {% hint style="success" %}
-**Recommended options: I**nclude Keplr and Persistence Wallet. Please refer to the updated guide linked below.
+**Recommended options:** Include Keplr and Persistence Wallet. Please refer to the updated guide linked below.
 {% endhint %}
 
 ## [wallet-setup.md](../begin-and-explore/wallet-setup.md "mention")

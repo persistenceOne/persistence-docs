@@ -1,5 +1,6 @@
 ---
 description: Explore alternative frontends for Persistence Wallet and Persistence DEX app.
+icon: globe-pointer
 ---
 
 # Alternative Frontends

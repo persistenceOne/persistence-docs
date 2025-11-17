@@ -1,4 +1,4 @@
-# Creating Your Persistence Address
+# 🦾 Create Your Persistence Address
 
 Once you have your [wallet setup](wallet-setup.md) done, it takes less than a minute to ensure the ‘Persistence chain’ is visible in your [Keplr wallet](https://wallet.keplr.app/).
 

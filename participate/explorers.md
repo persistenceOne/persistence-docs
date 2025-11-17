@@ -1,5 +1,6 @@
 ---
 description: List of explorers supporting the Persistence Chain
+icon: magnifying-glass
 ---
 
 # Explorers
