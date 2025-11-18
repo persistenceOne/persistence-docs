@@ -10,7 +10,7 @@ icon: book-open
 <figure><img src=".gitbook/assets/header_image.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-<mark style="color:$info;">**Note:**</mark> <mark style="color:$info;"></mark><mark style="color:$info;">These Docs are still in draft form. We apologise if the information you're seeking is not yet available. Feel free to contribute to improve it or contact the team directly with any questions you may have.</mark>
+<mark style="color:$info;">**Note:**</mark> <mark style="color:$info;"></mark><mark style="color:$info;">The documentation is continuously updated to reflect the latest developments across the ecosystem. We apologise if the information you’re looking for is not yet available. Feel free to contribute to its improvement or</mark> [<mark style="color:$info;">contact the team</mark>](https://t.me/PersistenceOneChat) <mark style="color:$info;">directly with any questions.</mark>
 {% endhint %}
 
 Welcome to the **Persistence Docs**! Here, you’ll find everything you need to learn, participate, and build within the ecosystem.

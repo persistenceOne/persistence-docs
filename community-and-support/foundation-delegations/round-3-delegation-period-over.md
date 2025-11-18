@@ -47,11 +47,7 @@ If any of the above criteria are no longer met, the foundation delegation will b
     To keep the FDP fair, validators should keep their commission equal to or less than 10% during the delegation period.\
 
 
-    {% hint style="warning" %}
-    **Validators who want to adjust their commission for Round 3, please do so before the end of submission period.** \
-    \
-    **Note:** Validators who try to game the system by increasing their commission shortly after the Round 3 delegations have been made will see their foundation delegations reduced/removed and risk being blacklisted for future Rounds.
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Validators who want to adjust their commission for Round 3, please do so before the end of submission period.</strong> <br><br><strong>Note:</strong> Validators who try to game the system by increasing their commission shortly after the Round 3 delegations have been made will see their foundation delegations reduced/removed and risk being blacklisted for future Rounds.</p></div>
 
 
 3.  **ISPs & Countries**\
@@ -60,22 +56,15 @@ If any of the above criteria are no longer met, the foundation delegation will b
     Data for these calculations will be based on [Observatory Zone](https://observatory.zone/persistence), and validators can use the "scenario analysis" tool to see their relative score. Please let us know via the Application form if any of the data provided there for your validator is inaccurate.\
 
 
-    {% hint style="warning" %}
-    **Deduction 1:** There will be deductions for ISPs with too much concentration (>10% of stake).
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Deduction 1:</strong> There will be deductions for ISPs with too much concentration (>10% of stake).</p></div>
 
 
 
-    {% hint style="warning" %}
-    **Deduction 2:** There will be deductions for countries with too much concentration (>10% of stake).
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Deduction 2:</strong> There will be deductions for countries with too much concentration (>10% of stake).</p></div>
 
 
 
-    {% hint style="danger" %}
-    **Deduction 3:** As plenty of validators are using Hetzner as an ISP, there is an increased risk on the network since **running anything crypto-related is not compliant with Hetzner's Terms & Conditions.** As a result, they might shut your node down without any notice. \
-    **Therefore,** there will be a **100% deduction on delegations for validators using Hetzner** as their sole provider in Round 3.
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="danger" class="hint hint-danger"><p><strong>Deduction 3:</strong> As plenty of validators are using Hetzner as an ISP, there is an increased risk on the network since <strong>running anything crypto-related is not compliant with Hetzner's Terms &#x26; Conditions.</strong> As a result, they might shut your node down without any notice. <br><strong>Therefore,</strong> there will be a <strong>100% deduction on delegations for validators using Hetzner</strong> as their sole provider in Round 3.</p></div>
 
 ***
 

@@ -2,45 +2,50 @@
 description: >-
   Explore the building blocks of Persistence One and how each component
   contributes to our mission of creating seamless cross-chain solutions.
-icon: rotate
+icon: tree-deciduous
 ---
 
 # Persistence Ecosystem
 
-### 🛠️ Persistence DEX(V1)
+<figure><img src="../.gitbook/assets/new_flowchart.jpg" alt=""><figcaption></figcaption></figure>
 
-A decentralized swap solution where you can:
+### 🔄 Persistence DEX (V1)
 
-* Trade efficiently.
-* Provide liquidity to earn from swap fees and LP rewards.
+A decentralised swapping solution where you can:
 
-🌐 [Access the DEX here](https://app.persistence.one)\
+* Trade efficiently across the Persistence Core-1 Chain and Babylon Genesis Network.
+* Provide liquidity to earn from swap fees and LP incentives.
 
+🏁 [Try Persistence DEX here.](https://app.persistence.one/)
 
-### 💡 XPRT: Powering the Ecosystem&#x20;
+[Learn more about Persistence DEX.](../products/persistence-dex-v1/)
 
-* **XPRT** is the backbone of the Persistence ecosystem.
-* It plays a pivotal role in:
-  * **Governance**: Participate in protocol decision-making.
-  * **Staking**: Contribute to network security and earn rewards.
-  * **Work Token**: Engage in economic activities within and outside the ecosystem.
+### 🟠 Bitcoin Cross-Chain Swaps (V2)
 
-:coin: [More on $XPRT here](../participate/xprt/)
-
-### 🚀 Bitcoin Cross-Chain Swaps(V2)
-
-Our flagship product focused on fast, zero-slippage swaps across Bitcoin L2s and sidechains.
+Our flagship product focused on fast, zero-slippage swaps across Bitcoin layer 2s and sidechains.
 
 * Powered by Intents.
 * Secured by Bitcoin.
 
-👉 [Learn more about Bitcoin Cross-Chain Swaps](../products/bitcoin-cross-chain-swaps-v2/)\
+🏁 [Try Bitcoin Cross-Chain Swaps here.](https://beta.interop.persistence.one/)
 
+[Learn more about Bitcoin Cross-Chain Swaps](../products/bitcoin-cross-chain-swaps-v2/).
 
-### 🏗️ Persistence Core-1 Chain
+### ⚡️ XPRT
+
+**XPRT** is the backbone of the Persistence One ecosystem.
+
+* It plays a crucial role in:
+  * **Governance**: Participate in protocol decision-making.
+  * **Staking**: Contribute to network security and earn rewards.
+  * **Work Token**: Engage in economic activities within and outside the ecosystem.
+
+[Learn more about XPRT.](../participate/xprt/)
+
+### ⛓️ Persistence Core-1 Chain
 
 The foundational Cosmos-based chain that powers Persistence's infrastructure.
 
 * Enables scalability, security, and interoperability for our ecosystem.
 
-:chains: [Dive deep into Persistence Core-1 chain](broken-reference)\
+[Learn more about the Persistence Core-1 chain.](broken-reference)
