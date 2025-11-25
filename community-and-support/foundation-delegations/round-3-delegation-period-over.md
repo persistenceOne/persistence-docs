@@ -40,12 +40,10 @@ If any of the above criteria are no longer met, the foundation delegation will b
 
     New validators who find it challenging to enter the active set independently have the opportunity to receive a small initial delegation from the foundation to kickstart their journey and secure a position in the active set. \
     As a pre-requisite they need to run a validator on the testnet (test-core-2) chain for a minimum of one month and make a few substantial bonus contributions. \
-    &#xNAN;_**Note:** This support initiative will remain accessible throughout the delegation period._\
-
+    &#xNAN;_**Note:** This support initiative will remain accessible throughout the delegation period._<br>
 2.  #### Commission
 
-    To keep the FDP fair, validators should keep their commission equal to or less than 10% during the delegation period.\
-
+    To keep the FDP fair, validators should keep their commission equal to or less than 10% during the delegation period.<br>
 
     <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Validators who want to adjust their commission for Round 3, please do so before the end of submission period.</strong> <br><br><strong>Note:</strong> Validators who try to game the system by increasing their commission shortly after the Round 3 delegations have been made will see their foundation delegations reduced/removed and risk being blacklisted for future Rounds.</p></div>
 
@@ -53,8 +51,7 @@ If any of the above criteria are no longer met, the foundation delegation will b
 3.  **ISPs & Countries**\
     While the network is quite decentralized when it comes to voting power, it could definitely be more decentralized in terms of server-hosting countries & ISPs. \
     \
-    Data for these calculations will be based on [Observatory Zone](https://observatory.zone/persistence), and validators can use the "scenario analysis" tool to see their relative score. Please let us know via the Application form if any of the data provided there for your validator is inaccurate.\
-
+    Data for these calculations will be based on [Observatory Zone](https://observatory.zone/persistence), and validators can use the "scenario analysis" tool to see their relative score. Please let us know via the Application form if any of the data provided there for your validator is inaccurate.<br>
 
     <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Deduction 1:</strong> There will be deductions for ISPs with too much concentration (>10% of stake).</p></div>
 

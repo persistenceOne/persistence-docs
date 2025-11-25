@@ -1,7 +1,6 @@
 # Geofencing on Persistence
 
-In accordance with Persistence’s [terms of use](https://persistence.one/termsofuse) and regulatory considerations, applications on the persistence.one domain, including [Persistence Web Wallet](https://wallet.persistence.one/) and [Persistence bridge](https://bridge.persistence.one/), will no longer be accessible from certain jurisdictions mentioned [here](https://blog.persistence.one/2023/12/22/restricted-jurisdictions/), including the United States of America and the United Kingdom, after **1 March 2024.**\
-
+In accordance with Persistence’s [terms of use](https://persistence.one/termsofuse) and regulatory considerations, applications on the persistence.one domain, including [Persistence Web Wallet](https://wallet.persistence.one/) and [Persistence bridge](https://bridge.persistence.one/), will no longer be accessible from certain jurisdictions mentioned [here](https://blog.persistence.one/2023/12/22/restricted-jurisdictions/), including the United States of America and the United Kingdom, after **1 March 2024.**<br>
 
 **Important Notes:**
 

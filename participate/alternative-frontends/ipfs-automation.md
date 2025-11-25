@@ -52,8 +52,7 @@ The rules can have any values for now as our application will fix them for us. W
 
 1. Add the _**appUUID**, **transformedURL**, **transformedURL**_**&#x20;inside&#x20;**_**cloudflareRuleExpression**_, _**cloudflareZoneId**, **cloudflareRulesetId**_ and _**cloudflareRuleId**_ for each of the apps. You can obtain the _**cloudflareZoneId**_ by following the instructions in the [Cloudflare documentation](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/). \
    \
-   The **cloudflareRulesetId** and **cloudflareRuleId** can be obtained by following the instructions on [this page](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view/).\
-
+   The **cloudflareRulesetId** and **cloudflareRuleId** can be obtained by following the instructions on [this page](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view/).<br>
 2. Get your rulesetId querying the below URL and search for the object with phase: http\_request\_transform and copy that rulesetId. This becomes your cloudflareRulesetId.
 
 `curl https://api.cloudflare.com/client/v4/zones/{zone_id}/rulesets \ --header "Authorization: Bearer <API_TOKEN>"`

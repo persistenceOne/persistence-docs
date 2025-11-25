@@ -26,10 +26,6 @@ Before you proceed, ensure you understand [the XPRT Token](./), what [Proof-of-S
 
 ## Centralized Exchanges
 
-{% embed url="https://www.huobi.com/en-us/exchange/xprt_usdt/" %}
-Huobi Global
-{% endembed %}
-
 {% embed url="https://www.kucoin.com/trade/XPRT-USDT" %}
 KuCoin
 {% endembed %}
