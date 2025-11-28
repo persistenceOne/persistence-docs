@@ -48,4 +48,4 @@ The foundational Cosmos-based chain that powers Persistence's infrastructure.
 
 * Enables scalability, security, and interoperability for our ecosystem.
 
-[Learn more about the Persistence Core-1 chain.](broken-reference)
+[Learn more about the Persistence Core-1 chain.](/broken/pages/YB8nbdu3j3FqbvFozukb)

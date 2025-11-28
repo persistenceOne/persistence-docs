@@ -26,8 +26,8 @@ Transfer tokens from ERC-20 to Core-1 or vice versa using Satellite Bridge.
 
 Learn more here:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/3rbJVX6Oq4piEGXlBe2h" %}
+[Broken link](/broken/pages/3rbJVX6Oq4piEGXlBe2h)
 {% endcontent-ref %}
 
 

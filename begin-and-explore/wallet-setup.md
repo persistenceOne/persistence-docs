@@ -4,13 +4,15 @@ icon: wallet
 
 # Wallet Setup
 
-To interact with the Persistence ecosystem, you'll need a supported wallet. Follow the instructions to set up one of the recommended wallets, and you’ll be ready to start trading, staking, and participating in governance.
+<figure><img src="../.gitbook/assets/P1 Wallets.jpg" alt=""><figcaption></figcaption></figure>
+
+To interact with the Persistence One ecosystem, you’ll need a supported wallet. Follow the instructions to set up one of the recommended wallets, and you’ll be all set to start trading, staking, and participating in governance.
 
 ## <img src="../.gitbook/assets/Keplr_icon_ver.1.3_2.png" alt="" data-size="line"> Keplr Wallet: Perfect for interacting with the Cosmos ecosystem
 
 &#x20;[Keplr Wallet](https://wallet.keplr.app/) is one of the wallets for interacting with the Persistence One ecosystem. Follow the instructions in the guide to download, install, and set up your wallet.
 
-Visit [Keplr Wallet’s website](https://www.keplr.app/get) and follow along the steps to get started.
+Visit [Keplr Wallet’s website](https://www.keplr.app/get) and follow the steps to get started.
 
 {% embed url="https://www.youtube.com/watch?v=cmxx_hIulz8" %}
 
