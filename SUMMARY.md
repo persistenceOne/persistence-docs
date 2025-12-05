@@ -34,6 +34,7 @@
   * [Technical Architecture](products/persistence-dex-v1/technical-architecture.md)
 * [Bitcoin Cross-Chain Swaps (V2)](products/bitcoin-cross-chain-swaps-v2/README.md)
   * [Introduction](products/bitcoin-cross-chain-swaps-v2/introduction.md)
+  * [Incentivized Mainnet](products/bitcoin-cross-chain-swaps-v2/incentivized-mainnet.md)
   * [Fundamentals](products/bitcoin-cross-chain-swaps-v2/fundamentals/README.md)
     * [BTCfi](products/bitcoin-cross-chain-swaps-v2/fundamentals/btcfi.md)
     * [Bitcoin Layer 2s](products/bitcoin-cross-chain-swaps-v2/fundamentals/bitcoin-layer-2s.md)
