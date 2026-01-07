@@ -1,0 +1,47 @@
+import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Sidebar } from '@/components/Sidebar'
+import { Header } from '@/components/Header'
+import { MarkdownContent } from '@/components/MarkdownContent'
+
+export const metadata = {
+  title: 'Governance - Persistence Docs',
+  description: 'Token holders decide on the future of the Persistence One ecosystem.',
+}
+
+export default function Page() {
+  const content = `
+# Governance
+
+## Off-chain Discussions 💬
+
+At Persistence, we firmly believe in an idea-meritocracy, where the most innovative and valuable ideas should always prevail. We rely on our community to actively contribute by generating new ideas, engaging in meaningful discussions, contemplating significant topics, and challenging the existing status quo collectively. To initiate or participate in any discussions, we highly recommend visiting the Persistence Forum, which is linked below:&#x20;
+
+<div class="embed-container"><iframe src="https://forum.persistence.one" frameborder="0" allowfullscreen></iframe></div>
+
+`
+  const hideFirstHeading = true
+
+  return (
+    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
+      <Header />
+      <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar />
+        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+          <Container maxW="5xl" py={8} px={7}>
+          {hideFirstHeading && (
+            <Heading as="h1" size="2xl" mb={4}>
+              Governance
+            </Heading>
+          )}
+          {true && (
+            <Text fontSize="lg" color="gray.600" mb={8}>
+              Token holders decide on the future of the Persistence One ecosystem.
+            </Text>
+          )}
+          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          </Container>
+        </Box>
+      </Box>
+    </Box>
+  )
+}
