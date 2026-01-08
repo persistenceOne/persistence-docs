@@ -7,7 +7,6 @@ interface EmbedProps {
 }
 
 export function Embed({ html }: EmbedProps) {
-  // Extract iframe src from HTML
   const iframeMatch = html.match(/<iframe[^>]+src="([^"]+)"[^>]*>/)
   if (!iframeMatch) return null
 
