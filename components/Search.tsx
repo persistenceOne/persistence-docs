@@ -191,7 +191,7 @@ export function Search() {
             <Box overflowY="auto" maxH="60vh">
               {query && results.length === 0 && (
                 <Box p={8} textAlign="center">
-                  <Text color="gray.500">No results found for "{query}"</Text>
+                  <Text color="gray.500">No results found for {query}</Text>
                 </Box>
               )}
 
