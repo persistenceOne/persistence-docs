@@ -1,12 +1,13 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+'use client'
+
+import { useState, useEffect } from 'react'
+import { Box, Container, Heading as ChakraHeading, Text } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
-
-export const metadata = {
-  title: 'Bitcoin Cross-Chain Swaps (V2) - Persistence Docs',
-  description: '>-',
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
 
 export default function Page() {
   const content = `
@@ -14,22 +15,34 @@ export default function Page() {
 
 `
   const hideFirstHeading = true
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
       <Header />
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar />
-        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+        <Box display="flex" flex="1" overflow="hidden">
+          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={8} px={7}>
           {hideFirstHeading && (
-            <Heading as="h1" size="2xl" mb={4}>
+            <ChakraHeading as="h1" size="2xl" mb={4}>
               Bitcoin Cross-Chain Swaps (V2)
-            </Heading>
+            </ChakraHeading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-          </Container>
+              
+              <PageNavigation />
+            </Container>
+        </Box>
+          <TableOfContents headings={headings} />
         </Box>
       </Box>
     </Box>

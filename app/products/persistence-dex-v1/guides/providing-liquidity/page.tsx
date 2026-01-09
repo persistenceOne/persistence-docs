@@ -1,12 +1,13 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+'use client'
+
+import { useState, useEffect } from 'react'
+import { Box, Container, Heading as ChakraHeading, Text } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
-
-export const metadata = {
-  title: 'Providing Liquidity - Persistence Docs',
-  description: '',
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
 
 export default function Page() {
   const content = `# Providing Liquidity
@@ -58,22 +59,34 @@ You will receive a confirmation once the transaction is confirmed.
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FhxC3fhMDSnI2oMTlPDig%252FSuccess.png%3Falt%3Dmedia%26token%3Df2453f95-2a5c-4e24-8390-8a27ff545ba5&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=28b4bec387a25b32c8648deb2bb1cdbc1299091c73bbbefdbbbc75ee43e1e666" alt=""><figcaption></figcaption></figure>
 `
   const hideFirstHeading = true
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
       <Header />
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar />
-        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+        <Box display="flex" flex="1" overflow="hidden">
+          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={8} px={7}>
           {hideFirstHeading && (
-            <Heading as="h1" size="2xl" mb={4}>
+            <ChakraHeading as="h1" size="2xl" mb={4}>
               Providing Liquidity
-            </Heading>
+            </ChakraHeading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-          </Container>
+              
+              <PageNavigation />
+            </Container>
+        </Box>
+          <TableOfContents headings={headings} />
         </Box>
       </Box>
     </Box>

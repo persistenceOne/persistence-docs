@@ -1,12 +1,13 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
-
-export const metadata = {
-  title: 'SubQuery - Persistence Docs',
-  description: '',
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
 
 export default function Page() {
   const content = `# SubQuery
@@ -31,13 +32,21 @@ SubQuery is open-source, meaning you have the freedom to run it in the following
 - You can publish it to SubQuery's enterprise-level [Managed Service](https://managedservice.subquery.network/), where we'll host your SubQuery project in production ready services for mission critical data with zero-downtime blue/green deployments. There even is a generous free tier. [Find out how](https://academy.subquery.network/run_publish/publish.html).
 - You can publish it to the decentralised [SubQuery Network](https://subquery.network/network), the most open, performant, reliable, and scalable data service for dApp developers. The SubQuery Network indexes and services data to the global community in an incentivised and verifiable way and supports Persistence from launch.`
   const hideFirstHeading = true
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
       <Header />
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar />
-        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+        <Box display="flex" flex="1" overflow="hidden">
+          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={8} px={7}>
           {hideFirstHeading && (
             <Heading as="h1" size="2xl" mb={4}>
@@ -46,7 +55,11 @@ SubQuery is open-source, meaning you have the freedom to run it in the following
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-          </Container>
+              
+              <PageNavigation />
+            </Container>
+        </Box>
+          <TableOfContents headings={headings} />
         </Box>
       </Box>
     </Box>

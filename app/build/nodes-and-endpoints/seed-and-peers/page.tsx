@@ -1,12 +1,13 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
-
-export const metadata = {
-  title: 'Seed & Peers - Persistence Docs',
-  description: '',
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
 
 export default function Page() {
   const content = `# Seed & Peers
@@ -38,13 +39,21 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
 | Persistence     |                                                                                       | <p>1. cee6b94965f301e8b5ad905a65fa39c03cd193ce@51.68.152.17:26656</p><p>2. 7f971fc5fc2ffedbaf32f3b4021645571461a712@198.244.177.67:26656</p><p>3. 21ca0b996db604681fb73721ecb01d2c6410c628@162.19.94.46:26656</p> |                                                                                       |
 `
   const hideFirstHeading = true
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
       <Header />
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar />
-        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+        <Box display="flex" flex="1" overflow="hidden">
+          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={8} px={7}>
           {hideFirstHeading && (
             <Heading as="h1" size="2xl" mb={4}>
@@ -53,7 +62,11 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-          </Container>
+              
+              <PageNavigation />
+            </Container>
+        </Box>
+          <TableOfContents headings={headings} />
         </Box>
       </Box>
     </Box>

@@ -29,6 +29,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import NextLink from 'next/link'
 import { CardTable } from './CardTable'
 import { Embed } from './Embed'
+import { extractHeadings } from '@/lib/extractHeadings'
 
 interface MarkdownContentProps {
   content: string
@@ -36,6 +37,63 @@ interface MarkdownContentProps {
 }
 
 export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentProps) {
+  // Extract headings and create ID map
+  const headings = extractHeadings(content)
+  const headingIdMap = new Map<string, string>()
+  headings.forEach((heading) => {
+    // Use the cleaned text (already has HTML stripped) for the map key
+    headingIdMap.set(`${heading.level}:${heading.text}`, heading.id)
+  })
+  
+  // Helper to generate ID from text (same logic as extractHeadings)
+  const generateId = (text: string) => {
+    return text
+      .toLowerCase()
+      .replace(/<[^>]+>/g, '') // Remove HTML tags
+      .replace(/&#x20;/g, ' ') // Decode HTML entities
+      .replace(/&#160;/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&#32;/g, ' ')
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim()
+  }
+  
+  // Helper to extract text from React children (handles images and other elements)
+  const extractTextFromChildren = (children: any): string => {
+    let text = ''
+    if (typeof children === 'string') {
+      text = children
+    } else if (Array.isArray(children)) {
+      text = children
+        .map((child) => {
+          if (typeof child === 'string') {
+            return child
+          }
+          if (typeof child === 'object' && child?.props?.children) {
+            return extractTextFromChildren(child.props.children)
+          }
+          return ''
+        })
+        .join(' ')
+    } else if (typeof children === 'object' && children?.props?.children) {
+      text = extractTextFromChildren(children.props.children)
+    } else {
+      text = String(children)
+    }
+    
+    // Clean up: remove HTML tags, normalize whitespace, decode entities
+    return text
+      .replace(/<[^>]+>/g, '') // Remove HTML tags
+      .replace(/&#x20;/g, ' ') // Decode HTML entities
+      .replace(/&#160;/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&#32;/g, ' ')
+      .replace(/\s+/g, ' ') // Normalize whitespace
+      .trim()
+  }
+
   // Remove first h1 if hideFirstHeading is true
   let processedContent = content
   if (hideFirstHeading) {
@@ -89,18 +147,46 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}
             components={{
-              h1: ({ node, ...props }: any) => (
-                <Heading as="h1" size="xl" mb={4} mt={8} {...props} />
-              ),
-              h2: ({ node, ...props }) => (
-                <Heading as="h2" size="lg" mb={3} mt={6} {...props} />
-              ),
-              h3: ({ node, ...props }) => (
-                <Heading as="h3" size="md" mb={2} mt={4} {...props} />
-              ),
-              h4: ({ node, ...props }) => (
-                <Heading as="h4" size="sm" mb={2} mt={3} {...props} />
-              ),
+              h1: ({ node, children, ...props }: any) => {
+                // Extract text content, handling React elements (like images) and HTML
+                const text = extractTextFromChildren(children)
+                const id = headingIdMap.get(`1:${text}`) || generateId(text)
+                return (
+                  <Heading as="h1" id={id} size="xl" mb={4} mt={8} {...props}>
+                    {children}
+                  </Heading>
+                )
+              },
+              h2: ({ node, children, ...props }: any) => {
+                // Extract text content, handling React elements (like images) and HTML
+                const text = extractTextFromChildren(children)
+                const id = headingIdMap.get(`2:${text}`) || generateId(text)
+                return (
+                  <Heading as="h2" id={id} size="lg" mb={3} mt={6} {...props}>
+                    {children}
+                  </Heading>
+                )
+              },
+              h3: ({ node, children, ...props }: any) => {
+                // Extract text content, handling React elements (like images) and HTML
+                const text = extractTextFromChildren(children)
+                const id = headingIdMap.get(`3:${text}`) || generateId(text)
+                return (
+                  <Heading as="h3" id={id} size="md" mb={2} mt={4} {...props}>
+                    {children}
+                  </Heading>
+                )
+              },
+              h4: ({ node, children, ...props }: any) => {
+                // Extract text content, handling React elements (like images) and HTML
+                const text = extractTextFromChildren(children)
+                const id = headingIdMap.get(`4:${text}`) || generateId(text)
+                return (
+                  <Heading as="h4" id={id} size="sm" mb={2} mt={3} {...props}>
+                    {children}
+                  </Heading>
+                )
+              },
               p: ({ node, ...props }) => <Text mb={4} lineHeight="tall" {...props} />,
               a: ({ node, href, ...props }: any) => {
                 const isExternal = href?.startsWith('http')

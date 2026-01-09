@@ -1,12 +1,13 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
-
-export const metadata = {
-  title: 'Connect & Follow - Persistence Docs',
-  description: '',
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
 
 export default function Page() {
   const content = `# Connect & Follow
@@ -20,13 +21,21 @@ export default function Page() {
 <table><thead><tr><th width="204">Country or Region</th><th width="214.33333333333331">Moderator / Facilitator</th><th width="381.6666666666667">Link</th></tr></thead><tbody><tr><td>Global</td><td>Persistence</td><td><a href="https://t.me/PersistenceOne">https://t.me/PersistenceOne</a></td></tr><tr><td>China</td><td></td><td><a href="https://t.me/PersistenceOneChina">https://t.me/PersistenceOneChina</a></td></tr><tr><td>France</td><td>StakeLab</td><td><a href="https://t.me/PersistenceOneFrance">https://t.me/PersistenceOneFrance</a></td></tr><tr><td>Russia</td><td>PostHuman</td><td><a href="https://t.me/PersistenceRussia">https://t.me/PersistenceRussia</a></td></tr><tr><td>South-Korea</td><td>Nonce</td><td><a href="https://t.me/PersistenceKorea">https://t.me/PersistenceKorea</a></td></tr><tr><td>Spain</td><td>Cosmonaut Stakes</td><td><a href="https://t.me/PersistenceOneESP">https://t.me/PersistenceOneESP</a></td></tr><tr><td>Turkey</td><td>Wonder wasp</td><td><a href="https://t.me/PersistenceOneTurkey">https://t.me/PersistenceOneTurkey</a></td></tr><tr><td>Vietnam</td><td>Megala</td><td><a href="https://t.me/PersistenceOneVietnam">https://t.me/PersistenceOneVietnam</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
       <Header />
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar />
-        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+        <Box display="flex" flex="1" overflow="hidden">
+          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={8} px={7}>
           {hideFirstHeading && (
             <Heading as="h1" size="2xl" mb={4}>
@@ -35,7 +44,11 @@ export default function Page() {
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-          </Container>
+              
+              <PageNavigation />
+            </Container>
+        </Box>
+          <TableOfContents headings={headings} />
         </Box>
       </Box>
     </Box>

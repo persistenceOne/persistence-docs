@@ -1,12 +1,13 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
-
-export const metadata = {
-  title: 'IBC Relayers - Persistence Docs',
-  description: 'Huge shout-out to our reliable IBC-Relayer operators!',
-}
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
 
 export default function Page() {
   const content = `
@@ -21,13 +22,21 @@ All the relayer details can be found on these dashboard.
 <figure><img src="/images/Screenshot 2024-12-03 at 12.09.19 AM.png" alt=""><figcaption><p><a href="https://persistence.interscope.pro/"><em>https://persistence.interscope.pro/</em></a></p></figcaption></figure>
 `
   const hideFirstHeading = true
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
       <Header />
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar />
-        <Box flex="1" bg="white" overflowY="auto" overflowX="hidden">
+        <Box display="flex" flex="1" overflow="hidden">
+          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={8} px={7}>
           {hideFirstHeading && (
             <Heading as="h1" size="2xl" mb={4}>
@@ -40,7 +49,11 @@ All the relayer details can be found on these dashboard.
             </Text>
           )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-          </Container>
+              
+              <PageNavigation />
+            </Container>
+        </Box>
+          <TableOfContents headings={headings} />
         </Box>
       </Box>
     </Box>
