@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading as ChakraHeading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading as ChakraHeading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -15,6 +15,7 @@ export default function Page() {
 
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -25,14 +26,14 @@ export default function Page() {
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <ChakraHeading as="h1" size="2xl" mb={4}>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Bitcoin Cross-Chain Swaps (V2)
             </ChakraHeading>
           )}
@@ -41,7 +42,7 @@ export default function Page() {
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

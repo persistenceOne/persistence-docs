@@ -135,9 +135,10 @@ export function Search() {
   return (
     <>
       <InputGroup
-        maxW="400px"
+        maxW={{ base: 'full', md: '400px' }}
         onClick={onOpen}
         cursor="pointer"
+        display={{ base: 'none', md: 'flex' }}
       >
         <InputLeftElement pointerEvents="none">
           <SearchIcon color="gray.400" />
@@ -157,8 +158,15 @@ export function Search() {
           </HStack>
         </InputRightElement>
       </InputGroup>
+      <IconButton
+        aria-label="Search"
+        icon={<SearchIcon />}
+        variant="ghost"
+        display={{ base: 'flex', md: 'none' }}
+        onClick={onOpen}
+      />
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
+      <Modal isOpen={isOpen} onClose={onClose} size={{ base: 'full', md: 'xl' }} isCentered>
         <ModalOverlay bg="blackAlpha.600" backdropFilter="blur(4px)" />
         <ModalContent maxH="80vh" overflow="hidden" bg="white" borderRadius="lg" boxShadow="xl">
           <ModalBody p={0}>

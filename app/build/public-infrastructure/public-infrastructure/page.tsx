@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -78,6 +78,7 @@ To help developers with integration, the following RPC-endpoints are provided
 | StakeFlow   | wss://rpc-persistence-01.stakeflow.io/websocket | wss://rpc-persistence-testnet-01.stakeflow.io/websocket |
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -88,14 +89,14 @@ To help developers with integration, the following RPC-endpoints are provided
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size="2xl" mb={4}>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Endpoints
             </Heading>
           )}
@@ -104,7 +105,7 @@ To help developers with integration, the following RPC-endpoints are provided
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

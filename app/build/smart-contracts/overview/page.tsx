@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -53,6 +53,7 @@ Now you can request to vote again on the relative discussion. After the proposal
 The process can be repeated for up to 3 more times if it failed to pass due to legitimate external reasons (e.g., potential low governance participation that did not meet the minimum on-chain quorum).
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -63,14 +64,14 @@ The process can be repeated for up to 3 more times if it failed to pass due to l
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size="2xl" mb={4}>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Overview
             </Heading>
           )}
@@ -79,7 +80,7 @@ The process can be repeated for up to 3 more times if it failed to pass due to l
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

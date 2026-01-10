@@ -237,8 +237,8 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 )
               },
               table: ({ node, ...props }) => (
-                <TableContainer mb={4}>
-                  <Table variant="simple" {...props} />
+                <TableContainer mb={4} overflowX="auto" maxW="100%">
+                  <Table variant="simple" size={{ base: 'sm', md: 'md' }} {...props} />
                 </TableContainer>
               ),
               thead: ({ node, ...props }) => <Thead {...props} />,

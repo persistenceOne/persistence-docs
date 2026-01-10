@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -24,6 +24,7 @@ This page provides a list of available faucets for both the Persistence mainnet 
 > ℹ️ **Info:** No balance in the faucet? Visit[connect-and-follow](/docs/community-and-support/connect-and-follow.md "mention") to contact us directly for tokens!
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -34,14 +35,14 @@ This page provides a list of available faucets for both the Persistence mainnet 
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size="2xl" mb={4}>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Faucets
             </Heading>
           )}
@@ -50,7 +51,7 @@ This page provides a list of available faucets for both the Persistence mainnet 
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

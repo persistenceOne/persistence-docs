@@ -110,6 +110,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       pl={6}
       pr={4}
       py={4}
+      display={{ base: 'none', xl: 'block' }}
     >
       <VStack align="stretch" spacing={2}>
         <Text

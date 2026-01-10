@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading as ChakraHeading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading as ChakraHeading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -38,6 +38,7 @@ Let's say we swap 100 ATOM for XPRT on Persistence DEX, the total fees charged w
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FjHN3KGhI0pcKJNScakbE%252FScreenshot%25202023-05-30%2520at%25208.55.18%2520PM.png%3Falt%3Dmedia%26token%3Df11401f9-4f65-48a3-a0fc-bd3a311ddfd6&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=aec35e82c0617aeb2712ce622ce884b53ea6b971df57ba2ea369c8f06e387859" alt=""><figcaption></figcaption></figure>
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -48,14 +49,14 @@ Let's say we swap 100 ATOM for XPRT on Persistence DEX, the total fees charged w
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <ChakraHeading as="h1" size="2xl" mb={4}>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Fees
             </ChakraHeading>
           )}
@@ -64,7 +65,7 @@ Let's say we swap 100 ATOM for XPRT on Persistence DEX, the total fees charged w
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

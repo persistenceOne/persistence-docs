@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -39,6 +39,7 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
 | Persistence     |                                                                                       | <p>1. cee6b94965f301e8b5ad905a65fa39c03cd193ce@51.68.152.17:26656</p><p>2. 7f971fc5fc2ffedbaf32f3b4021645571461a712@198.244.177.67:26656</p><p>3. 21ca0b996db604681fb73721ecb01d2c6410c628@162.19.94.46:26656</p> |                                                                                       |
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -49,14 +50,14 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size="2xl" mb={4}>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Seed & Peers
             </Heading>
           )}
@@ -65,7 +66,7 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

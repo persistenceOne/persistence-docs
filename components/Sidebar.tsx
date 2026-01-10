@@ -11,6 +11,13 @@ import {
   HStack,
   Button,
   Image,
+  Drawer,
+  DrawerBody,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useBreakpointValue,
 } from '@chakra-ui/react'
 import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
@@ -127,7 +134,37 @@ function NavItemComponent({ item, level = 0 }: NavItemProps) {
   )
 }
 
-export function Sidebar() {
+interface SidebarProps {
+  isOpen?: boolean
+  onClose?: () => void
+}
+
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const isMobile = useBreakpointValue({ base: true, lg: false })
+  
+  const sidebarContent = (
+    <VStack align="stretch" spacing={1}>
+      {navigation.map((item) => (
+        <NavItemComponent key={item.path} item={item} />
+      ))}
+    </VStack>
+  )
+
+  if (isMobile) {
+    return (
+      <Drawer isOpen={isOpen || false} placement="left" onClose={onClose || (() => {})}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Navigation</DrawerHeader>
+          <DrawerBody p={4}>
+            {sidebarContent}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    )
+  }
+
   return (
     <Box
       as="nav"
@@ -139,12 +176,9 @@ export function Sidebar() {
       overflowY="auto"
       height="100%"
       flexShrink={0}
+      display={{ base: 'none', lg: 'block' }}
     >
-      <VStack align="stretch" spacing={1}>
-        {navigation.map((item) => (
-          <NavItemComponent key={item.path} item={item} />
-        ))}
-      </VStack>
+      {sidebarContent}
     </Box>
   )
 }

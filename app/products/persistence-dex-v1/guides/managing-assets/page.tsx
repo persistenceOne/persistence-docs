@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading as ChakraHeading, Text } from '@chakra-ui/react'
+import { Box, Container, Heading as ChakraHeading, Text , useDisclosure } from '@chakra-ui/react'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -51,6 +51,7 @@ Follow the steps below to withdraw assets to the source chain from Persistence C
 <figure><img src="..//images/Screenshot 2023-03-26 at 4.01.17 PM.png" alt=""><figcaption></figcaption></figure>
 `
   const hideFirstHeading = true
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -61,14 +62,14 @@ Follow the steps below to withdraw assets to the source chain from Persistence C
 
   return (
     <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header />
+      <Header onMenuClick={onOpen} />
       <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar />
-        <Box display="flex" flex="1" overflow="hidden">
+        <Sidebar isOpen={isOpen} onClose={onClose} />
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={8} px={7}>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <ChakraHeading as="h1" size="2xl" mb={4}>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Managing Assets
             </ChakraHeading>
           )}
@@ -77,7 +78,7 @@ Follow the steps below to withdraw assets to the source chain from Persistence C
               
               <PageNavigation />
             </Container>
-        </Box>
+          </Box>
           <TableOfContents headings={headings} />
         </Box>
       </Box>

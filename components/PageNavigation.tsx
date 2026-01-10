@@ -47,6 +47,7 @@ export function PageNavigation({ currentPath }: PageNavigationProps) {
         borderColor="gray.200"
         pt={6}
         display="flex"
+        flexDirection={{ base: 'column', md: 'row' }}
         justifyContent="space-between"
         alignItems="stretch"
         gap={4}
