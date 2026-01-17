@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading as ChakraHeading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading as ChakraHeading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -29,7 +30,47 @@ The "Tradooor Rebate Program" is designed to benefit traders who actively partic
 
 _Head over to the Rebate Program page on the web app to find your reward amount and total volume traded as part of the program._
 
-<div class="embed-container"><iframe src="https://app.persistence.one/rebate-program" frameborder="0" allowfullscreen></iframe></div>
+
+          <Box
+            as={Link}
+            href="https://app.persistence.one/rebate-program"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">P</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Persistence DEX
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  app.persistence.one
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
 
 <figure><img src="/images/image (3).avif" alt=""><figcaption></figcaption></figure>
 

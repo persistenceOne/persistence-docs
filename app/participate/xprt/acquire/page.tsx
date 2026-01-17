@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import { Box, Container, Heading, Text, useDisclosure, Link, HStack, Image } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -19,23 +20,9 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 
 > ✅ **Success:** The references provided below are solely for informational purposes. They do not constitute an endorsement of the specific exchange, nor do they offer any financial or investment advice.&#x20;
 
-> ⚠️ **Warning:** Before you proceed, ensure you understand [the XPRT Token](/docs/participate/xprt), what [Proof-of-Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp) is, and which [wallets](/docs/participate/wallets) are supported.
+> ⚠️ **Warning:** Before you proceed, ensure you understand [the XPRT Token](/participate/xprt), what [Proof-of-Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp) is, and which [wallets](/participate/wallets) are supported.
 
-<div class="embed-container"><iframe src="https://blog.persistence.one/2024/12/05/how-to-acquire-xprt-from-cexs-and-dexs/" frameborder="0" allowfullscreen></iframe></div>
-
-<div class="embed-container"><iframe src="https://ascendex.com/en/cashtrade-spottrading/usdt/xprt" frameborder="0" allowfullscreen></iframe></div>
-
-<div class="embed-container"><iframe src="https://www.gate.io/trade/XPRT_USDT" frameborder="0" allowfullscreen></iframe></div>
-
-<div class="embed-container"><iframe src="https://www.coinex.com/en/exchange/xprt-usdt" frameborder="0" allowfullscreen></iframe></div>
-
-***
-
-## $XPRT Price Tracking
-
-<div class="embed-container"><iframe src="https://coinmarketcap.com/currencies/persistence/" frameborder="0" allowfullscreen></iframe></div>
-
-<div class="embed-container"><iframe src="https://www.coingecko.com/en/coins/persistence" frameborder="0" allowfullscreen></iframe></div>
+## Decentralized Exchanges
 `
   const hideFirstHeading = true
   const description = 'Not Investment Advice'
@@ -68,6 +55,372 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
                 </Text>
               )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
+          {/* Blog Post Link */}
+          <Box
+            as={Link}
+            href="https://blog.persistence.one/2024/12/05/how-to-acquire-xprt-from-cexs-and-dexs/"
+            isExternal
+            display="block"
+            mt={6}
+            mb={6}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Image
+                src="/images/logo.avif"
+                alt="Persistence"
+                boxSize="40px"
+                borderRadius="md"
+                flexShrink={0}
+              />
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  How to Acquire XPRT from CEX&apos;s and DEX&apos;s – Persistence One
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  Persistence One - The BTCFi Liquidity Hub
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* Decentralized Exchanges Section */}
+          <Heading as="h2" size="lg" mb={4} mt={8}>
+            Decentralized Exchanges
+          </Heading>
+
+          {/* Osmosis */}
+          <Box
+            as={Link}
+            href="https://app.osmosis.zone/assets/ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="purple.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">O</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  https://app.osmosis.zone/assets/ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  app.osmosis.zone
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* Centralized Exchanges Section */}
+          <Heading as="h2" size="lg" mb={4} mt={8}>
+            Centralized Exchanges
+          </Heading>
+
+          {/* KuCoin */}
+          <Box
+            as={Link}
+            href="https://www.kucoin.com/trade/XPRT-USDT"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="green.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">K</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Crypto Exchange | Bitcoin Exchange | Bitcoin Trading | KuCoin
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  kucoin.com
+                </Text>
+                <Text fontSize="xs" color="gray.500" mt={1}>
+                  KuCoin
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* AscendEX */}
+          <Box
+            as={Link}
+            href="https://ascendex.com/en/cashtrade-spottrading/usdt/xprt"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="gray.600"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">A</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  XPRT Price
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  ascendex.com
+                </Text>
+                <Text fontSize="xs" color="gray.500" mt={1}>
+                  AscendEX
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* Gate.io */}
+          <Box
+            as={Link}
+            href="https://www.gate.io/trade/XPRT_USDT"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">G</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  0.015637 XPRT USDT Spot Trading | Live Price Chart | Gate.com
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  Gate.com
+                </Text>
+                <Text fontSize="xs" color="gray.500" mt={1}>
+                  Gate.io
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* CoinEx */}
+          <Box
+            as={Link}
+            href="https://www.coinex.com/en/exchange/xprt-usdt"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="green.600"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">C</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Trade XPRT/USDT | XPRT on CoinEx Exchange
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  www.coinex.com
+                </Text>
+                <Text fontSize="xs" color="gray.500" mt={1}>
+                  CoinEx
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* Price Tracking Section */}
+          <Heading as="h2" size="lg" mb={4} mt={8}>
+            $XPRT Price Tracking
+          </Heading>
+
+          {/* CoinMarketCap */}
+          <Box
+            as={Link}
+            href="https://coinmarketcap.com/currencies/persistence/"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.600"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">M</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Persistence One
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  CoinMarketCap
+                </Text>
+                <Text fontSize="xs" color="gray.500" mt={1}>
+                  CoinMarketCap
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* CoinGecko */}
+          <Box
+            as={Link}
+            href="https://www.coingecko.com/en/coins/persistence"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="green.600"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">G</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Persistence One
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  CoinGecko
+                </Text>
+                <Text fontSize="xs" color="gray.500" mt={1}>
+                  CoinGecko
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
               
               <PageNavigation />
             </Container>

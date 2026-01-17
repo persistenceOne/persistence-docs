@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -19,13 +20,7 @@ export default function Page() {
 
 ## Network Stats
 
-<div class="embed-container"><iframe src="https://persistence.smartstake.io/stats" frameborder="0" allowfullscreen></iframe></div>
-
 ## Validator Stats
-
-<div class="embed-container"><iframe src="https://persistence.smartstake.io/" frameborder="0" allowfullscreen></iframe></div>
-
-<div class="embed-container"><iframe src="https://observatory.zone/persistence" frameborder="0" allowfullscreen></iframe></div>
 
 `
   const hideFirstHeading = true
@@ -60,6 +55,132 @@ export default function Page() {
               )}
 
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
+          {/* Network Stats */}
+          <Box
+            as={Link}
+            href="https://persistence.smartstake.io/stats"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="purple.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">N</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Network Stats
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  smartstake.io
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* Validator Stats */}
+          <Box
+            as={Link}
+            href="https://persistence.smartstake.io/"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="purple.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">V</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Validator Stats
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  smartstake.io
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          {/* Observatory Zone */}
+          <Box
+            as={Link}
+            href="https://observatory.zone/persistence"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="indigo.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">O</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Observatory Zone
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  observatory.zone
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
               
               <PageNavigation />
             </Container>

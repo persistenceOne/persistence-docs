@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -20,7 +21,47 @@ export default function Page() {
 
 Kindly check back here after some time or sign up for the updates on this from here:
 
-<div class="embed-container"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdaEj_qlTkuSCk4ywVxksfVWcKB1DbCvisDGwo15JzUBjd3dQ/viewform" frameborder="0" allowfullscreen></iframe></div>
+
+          <Box
+            as={Link}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdaEj_qlTkuSCk4ywVxksfVWcKB1DbCvisDGwo15JzUBjd3dQ/viewform"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">G</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Google Form
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  docs.google.com
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
 
 `
   const hideFirstHeading = true

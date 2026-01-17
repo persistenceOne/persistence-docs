@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { Box, Container, Heading, Text, Link, useDisclosure } from '@chakra-ui/react'
+import {Box, Container, Heading, Text, Link, useDisclosure, HStack, Image} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -38,7 +39,47 @@ Follow these steps to set up Leap Wallet:
 
 ✨ **Get started with Leap Wallet** [Visit Leap Wallet's website](https://leapwallet.io) and follow the instructions to dive into the Persistence ecosystem.
 
-<div class="embed-container"><iframe src="https://www.leapwallet.io/support/how-to-set-up-leap-wallet" frameborder="0" allowfullscreen></iframe></div>
+
+          <Box
+            as={Link}
+            href="https://www.leapwallet.io/support/how-to-set-up-leap-wallet"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">L</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Leap Wallet Guide
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  leapwallet.io
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
 `
   const hideFirstHeading = true
   const { isOpen, onOpen, onClose } = useDisclosure()

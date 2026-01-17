@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -69,7 +70,47 @@ To ensure communication is always smooth, please ensure to have provided your la
 
 We recommend validators to set up their own monitoring tools and alerts to avoid any downtime. In absence of your own monitoring tools, we suggest using the tool made available by Paranormal Brothers:
 
-<div class="embed-container"><iframe src="https://persistence.paranorm.pro/monitor/" frameborder="0" allowfullscreen></iframe></div>
+
+          <Box
+            as={Link}
+            href="https://persistence.paranorm.pro/monitor/"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">P</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Persistence Monitor
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  paranorm.pro
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
 `
   const hideFirstHeading = true
   const description = 'Communication is key!'

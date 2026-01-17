@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -10,6 +10,7 @@ import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import {ChevronRightIcon} from "@chakra-ui/icons";
 
 export default function Page() {
   const content = `
@@ -21,7 +22,7 @@ export default function Page() {
 
 ## Keplr
 
-<div class="embed-container"><iframe src="https://wallet.keplr.app/chains/persistence" frameborder="0" allowfullscreen></iframe></div>
+
 
 Tutorial:
 
@@ -29,15 +30,15 @@ Tutorial:
 
 Tutorial/Guide:
 
-<div class="embed-container"><iframe src="https://medium.com/cosmostation/how-to-create-your-personal-persistence-xprt-account-on-cosmostation-wallet-ios-android-web-30cdfece35ce" frameborder="0" allowfullscreen></iframe></div>
+
 
 Tutorial/Guide:
 
-<div class="embed-container"><iframe src="https://medium.com/everstake/how-to-connect-a-ledger-wallet-to-the-persistence-wallet-and-stake-xprt-a-simple-guide-for-7daacca53bfd" frameborder="0" allowfullscreen></iframe></div>
+
 
 Tutorial/Guide:
 
-<div class="embed-container"><iframe src="https://everstake.one/blog/how-to-stake-persistence-xprt-using-the-leap-wallet" frameborder="0" allowfullscreen></iframe></div>
+
 
 > ⚠️ **Warning:** Note: As part of the Persistence v3 chain upgrade, the default coin type was changed from 750 to 118. Read all about it [here](https://blog.persistence.one/2022/07/14/coin-type-migration-from-750-to-118-for-persistence-core-1-chain-xprt/).
 
@@ -76,6 +77,170 @@ Tutorial/Guide:
               )}
 
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+
+          <Box
+            as={Link}
+            href="https://wallet.keplr.app/chains/persistence"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="purple.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">K</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Keplr Wallet
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  wallet.keplr.app
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          <Box
+            as={Link}
+            href="https://medium.com/cosmostation/how-to-create-your-personal-persistence-xprt-account-on-cosmostation-wallet-ios-android-web-30cdfece35ce"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="black"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">C</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Cosmostation Guide
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  medium.com
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          <Box
+            as={Link}
+            href="https://medium.com/everstake/how-to-connect-a-ledger-wallet-to-the-persistence-wallet-and-stake-xprt-a-simple-guide-for-7daacca53bfd"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="black"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">E</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Everstake Guide
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  medium.com
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          <Box
+            as={Link}
+            href="https://everstake.one/blog/how-to-stake-persistence-xprt-using-the-leap-wallet"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">E</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Everstake Guide
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  everstake.one
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
               <PageNavigation />
             </Container>
           </Box>

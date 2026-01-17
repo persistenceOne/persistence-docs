@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -10,6 +10,7 @@ import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import {ChevronRightIcon} from "@chakra-ui/icons";
 
 export default function Page() {
   const content = `
@@ -21,11 +22,11 @@ This means that [XPRT](/docs/participate/xprt) token holders will be able to del
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/iSyhmlYERuk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-<div class="embed-container"><iframe src="https://www.rockx.com/staking/persistence" frameborder="0" allowfullscreen></iframe></div>
 
-<div class="embed-container"><iframe src="https://stakely.io/en/persistence-staking" frameborder="0" allowfullscreen></iframe></div>
 
-<div class="embed-container"><iframe src="https://p2p.org/economy/persistence-xprt/" frameborder="0" allowfullscreen></iframe></div>
+
+
+
 
 As technology and tools continuously advance, some of the guides may become outdated. If you encounter any outdated guides, please directly inform the relevant team. To create a new guide, please contact the Persistence Team or submit a public relations (PR) request.
 
@@ -65,6 +66,129 @@ Please reach out on Discord if you’re creating staking guides in any language 
               )}
 
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+
+          <Box
+            as={Link}
+            href="https://www.rockx.com/staking/persistence"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="orange.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">R</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  RockX Staking
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  rockx.com
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          <Box
+            as={Link}
+            href="https://stakely.io/en/persistence-staking"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="green.500"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">S</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  Stakely Staking
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  stakely.io
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+
+          <Box
+            as={Link}
+            href="https://p2p.org/economy/persistence-xprt/"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg="blue.600"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color="white" fontWeight="bold" fontSize="xl">P</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  P2P Validator
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  p2p.org
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
               
               <PageNavigation />
             </Container>
