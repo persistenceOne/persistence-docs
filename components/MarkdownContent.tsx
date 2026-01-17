@@ -23,7 +23,9 @@ import {
   AlertIcon,
   Image,
   Divider,
+  HStack,
 } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import NextLink from 'next/link'
@@ -188,16 +190,37 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 )
               },
               p: ({ node, ...props }) => <Text mb={4} lineHeight="tall" {...props} />,
-              a: ({ node, href, ...props }: any) => {
+              a: ({ node, href, children, ...props }: any) => {
                 const isExternal = href?.startsWith('http')
                 const isInternal = href?.startsWith('/') && !href?.startsWith('http')
                 if (isInternal) {
                   return (
-                    <Link as={NextLink} href={href} color="blue.500" {...props} />
+                    <Link
+                      as={NextLink}
+                      href={href}
+                      color="blue.500"
+                      textDecoration="underline"
+                      _hover={{ color: 'blue.600' }}
+                      {...props}
+                    >
+                      {children}
+                    </Link>
                   )
                 }
                 return (
-                  <Link color="blue.500" isExternal={isExternal} href={href} {...props} />
+                  <Link
+                    color="blue.500"
+                    isExternal={isExternal}
+                    href={href}
+                    textDecoration="underline"
+                    _hover={{ color: 'blue.600' }}
+                    {...props}
+                  >
+                    <HStack as="span" display="inline-flex" spacing={1} alignItems="center">
+                      <span>{children}</span>
+                      {isExternal && <ExternalLinkIcon boxSize={3} />}
+                    </HStack>
+                  </Link>
                 )
               },
               ul: ({ node, ...props }) => <UnorderedList mb={4} {...props} />,

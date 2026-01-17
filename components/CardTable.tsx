@@ -1,6 +1,7 @@
 'use client'
 
-import { SimpleGrid, Card, CardBody, CardHeader, Heading, Text, Link } from '@chakra-ui/react'
+import { SimpleGrid, Card, CardBody, CardHeader, Heading, Text, Link, HStack } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 
 interface CardTableProps {
@@ -76,14 +77,23 @@ export function CardTable({ html }: CardTableProps) {
             </Text>
             {card.href && (
               <Link
-                as={NextLink}
+                as={card.href.startsWith('http') ? undefined : NextLink}
                 href={card.href}
                 color="blue.500"
                 fontWeight="medium"
                 fontSize="sm"
-                _hover={{ color: 'blue.600', textDecoration: 'underline' }}
+                textDecoration="underline"
+                isExternal={card.href.startsWith('http')}
+                _hover={{ color: 'blue.600' }}
               >
-                Learn more →
+                <HStack as="span" display="inline-flex" spacing={1} alignItems="center">
+                  <span>Learn more</span>
+                  {card.href.startsWith('http') ? (
+                    <ExternalLinkIcon boxSize={3} />
+                  ) : (
+                    <span>→</span>
+                  )}
+                </HStack>
               </Link>
             )}
           </CardBody>
