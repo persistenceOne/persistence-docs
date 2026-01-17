@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading as ChakraHeading, Text , useDisclosure } from '@chakra-ui/react'
+import { usePathname } from 'next/navigation'
+import { Box, Container, Heading as ChakraHeading, Text, Link, useDisclosure } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -37,6 +39,7 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 `
   const hideFirstHeading = true
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -54,9 +57,9 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Getting Started
-            </ChakraHeading>
+            </ChakraHeading></Link>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

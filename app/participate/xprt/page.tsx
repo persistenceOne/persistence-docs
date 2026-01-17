@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
+import { usePathname } from 'next/navigation'
+import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -29,6 +31,7 @@ To check all the EVM Token contract addresses for XPRT, you can check [here](htt
   const hideFirstHeading = true
   const description = 'This documentation contains all the IBC Denom or Token Contract for XPRT on the respective chains.'
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -47,9 +50,9 @@ To check all the EVM Token contract addresses for XPRT, you can check [here](htt
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <>
-              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+              <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
                 XPRT Token
-              </Heading>
+              </Heading></Link>
             </>
           )}
               {description && (

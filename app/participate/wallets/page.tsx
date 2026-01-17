@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
+import { usePathname } from 'next/navigation'
+import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -45,6 +47,7 @@ Tutorial/Guide:
   const hideFirstHeading = true
   const description = 'List of wallets supporting XPRT'
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -62,9 +65,9 @@ Tutorial/Guide:
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Wallets
-            </Heading>
+            </Heading></Link>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>

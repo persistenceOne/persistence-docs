@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Box, Container, Heading, Text, useDisclosure, HStack, Image, Link } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
@@ -24,6 +25,7 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 `
   const hideFirstHeading = true
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -41,9 +43,9 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Acquiring XPRT Tokens
-            </Heading>
+            </Heading></Link>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

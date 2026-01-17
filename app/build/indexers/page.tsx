@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
+import { usePathname } from 'next/navigation'
+import { Box, Container, Heading, Text, Link, useDisclosure } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -21,6 +23,7 @@ Indexers provide a mechanism for organising blockchain data to facilitate their 
 `
   const hideFirstHeading = true
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -38,9 +41,9 @@ Indexers provide a mechanism for organising blockchain data to facilitate their 
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Indexers
-            </Heading>
+            </Heading></Link>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

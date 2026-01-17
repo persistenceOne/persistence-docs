@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
+import { usePathname } from 'next/navigation'
+import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -177,6 +179,7 @@ The explorer for this chain is accessible [here](https://www.mintscan.io/persist
 `
   const hideFirstHeading = true
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -194,9 +197,9 @@ The explorer for this chain is accessible [here](https://www.mintscan.io/persist
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
               Validate on Mainnet
-            </Heading>
+            </Heading></Link>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

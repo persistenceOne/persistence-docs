@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
+import { usePathname } from 'next/navigation'
+import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -72,6 +74,7 @@ We recommend validators to set up their own monitoring tools and alerts to avoid
   const hideFirstHeading = true
   const description = 'Communication is key!'
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
   useEffect(() => {
@@ -90,9 +93,9 @@ We recommend validators to set up their own monitoring tools and alerts to avoid
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <>
-              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+              <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
                 Validator Communication
-              </Heading>
+              </Heading></Link>
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
                   {description}
