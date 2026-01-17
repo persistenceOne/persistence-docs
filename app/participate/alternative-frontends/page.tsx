@@ -32,6 +32,7 @@ export default function Page() {
 | Kleomedes | [https://ipfs.kleomedes.network/dexter](https://ipfs.kleomedes.network/dexter) |
 `
   const hideFirstHeading = true
+  const description = 'Explore alternative frontends for Persistence Wallet and Persistence DEX app.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -54,11 +55,11 @@ export default function Page() {
               Alternative Frontends
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Explore alternative frontends for Persistence Wallet and Persistence DEX app.
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

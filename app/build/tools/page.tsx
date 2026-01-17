@@ -16,6 +16,7 @@ export default function Page() {
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Persistence JS</strong></td><td><a href="/images/Screenshot 2025-01-01 at 2.46.16 PM.png">Screenshot 2025-01-01 at 2.46.16 PM.png</a></td><td><a href="persistence-js.md">persistence-js.md</a></td></tr><tr><td><strong>Persistence SDK</strong></td><td><a href="/images/Screenshot 2025-01-01 at 2.46.41 PM.png">Screenshot 2025-01-01 at 2.46.41 PM.png</a></td><td><a href="persistence-sdk.md">persistence-sdk.md</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
+  const description = 'A builder without the right tool is just a fool'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -34,14 +35,16 @@ export default function Page() {
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Developer Tools
-            </Heading>
-          )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              A builder without the right tool is just a fool
-            </Text>
+            <>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+                Developer Tools
+              </Heading>
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+            </>
           )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

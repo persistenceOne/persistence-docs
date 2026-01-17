@@ -47,6 +47,7 @@ If you encounter any issues while joining the Persistence network or have questi
 For general questions and community support, join the [Persistence Discord](https://discord.persistence.one) and ask in the \`#testnet-validators-discussion\` channel.
 `
   const hideFirstHeading = true
+  const description = 'This page contains information on Persistence public testnets'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -65,17 +66,18 @@ For general questions and community support, join the [Persistence Discord](http
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Persistence Testnet
-            </Heading>
-          )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              This page contains information on Persistence public testnets
-            </Text>
+            <>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+                Persistence Testnet
+              </Heading>
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+            </>
           )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-              
               <PageNavigation />
             </Container>
           </Box>

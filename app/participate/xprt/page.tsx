@@ -27,6 +27,7 @@ To check all the EVM Token contract addresses for XPRT, you can check [here](htt
 
 `
   const hideFirstHeading = true
+  const description = 'This documentation contains all the IBC Denom or Token Contract for XPRT on the respective chains.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -45,13 +46,19 @@ To check all the EVM Token contract addresses for XPRT, you can check [here](htt
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              XPRT Token
-            </Heading>
+            <>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+                XPRT Token
+              </Heading>
+            </>
           )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-              
               <PageNavigation />
             </Container>
           </Box>

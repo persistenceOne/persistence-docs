@@ -80,6 +80,7 @@ Proposal is created and upon approval from the Persistence Governance, the pool 
 > ℹ️ **Info:** If you need any additional support, please raise a ticket [on our Discord server](https://discord.persistence.one), and the Persistence DEX Team will be available to help.
 `
   const hideFirstHeading = true
+  const description = 'Best suited for liquid-staked assets such as stkATOM and interest-bearing tokens.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -102,7 +103,11 @@ Proposal is created and upon approval from the Persistence Governance, the pool 
               Metastable Pool
             </ChakraHeading>
           )}
-          
+            {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+            )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

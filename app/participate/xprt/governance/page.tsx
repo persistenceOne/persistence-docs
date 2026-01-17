@@ -21,6 +21,7 @@ At Persistence, we firmly believe in an idea-meritocracy, where the most innovat
 
 `
   const hideFirstHeading = true
+  const description = 'Token holders decide on the future of the Persistence One ecosystem.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -43,11 +44,12 @@ At Persistence, we firmly believe in an idea-meritocracy, where the most innovat
               Governance
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Token holders decide on the future of the Persistence One ecosystem.
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

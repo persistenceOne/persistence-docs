@@ -22,6 +22,7 @@ Supported Assets:&#x20;
 
 `
   const hideFirstHeading = true
+  const description = 'https://bridge.persistence.one'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -44,13 +45,15 @@ Supported Assets:&#x20;
               Persistence Bridge
             </Heading>
           )}
-          {true && (
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
             <Text fontSize="lg" color="gray.600" mb={8}>
               https://bridge.persistence.one
             </Text>
-          )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-              
               <PageNavigation />
             </Container>
           </Box>

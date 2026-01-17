@@ -111,6 +111,7 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
   * [DWeb Link](https://bafybeig5ruccbktzi4bf7yb3hwec4j3rtdvne426eqxfkkgvquld6hn33a.ipfs.dweb.link/)
 `
   const hideFirstHeading = true
+  const description = 'Hosting a website/DApp frontend on IPFS grants several benefits, such as serverless hosting, potential resilience to DNS hijacks (together with IPNS/ENS), and high uptime.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -133,6 +134,11 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
               🔃 Hosting IPFS Versions with Pinata
             </Heading>
           )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

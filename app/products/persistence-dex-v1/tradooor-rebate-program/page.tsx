@@ -86,6 +86,7 @@ A: Each epoch has a duration of 24 hours. You will receive the rebate once every
 A: No, there are no fees or charges associated with receiving the rebates. The full rebate amount will be airdropped to your wallet.
 `
   const hideFirstHeading = true
+  const description = 'The tradoor rebate program is designed to incentivize traders on the platform and generate real yield for the LPs.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -108,7 +109,11 @@ A: No, there are no fees or charges associated with receiving the rebates. The f
               Tradooor Rebate Program
             </ChakraHeading>
           )}
-          
+            {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+            )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

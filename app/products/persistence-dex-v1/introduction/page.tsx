@@ -18,7 +18,7 @@ Trade efficiently or provide liquidity to earn from swap fees and LP rewards ðŸ‘
 
 **Read the announcement:** [https://blog.persistence.one/2024/06/11/rebranding-dexter-introducing-persistence-dex-and-enhancing-ecosystem-alignment/](https://blog.persistence.one/2024/06/11/rebranding-dexter-introducing-persistence-dex-and-enhancing-ecosystem-alignment/)
 
-> âŒ **Danger:** **Note:** Persistence DEX's docs are currently in the draft stage. We apologise for any missing information and welcome contributions to enhance its quality. If you have any queries, please don't hesitate to contact our team
+>**Note:** Persistence DEX's docs are currently in the draft stage. We apologise for any missing information and welcome contributions to enhance its quality. If you have any queries, please don't hesitate to contact our team
 
 ## Learn the fundamentals
 

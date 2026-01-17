@@ -36,6 +36,7 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 <div class="embed-container"><iframe src="https://www.coingecko.com/en/coins/persistence" frameborder="0" allowfullscreen></iframe></div>
 `
   const hideFirstHeading = true
+  const description = 'Not Investment Advice'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -58,11 +59,11 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
               Acquire
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Not Investment Advice
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

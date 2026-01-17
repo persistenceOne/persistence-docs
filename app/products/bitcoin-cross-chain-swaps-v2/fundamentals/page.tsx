@@ -15,6 +15,7 @@ export default function Page() {
 
 `
   const hideFirstHeading = true
+  const description = 'Discover the key concepts behind Persistence One’s Bitcoin Cross-Chain Swaps, including BTCfi, Bitcoin Layer 2 solutions, and intents powering cross-chain interoperability.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -37,6 +38,11 @@ export default function Page() {
               Fundamentals
             </Heading>
           )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

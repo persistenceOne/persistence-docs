@@ -76,6 +76,7 @@ Proposal is created and upon approval from the Persistence Governance, the pool 
 > ℹ️ **Info:** If you need any additional support, please raise a ticket on [our Discord server,](https://discord.persistence.one) and the Persistence DEX Team will be available to help.
 `
   const hideFirstHeading = true
+  const description = 'Suits all assets'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -98,11 +99,11 @@ Proposal is created and upon approval from the Persistence Governance, the pool 
               Weighted Pool
             </ChakraHeading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Suits all assets
-            </Text>
-          )}
+            {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+            )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

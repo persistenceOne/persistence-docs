@@ -57,6 +57,7 @@ The foundational Cosmos-based chain that powers Persistence's infrastructure.
 [Learn more about the Persistence Core-1 chain.](/docs/persistence-hub/broken/pages/YB8nbdu3j3FqbvFozukb)
 `
   const hideFirstHeading = true
+  const description = 'Explore the building blocks of Persistence One and how each component contributes to our mission of creating seamless cross-chain solutions.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -79,6 +80,11 @@ The foundational Cosmos-based chain that powers Persistence's infrastructure.
               Persistence Ecosystem
             </Heading>
           )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

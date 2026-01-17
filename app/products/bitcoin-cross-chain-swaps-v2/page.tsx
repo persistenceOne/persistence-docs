@@ -15,6 +15,7 @@ export default function Page() {
 
 `
   const hideFirstHeading = true
+  const description = 'A revolutionary solution for Bitcoin interoperability, enabling fast, secure, and zero-slippage swaps across Bitcoin Layer 2s and sidechains.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -33,9 +34,16 @@ export default function Page() {
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Bitcoin Cross-Chain Swaps (V2)
-            </ChakraHeading>
+            <>
+              <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+                Bitcoin Cross-Chain Swaps (V2)
+              </ChakraHeading>
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+            </>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

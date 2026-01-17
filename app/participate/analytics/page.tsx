@@ -27,6 +27,7 @@ export default function Page() {
 
 `
   const hideFirstHeading = true
+  const description = 'List of Network Analytics Dashboards'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -49,11 +50,12 @@ export default function Page() {
               Analytics
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              List of Network Analytics Dashboards
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

@@ -43,6 +43,7 @@ Tutorial/Guide:
 
 `
   const hideFirstHeading = true
+  const description = 'List of wallets supporting XPRT'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -65,13 +66,13 @@ Tutorial/Guide:
               Wallets
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              List of wallets supporting XPRT
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-              
               <PageNavigation />
             </Container>
           </Box>

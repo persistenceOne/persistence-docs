@@ -15,6 +15,7 @@ export default function Page() {
 
 `
   const hideFirstHeading = true
+  const description = 'Unlock seamless trading, liquidity provisioning, and rewards within the Persistence ecosystem.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -37,9 +38,12 @@ export default function Page() {
               Persistence DEX (V1)
             </ChakraHeading>
           )}
-          
+            {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+            )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
-              
               <PageNavigation />
             </Container>
           </Box>

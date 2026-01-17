@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
@@ -24,6 +25,7 @@ import {
   Image,
   Divider,
   HStack,
+  Flex,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -163,6 +165,30 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 // Extract text content, handling React elements (like images) and HTML
                 const text = extractTextFromChildren(children)
                 const id = headingIdMap.get(`2:${text}`) || generateId(text)
+                
+                // Check if children contain an image (for wallet icons)
+                // Convert children to array to check for images
+                const childrenArray = React.Children.toArray(children)
+                const hasImage = childrenArray.some((child: any) => {
+                  if (typeof child === 'string') {
+                    return child.includes('<img') || child.includes('img src')
+                  }
+                  if (typeof child === 'object' && child !== null) {
+                    return child.type === 'img' || child.props?.src || 
+                           (child.props?.children && String(child.props.children).includes('<img'))
+                  }
+                  return false
+                })
+                
+                // If heading contains an image, wrap in Flex to align icon and text
+                if (hasImage) {
+                  return (
+                    <Heading as="h2" id={id} size="lg" mb={3} mt={6} display="flex" alignItems="center" gap={3} {...props}>
+                      {children}
+                    </Heading>
+                  )
+                }
+                
                 return (
                   <Heading as="h2" id={id} size="lg" mb={3} mt={6} {...props}>
                     {children}
@@ -278,6 +304,29 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                   // Extract image name and use /images/ path
                   const imageName = imageSrc.split('/').pop()
                   imageSrc = `/images/${imageName}`
+                }
+                
+                // Check if image is in a heading (data-size="line" indicates inline/heading image)
+                // Check both props and node properties for data-size attribute
+                const dataSize = props['data-size'] || (node?.properties as any)?.dataSize || (node?.properties as any)?.['data-size']
+                const isInline = dataSize === 'line'
+                
+                // Also check if it's a wallet icon (Keplr or Leap)
+                const isWalletIcon = imageSrc.includes('Keplr') || imageSrc.includes('Icon _ Transparent')
+                
+                if (isInline || isWalletIcon) {
+                  return (
+                    <Image
+                      display="inline-block"
+                      verticalAlign="middle"
+                      boxSize={{ base: '28px', md: '36px' }}
+                      mr={3}
+                      borderRadius="md"
+                      src={imageSrc}
+                      alt={alt || ''}
+                      {...props}
+                    />
+                  )
                 }
                 
                 return (

@@ -22,6 +22,7 @@ All the relayer details can be found on these dashboard.
 <figure><img src="/images/Screenshot 2024-12-03 at 12.09.19 AM.png" alt=""><figcaption><p><a href="https://persistence.interscope.pro/"><em>https://persistence.interscope.pro/</em></a></p></figcaption></figure>
 `
   const hideFirstHeading = true
+  const description = 'Huge shout-out to our reliable IBC-Relayer operators!'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -40,14 +41,16 @@ All the relayer details can be found on these dashboard.
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              IBC Relayers
-            </Heading>
-          )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Huge shout-out to our reliable IBC-Relayer operators!
-            </Text>
+            <>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+                IBC Relayers
+              </Heading>
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+            </>
           )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

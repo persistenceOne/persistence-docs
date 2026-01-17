@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, Container, Heading, Text , useDisclosure } from '@chakra-ui/react'
+import { Box, Container, Heading, Text, useDisclosure, HStack, Image, Link } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
@@ -19,8 +21,6 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 * Transfer $XPRT to your wallet and start participating in staking or governance.
 
 ### Learn How to Acquire XPRT from CEXs and DEXs:
-
-<div class="embed-container"><iframe src="https://blog.persistence.one/2024/12/05/how-to-acquire-xprt-from-cexs-and-dexs/" frameborder="0" allowfullscreen></iframe></div>
 `
   const hideFirstHeading = true
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -47,6 +47,44 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
+          <Box
+            as={Link}
+            href="https://blog.persistence.one/2024/12/05/how-to-acquire-xprt-from-cexs-and-dexs/"
+            isExternal
+            display="block"
+            mt={6}
+            mb={8}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: 'gray.300',
+              bg: 'gray.50',
+              textDecoration: 'none',
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Image
+                src="/images/logo.avif"
+                alt="Persistence"
+                boxSize="40px"
+                borderRadius="md"
+                flexShrink={0}
+              />
+              <Box flex="1">
+                <Text fontWeight="medium" color="gray.900" mb={1}>
+                  How to Acquire XPRT from CEX&apos;s and DEX&apos;s – Persistence One
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  Persistence One - The BTCFi Liquidity Hub
+                </Text>
+              </Box>
+              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
               
               <PageNavigation />
             </Container>

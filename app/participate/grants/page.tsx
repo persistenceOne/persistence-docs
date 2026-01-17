@@ -82,6 +82,7 @@ Conclusion Respective grants will be disbursed after the selected applicants del
 * It is at the sole discretion of the Persistence team to select and/or reject applicants for any given grant.
 `
   const hideFirstHeading = true
+  const description = 'Get support from the Foundation to build in the Persistence Ecosystem'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -104,11 +105,11 @@ Conclusion Respective grants will be disbursed after the selected applicants del
               Grants
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Get support from the Foundation to build in the Persistence Ecosystem
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

@@ -74,7 +74,7 @@ While the network is quite decentralized when it comes to voting power, it could
 
 As plenty of validators are using Hetzner as an ISP, there is an increased risk on the network since **running anything crypto-related is not compliant with Hetzner's Terms & Conditions.** As a result, they might shut your node down without any notice.&#x20;
 
-> ❌ **Danger:** Therefore, there will be a **50% deduction on delegations for validators using Hetzner** as their sole provider in Round 2.
+> **Danger:** Therefore, there will be a **50% deduction on delegations for validators using Hetzner** as their sole provider in Round 2.
 
 
 

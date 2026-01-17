@@ -149,6 +149,7 @@ If the order isn’t fulfilled, the funds remain in escrow, and the order will e
 You can always seek help from our moderators or the team on [Telegram](https://t.me/PersistenceOneChat) or [Discord](https://discord.persistence.one/).
 `
   const hideFirstHeading = true
+  const description = 'Everything you need to understand about Persistence One’s BTC Interop incentivized mainnet.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -171,7 +172,11 @@ You can always seek help from our moderators or the team on [Telegram](https://t
               Incentivized Mainnet
             </ChakraHeading>
           )}
-          
+            {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+            )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />

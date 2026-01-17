@@ -45,6 +45,7 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
 
 `
   const hideFirstHeading = true
+  const description = 'List of bridges and possible asset transfers between Persistence and other chains'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -67,6 +68,11 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
               Bridges
             </Heading>
           )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

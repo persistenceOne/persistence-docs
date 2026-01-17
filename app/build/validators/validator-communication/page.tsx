@@ -70,6 +70,7 @@ We recommend validators to set up their own monitoring tools and alerts to avoid
 <div class="embed-container"><iframe src="https://persistence.paranorm.pro/monitor/" frameborder="0" allowfullscreen></iframe></div>
 `
   const hideFirstHeading = true
+  const description = 'Communication is key!'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -88,14 +89,16 @@ We recommend validators to set up their own monitoring tools and alerts to avoid
           <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Validator Communication
-            </Heading>
-          )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Communication is key!
-            </Text>
+            <>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
+                Validator Communication
+              </Heading>
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+            </>
           )}
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               

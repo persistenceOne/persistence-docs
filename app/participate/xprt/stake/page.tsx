@@ -32,6 +32,7 @@ As technology and tools continuously advance, some of the guides may become outd
 Please reach out on Discord if you’re creating staking guides in any language other than English.
 `
   const hideFirstHeading = true
+  const description = 'Stake with a validator of your choice and help to secure the network.'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -54,11 +55,12 @@ Please reach out on Discord if you’re creating staking guides in any language 
               Stake
             </Heading>
           )}
-          {true && (
-            <Text fontSize="lg" color="gray.600" mb={8}>
-              Stake with a validator of your choice and help to secure the network.
-            </Text>
-          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                  {description}
+                </Text>
+              )}
+
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />
