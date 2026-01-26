@@ -3,10 +3,8 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, Link} from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
@@ -27,7 +25,6 @@ export default function Page() {
 <table><thead><tr><th width="204">Country or Region</th><th width="214.33333333333331">Moderator / Facilitator</th><th width="381.6666666666667">Link</th></tr></thead><tbody><tr><td>Global</td><td>Persistence</td><td><a href="https://t.me/PersistenceOne">https://t.me/PersistenceOne</a></td></tr><tr><td>China</td><td></td><td><a href="https://t.me/PersistenceOneChina">https://t.me/PersistenceOneChina</a></td></tr><tr><td>France</td><td>StakeLab</td><td><a href="https://t.me/PersistenceOneFrance">https://t.me/PersistenceOneFrance</a></td></tr><tr><td>Russia</td><td>PostHuman</td><td><a href="https://t.me/PersistenceRussia">https://t.me/PersistenceRussia</a></td></tr><tr><td>South-Korea</td><td>Nonce</td><td><a href="https://t.me/PersistenceKorea">https://t.me/PersistenceKorea</a></td></tr><tr><td>Spain</td><td>Cosmonaut Stakes</td><td><a href="https://t.me/PersistenceOneESP">https://t.me/PersistenceOneESP</a></td></tr><tr><td>Turkey</td><td>Wonder wasp</td><td><a href="https://t.me/PersistenceOneTurkey">https://t.me/PersistenceOneTurkey</a></td></tr><tr><td>Vietnam</td><td>Megala</td><td><a href="https://t.me/PersistenceOneVietnam">https://t.me/PersistenceOneVietnam</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -38,10 +35,6 @@ export default function Page() {
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -58,7 +51,5 @@ export default function Page() {
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
-  )
+      )
 }

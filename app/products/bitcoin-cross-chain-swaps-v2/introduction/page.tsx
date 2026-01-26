@@ -3,11 +3,9 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading as ChakraHeading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import {Box, Container, Heading as ChakraHeading, Text, Link, HStack, Image} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
@@ -53,23 +51,22 @@ This comprehensive guide walks you through the process of performing cross-chain
             borderRadius="md"
             p={4}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
               <Box
                 boxSize="40px"
                 borderRadius="md"
-                bg="blue.600"
+                bg={themeColors.accent.primary_600}
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
                 flexShrink={0}
               >
-                <Text color="white" fontWeight="bold" fontSize="xl">P</Text>
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">P</Text>
               </Box>
               <Box flex="1">
                 <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
@@ -87,7 +84,6 @@ This comprehensive guide walks you through the process of performing cross-chain
 
 `
   const hideFirstHeading = true
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -98,10 +94,6 @@ This comprehensive guide walks you through the process of performing cross-chain
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -118,7 +110,5 @@ This comprehensive guide walks you through the process of performing cross-chain
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
-  )
+      )
 }

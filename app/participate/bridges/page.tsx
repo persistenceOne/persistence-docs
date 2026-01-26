@@ -3,11 +3,9 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, Link, HStack, Image} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
@@ -58,23 +56,22 @@ Find more information on the [IBC Protocol website](https://ibcprotocol.org/) an
             borderRadius="md"
             p={4}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
               <Box
                 boxSize="40px"
                 borderRadius="md"
-                bg="blue.500"
+                bg={themeColors.accent.primary}
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
                 flexShrink={0}
               >
-                <Text color="white" fontWeight="bold" fontSize="xl">M</Text>
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">M</Text>
               </Box>
               <Box flex="1">
                 <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
@@ -93,7 +90,6 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
 `
   const hideFirstHeading = true
   const description = 'List of bridges and possible asset transfers between Persistence and other chains'
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -104,10 +100,6 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -129,7 +121,5 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
-  )
+      )
 }

@@ -25,12 +25,12 @@ export const theme = extendTheme({
       },
     },
     Link: {
-      baseStyle: {
-        color: 'blue.500',
+      baseStyle: (props: any) => ({
+        color: props.colorMode === 'dark' ? colors.dark.text.link : colors.light.text.link,
         _hover: {
           textDecoration: 'underline',
         },
-      },
+      }),
     },
   },
   colors,

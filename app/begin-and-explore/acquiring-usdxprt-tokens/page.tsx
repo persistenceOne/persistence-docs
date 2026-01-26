@@ -3,11 +3,9 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { Box, Container, Heading, Text, useDisclosure, HStack, Image, Link } from '@chakra-ui/react'
+import { Box, Container, Heading, Text, HStack, Image, Link } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
@@ -28,7 +26,6 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 ### Learn How to Acquire XPRT from CEXs and DEXs:
 `
   const hideFirstHeading = true
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -39,10 +36,6 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -66,10 +59,9 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
             borderRadius="md"
             p={4}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
@@ -91,13 +83,10 @@ $XPRT is the native token of the Persistence ecosystem. It powers the network th
               <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
-              
               <PageNavigation />
             </Container>
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
   )
 }

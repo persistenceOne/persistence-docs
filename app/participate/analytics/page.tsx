@@ -3,11 +3,9 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, Link, HStack, Image} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
@@ -29,7 +27,6 @@ export default function Page() {
 `
   const hideFirstHeading = true
   const description = 'List of Network Analytics Dashboards'
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -40,10 +37,6 @@ export default function Page() {
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -72,10 +65,9 @@ export default function Page() {
             borderRadius="md"
             p={4}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
@@ -88,7 +80,7 @@ export default function Page() {
                 justifyContent="center"
                 flexShrink={0}
               >
-                <Text color="white" fontWeight="bold" fontSize="xl">N</Text>
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">N</Text>
               </Box>
               <Box flex="1">
                 <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
@@ -114,10 +106,9 @@ export default function Page() {
             borderRadius="md"
             p={4}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
@@ -130,7 +121,7 @@ export default function Page() {
                 justifyContent="center"
                 flexShrink={0}
               >
-                <Text color="white" fontWeight="bold" fontSize="xl">V</Text>
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">V</Text>
               </Box>
               <Box flex="1">
                 <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
@@ -156,10 +147,9 @@ export default function Page() {
             borderRadius="md"
             p={4}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
@@ -172,7 +162,7 @@ export default function Page() {
                 justifyContent="center"
                 flexShrink={0}
               >
-                <Text color="white" fontWeight="bold" fontSize="xl">O</Text>
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">O</Text>
               </Box>
               <Box flex="1">
                 <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
@@ -191,7 +181,5 @@ export default function Page() {
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
-  )
+      )
 }

@@ -3,10 +3,8 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, Link} from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
@@ -45,7 +43,6 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
 | Persistence     |                                                                                       | <p>1. cee6b94965f301e8b5ad905a65fa39c03cd193ce@51.68.152.17:26656</p><p>2. 7f971fc5fc2ffedbaf32f3b4021645571461a712@198.244.177.67:26656</p><p>3. 21ca0b996db604681fb73721ecb01d2c6410c628@162.19.94.46:26656</p> |                                                                                       |
 `
   const hideFirstHeading = true
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -56,10 +53,6 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -76,7 +69,5 @@ Seed nodes are used to provide a list of peers (other nodes) for new nodes withi
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
-  )
+      )
 }

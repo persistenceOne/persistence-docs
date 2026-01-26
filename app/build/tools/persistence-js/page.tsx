@@ -3,62 +3,19 @@ import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, Link, HStack, Image} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
-import { Sidebar } from '@/components/Sidebar'
-import { Header } from '@/components/Header'
 import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import colors from '@/theme/colors';
 
 export default function Page() {
   const { colorMode } = useColorMode()
   const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `# Persistence JS
-
-
-          <Box
-            as={Link}
-            href="https://github.com/persistenceOne/persistenceJS#readme"
-            isExternal
-            display="block"
-            mb={4}
-            border="1px solid"
-            borderColor={themeColors.borderColor}
-            borderRadius="md"
-            p={4}
-            _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
-              textDecoration: 'none',
-            }}
-            transition="all 0.2s"
-          >
-            <HStack spacing={4} align="center">
-              <Box
-                boxSize="40px"
-                borderRadius="md"
-                bg={themeColors.card.variant0}
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                flexShrink={0}
-              >
-                <Text color="white" fontWeight="bold" fontSize="xl">P</Text>
-              </Box>
-              <Box flex="1">
-                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
-                  PersistenceJS
-                </Text>
-                <Text fontSize="sm" color={themeColors.text[500]}>
-                  github.com
-                </Text>
-              </Box>
-              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
-            </HStack>
-          </Box>
 
 ### Setup
 
@@ -99,9 +56,7 @@ console.log(codes);
       {
         transfer: {
           recipient: "persistence123em6jp7y96rtylp6tjk9r0dcescl0k4ccqvpu", //recipient address
-          amount: "10",
-        },
-      },
+          amount: "10"}},
       { amount: coins(2_000_000, "stake"), gas: "200000" },
     );
     console.log(res);
@@ -121,8 +76,7 @@ console.log(codes);
 
     \`\`\`
     const balance = await alice.wasm.queryContractSmart(pstake, {
-      balance: { address: "persistence123em6jp7y96rtylp6tjk9r0dcescl0k4ccqvpu" },
-    });
+      balance: { address: "persistence123em6jp7y96rtylp6tjk9r0dcescl0k4ccqvpu" }});
     console.log(balance);
     \`\`\`
 
@@ -143,9 +97,7 @@ import colors from '@/theme/colors'
       value: cosmos.bank.v1beta1.MsgSend.fromJSON({
         fromAddress: from,
         toAddress: to,
-        amount: amount,
-      }),
-    };
+        amount: amount})};
     const res = await alice.core.signAndBroadcast(
       account.address,
       [sendMsg],
@@ -163,7 +115,6 @@ This [script](https://github.com/persistenceOne/persistenceJS/blob/master/tests/
 > _**NOTE:**_ It is the default method for uploading your own contract to the persistence chain.
 `
   const hideFirstHeading = true
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 
@@ -174,10 +125,6 @@ This [script](https://github.com/persistenceOne/persistenceJS/blob/master/tests/
 
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" overflow="hidden">
-      <Header onMenuClick={onOpen} />
-      <Box display="flex" flex="1" overflow="hidden">
-        <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
@@ -188,13 +135,52 @@ This [script](https://github.com/persistenceOne/persistenceJS/blob/master/tests/
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
+          <Box
+            as={Link}
+            href="https://github.com/persistenceOne/persistenceJS#readme"
+            isExternal
+            display="block"
+            mb={4}
+            border="1px solid"
+            borderColor={themeColors.borderColor}
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'
+            }}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Box
+                boxSize="40px"
+                borderRadius="md"
+                bg={themeColors.card.variant0}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexShrink={0}
+              >
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">P</Text>
+              </Box>
+              <Box flex="1">
+                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
+                  PersistenceJS
+                </Text>
+                <Text fontSize="sm" color={themeColors.text[500]}>
+                  github.com
+                </Text>
+              </Box>
+              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
               
               <PageNavigation />
             </Container>
           </Box>
           <TableOfContents headings={headings} />
         </Box>
-      </Box>
-    </Box>
-  )
+      )
 }

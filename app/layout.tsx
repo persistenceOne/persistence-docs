@@ -1,5 +1,5 @@
 import { Providers } from '@/components/Providers'
-import { Box } from '@chakra-ui/react'
+import { AppLayout } from '@/components/AppLayout'
 
 export const metadata = {
   title: 'Persistence Docs',
@@ -41,7 +41,9 @@ export default function RootLayout({
     <html lang="en" style={{ height: '100%' }}>
       <body style={{ height: '100%', margin: 0, overflow: 'hidden' }}>
         <Providers>
-          {children}
+          <AppLayout>
+            {children}
+          </AppLayout>
         </Providers>
       </body>
     </html>

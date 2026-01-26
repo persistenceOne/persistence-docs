@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { HStack, IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { HStack, IconButton, useColorMode } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import colors from '@/theme/colors'
 
 type ColorMode = 'light' | 'dark' | 'system'
 
@@ -58,8 +59,11 @@ export function ThemeToggle() {
   }
 
   const activeMode = getActiveMode()
-  const inactiveColor = useColorModeValue('gray.400', 'gray.500')
-  const accentColor = '#E59636' // accent.primary from colors.ts
+  // Get theme colors based on the actual displayed mode (not the selected mode)
+  const displayedMode = mode === 'system' ? getSystemPreference() : mode
+  const themeColors = colors[displayedMode as 'light' | 'dark']
+  const inactiveColor = themeColors.text[400]
+  const accentColor = themeColors.accent.primary
 
   return (
     <HStack spacing={1} justify="center">
@@ -70,14 +74,9 @@ export function ThemeToggle() {
         variant="ghost"
         size="sm"
         color={mode === 'light' ? accentColor : inactiveColor}
-        bg={mode === 'light' ? 'rgba(229, 150, 54, 0.1)' : 'transparent'}
+        bg={mode === 'light' ? themeColors.accent.primary_opacity20 : 'transparent'}
         _hover={{
-          bg: mode === 'light' ? 'rgba(229, 150, 54, 0.1)' : 'gray.100',
-        }}
-        _dark={{
-          _hover: {
-            bg: mode === 'light' ? 'rgba(229, 150, 54, 0.2)' : 'gray.700',
-          },
+          bg: mode === 'light' ? themeColors.accent.primary_opacity20 : themeColors.sidebar.hover,
         }}
       />
       <IconButton
@@ -117,14 +116,9 @@ export function ThemeToggle() {
         variant="ghost"
         size="sm"
         color={mode === 'system' ? accentColor : inactiveColor}
-        bg={mode === 'system' ? 'rgba(229, 150, 54, 0.1)' : 'transparent'}
+        bg={mode === 'system' ? themeColors.accent.primary_opacity20 : 'transparent'}
         _hover={{
-          bg: mode === 'system' ? 'rgba(229, 150, 54, 0.1)' : 'gray.100',
-        }}
-        _dark={{
-          _hover: {
-            bg: mode === 'system' ? 'rgba(229, 150, 54, 0.2)' : 'gray.700',
-          },
+          bg: mode === 'system' ? themeColors.accent.primary_opacity20 : themeColors.sidebar.hover,
         }}
       />
       <IconButton
@@ -134,14 +128,9 @@ export function ThemeToggle() {
         variant="ghost"
         size="sm"
         color={mode === 'dark' ? accentColor : inactiveColor}
-        bg={mode === 'dark' ? 'rgba(229, 150, 54, 0.1)' : 'transparent'}
+        bg={mode === 'dark' ? themeColors.accent.primary_opacity20 : 'transparent'}
         _hover={{
-          bg: mode === 'dark' ? 'rgba(229, 150, 54, 0.1)' : 'gray.100',
-        }}
-        _dark={{
-          _hover: {
-            bg: mode === 'dark' ? 'rgba(229, 150, 54, 0.2)' : 'gray.700',
-          },
+          bg: mode === 'dark' ? themeColors.accent.primary_opacity20 : themeColors.sidebar.hover,
         }}
       />
     </HStack>
