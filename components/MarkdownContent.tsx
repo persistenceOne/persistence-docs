@@ -26,6 +26,7 @@ import {
   Divider,
   HStack,
   Flex,
+  useColorMode,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -34,6 +35,7 @@ import NextLink from 'next/link'
 import { CardTable } from './CardTable'
 import { Embed } from './Embed'
 import { extractHeadings } from '@/lib/extractHeadings'
+import colors from '@/theme/colors'
 
 interface MarkdownContentProps {
   content: string
@@ -41,6 +43,9 @@ interface MarkdownContentProps {
 }
 
 export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentProps) {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
+  
   // Extract headings and create ID map
   const headings = extractHeadings(content)
   const headingIdMap = new Map<string, string>()
@@ -156,7 +161,7 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 const text = extractTextFromChildren(children)
                 const id = headingIdMap.get(`1:${text}`) || generateId(text)
                 return (
-                  <Heading as="h1" id={id} size="xl" mb={4} mt={8} {...props}>
+                  <Heading as="h1" id={id} size="xl" mb={4} mt={8} color={themeColors.text[700]} {...props}>
                     {children}
                   </Heading>
                 )
@@ -183,14 +188,14 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 // If heading contains an image, wrap in Flex to align icon and text
                 if (hasImage) {
                   return (
-                    <Heading as="h2" id={id} size="lg" mb={3} mt={6} display="flex" alignItems="center" gap={3} {...props}>
+                    <Heading as="h2" id={id} size="lg" mb={3} mt={6} display="flex" alignItems="center" gap={3} color={themeColors.text[700]} {...props}>
                       {children}
                     </Heading>
                   )
                 }
                 
                 return (
-                  <Heading as="h2" id={id} size="lg" mb={3} mt={6} {...props}>
+                  <Heading as="h2" id={id} size="lg" mb={3} mt={6} color={themeColors.text[700]} {...props}>
                     {children}
                   </Heading>
                 )
@@ -200,7 +205,7 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 const text = extractTextFromChildren(children)
                 const id = headingIdMap.get(`3:${text}`) || generateId(text)
                 return (
-                  <Heading as="h3" id={id} size="md" mb={2} mt={4} {...props}>
+                  <Heading as="h3" id={id} size="md" mb={2} mt={4} color={themeColors.text[700]} {...props}>
                     {children}
                   </Heading>
                 )
@@ -210,12 +215,12 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 const text = extractTextFromChildren(children)
                 const id = headingIdMap.get(`4:${text}`) || generateId(text)
                 return (
-                  <Heading as="h4" id={id} size="sm" mb={2} mt={3} {...props}>
+                  <Heading as="h4" id={id} size="sm" mb={2} mt={3} color={themeColors.text[700]} {...props}>
                     {children}
                   </Heading>
                 )
               },
-              p: ({ node, ...props }) => <Text mb={4} lineHeight="tall" {...props} />,
+              p: ({ node, ...props }) => <Text mb={4} lineHeight="tall" color={themeColors.text[700]} {...props} />,
               a: ({ node, href, children, ...props }: any) => {
                 const isExternal = href?.startsWith('http')
                 const isInternal = href?.startsWith('/') && !href?.startsWith('http')
@@ -224,9 +229,9 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                     <Link
                       as={NextLink}
                       href={href}
-                      color="blue.500"
+                      color={themeColors.text.link}
                       textDecoration="underline"
-                      _hover={{ color: 'blue.600' }}
+                      _hover={{ color: themeColors.accent.primary }}
                       {...props}
                     >
                       {children}
@@ -235,11 +240,11 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 }
                 return (
                   <Link
-                    color="blue.500"
+                    color={themeColors.text.link}
                     isExternal={isExternal}
                     href={href}
                     textDecoration="underline"
-                    _hover={{ color: 'blue.600' }}
+                    _hover={{ color: themeColors.accent.primary }}
                     {...props}
                   >
                     <HStack as="span" display="inline-flex" spacing={1} alignItems="center">
@@ -277,8 +282,8 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                     py={1}
                     borderRadius="md"
                     fontSize="sm"
-                    bg="gray.100"
-                    color="gray.800"
+                    bg={themeColors.card.variant0}
+                    color={themeColors.text[700]}
                     {...props}
                   >
                     {codeString}
@@ -290,11 +295,11 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                   <Table variant="simple" size={{ base: 'sm', md: 'md' }} {...props} />
                 </TableContainer>
               ),
-              thead: ({ node, ...props }) => <Thead {...props} />,
+              thead: ({ node, ...props }) => <Thead bg={themeColors.card.variant0} {...props} />,
               tbody: ({ node, ...props }) => <Tbody {...props} />,
               tr: ({ node, ...props }) => <Tr {...props} />,
-              th: ({ node, ...props }) => <Th {...props} />,
-              td: ({ node, ...props }) => <Td {...props} />,
+              th: ({ node, ...props }) => <Th color={themeColors.text[700]} {...props} />,
+              td: ({ node, ...props }) => <Td color={themeColors.text[600]} {...props} />,
               img: ({ node, src, alt, ...props }: any) => {
                 // Ensure image paths are correct
                 let imageSrc = src || ''
@@ -340,7 +345,7 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                   />
                 )
               },
-              hr: ({ node, ...props }) => <Divider my={6} {...props} />,
+              hr: ({ node, ...props }) => <Divider my={6} borderColor={themeColors.borderColor} {...props} />,
               blockquote: ({ node, ...props }: any) => {
                 const content = String(props.children)
                 const isInfo = content.includes('ℹ️') || content.includes('info')
@@ -354,9 +359,9 @@ export function MarkdownContent({ content, hideFirstHeading }: MarkdownContentPr
                 else if (isDanger) status = 'error'
                 
                 return (
-                  <Alert status={status} variant="left-accent" mb={4}>
+                  <Alert status={status} variant="left-accent" mb={4} bg={themeColors.card.variant0}>
                     <AlertIcon />
-                    <Box>{props.children}</Box>
+                    <Box color={themeColors.text[700]}>{props.children}</Box>
                   </Alert>
                 )
               },

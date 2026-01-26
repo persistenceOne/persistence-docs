@@ -18,12 +18,14 @@ import {
   DrawerContent,
   DrawerCloseButton,
   useBreakpointValue,
+  useColorMode,
 } from '@chakra-ui/react'
 import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
 import { NavItem } from '@/lib/navigation'
 import { navigation } from '@/lib/navigation'
+import colors from '@/theme/colors'
 
 interface NavItemProps {
   item: NavItem
@@ -32,6 +34,8 @@ interface NavItemProps {
 
 function NavItemComponent({ item, level = 0 }: NavItemProps) {
   const pathname = usePathname()
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const isActive = pathname === item.path
   const hasChildren = item.children && item.children.length > 0
   const isTopLevel = level === 0
@@ -45,7 +49,7 @@ function NavItemComponent({ item, level = 0 }: NavItemProps) {
         // Top-level items with children: always show, no collapse
         isTopLevel ? (
           <Box py={1} px={2}>
-            <Text fontSize="sm" fontWeight="bold" color="gray.700" textTransform="uppercase" mb={1}>
+            <Text fontSize="sm" fontWeight="bold" color={themeColors.text[400]} textTransform="uppercase" mb={1}>
               {item.title}
             </Text>
           </Box>
@@ -61,9 +65,9 @@ function NavItemComponent({ item, level = 0 }: NavItemProps) {
             px={2}
             borderRadius="md"
             bg={isActive ? 'transparent' : 'transparent'}
-            color={isActive ? 'blue.600' : 'gray.700'}
+            color={isActive ? themeColors.accent.primary : themeColors.text[500]}
             fontWeight={isActive ? 'semibold' : 'normal'}
-            _hover={{ bg: 'gray.50' }}
+            _hover={{ bg: themeColors.sidebar.hover }}
             pl={level * 4 + 2}
             height="auto"
           >
@@ -93,9 +97,9 @@ function NavItemComponent({ item, level = 0 }: NavItemProps) {
           px={2}
           borderRadius="md"
           bg={isActive ? 'transparent' : 'transparent'}
-          color={isActive ? 'blue.600' : 'gray.700'}
+          color={isActive ? themeColors.accent.primary : themeColors.text[500]}
           fontWeight={isActive ? 'semibold' : 'normal'}
-          _hover={{ bg: 'gray.50', textDecoration: 'none' }}
+          _hover={{ bg: themeColors.sidebar.hover, textDecoration: 'none' }}
           pl={level * 4 + 2}
         >
           <HStack spacing={2}>
@@ -141,6 +145,8 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const isMobile = useBreakpointValue({ base: true, lg: false })
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   
   const sidebarContent = (
     <VStack align="stretch" spacing={1}>
@@ -153,11 +159,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   if (isMobile) {
     return (
       <Drawer isOpen={isOpen || false} placement="left" onClose={onClose || (() => {})}>
-        <DrawerOverlay />
-        <DrawerContent>
+        <DrawerOverlay bg={themeColors.modal.overlay} />
+        <DrawerContent bg={themeColors.modal.bg}>
           <DrawerCloseButton />
-          <DrawerHeader>Navigation</DrawerHeader>
-          <DrawerBody p={4}>
+          <DrawerHeader color={themeColors.text[600]}>Navigation</DrawerHeader>
+          <DrawerBody p={4} bg={themeColors.modal.bg}>
             {sidebarContent}
           </DrawerBody>
         </DrawerContent>
@@ -169,9 +175,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <Box
       as="nav"
       width="320px"
-      bg="gray.50"
+      bg={themeColors.sidebar.background}
       borderRight="1px"
-      borderColor="gray.200"
+      borderColor={themeColors.borderColor}
       p={4}
       overflowY="auto"
       height="100%"

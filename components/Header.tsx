@@ -1,20 +1,24 @@
 'use client'
 
-import { Box, HStack, Image, IconButton, useDisclosure } from '@chakra-ui/react'
+import { Box, HStack, Image, IconButton, useDisclosure, useColorMode } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { Search } from './Search'
+import colors from '@/theme/colors'
 
 interface HeaderProps {
   onMenuClick?: () => void
 }
 
 export function Header({ onMenuClick }: HeaderProps) {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
+  
   return (
     <Box
       as="header"
-      bg="white"
+      bg={themeColors.nav.bg}
       borderBottom="1px"
-      borderColor="gray.200"
+      borderColor={themeColors.borderColor}
       px={{ base: 4, md: 8 }}
       py={4}
       display="flex"
@@ -32,7 +36,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           onClick={onMenuClick}
         />
         <Image
-          src="/images/logo.avif"
+          src={colorMode === "dark" ? "/images/logo_light.avif" : "/images/logo.avif"}
           alt="Persistence Docs"
           height={{ base: '32px', md: '40px' }}
           objectFit="contain"

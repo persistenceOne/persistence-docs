@@ -19,12 +19,13 @@ import {
   ModalOverlay,
   ModalContent,
   ModalBody,
-  useColorModeValue,
+  useColorMode,
 } from '@chakra-ui/react'
 import { SearchIcon, CloseIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { useRouter } from 'next/navigation'
 import { navigation } from '@/lib/navigation'
+import colors from '@/theme/colors'
 
 interface SearchResult {
   title: string
@@ -56,13 +57,13 @@ function flattenNavigation(items: typeof navigation, section = ''): SearchResult
 const allPages = flattenNavigation(navigation)
 
 export function Search() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const { isOpen, onOpen, onClose } = useDisclosure()
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
-  const bg = useColorModeValue('white', 'gray.800')
-  const borderColor = useColorModeValue('gray.200', 'gray.700')
 
   // Handle Cmd+K / Ctrl+K shortcut
   useEffect(() => {
@@ -141,15 +142,15 @@ export function Search() {
         display={{ base: 'none', md: 'flex' }}
       >
         <InputLeftElement pointerEvents="none">
-          <SearchIcon color="gray.400" />
+          <SearchIcon color={themeColors.text.input_placeholder} />
         </InputLeftElement>
         <Input
           placeholder="Search..."
           value=""
           readOnly
-          bg="white"
-          borderColor="gray.200"
-          _hover={{ borderColor: 'gray.300' }}
+          bg={themeColors.card.variant0}
+          borderColor={themeColors.borderColor}
+          _hover={{ borderColor: themeColors.accent.primary }}
         />
         <InputRightElement width="auto" px={2}>
           <HStack spacing={1}>
@@ -167,13 +168,13 @@ export function Search() {
       />
 
       <Modal isOpen={isOpen} onClose={onClose} size={{ base: 'full', md: 'xl' }} isCentered>
-        <ModalOverlay bg="blackAlpha.600" backdropFilter="blur(4px)" />
-        <ModalContent maxH="80vh" overflow="hidden" bg="white" borderRadius="lg" boxShadow="xl">
+        <ModalOverlay bg={themeColors.modal.overlay} backdropFilter="blur(4px)" />
+        <ModalContent maxH="80vh" overflow="hidden" bg={themeColors.modal.bg} borderRadius="lg" boxShadow="xl">
           <ModalBody p={0}>
-            <Box p={4} borderBottom="1px" borderColor="gray.200" bg="white">
+            <Box p={4} borderBottom="1px" borderColor={themeColors.borderColor} bg={themeColors.modal.bg}>
               <InputGroup>
                 <InputLeftElement pointerEvents="none">
-                  <SearchIcon color="gray.400" />
+                  <SearchIcon color={themeColors.text.input_placeholder} />
                 </InputLeftElement>
                 <Input
                   ref={inputRef}
@@ -199,16 +200,16 @@ export function Search() {
             <Box overflowY="auto" maxH="60vh">
               {query && results.length === 0 && (
                 <Box p={8} textAlign="center">
-                  <Text color="gray.500">No results found for {query}</Text>
+                  <Text color={themeColors.text[400]}>No results found for {query}</Text>
                 </Box>
               )}
 
               {query && results.length > 0 && (
-                <VStack align="stretch" spacing={0} divider={<Divider />}>
+                <VStack align="stretch" spacing={0} divider={<Divider borderColor={themeColors.borderColor} />}>
                   {Object.entries(groupedResults).map(([section, sectionResults]) => (
                     <Box key={section}>
-                      <Box px={4} py={2} bg="gray.50">
-                        <Text fontSize="xs" fontWeight="bold" color="gray.600" textTransform="uppercase">
+                      <Box px={4} py={2} bg={themeColors.sidebar.hover}>
+                        <Text fontSize="xs" fontWeight="bold" color={themeColors.text[400]} textTransform="uppercase">
                           {section}
                         </Text>
                       </Box>
@@ -222,22 +223,22 @@ export function Search() {
                             display="block"
                             px={4}
                             py={3}
-                            _hover={{ bg: 'gray.100' }}
+                            _hover={{ bg: themeColors.sidebar.hover }}
                             textDecoration="none"
-                            bg="white"
+                            bg={themeColors.modal.bg}
                           >
                             <HStack justify="space-between">
                               <VStack align="start" spacing={0}>
-                                <Text fontWeight="medium" color="gray.900">
+                                <Text fontWeight="medium" color={themeColors.text[700]}>
                                   {result.title}
                                 </Text>
                                 {result.description && (
-                                  <Text fontSize="sm" color="gray.600" noOfLines={1}>
+                                  <Text fontSize="sm" color={themeColors.text[500]} noOfLines={1}>
                                     {result.description}
                                   </Text>
                                 )}
                               </VStack>
-                              <Text fontSize="xs" color="gray.400">
+                              <Text fontSize="xs" color={themeColors.text[400]}>
                                 →
                               </Text>
                             </HStack>
@@ -251,7 +252,7 @@ export function Search() {
 
               {!query && (
                 <Box p={8} textAlign="center">
-                  <Text color="gray.500">Start typing to search...</Text>
+                  <Text color={themeColors.text[400]}>Start typing to search...</Text>
                 </Box>
               )}
             </Box>

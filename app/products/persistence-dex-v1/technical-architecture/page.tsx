@@ -1,4 +1,5 @@
 'use client'
+import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
@@ -10,8 +11,11 @@ import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import colors from '@/theme/colors'
 
 export default function Page() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `# Technical Architecture
 
 Persistence DEX's base is made up of the following contracts:
@@ -103,7 +107,7 @@ Code: [https://github.com/dexter-zone/dexter\\_core/tree/main/contracts/lp\\_tok
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
-          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>

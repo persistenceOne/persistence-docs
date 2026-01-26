@@ -1,4 +1,5 @@
 'use client'
+import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
@@ -11,8 +12,11 @@ import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import colors from '@/theme/colors'
 
 export default function Page() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `
 # Bridges
 
@@ -50,7 +54,7 @@ Find more information on the [IBC Protocol website](https://ibcprotocol.org/) an
             display="block"
             mb={4}
             border="1px solid"
-            borderColor="gray.200"
+            borderColor={themeColors.borderColor}
             borderRadius="md"
             p={4}
             _hover={{
@@ -73,14 +77,14 @@ Find more information on the [IBC Protocol website](https://ibcprotocol.org/) an
                 <Text color="white" fontWeight="bold" fontSize="xl">M</Text>
               </Box>
               <Box flex="1">
-                <Text fontWeight="medium" color="gray.900" mb={1}>
+                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
                   Map of Zones
                 </Text>
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" color={themeColors.text[500]}>
                   mapofzones.com
                 </Text>
               </Box>
-              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
 
@@ -105,15 +109,15 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
-          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
               Bridges
             </Heading></Link>
           )}
               {description && (
-                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                   {description}
                 </Text>
               )}

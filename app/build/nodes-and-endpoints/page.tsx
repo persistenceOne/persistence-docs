@@ -1,4 +1,5 @@
 'use client'
+import { useColorMode } from '@chakra-ui/react'
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
@@ -10,8 +11,11 @@ import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import colors from '@/theme/colors'
 
 export default function Page() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `# Running Nodes
 
 A full node is a server running a chain's binary (its software) that fully validates transactions and blocks of a blockchain and keeps a complete record of all historic activity. A full node is distinct from a pruned node that processes only block headers and a small subset of transactions. Running a full node requires more resources than a pruned node.
@@ -48,10 +52,10 @@ Of course, it is possible and encouraged for users to run full nodes even if the
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
-          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
               Running Nodes
             </Heading></Link>
           )}

@@ -1,14 +1,18 @@
 'use client'
 
-import { SimpleGrid, Card, CardBody, CardHeader, Heading, Text, Link, HStack } from '@chakra-ui/react'
+import { SimpleGrid, Card, CardBody, CardHeader, Heading, Text, Link, HStack, useColorMode } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
+import colors from '@/theme/colors'
 
 interface CardTableProps {
   html: string
 }
 
 export function CardTable({ html }: CardTableProps) {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
+  
   // Parse the HTML table using regex (works in SSR)
   const rowMatches = html.match(/<tr>[\s\S]*?<\/tr>/g) || []
   
@@ -55,36 +59,36 @@ export function CardTable({ html }: CardTableProps) {
       {cards.map((card, index) => (
         <Card
           key={index}
-          bg="white"
-          color="gray.900"
+          bg={themeColors.card.variant0}
+          color={themeColors.text[700]}
           borderRadius="md"
           border="1px"
-          borderColor="gray.200"
+          borderColor={themeColors.borderColor}
           boxShadow="sm"
-          _hover={{ boxShadow: 'md', transform: 'translateY(-2px)' }}
+          _hover={{ boxShadow: 'md', transform: 'translateY(-2px)', borderColor: themeColors.accent.primary }}
           transition="all 0.2s"
         >
           <CardHeader pb={2}>
             {card.title && (
-              <Heading size="md" color="gray.900" fontWeight="bold">
+              <Heading size="md" color={themeColors.text[700]} fontWeight="bold">
                 {card.title}
               </Heading>
             )}
           </CardHeader>
           <CardBody pt={0}>
-            <Text mb={4} color="gray.600" fontSize="sm" lineHeight="tall">
+            <Text mb={4} color={themeColors.text[500]} fontSize="sm" lineHeight="tall">
               {card.description}
             </Text>
             {card.href && (
               <Link
                 as={card.href.startsWith('http') ? undefined : NextLink}
                 href={card.href}
-                color="blue.500"
+                color={themeColors.text.link}
                 fontWeight="medium"
                 fontSize="sm"
                 textDecoration="underline"
                 isExternal={card.href.startsWith('http')}
-                _hover={{ color: 'blue.600' }}
+                _hover={{ color: themeColors.accent.primary }}
               >
                 <HStack as="span" display="inline-flex" spacing={1} alignItems="center">
                   <span>Learn more</span>

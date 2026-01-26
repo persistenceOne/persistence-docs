@@ -1,10 +1,11 @@
 'use client'
 
-import { Box, Text, Flex } from '@chakra-ui/react'
+import { Box, Text, Flex, useColorMode } from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
 import { navigation } from '@/lib/navigation'
+import colors from '@/theme/colors'
 
 interface PageNavigationProps {
   currentPath?: string
@@ -27,6 +28,8 @@ function flattenNavigation(items: any[]): Array<{ path: string; title: string }>
 }
 
 export function PageNavigation({ currentPath }: PageNavigationProps) {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const pathname = usePathname()
   const path = currentPath || pathname || '/'
   
@@ -44,7 +47,7 @@ export function PageNavigation({ currentPath }: PageNavigationProps) {
     <Box mt={8}>
       <Box
         borderTop="1px solid"
-        borderColor="gray.200"
+        borderColor={themeColors.borderColor}
         pt={6}
         display="flex"
         flexDirection={{ base: 'column', md: 'row' }}
@@ -58,25 +61,26 @@ export function PageNavigation({ currentPath }: PageNavigationProps) {
             href={previousPage.path}
             flex="1"
             border="1px solid"
-            borderColor="gray.200"
+            borderColor={themeColors.borderColor}
             borderRadius="md"
             p={4}
+            bg={themeColors.card.variant0}
             display="flex"
             alignItems="center"
             gap={3}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.card.variant0,
               textDecoration: 'none',
             }}
             transition="all 0.2s"
           >
-            <ChevronLeftIcon color="gray.600" boxSize={5} />
+            <ChevronLeftIcon color={themeColors.text[500]} boxSize={5} />
             <Box flex="1">
-              <Text fontSize="xs" color="gray.500" mb={1}>
+              <Text fontSize="xs" color={themeColors.text[400]} mb={1}>
                 Previous
               </Text>
-              <Text fontSize="sm" fontWeight="medium" color="gray.900">
+              <Text fontSize="sm" fontWeight="medium" color={themeColors.text[700]}>
                 {previousPage.title}
               </Text>
             </Box>
@@ -91,35 +95,36 @@ export function PageNavigation({ currentPath }: PageNavigationProps) {
             href={nextPage.path}
             flex="1"
             border="1px solid"
-            borderColor="gray.200"
+            borderColor={themeColors.borderColor}
             borderRadius="md"
             p={4}
+            bg={themeColors.card.variant0}
             display="flex"
             alignItems="center"
             gap={3}
             justifyContent="flex-end"
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.card.variant0,
               textDecoration: 'none',
             }}
             transition="all 0.2s"
           >
             <Box flex="1" textAlign="right">
-              <Text fontSize="xs" color="gray.500" mb={1}>
+              <Text fontSize="xs" color={themeColors.text[400]} mb={1}>
                 Next
               </Text>
-              <Text fontSize="sm" fontWeight="medium" color="gray.900">
+              <Text fontSize="sm" fontWeight="medium" color={themeColors.text[700]}>
                 {nextPage.title}
               </Text>
             </Box>
-            <ChevronRightIcon color="gray.600" boxSize={5} />
+            <ChevronRightIcon color={themeColors.text[500]} boxSize={5} />
           </Box>
         )}
       </Box>
-      <Text fontSize="sm" color="gray.500" mt={4}>
-        Last updated 1 year ago
-      </Text>
+      {/*<Text fontSize="sm" color={themeColors.text[400]} mt={4}>*/}
+      {/*  Last updated 1 year ago*/}
+      {/*</Text>*/}
     </Box>
   )
 }

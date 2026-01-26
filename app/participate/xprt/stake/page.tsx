@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image} from '@chakra-ui/react'
+import {Box, Container, Heading, Text, useDisclosure, Link, HStack, Image, useColorMode} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
@@ -10,9 +10,12 @@ import { MarkdownContent } from '@/components/MarkdownContent'
 import { TableOfContents } from '@/components/TableOfContents'
 import { PageNavigation } from '@/components/PageNavigation'
 import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
-import {ChevronRightIcon} from "@chakra-ui/icons";
+import {ChevronRightIcon} from "@chakra-ui/icons"
+import colors from '@/theme/colors'
 
 export default function Page() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `
 # Stake
 
@@ -52,15 +55,15 @@ Please reach out on Discord if you’re creating staking guides in any language 
       <Box display="flex" flex="1" overflow="hidden">
         <Sidebar isOpen={isOpen} onClose={onClose} />
         <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
-          <Box flex="1" bg="white" overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
               Stake
             </Heading></Link>
           )}
               {description && (
-                <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" mb={4}>
+                <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                   {description}
                 </Text>
               )}
@@ -74,12 +77,13 @@ Please reach out on Discord if you’re creating staking guides in any language 
             display="block"
             mb={4}
             border="1px solid"
-            borderColor="gray.200"
+            borderColor={themeColors.borderColor}
             borderRadius="md"
             p={4}
+            bg={themeColors.card.variant0}
             _hover={{
-              borderColor: 'gray.300',
-              bg: 'gray.50',
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.card.variant0,
               textDecoration: 'none',
             }}
             transition="all 0.2s"
@@ -88,23 +92,23 @@ Please reach out on Discord if you’re creating staking guides in any language 
               <Box
                 boxSize="40px"
                 borderRadius="md"
-                bg="orange.500"
+                bg={themeColors.accent.primary}
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
                 flexShrink={0}
               >
-                <Text color="white" fontWeight="bold" fontSize="xl">R</Text>
+                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">R</Text>
               </Box>
               <Box flex="1">
-                <Text fontWeight="medium" color="gray.900" mb={1}>
+                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
                   RockX Staking
                 </Text>
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" color={themeColors.text[500]}>
                   rockx.com
                 </Text>
               </Box>
-              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
 
@@ -115,7 +119,7 @@ Please reach out on Discord if you’re creating staking guides in any language 
             display="block"
             mb={4}
             border="1px solid"
-            borderColor="gray.200"
+            borderColor={themeColors.borderColor}
             borderRadius="md"
             p={4}
             _hover={{
@@ -138,14 +142,14 @@ Please reach out on Discord if you’re creating staking guides in any language 
                 <Text color="white" fontWeight="bold" fontSize="xl">S</Text>
               </Box>
               <Box flex="1">
-                <Text fontWeight="medium" color="gray.900" mb={1}>
+                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
                   Stakely Staking
                 </Text>
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" color={themeColors.text[500]}>
                   stakely.io
                 </Text>
               </Box>
-              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
 
@@ -156,7 +160,7 @@ Please reach out on Discord if you’re creating staking guides in any language 
             display="block"
             mb={4}
             border="1px solid"
-            borderColor="gray.200"
+            borderColor={themeColors.borderColor}
             borderRadius="md"
             p={4}
             _hover={{
@@ -179,14 +183,14 @@ Please reach out on Discord if you’re creating staking guides in any language 
                 <Text color="white" fontWeight="bold" fontSize="xl">P</Text>
               </Box>
               <Box flex="1">
-                <Text fontWeight="medium" color="gray.900" mb={1}>
+                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
                   P2P Validator
                 </Text>
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" color={themeColors.text[500]}>
                   p2p.org
                 </Text>
               </Box>
-              <ChevronRightIcon color="gray.600" boxSize={5} flexShrink={0} />
+              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
               

@@ -1,14 +1,18 @@
 'use client'
 
-import { Box, VStack, Link, Text } from '@chakra-ui/react'
+import { Box, VStack, Link, Text, Divider, useColorMode } from '@chakra-ui/react'
 import { HeadingItem } from '@/lib/extractHeadings'
 import { useEffect, useState } from 'react'
+import { ThemeToggle } from './ThemeToggle'
+import colors from '@/theme/colors'
 
 interface TableOfContentsProps {
   headings: HeadingItem[]
 }
 
 export function TableOfContents({ headings }: TableOfContentsProps) {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
   const [activeId, setActiveId] = useState<string>('')
 
   useEffect(() => {
@@ -104,44 +108,55 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       position="sticky"
       top="80px"
       maxH="calc(100vh - 100px)"
-      overflowY="auto"
       w="240px"
       flexShrink={0}
       pl={6}
       pr={4}
       py={4}
-      display={{ base: 'none', xl: 'block' }}
+      display={{ base: 'none', xl: 'flex' }}
+      flexDirection="column"
     >
-      <VStack align="stretch" spacing={2}>
-        <Text
-          fontSize="sm"
-          fontWeight="semibold"
-          color="gray.600"
-          textTransform="uppercase"
-          letterSpacing="wide"
-          mb={2}
-        >
-          On this page
-        </Text>
-        {headings.map((heading) => (
-          <Link
-            key={heading.id}
-            href={`#${heading.id}`}
-            onClick={(e) => handleClick(e, heading.id)}
-            fontSize="sm"
-            color={activeId === heading.id ? 'blue.500' : 'gray.600'}
-            fontWeight={activeId === heading.id ? 'medium' : 'normal'}
-            pl={heading.level > 2 ? `${(heading.level - 2) * 12}px` : '0'}
-            _hover={{
-              color: 'blue.500',
-              textDecoration: 'none',
-            }}
-            transition="color 0.2s"
-          >
-            {heading.text}
-          </Link>
-        ))}
-      </VStack>
+      <Text
+        fontSize="sm"
+        fontWeight="semibold"
+        color={themeColors.text[400]}
+        textTransform="uppercase"
+        letterSpacing="wide"
+        mb={2}
+        flexShrink={0}
+      >
+        On this page
+      </Text>
+      <Box
+        flex="1"
+        overflowY="auto"
+        overflowX="hidden"
+        mb={4}
+      >
+        <VStack align="stretch" spacing={2}>
+          {headings.map((heading) => (
+            <Link
+              key={heading.id}
+              href={`#${heading.id}`}
+              onClick={(e) => handleClick(e, heading.id)}
+              fontSize="sm"
+              color={activeId === heading.id ? themeColors.accent.primary : themeColors.text[500]}
+              fontWeight={activeId === heading.id ? 'medium' : 'normal'}
+              pl={heading.level > 2 ? `${(heading.level - 2) * 12}px` : '0'}
+              _hover={{
+                color: themeColors.accent.primary,
+                textDecoration: 'none',
+              }}
+              transition="color 0.2s"
+            >
+              {heading.text}
+            </Link>
+          ))}
+        </VStack>
+      </Box>
+      <Box flexShrink={0} pt={2} borderTop="1px" borderColor={themeColors.borderColor}>
+        <ThemeToggle />
+      </Box>
     </Box>
   )
 }
