@@ -1,0 +1,96 @@
+'use client'
+import { useColorMode } from '@chakra-ui/react'
+
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import {Box, Container, Heading, Text, Link} from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { MarkdownContent } from '@/components/MarkdownContent'
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import colors from '@/theme/colors'
+
+export default function Page() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
+  const content = `# Leap Wallet
+
+**Leap Wallet** supports both the coin-types (i.e 118 & 750) wallet addresses.&#x20;
+
+| Coin-type Name on Leap Wallet | Coin-type  |
+| ----------------------------- | ---------- |
+| Persistence (New)             | 118        |
+| Persistence (Old)             | 750        |
+
+
+
+<details>
+
+<summary>Screenshot of both the coin-types in leap wallet. </summary>
+
+![](</images/photo_2023-08-14 01.15.08.jpeg>)
+
+</details>
+
+
+
+## Migration
+
+_Note: Migration is only required if you are using 750 Coin-type wallet address._
+
+### 1. Manual Migration
+
+<details>
+
+<summary>Manually transfer funds from old coin-type [Persistence (old)]  to new coin-type [Persistence (New)].</summary>
+
+In Leap Wallet:
+
+1. Copy the new/118 coin-type wallet persistence address
+2. Go to old/750 coin-type wallet persistence address
+3. Press "Send" and paste the new/118 coin-type wallet address. Select the full amount and hit "Send".&#x20;
+
+**Note:** If you have multiple tokens in 750 coin-type wallet persistence address, you will have to repeat this step individually for all tokens.
+
+Do you have staked $XPRT in your wallet address?
+
+* **Immediate solution:** Unbond your XPRT and migrate to the newly created coin-type 118 wallet address. (21 days unbonding period)
+* **Suggested Migration:** After the Implementation of the Liquid Staking Module by Iqlusion on Persistence _Core-1 Chain_ (Timeline not yet confirmed), the stake can be directly transferred to the new coin-type 118 wallet address without unbonding.
+
+</details>
+
+### 2. Automated Migration
+
+> ⚠️ **Warning:** This process is unavailable at the moment.
+
+`
+  const hideFirstHeading = true
+  const pathname = usePathname()
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
+
+  return (
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
+          {hideFirstHeading && (
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
+              Leap Wallet
+            </Heading></Link>
+          )}
+          
+          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+              
+              <PageNavigation />
+            </Container>
+          </Box>
+          <TableOfContents headings={headings} />
+        </Box>
+      )
+}

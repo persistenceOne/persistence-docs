@@ -1,0 +1,92 @@
+'use client'
+import { useColorMode } from '@chakra-ui/react'
+
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import { Box, Container, Heading, Text, HStack, Image, Link } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
+import { MarkdownContent } from '@/components/MarkdownContent'
+import { TableOfContents } from '@/components/TableOfContents'
+import { PageNavigation } from '@/components/PageNavigation'
+import { extractHeadings, HeadingItem } from '@/lib/extractHeadings'
+import colors from '@/theme/colors'
+
+export default function Page() {
+  const { colorMode } = useColorMode()
+  const themeColors = colors[colorMode as 'light' | 'dark']
+  const content = `
+# Acquiring XPRT Tokens
+
+$XPRT is the native token of the Persistence ecosystem. It powers the network through staking and governance. Here’s how you can acquire $XPRT tokens:
+
+* Buy from centralised exchanges like [Gate.io](https://www.gate.io/trade/XPRT_USDT), [Kucoin](https://www.kucoin.com/trade/XPRT-USDT), or decentralised exchanges (DEX) like [Swapfast by Leap](https://swapfast.app/?destinationAsset=uxprt\\&destinationChainId=core-1\\&sourceAsset=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\\&sourceChainId=1), [IBC Transfer from Osmosis](https://app.osmosis.zone/assets/XPRT).
+* Transfer $XPRT to your wallet and start participating in staking or governance.
+
+### Learn How to Acquire XPRT from CEXs and DEXs:
+`
+  const hideFirstHeading = true
+  const pathname = usePathname()
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
+
+  return (
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
+          {hideFirstHeading && (
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
+              Acquiring XPRT Tokens
+            </Heading></Link>
+          )}
+          
+          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
+          <Box
+            as={Link}
+            href="https://blog.persistence.one/2024/12/05/how-to-acquire-xprt-from-cexs-and-dexs/"
+            isExternal
+            display="block"
+            mt={6}
+            mb={8}
+            border="1px solid"
+            borderColor={themeColors.borderColor}
+            borderRadius="md"
+            p={4}
+            _hover={{
+              borderColor: themeColors.accent.primary,
+              bg: themeColors.sidebar.hover,
+              textDecoration: 'none'}}
+            transition="all 0.2s"
+          >
+            <HStack spacing={4} align="center">
+              <Image
+                src="/images/logo.avif"
+                alt="Persistence"
+                boxSize="40px"
+                borderRadius="md"
+                flexShrink={0}
+              />
+              <Box flex="1">
+                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
+                  How to Acquire XPRT from CEX&apos;s and DEX&apos;s – Persistence One
+                </Text>
+                <Text fontSize="sm" color={themeColors.text[500]}>
+                  Persistence One - The BTCFi Liquidity Hub
+                </Text>
+              </Box>
+              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
+            </HStack>
+          </Box>
+              <PageNavigation />
+            </Container>
+          </Box>
+          <TableOfContents headings={headings} />
+        </Box>
+  )
+}
