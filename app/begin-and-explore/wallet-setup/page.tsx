@@ -41,46 +41,6 @@ Follow these steps to set up Leap Wallet:
 
 ✨ **Get started with Leap Wallet** [Visit Leap Wallet's website](https://leapwallet.io) and follow the instructions to dive into the Persistence ecosystem.
 
-
-          <Box
-            as={Link}
-            href="https://www.leapwallet.io/support/how-to-set-up-leap-wallet"
-            isExternal
-            display="block"
-            mb={4}
-            border="1px solid"
-            borderColor={themeColors.borderColor}
-            borderRadius="md"
-            p={4}
-            _hover={{
-              borderColor: themeColors.accent.primary,
-              bg: themeColors.sidebar.hover,
-              textDecoration: 'none'}}
-            transition="all 0.2s"
-          >
-            <HStack spacing={4} align="center">
-              <Box
-                boxSize="40px"
-                borderRadius="md"
-                bg={themeColors.accent.primary}
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                flexShrink={0}
-              >
-                <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">L</Text>
-              </Box>
-              <Box flex="1">
-                <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
-                  Leap Wallet Guide
-                </Text>
-                <Text fontSize="sm" color={themeColors.text[500]}>
-                  leapwallet.io
-                </Text>
-              </Box>
-              <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
-            </HStack>
-          </Box>
 `
   const hideFirstHeading = true
   const pathname = usePathname()
@@ -103,6 +63,47 @@ Follow these steps to set up Leap Wallet:
               )}
               
               <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+              
+              <Box
+                as={Link}
+                href="https://www.leapwallet.io/support/how-to-set-up-leap-wallet"
+                isExternal
+                display="block"
+                mb={4}
+                border="1px solid"
+                borderColor={themeColors.borderColor}
+                borderRadius="md"
+                p={4}
+                _hover={{
+                  borderColor: themeColors.accent.primary,
+                  bg: themeColors.sidebar.hover,
+                  textDecoration: 'none'
+                }}
+                transition="all 0.2s"
+              >
+                <HStack spacing={4} align="center">
+                  <Box
+                    boxSize="40px"
+                    borderRadius="md"
+                    bg={themeColors.accent.primary}
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    flexShrink={0}
+                  >
+                    <Text color={themeColors.button.primaryTextColor} fontWeight="bold" fontSize="xl">L</Text>
+                  </Box>
+                  <Box flex="1">
+                    <Text fontWeight="medium" color={themeColors.text[700]} mb={1}>
+                      Leap Wallet Guide
+                    </Text>
+                    <Text fontSize="sm" color={themeColors.text[500]}>
+                      leapwallet.io
+                    </Text>
+                  </Box>
+                  <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
+                </HStack>
+              </Box>
               
               <PageNavigation />
             </Container>
