@@ -17,7 +17,7 @@ export default function Page() {
   const content = `
 # Developer Tools
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Persistence JS</strong></td><td><a href="/images/Screenshot 2025-01-01 at 2.46.16 PM.png">Screenshot 2025-01-01 at 2.46.16 PM.png</a></td><td><a href="persistence-js.md">persistence-js.md</a></td></tr><tr><td><strong>Persistence SDK</strong></td><td><a href="/images/Screenshot 2025-01-01 at 2.46.41 PM.png">Screenshot 2025-01-01 at 2.46.41 PM.png</a></td><td><a href="persistence-sdk.md">persistence-sdk.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Persistence JS</strong></td><td><a href="/images/Screenshot 2025-01-01 at 2.46.16 PM.png">Screenshot 2025-01-01 at 2.46.16 PM.png</a></td><td><a href="persistence-js">persistence-js.md</a></td></tr><tr><td><strong>Persistence SDK</strong></td><td><a href="/images/Screenshot 2025-01-01 at 2.46.41 PM.png">Screenshot 2025-01-01 at 2.46.41 PM.png</a></td><td><a href="persistence-sdk">persistence-sdk.md</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
   const description = 'A builder without the right tool is just a fool'
@@ -36,9 +36,7 @@ export default function Page() {
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <>
-              <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4} color={themeColors.text[700]}>
-                Developer Tools
-              </Heading></Link>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4} color={themeColors.text[700]}>Developer Tools</Heading>
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                   {description}

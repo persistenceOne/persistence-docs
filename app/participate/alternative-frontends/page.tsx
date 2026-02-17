@@ -19,7 +19,7 @@ export default function Page() {
 
 > ✅ **Success:** **Important:** Before utilising any alternative frontends, it is crucial to verify the provided links for authenticity and security. Always ensure the accuracy of the links from this repository to maintain a secure and reliable user experience.
 
-> ℹ️ **Info:** If you are hosting an alternative frontend & not included in the list below, [reach out](/docs/community-and-support/connect-and-follow) to the Persistence One team, and we will ensure its addition.
+> If you are hosting an alternative frontend & not included in the list below, [reach out](/community-and-support/connect-and-follow) to the Persistence One team, and we will ensure its addition.
 
 ## Persistence Wallet (pWallet)
 
@@ -51,9 +51,7 @@ export default function Page() {
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Alternative Frontends
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Alternative Frontends</Heading>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

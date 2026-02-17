@@ -53,9 +53,7 @@ Follow the next pages for managing assets, trading, providing liquidity & more o
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Guides
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Guides</ChakraHeading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

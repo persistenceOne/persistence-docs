@@ -18,14 +18,14 @@ export default function Page() {
 # Validate on Mainnet
 
 > **Warning**
-> Before creating a mainnet validator, ensure you have first followed the instructions on [how to join the mainnet](/docs/build/nodes-and-endpoints/join-mainnet). Also, unless you have previous experience running Cosmos Validators, we highly recommend starting with learning [how to validate on testnet](https://docs.persistence.one/build/validators/testnet-validator-setup).
+> Before creating a mainnet validator, ensure you have first followed the instructions on [how to join the mainnet](/build/nodes-and-endpoints/join-mainnet). Also, unless you have previous experience running Cosmos Validators, we highly recommend starting with learning [how to validate on testnet](https://docs.persistence.one/build/validators/testnet-validator-setup).
 
 ### Create Validator
 1. Ensure the **node is synced** *(response must be \`false\`)*: 
 	\`\`\`bash
 	curl http://localhost:26657/status | jq -r ".result.sync_info.catching_up"
 	\`\`\`
-2. Ensure you've got at least **~2+ XPRT** available in the wallet *(XPRT address created in [how to join the mainnet](/docs/build/nodes-and-endpoints/join-mainnet))*. You can acquire **XPRT** by following [this guide](https://www.binance.com/en/how-to-buy/persistence).
+2. Ensure you've got at least **~2+ XPRT** available in the wallet *(XPRT address created in [how to join the mainnet](/build/nodes-and-endpoints/join-mainnet))*. You can acquire **XPRT** by following [this guide](https://www.binance.com/en/how-to-buy/persistence).
 3.  **Create Validator**.
 
 	Before copying and pasting the command below, ensure you keep, replace, or delete certain options as highlighted in the command snippet below. We recommend copying the command in a notepad *(or other text editor)* and edit the parameters accordingly. 
@@ -194,9 +194,7 @@ The explorer for this chain is accessible [here](https://www.mintscan.io/persist
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Validate on Mainnet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Validate on Mainnet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

@@ -73,7 +73,7 @@ Users receive their tokens instantly with a 5% fee which is deducted from their 
 
 * **Step 3:** The user has two options to receive their bonded tokens. In order to bypass the 7 days unbonding period - Users have the option to Instant Unbond them to receive their tokens immediately.
 
-> ℹ️ **Info:** Instant Unbond has a fee of 5% that will be deducted in LP shares.
+> Instant Unbond has a fee of 5% that will be deducted in LP shares.
 
 <figure><img src="/images/3.webp" alt=""><figcaption></figcaption></figure>
 
@@ -103,7 +103,7 @@ If the user has tokens which are currently unbonding and they wish to bypass the
 
 * **Step 3:** Click on “instant unlock” to receive their unbonding tokens immediately.
 
-> ℹ️ **Info:** The fee for Instant Unlock ranges between 5% and 3%, adjusted according to the remaining time in the unbonding period will be deducted in LP shares.
+> The fee for Instant Unlock ranges between 5% and 3%, adjusted according to the remaining time in the unbonding period will be deducted in LP shares.
 
 <figure><img src="/images/3 (1).webp" alt=""><figcaption></figcaption></figure>
 
@@ -146,9 +146,7 @@ If the user has tokens which are currently unbonding and they wish to bypass the
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Instant LP Unbonding
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Instant LP Unbonding</ChakraHeading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

@@ -39,7 +39,7 @@ pWALLET (When connected with Persistence Ledger App) by default only support 750
 
 </details>
 
-> ℹ️ **Info:** **Still not sure which coin-type you're using?** This is the simplest method to determine:
+> **Still not sure which coin-type you're using?** This is the simplest method to determine:
 
 If you login into pWALLET using Persistence ledger app, then you're on 750 coin-type wallet address.
 
@@ -51,7 +51,7 @@ If you login into pWALLET using cosmos ledger app, then you're on 118 coin-type 
 
 * [x] You're a ledger user
 * [x] You use Persistence Ledger App to login into pWALLET
-* [x] Your wallet needs a migration (Check this [section](/docs/community-and-support/coin-type-migration-from-750-to-118/ledger-hardware-wallet.md#how-do-you-use-your-ledger))
+* [x] Your wallet needs a migration (Check this [section](/community-and-support/coin-type-migration-from-750-to-118/ledger-hardware-wallet#how-do-you-use-your-ledger))
 * [x] Using preferred browser (Google Chrome, Brave or Firefox)
 * [x] You have [Keplr wallet extension](https://www.keplr.app/) installed
 
@@ -106,7 +106,7 @@ A. Click on 'Sign In'
 
 B. Connect using 'Use Keplr'
 
-> ℹ️ **Info:** Make sure your Ledger wallet is selected in your keplr extension.
+> Make sure your Ledger wallet is selected in your keplr extension.
 
 <figure><img src="/images/Screenshot 2023-11-25 at 3.31.24 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -132,7 +132,7 @@ A. Go to 'Staking' tab and select 'Delegated' from the menu.
 
 B. Check if the validator where you stake/delegate your tokens have enough capacity (i.e Validator Bond) to migrate your tokens (using[ Smartstake](https://analytics.smartstake.io/persistence/valbonds) dashboard)
 
-> ℹ️ **Info:** Eg: As I delegate \\~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migration process.
+> Eg: As I delegate \\~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migration process.
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.21.56 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -146,7 +146,7 @@ D. Click on '**Transfer Delegation**'
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.32.19 AM.png" alt=""><figcaption></figcaption></figure>
 
-E. Enter the amount and your wallet address which you copied in [Step 2](/docs/community-and-support/coin-type-migration-from-750-to-118/ledger-hardware-wallet.md#lets-start-with-the-migration).
+E. Enter the amount and your wallet address which you copied in [Step 2](/community-and-support/coin-type-migration-from-750-to-118/ledger-hardware-wallet#lets-start-with-the-migration).
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.34.15 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -164,7 +164,7 @@ G. Your staked tokens are now transferred to the 118 coin-type wallet address fr
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.41.47 AM.png" alt=""><figcaption></figcaption></figure>
 
-> ℹ️ **Info:** Repeat these steps again if you have staked with more than 1 validator.
+> Repeat these steps again if you have staked with more than 1 validator.
 
 ### Step 5: Migrate all liquid tokens
 
@@ -180,7 +180,7 @@ C. Send all the tokens to your new coin-type wallet address which you copied.
 
 ### Step 6: Sign into pWallet back with Keplr app
 
-> ℹ️ **Info:** Make sure your Ledger wallet is selected in your keplr extension.
+> Make sure your Ledger wallet is selected in your keplr extension.
 
 <figure><img src="/images/Screenshot 2023-11-25 at 3.31.24 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -254,9 +254,7 @@ No, this process does not transfer your liquidity. You need to first remove the 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Ledger Hardware Wallet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Ledger Hardware Wallet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

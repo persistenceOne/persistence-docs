@@ -35,9 +35,7 @@ export default function Page() {
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <>
-              <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>
-                Bitcoin Cross-Chain Swaps (V2)
-              </ChakraHeading></Link>
+              <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4}>Bitcoin Cross-Chain Swaps (V2)</ChakraHeading>
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                   {description}

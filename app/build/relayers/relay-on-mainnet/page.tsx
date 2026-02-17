@@ -121,7 +121,7 @@ We need to install and setup one dependency - **Go**.
 
 ### 1. Install the Cosmos Relayer Binary
 
-The Cosmos Go Relayer code is available at the [Official GitHub Repository](https://github.com/cosmos/relayer). First, we must 'download' all the code locally by cloning the GitHub repository, choosing the latest version _(as of time of writing: v5.0.0)_ and installing the binary into our GOPATH as explained in the [prerequisites section](/docs/build/relayers/relay-on-mainnet.md#Install-Go) of this guide.
+The Cosmos Go Relayer code is available at the [Official GitHub Repository](https://github.com/cosmos/relayer). First, we must 'download' all the code locally by cloning the GitHub repository, choosing the latest version _(as of time of writing: v5.0.0)_ and installing the binary into our GOPATH as explained in the [prerequisites section](/build/relayers/relay-on-mainnet#Install-Go) of this guide.
 
 \`\`\`bash
 git clone https://github.com/cosmos/relayer.git # Download all the code locally
@@ -135,7 +135,7 @@ After installing the binary, verify its installation by executing the following 
 rly version
 \`\`\`
 
-The command should output a similar message. If you're seeing an error, ensure you have correctly [installed and setup Go](/docs/build/relayers/relay-on-mainnet.md#Install-Go).
+The command should output a similar message. If you're seeing an error, ensure you have correctly [installed and setup Go](/build/relayers/relay-on-mainnet#Install-Go).
 
 \`\`\`bash
 version: v2.2.0-rc3
@@ -222,7 +222,7 @@ rly keys list persistence
 
 ### 5. Edit the Relayer Key Name in \`config.yaml\`
 
-**NOTE:** This step is necessary if you chose a \`key-name\` other than "default" in the [previous step](/docs/build/relayers/relay-on-mainnet.md#Import-Keys-OR-Create-Keys). Be aware you need to replace the key names for both chains - Gravity Bridge and Persistence.
+**NOTE:** This step is necessary if you chose a \`key-name\` other than "default" in the [previous step](/build/relayers/relay-on-mainnet#Import-Keys-OR-Create-Keys). Be aware you need to replace the key names for both chains - Gravity Bridge and Persistence.
 
 Example:
 
@@ -396,9 +396,7 @@ paths:
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Relay on Mainnet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Relay on Mainnet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

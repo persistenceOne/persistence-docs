@@ -19,7 +19,7 @@ export default function Page() {
 
 As the Persistence chain runs on a delegated [Proof-of-Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp) based Tendermint PBFT consensus engine, staking is integral to ensuring a secure and robust network.&#x20;
 
-This means that [XPRT](/docs/participate/xprt) token holders will be able to delegate their tokens to one of the networks' validators for staking. Stakers will receive [staking rewards](https://www.stakingrewards.com/earn/persistence/) in the form of XPRT in return for contributing to the security of the network.
+This means that [XPRT](/participate/xprt) token holders will be able to delegate their tokens to one of the networks' validators for staking. Stakers will receive [staking rewards](https://www.stakingrewards.com/earn/persistence/) in the form of XPRT in return for contributing to the security of the network.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/iSyhmlYERuk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -51,9 +51,7 @@ Please reach out on Discord if you’re creating staking guides in any language 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Stake
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Stake</Heading>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

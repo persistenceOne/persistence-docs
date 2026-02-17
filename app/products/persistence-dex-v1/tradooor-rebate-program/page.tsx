@@ -26,9 +26,9 @@ The "Tradooor Rebate Program" is designed to benefit traders who actively partic
 
 ## Guide
 
-[guides](/docs/products/persistence-dex-v1/guides/)
+[guides](/products/persistence-dex-v1/guides/)
 
-[trading-assets](/docs/products/persistence-dex-v1/guides/trading-assets)
+[trading-assets](/products/persistence-dex-v1/guides/trading-assets)
 
 _Head over to the Rebate Program page on the web app to find your reward amount and total volume traded as part of the program._
 
@@ -145,9 +145,7 @@ A: No, there are no fees or charges associated with receiving the rebates. The f
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Tradooor Rebate Program
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Tradooor Rebate Program</ChakraHeading>
           )}
             {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

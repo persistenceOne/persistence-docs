@@ -44,9 +44,7 @@ Intent-based swaps revolutionize cross-chain transactions by eliminating the tra
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Traditional Bridges vs. Intent-Based Swaps
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Traditional Bridges vs. Intent-Based Swaps</ChakraHeading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

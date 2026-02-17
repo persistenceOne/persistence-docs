@@ -20,9 +20,35 @@ export default function Page() {
 
 ## Off-chain Discussions 💬
 
-At Persistence, we firmly believe in an idea-meritocracy, where the most innovative and valuable ideas should always prevail. We rely on our community to actively contribute by generating new ideas, engaging in meaningful discussions, contemplating significant topics, and challenging the existing status quo collectively. To initiate or participate in any discussions, we highly recommend visiting the Persistence Forum, which is linked below:&#x20;
+At Persistence, we firmly believe in an idea-meritocracy, where the most innovative and valuable ideas should always prevail. We rely on our community to actively contribute by generating new ideas, engaging in meaningful discussions, contemplating significant topics, and challenging the existing status quo collectively. To initiate or participate in any discussions, we highly recommend visiting the Persistence Forum, which is linked below:
+
+`
+  const hideFirstHeading = true
+  const description = 'Token holders decide on the future of the Persistence One ecosystem.'
+  const pathname = usePathname()
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
+
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
 
 
+  return (
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
+          {hideFirstHeading && (
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Governance</Heading>
+          )}
+              {description && (
+                <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
+                  {description}
+                </Text>
+              )}
+
+          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
           <Box
             as={Link}
             href="https://forum.persistence.one"
@@ -62,35 +88,6 @@ At Persistence, we firmly believe in an idea-meritocracy, where the most innovat
               <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
-
-`
-  const hideFirstHeading = true
-  const description = 'Token holders decide on the future of the Persistence One ecosystem.'
-  const pathname = usePathname()
-  const [headings, setHeadings] = useState<HeadingItem[]>([])
-
-  useEffect(() => {
-    const extracted = extractHeadings(content)
-    setHeadings(extracted)
-  }, [content])
-
-
-  return (
-        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
-          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
-          {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Governance
-            </Heading></Link>
-          )}
-              {description && (
-                <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
-                  {description}
-                </Text>
-              )}
-
-          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />
             </Container>

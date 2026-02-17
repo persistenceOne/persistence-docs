@@ -28,7 +28,7 @@ Additional Resources:
 
 The following pages show the established relayers between the Persistence Core-1 Chain and other IBC-enabled chains. It also contains information for operators who want to set up additional relayers.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>IBC Channels</strong></td><td><a href="ibc-channels.md">ibc-channels.md</a></td></tr><tr><td><strong>IBC Relayers</strong></td><td><a href="ibc-relayers.md">ibc-relayers.md</a></td></tr><tr><td><strong>Relay on Mainnet</strong></td><td><a href="relay-on-mainnet.md">relay-on-mainnet.md</a></td></tr><tr><td><strong>Relay on Testnet</strong></td><td><a href="relay-on-testnet.md">relay-on-testnet.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>IBC Channels</strong></td><td><a href="/build/relayers/ibc-channels">ibc-channels</a></td></tr><tr><td><strong>IBC Relayers</strong></td><td><a href="/build/relayers/ibc-relayers">ibc-relayers</a></td></tr><tr><td><strong>Relay on Mainnet</strong></td><td><a href="/build/relayers/relay-on-mainnet">relay-on-mainnet</a></td></tr><tr><td><strong>Relay on Testnet</strong></td><td><a href="/build/relayers/relay-on-testnet">relay-on-testnet</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
   const pathname = usePathname()
@@ -45,9 +45,7 @@ The following pages show the established relayers between the Persistence Core-1
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Relayers
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Relayers</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

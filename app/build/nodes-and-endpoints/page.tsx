@@ -31,7 +31,7 @@ Of course, it is possible and encouraged for users to run full nodes even if the
 * **Seeds:** nodes can make their address book available to other nodes to aid with a node's network integration.
 * **Peers:** every public node is identifiable by other nodes using its peer address.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Run a Local Node</strong></td><td><a href="setup.md">setup.md</a></td></tr><tr><td><strong>Run a Testnet Node</strong></td><td><a href="join-testnet.md">join-testnet.md</a></td></tr><tr><td><strong>Run a Mainnet Node</strong></td><td><a href="join-mainnet.md">join-mainnet.md</a></td></tr><tr><td><strong>Node Operations</strong></td><td><a href="node-operations/">node-operations</a></td></tr><tr><td><strong>Seed &#x26; Peers</strong></td><td><a href="seed-and-peers.md">seed-and-peers.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Run a Local Node</strong></td><td><a href="setup">setup.md</a></td></tr><tr><td><strong>Run a Testnet Node</strong></td><td><a href="join-testnet">join-testnet.md</a></td></tr><tr><td><strong>Run a Mainnet Node</strong></td><td><a href="join-mainnet">join-mainnet.md</a></td></tr><tr><td><strong>Node Operations</strong></td><td><a href="node-operations/">node-operations</a></td></tr><tr><td><strong>Seed &#x26; Peers</strong></td><td><a href="seed-and-peers">seed-and-peers.md</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
   const pathname = usePathname()
@@ -48,9 +48,7 @@ Of course, it is possible and encouraged for users to run full nodes even if the
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Running Nodes
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Running Nodes</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

@@ -24,7 +24,7 @@ Transfer tokens from ERC-20 to Core-1 or vice versa using Persistence Bridge.
 
 Learn more here:
 
-[persistence-bridge](/docs/participate/bridges/persistence-bridge)
+[persistence-bridge](/participate/bridges/persistence-bridge)
 
 
 
@@ -34,13 +34,13 @@ Transfer tokens from ERC-20 to Core-1 or vice versa using Satellite Bridge.
 
 Learn more here:
 
-[Broken link](/docs/participate/broken/pages/3rbJVX6Oq4piEGXlBe2h)
+[Broken link](/participate/broken/pages/3rbJVX6Oq4piEGXlBe2h)
 
 
 
 ### 3. IBC
 
-While it's technically not a bridge but an Inter-Blockchain Communication Protocol, IBC enables any assets to flow easily between all IBC-enabled blockchains (which Persistence is), via so-called relayers. Find out [here](/docs/build/relayers/ibc-relayers) which relayers enable asset flows to and from the Persistence
+While it's technically not a bridge but an Inter-Blockchain Communication Protocol, IBC enables any assets to flow easily between all IBC-enabled blockchains (which Persistence is), via so-called relayers. Find out [here](/build/relayers/ibc-relayers) which relayers enable asset flows to and from the Persistence
 
 Find more information on the [IBC Protocol website](https://ibcprotocol.org/) and visualise connections and asset flows easily using the link below:&#x20;
 
@@ -104,9 +104,7 @@ For details on the IBC-channels between Persistence Core-1 and other chains, fol
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Bridges
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Bridges</Heading>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

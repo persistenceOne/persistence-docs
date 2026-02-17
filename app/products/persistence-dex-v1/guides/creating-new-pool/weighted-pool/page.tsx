@@ -33,31 +33,31 @@ For an in-depth explanation of Weighted Pools by Persistence DEX, [click here.](
 
 * **Step 3:** Choose Pool Type - in this case, Weighted Pool is selected as the preferred pool type.
 
-> ℹ️ **Info:** You will need 250 XPRT to create the pool and 3500 XPRT as a proposal deposit for the governance proposal.
+> You will need 250 XPRT to create the pool and 3500 XPRT as a proposal deposit for the governance proposal.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FxaeRhwDk8J13jOp2yAjk%252Fimage.png%3Falt%3Dmedia%26token%3D09fa8a5b-8bd9-47ce-bc0f-844dea56c355&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=5d85f81c110070727343d9fbc2cc1c24822df7fa56c5bbf72749df2b2f30fea3" alt=""><figcaption></figcaption></figure>
 
 * **Step 4:** Select Token Pair for Weighted Pool
 
-> ℹ️ **Info:** Minimum of 2 tokens will need to be selected in order to Create a New Pool.
+> Minimum of 2 tokens will need to be selected in order to Create a New Pool.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252F3CyireHdzEXeZF0Tefiq%252FScreenshot%25202023-12-20%2520at%252012.45.41%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3Daa9417c2-7ce0-400c-b0e6-8390ef8477d6&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=1d6df1c720d28c664a2a453b325ecf6949738289bf7452e13a5e2af15e58f790" alt=""><figcaption></figcaption></figure>
 
 * **Step 5:** Assign token weight and repeat until all tokens have been added; ensure weights add to 100%.
 
-> ℹ️ **Info:** The default settings for Swap Fee follows protocol recommendations but can be modified to align with your preferences.
+> The default settings for Swap Fee follows protocol recommendations but can be modified to align with your preferences.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FX8BuIsohPYZ03Q6Xhrz9%252FScreenshot%25202023-12-20%2520at%252012.49.38%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3D33248432-9c53-4f62-880e-5eea36b428db&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=369df58d4d6761705b3a3b1a71d510497498afe769bb2b22e703a7e19f2ea6d0" alt=""><figcaption></figcaption></figure>
 
 * _**\\[Optional]**_**&#x20;Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
 
-> ℹ️ **Info:** If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
+> If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252Fyybjl4aieHiq5vCFwyl8%252FScreenshot%25202023-12-20%2520at%252012.52.01%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3Dd8b02959-c31c-4f51-85c7-0c07a7771d09&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=f8c7c96f5d4e244b22aab171ecf51c1b14ecb0b8beb24250c71c14499a7abc9c" alt=""><figcaption></figcaption></figure>
 
 * _**\\[Optional]**_**&#x20;Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
 
-> ℹ️ **Info:** Setting up the rewards schedule is optional and can be done post-pool creation. To set a rewards schedule for pool, click this link.
+> Setting up the rewards schedule is optional and can be done post-pool creation. To set a rewards schedule for pool, click this link.
 
 If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation.
 
@@ -77,7 +77,7 @@ If there's an insufficient balance for any assets, users can deposit those asset
 
 Proposal is created and upon approval from the Persistence Governance, the pool will be created and accessible on the UI.
 
-> ℹ️ **Info:** If you need any additional support, please raise a ticket on [our Discord server,](https://discord.persistence.one) and the Persistence DEX Team will be available to help.
+> If you need any additional support, please raise a ticket on [our Discord server,](https://discord.persistence.one) and the Persistence DEX Team will be available to help.
 `
   const hideFirstHeading = true
   const description = 'Suits all assets'
@@ -95,9 +95,7 @@ Proposal is created and upon approval from the Persistence Governance, the pool 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Weighted Pool
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Weighted Pool</ChakraHeading>
           )}
             {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

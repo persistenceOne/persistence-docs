@@ -29,7 +29,7 @@ We invite you on this journey with us, where you can learn, participate, explore
 
 Your participation is crucial! Dive into the comprehensive guide on how you can actively engage with the Persistence ecosystem and discover all the tools that facilitate your involvement.&#x20;
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>XPRT</strong></td><td>Find out how to acquire and stake the native ecosystem token and use it in Governance and DeFi.</td><td><a href="participate/xprt/">xprt</a></td></tr><tr><td align="center"><strong>Wallets</strong></td><td>Find out which wallets to use to interact with the Persistence chain</td><td><a href="participate/wallets.md">wallets.md</a></td></tr><tr><td align="center"><strong>Explorers</strong></td><td>Your options to find the on-chain data you need</td><td><a href="participate/explorers.md">explorers.md</a></td></tr><tr><td align="center"><strong>Bridges</strong></td><td>Your options for bridging assets into or out of Persistence</td><td><a href="participate/bridges.md">bridges.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>XPRT</strong></td><td>Find out how to acquire and stake the native ecosystem token and use it in Governance and DeFi.</td><td><a href="participate/xprt/">xprt</a></td></tr><tr><td align="center"><strong>Wallets</strong></td><td>Find out which wallets to use to interact with the Persistence chain</td><td><a href="participate/wallets">wallets.md</a></td></tr><tr><td align="center"><strong>Explorers</strong></td><td>Your options to find the on-chain data you need</td><td><a href="participate/explorers">explorers.md</a></td></tr><tr><td align="center"><strong>Bridges</strong></td><td>Your options for bridging assets into or out of Persistence</td><td><a href="participate/bridges">bridges.md</a></td></tr></tbody></table>
 
 ## 🚚 Build, Integrate, Validate
 
@@ -39,6 +39,6 @@ Technical Documentation for builders and validators.
 
 ## 📣 Connect & Follow
 
-Find all links to the Persistence official pages and channels [on this page](community-and-support/connect-and-follow.md).
+Find all links to the Persistence official pages and channels [on this page](community-and-support/connect-and-follow).
 
 _**Disclaimer:** This documentation page is collaboratively maintained by Persistence Labs and the Persistence Foundation. However, there is no assurance that all the information presented is always accurate. We encourage the community to flag any errors or inaccuracies and contribute to keeping the documentation up-to-date._

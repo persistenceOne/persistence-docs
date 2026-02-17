@@ -18,7 +18,7 @@ export default function Page() {
 # Validate on Testnet
 
 > **Warning**
-> Before creating a testnet validator, ensure you have first followed the instructions on [how to join the testnet](/docs/build/nodes-and-endpoints/join-testnet).
+> Before creating a testnet validator, ensure you have first followed the instructions on [how to join the testnet](/build/nodes-and-endpoints/join-testnet).
 
 ### Create Validator
 1. Ensure the **node is synced** *(response must be \`false\`)*: 
@@ -171,7 +171,7 @@ You can find more advanced information about running a node or a validator on th
 With version v8 \`x/oracle\` module has been added to persistenceCore.  
 The validators are required to run oracle price feeder along with the validator node.
 
-Please read [this guide](/docs/build/validators/setup-oracle-feeder) to setup price feeder.
+Please read [this guide](/build/validators/setup-oracle-feeder) to setup price feeder.
 
 ## Version
 
@@ -199,9 +199,7 @@ The explorer for this chain is accessible [here](https://testnet.ping.pub/test-c
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Validate on Testnet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Validate on Testnet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

@@ -31,11 +31,11 @@ Minimum requirements to be met in order to be eligible for any foundation delega
 * [ ] Governance Participation since 1/1/2023 ≥80%&#x20;
 * [ ] Not slashed in the last 3 months \\*\\*\\*
 
-[\\* New support program for new validators](/docs/build/validators/foundation-delegations/round-2.md#new-validator-support-to-get-into-the-active-set)
+[\\* New support program for new validators](/build/validators/foundation-delegations/round-2#new-validator-support-to-get-into-the-active-set)
 
-[\\*\\* Changes to commission requirements](/docs/build/validators/foundation-delegations/round-2.md#commission)
+[\\*\\* Changes to commission requirements](/build/validators/foundation-delegations/round-2#commission)
 
-[\\*\\*\\* Changes to the impact of slashing events](/docs/build/validators/foundation-delegations/round-2.md#slashing-events)
+[\\*\\*\\* Changes to the impact of slashing events](/build/validators/foundation-delegations/round-2#slashing-events)
 
 #### Off-Chain:
 
@@ -44,7 +44,7 @@ Minimum requirements to be met in order to be eligible for any foundation delega
 * [ ] Subscribed to all relevant [Communication Channels](https://docs.persistence.one/build/validators/validator-communication)
 * [ ] General Responsiveness (Discord + Telegram)
 
-[\\*\\*\\*\\* Choice of country & ISP starts to have an impact on the received delegations](/docs/build/validators/foundation-delegations/round-2.md#isps-and-countries)
+[\\*\\*\\*\\* Choice of country & ISP starts to have an impact on the received delegations](/build/validators/foundation-delegations/round-2#isps-and-countries)
 
 All validators will be evaluated continuously against the above criteria. When submitting your application, please ensure that everything is in place to meet the above criteria.&#x20;
 
@@ -133,9 +133,7 @@ As the rounds of the Foundation Program progress, the aim is to optimize the pro
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Round 2 - Closed
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Round 2 - Closed</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

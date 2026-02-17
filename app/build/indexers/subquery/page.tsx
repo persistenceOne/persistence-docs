@@ -16,7 +16,7 @@ export default function Page() {
   const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `# SubQuery
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>SubQuery</strong></td><td><a href="./overview.md">overview.md</a></td></tr></tbody></table>`
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>SubQuery</strong></td><td><a href="./overview">overview.md</a></td></tr></tbody></table>`
   const hideFirstHeading = true
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
@@ -32,9 +32,7 @@ export default function Page() {
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              SubQuery
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>SubQuery</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

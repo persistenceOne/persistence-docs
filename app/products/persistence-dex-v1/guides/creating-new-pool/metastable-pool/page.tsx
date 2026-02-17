@@ -33,19 +33,19 @@ For an in-depth explanation of Metastable Pools by Persistence DEX, [click here]
 
 * **Step 3:** Choose Pool Type - in this case, Metastable Pool is selected as the preferred pool type.
 
-> ℹ️ **Info:** You will need 250 XPRT to create the pool and 3500 XPRT as a proposal deposit for the governance proposal.
+> You will need 250 XPRT to create the pool and 3500 XPRT as a proposal deposit for the governance proposal.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FjrSJCDlcKIPyHAq0i6cm%252Fimage.png%3Falt%3Dmedia%26token%3D25ad86d5-dddd-4fd5-a3ee-c52c9bcdc6b5&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=e04948c1f814bbd5db462de35b58126331c980fbcb601641f2d1eb394b8dc0ae" alt=""><figcaption></figcaption></figure>
 
 * **Step 4:** Select Token Pair for Metastable Pool.
 
-> ℹ️ **Info:** Minimum of 2 tokens will need to be selected in order to Create a New Pool.
+> Minimum of 2 tokens will need to be selected in order to Create a New Pool.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FhPi6jEV1bdk9qpefQgj5%252FScreenshot%25202023-12-20%2520at%252011.47.52%25E2%2580%25AFAM.png%3Falt%3Dmedia%26token%3D19b0d10a-fe11-425b-b128-6feb987bc967&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=7c1b922497f6d06f85b84230d4dab0983b24abaab98a4c978122db223e11866a" alt=""><figcaption></figcaption></figure>
 
 * **Step 5:** Assign token weight and repeat until all tokens have been added; ensure weights add to 100%
 
-> ℹ️ **Info:** The default settings for Swap Fee, AMP Factor, and Max Spread Limit follow protocol recommendations but can be modified to align with your preferences.
+> The default settings for Swap Fee, AMP Factor, and Max Spread Limit follow protocol recommendations but can be modified to align with your preferences.
 
 Scaling factor adjustment: Kindly contact the Persistence DEX team on [discord](https://discord.persistence.one) in order to adjust the scaling factor
 
@@ -53,13 +53,13 @@ Scaling factor adjustment: Kindly contact the Persistence DEX team on [discord](
 
 * _**\\[Optional]**_**&#x20;Step 6:** Add Liquidity by entering a >0 amount of each token to add liquidity to the pool upon creation.
 
-> ℹ️ **Info:** If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
+> If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation. Persistence DEX recommends bootstrapping the liquidity with a minimum of $1,000 in the ratio selected.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252FFLbGoK4eo4f5M24lFp6l%252FScreenshot%25202023-12-20%2520at%252011.58.08%25E2%2580%25AFAM.png%3Falt%3Dmedia%26token%3D134d0f63-6469-4b81-804b-f74452bce5d1&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=8a8e5275031034ef217e1f111574363f169e3b575dff4eedc141505e75d6fb0c" alt=""><figcaption></figcaption></figure>
 
 * _**\\[Optional]**_**&#x20;Step 7:** Set Pool Rewards Schedule by selecting reward token and amount, and rewards time period.
 
-> ℹ️ **Info:** Setting up the rewards schedule is optional and can be done post pool creation. To set a rewards schedule for the pool, click this link.
+> Setting up the rewards schedule is optional and can be done post pool creation. To set a rewards schedule for the pool, click this link.
 
 If there's an insufficient balance for any assets, users can deposit those assets first and then proceed to add liquidity to the pool during its creation.
 
@@ -71,7 +71,7 @@ If there's an insufficient balance for any assets, users can deposit those asset
 
 * **Step 9:** Create Proposal for setting up the Metastable Pool. Title and Description for the proposal are pre defined as per the pool details. Additional information, if necessary, can be included within the additional message text box.
 
-> ℹ️ **Info:** To create the proposal following Persistence Governance norms, a Proposal Deposit of 3,500 XPRT and Pool Creation Fee of 250 XPRT is required.
+> To create the proposal following Persistence Governance norms, a Proposal Deposit of 3,500 XPRT and Pool Creation Fee of 250 XPRT is required.
 
 <figure><img src="https://docs.dexter.zone/~gitbook/image?url=https%3A%2F%2F2753824657-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F9LsBCKFqnrfW4Kl6Y0k0%252Fuploads%252Fedx0KqHLYmgzTyl5T4q5%252FScreenshot%25202023-12-20%2520at%252012.17.15%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3Dcf47bdd7-cb64-43f6-aaba-9816231b4db3&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=32ffacbff81bf337fad87a3e1888c4e60dfb93b32b81f8de3cffd39bd55ceaa4" alt=""><figcaption></figcaption></figure>
 
@@ -81,7 +81,7 @@ If there's an insufficient balance for any assets, users can deposit those asset
 
 Proposal is created and upon approval from the Persistence Governance, the pool will be created and accessible on the UI.
 
-> ℹ️ **Info:** If you need any additional support, please raise a ticket [on our Discord server](https://discord.persistence.one), and the Persistence DEX Team will be available to help.
+> If you need any additional support, please raise a ticket [on our Discord server](https://discord.persistence.one), and the Persistence DEX Team will be available to help.
 `
   const hideFirstHeading = true
   const description = 'Best suited for liquid-staked assets such as stkATOM and interest-bearing tokens.'
@@ -99,9 +99,7 @@ Proposal is created and upon approval from the Persistence Governance, the pool 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Metastable Pool
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Metastable Pool</ChakraHeading>
           )}
             {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

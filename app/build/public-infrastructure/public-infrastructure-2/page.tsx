@@ -24,9 +24,9 @@ This repo contains a \`chain.json\` and \`assetlist.json\` for a number of cosmo
 * [\`assetlist.json\`](https://github.com/cosmos/chain-registry/blob/master/persistence/assetlist.json) for Persistence
 * [\`chain.json\`](https://github.com/cosmos/chain-registry/blob/master/persistence/chain.json) for Persistence
 
-Use the other pages in this [build, integrate, validate section](/docs/build/public-infrastructure/broken/pages/YB8nbdu3j3FqbvFozukb) or use [this dashboard](https://cosmos.directory/persistence/nodes) to see a list of RPC, REST, GRPC endpoints, seeds & peers.
+Use the other pages in this [build, integrate, validate section](/build/public-infrastructure/broken/pages/YB8nbdu3j3FqbvFozukb) or use [this dashboard](https://cosmos.directory/persistence/nodes) to see a list of RPC, REST, GRPC endpoints, seeds & peers.
 
-> ℹ️ **Info:** Did you know there is also an NPM package that fetch chain-registry data?\\
+> Did you know there is also an NPM package that fetch chain-registry data?\\
 **Learn more** : [https://www.npmjs.com/package/chain-registry](https://www.npmjs.com/package/chain-registry)
 
 `
@@ -45,9 +45,7 @@ Use the other pages in this [build, integrate, validate section](/docs/build/pub
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Chain Registry
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Chain Registry</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

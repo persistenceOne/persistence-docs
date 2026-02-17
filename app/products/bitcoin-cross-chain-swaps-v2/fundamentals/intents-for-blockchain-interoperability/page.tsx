@@ -62,7 +62,7 @@ Solvers execute all the required actions behind the scenes. For example, they sw
 
 
 
-### How Solvers get paid :money\\_with\\_wings:
+### How Solvers get paid
 
 * Solvers get compensated for their services through fees or incentives.
 * A small transaction fee is charged for executing the intent.
@@ -91,9 +91,7 @@ Solvers execute all the required actions behind the scenes. For example, they sw
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Intents for Blockchain Interoperability
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Intents for Blockchain Interoperability</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
