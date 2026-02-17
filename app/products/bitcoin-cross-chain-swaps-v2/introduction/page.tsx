@@ -39,7 +39,29 @@ Persistence One aims to become the primary gateway for cross-chain BTC swaps, fo
 
 This comprehensive guide walks you through the process of performing cross-chain BTC swaps using the Persistence One testnet.
 
+`
+  const hideFirstHeading = true
+  const pathname = usePathname()
+  const [headings, setHeadings] = useState<HeadingItem[]>([])
 
+  useEffect(() => {
+    const extracted = extractHeadings(content)
+    setHeadings(extracted)
+  }, [content])
+
+
+  return (
+        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
+          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
+          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
+          {hideFirstHeading && (
+            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
+              Introduction
+            </ChakraHeading></Link>
+          )}
+          
+          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
+          
           <Box
             as={Link}
             href="https://blog.persistence.one/2024/11/15/how-to-use-the-persistence-one-btc-interoperability-testnet-for-cross-chain-btc-swaps-guide/"
@@ -53,7 +75,8 @@ This comprehensive guide walks you through the process of performing cross-chain
             _hover={{
               borderColor: themeColors.accent.primary,
               bg: themeColors.sidebar.hover,
-              textDecoration: 'none'}}
+              textDecoration: 'none'
+            }}
             transition="all 0.2s"
           >
             <HStack spacing={4} align="center">
@@ -79,31 +102,6 @@ This comprehensive guide walks you through the process of performing cross-chain
               <ChevronRightIcon color={themeColors.text[500]} boxSize={5} flexShrink={0} />
             </HStack>
           </Box>
-
-
-
-`
-  const hideFirstHeading = true
-  const pathname = usePathname()
-  const [headings, setHeadings] = useState<HeadingItem[]>([])
-
-  useEffect(() => {
-    const extracted = extractHeadings(content)
-    setHeadings(extracted)
-  }, [content])
-
-
-  return (
-        <Box display="flex" flex="1" overflow="hidden" flexDirection={{ base: "column", xl: "row" }}>
-          <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
-          <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
-          {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Introduction
-            </ChakraHeading></Link>
-          )}
-          
-          <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />
               
               <PageNavigation />
             </Container>
