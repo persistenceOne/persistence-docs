@@ -16,7 +16,7 @@ export default function Page() {
   const themeColors = colors[colorMode as 'light' | 'dark']
   const content = `# Endpoints
 
-> ℹ️ **Info:** The following API's are recommended for development purposes. For maximum control and reliability it's recommended to [run your own node](/docs/build/nodes-and-endpoints/setup).
+> The following API's are recommended for development purposes. For maximum control and reliability it's recommended to [run your own node](/build/nodes-and-endpoints/setup).
 
 ## RPC
 
@@ -96,9 +96,7 @@ To help developers with integration, the following RPC-endpoints are provided
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Endpoints
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Endpoints</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

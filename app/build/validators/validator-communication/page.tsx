@@ -52,7 +52,7 @@ Hence, we launched a telegram bot (Amelia) which can relay the following details
 2. Chain updates - Missing blocks, commission change, etc
 3. Reminders - Automatically sends reminder for voting 24 hours prior to end time for validators who haven't voted.&#x20;
 
-**Looks appealing?** [Contact team](/docs/community-and-support/connect-and-follow) if you don't have it installed on our group already.&#x20;
+**Looks appealing?** [Contact team](/community-and-support/connect-and-follow) if you don't have it installed on our group already.&#x20;
 
 **PS:** This bot will not be used for spams or marketing announcements. Pinky Promise!
 
@@ -66,7 +66,7 @@ Join our Email list from[ here](http://eepurl.com/idRmrT) or contact someone fro
 
 ## Your contact details
 
-To ensure communication is always smooth, please ensure to have provided your latest contact details. To do so, please register your contact details via [the FDP-app](https://fdp.persistence.one). Note that you can provide your contact details without applying for the [Foundation Delegation Program](/docs/build/validators/foundation-delegations/), just complete step 1 in the FDP-app.&#x20;
+To ensure communication is always smooth, please ensure to have provided your latest contact details. To do so, please register your contact details via [the FDP-app](https://fdp.persistence.one). Note that you can provide your contact details without applying for the [Foundation Delegation Program](/build/validators/foundation-delegations/), just complete step 1 in the FDP-app.&#x20;
 
 ## Monitoring
 
@@ -130,9 +130,7 @@ We recommend validators to set up their own monitoring tools and alerts to avoid
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <>
-              <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4} color={themeColors.text[700]}>
-                Validator Communication
-              </Heading></Link>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4} color={themeColors.text[700]}>Validator Communication</Heading>
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                   {description}

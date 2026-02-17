@@ -40,7 +40,7 @@ From the release notes in the respective frontend GitHub repositories, find CIDv
 
 <figure><img src="/images/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-> ℹ️ **Info:** **Note:** A paid plan (Picnic plan) on Pinata will be required.
+> **Note:** A paid plan (Picnic plan) on Pinata will be required.
 
 #### 1.3 Configure DNS on Pinata
 
@@ -130,9 +130,7 @@ Example: [https://ipfs.kitkat.zone/pwallet](https://ipfs.kitkat.zone/pwallet), [
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              🔃 Hosting IPFS Versions with Pinata
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>🔃 Hosting IPFS Versions with Pinata</Heading>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

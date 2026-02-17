@@ -29,9 +29,7 @@ The initial validator bond factor would be set at 250 and can be configurable by
 With a validator-bond factor of 250, for every one XPRT delegated as validator-bond, that validator is eligible to receive up to two-hundred-and-fifty liquid stake delegated XPRT tokens from a liquid staking provider.
 
 \`\`\`formula:
-\`\`\`markup
 total_liquid_stake_on_validator.amount / Sum(every_delegation_where[bond=True].amount) < VALIDATOR_BOND_FACTOR
-\`\`\`
 \`\`\`
 
 ### Step-by-step instructions for validators
@@ -46,7 +44,7 @@ total_liquid_stake_on_validator.amount / Sum(every_delegation_where[bond=True].a
 
 **Step 5:** From \`valBondAccount\`, Validator-Bond the delegation you made to your validator (see detailed instructions below).
 
-> ℹ️ **Info:** The Validator-Bond transaction will mark your existing delegation as a validator bond and users will now be able to migrate their wallet addresses using your validator.
+> The Validator-Bond transaction will mark your existing delegation as a validator bond and users will now be able to migrate their wallet addresses using your validator.
 
 ***
 
@@ -66,23 +64,18 @@ _Here’s an example of a successful validator bond transaction on core-1 chain:
 
 * **First**, delegate to a validator from a new account:
 
-\`\`\`
 \`\`\`url
 https://www.mintscan.io/persistence/transactions/11D746B6C94CA4BBC18B02F08A0024A4730BAE1ADDEFEDAFAE85EC58A7DACAA5
-\`\`\`
 \`\`\`
 
 * **Then**, validator bond from that account:
 
-\`\`\`
 \`\`\`url
 https://www.mintscan.io/persistence/transactions/36E58CAAA55BAA9CBC59E7CD0C1F78355AE5268331DB6C23DDC5AB79E001DF0E?height=13165160
-\`\`\`
 \`\`\`
 
 Here’s the transaction that was submitted on the command line:
 
-\`\`\`
 \`\`\`
  persistenceCore tx staking validator-bond ValidatorAddress 
  
@@ -90,7 +83,6 @@ Here’s the transaction that was submitted on the command line:
   --fees 1000uxprt
   --chain-id core-1
   --node https://rpc.core.persistence.one:443
-\`\`\`
 \`\`\`
 
 You can confirm your conversion to a validator bond succeeded by querying the delegation:
@@ -222,9 +214,7 @@ No, they do not. To designate a delegation as validator bond, the delegator must
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              For Validators
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>For Validators</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

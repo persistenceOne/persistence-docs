@@ -229,13 +229,13 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
 
 ## Node operations
 
-### [Run your node in the background](/docs/build/nodes-and-endpoints/node-operations/run-in-the-background)
+### [Run your node in the background](/build/nodes-and-endpoints/node-operations/run-in-the-background)
 
 ### Upgrade the Node's Software
 
-#### [Using Cosmovisor](/docs/build/nodes-and-endpoints/node-operations/cosmovisor-upgrades)
+#### [Using Cosmovisor](/build/nodes-and-endpoints/node-operations/cosmovisor-upgrades)
 
-#### [Manually swap binaries](/docs/build/nodes-and-endpoints/node-operations/manual-upgrades)
+#### [Manually swap binaries](/build/nodes-and-endpoints/node-operations/manual-upgrades)
 `
   const hideFirstHeading = true
   const pathname = usePathname()
@@ -252,9 +252,7 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Run a Testnet Node
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Run a Testnet Node</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

@@ -24,7 +24,7 @@ This guide is for users who use [Keplr wallet](https://keplr.app/) & want to mig
 
 ### Is migration for my wallet address needed?
 
-<table><thead><tr><th width="294.66666666666663">When was the wallet created?</th><th width="172">Default Coin-type</th><th>Migration Required?</th></tr></thead><tbody><tr><td>After 7 October 2022</td><td>118</td><td>No 🎉</td></tr><tr><td>Before 7 October 2022</td><td>750</td><td>Yes</td></tr><tr><td>Don't remember</td><td>-</td><td><a href="keplr-wallet.md#step-1-check-which-coin-type-youre-using">Refer here</a></td></tr></tbody></table>
+<table><thead><tr><th width="294.66666666666663">When was the wallet created?</th><th width="172">Default Coin-type</th><th>Migration Required?</th></tr></thead><tbody><tr><td>After 7 October 2022</td><td>118</td><td>No 🎉</td></tr><tr><td>Before 7 October 2022</td><td>750</td><td>Yes</td></tr><tr><td>Don't remember</td><td>-</td><td><a href="keplr-wallet#step-1-check-which-coin-type-youre-using">Refer here</a></td></tr></tbody></table>
 
 > ✅ **Success:** Both coin-type wallet addresses are supported by keplr. Hence both of the addresses can be used simultaneously.
 
@@ -86,13 +86,13 @@ Hence in this process, we have to move tokens from **Wallet 1** to **Wallet 2**.
 
 A. Go to 'Staking' tab and select 'Delegated' from the menu.
 
-> ℹ️ **Info:** Skip this step if you don't have any staked tokens
+> Skip this step if you don't have any staked tokens
 
 <figure><img src="/images/Screenshot 2023-11-02 at 12.48.26 AM.png" alt=""><figcaption></figcaption></figure>
 
 B. Check if the validator where you stake/delegate your tokens have enough capacity (i.e Validator Bond) to migrate your tokens (using[ Smartstake](https://analytics.smartstake.io/persistence/valbonds) dashboard)
 
-> ℹ️ **Info:** Eg: As I delegate \\~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migation process.
+> Eg: As I delegate \\~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migation process.
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.21.56 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -124,7 +124,7 @@ G. Your tokens are now transferred to the 118 coin-type wallet address from 750 
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.41.47 AM.png" alt=""><figcaption></figcaption></figure>
 
-> ℹ️ **Info:** Repeat these steps again if you have staked with more than 1 validator.
+> Repeat these steps again if you have staked with more than 1 validator.
 
 ### Migrate all liquid tokens in the wallet
 
@@ -210,9 +210,7 @@ No, this process does not transfer your liquidity. You need to first remove the 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Keplr Wallet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Keplr Wallet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

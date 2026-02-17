@@ -52,7 +52,7 @@ Congratulations! You've made a swap on Persistence DEX.
 
 ## Setting Slippage <a href="#setting-slippage" id="setting-slippage"></a>
 
-> ℹ️ **Info:** Slippage tolerance is the acceptable change in price during the execution of the trade.
+> Slippage tolerance is the acceptable change in price during the execution of the trade.
 
 Click on the "gear" icon on the right side of the screen, a popup would show up with a text box.
 
@@ -77,9 +77,7 @@ Either select the predetermined slippage tolerance by clicking on the button or 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>
-              Trading Assets
-            </ChakraHeading></Link>
+            <ChakraHeading as="h1" size={{ base: "xl", md: "2xl" }} mb={4}>Trading Assets</ChakraHeading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

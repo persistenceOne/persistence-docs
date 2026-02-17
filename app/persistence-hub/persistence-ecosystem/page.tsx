@@ -28,7 +28,7 @@ A decentralised swapping solution where you can:
 
 🏁 [Try Persistence DEX here.](https://app.persistence.one/)
 
-[Learn more about Persistence DEX.](/docs/products/persistence-dex-v1/)
+[Learn more about Persistence DEX.](/products/persistence-dex-v1/)
 
 ### 🟠 Bitcoin Cross-Chain Swaps (V2)
 
@@ -39,7 +39,7 @@ Our flagship product focused on fast, zero-slippage swaps across Bitcoin layer 2
 
 🏁 [Try Bitcoin Cross-Chain Swaps here.](https://beta.interop.persistence.one/)
 
-[Learn more about Bitcoin Cross-Chain Swaps](/docs/products/bitcoin-cross-chain-swaps-v2/).
+[Learn more about Bitcoin Cross-Chain Swaps](/products/bitcoin-cross-chain-swaps-v2/).
 
 ### ⚡️ XPRT
 
@@ -50,7 +50,7 @@ Our flagship product focused on fast, zero-slippage swaps across Bitcoin layer 2
   * **Staking**: Contribute to network security and earn rewards.
   * **Work Token**: Engage in economic activities within and outside the ecosystem.
 
-[Learn more about XPRT.](/docs/participate/xprt/)
+[Learn more about XPRT.](/participate/xprt/)
 
 ### ⛓️ Persistence Core-1 Chain
 
@@ -58,7 +58,7 @@ The foundational Cosmos-based chain that powers Persistence's infrastructure.
 
 * Enables scalability, security, and interoperability for our ecosystem.
 
-[Learn more about the Persistence Core-1 chain.](/docs/persistence-hub/broken/pages/YB8nbdu3j3FqbvFozukb)
+[Learn more about the Persistence Core-1 chain.](/persistence-hub/broken/pages/YB8nbdu3j3FqbvFozukb)
 `
   const hideFirstHeading = true
   const description = 'Explore the building blocks of Persistence One and how each component contributes to our mission of creating seamless cross-chain solutions.'
@@ -76,9 +76,7 @@ The foundational Cosmos-based chain that powers Persistence's infrastructure.
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Persistence Ecosystem
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Persistence Ecosystem</Heading>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

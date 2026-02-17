@@ -29,7 +29,7 @@ More information about validators' security, FAQ, and others, is available [here
 
 Below you can find relevant information regarding Persistence validators topics.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Validate on Mainnet</strong></td><td><a href="mainnet-validator-setup.md">mainnet-validator-setup.md</a></td></tr><tr><td><strong>Validate on Testnet</strong></td><td><a href="testnet-validator-setup.md">testnet-validator-setup.md</a></td></tr><tr><td><strong>Validator Communication</strong></td><td><a href="validator-communication.md">validator-communication.md</a></td></tr><tr><td><strong>Foundation Delegations</strong></td><td><a href="foundation-delegations/">foundation-delegations</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Validate on Mainnet</strong></td><td><a href="mainnet-validator-setup">mainnet-validator-setup.md</a></td></tr><tr><td><strong>Validate on Testnet</strong></td><td><a href="testnet-validator-setup">testnet-validator-setup.md</a></td></tr><tr><td><strong>Validator Communication</strong></td><td><a href="validator-communication">validator-communication.md</a></td></tr><tr><td><strong>Foundation Delegations</strong></td><td><a href="foundation-delegations/">foundation-delegations</a></td></tr></tbody></table>
 `
   const hideFirstHeading = true
   const pathname = usePathname()
@@ -46,9 +46,7 @@ Below you can find relevant information regarding Persistence validators topics.
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Validators
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Validators</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

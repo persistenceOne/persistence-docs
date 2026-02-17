@@ -24,13 +24,13 @@ This guide is for users who have logged into **pWALLET** using Keystore or Mnemo
 
 <figure><img src="/images/Screenshot 2023-10-23 at 10.31.06 AM.png" alt=""><figcaption></figcaption></figure>
 
-If you already have all your tokens on 118 coin-type wallet address then no migration is needed. However if you have funds in your 750 coin-type wallet address then you need to proceed with the migration (i.e move to [Step 2](/docs/community-and-support/coin-type-migration-from-750-to-118/persistence-wallet.md#step-2-migrate-all-the-available-tokens-in-your-wallet)).
+If you already have all your tokens on 118 coin-type wallet address then no migration is needed. However if you have funds in your 750 coin-type wallet address then you need to proceed with the migration (i.e move to [Step 2](/community-and-support/coin-type-migration-from-750-to-118/persistence-wallet#step-2-migrate-all-the-available-tokens-in-your-wallet)).
 
 ***
 
 ## Step 2: Migrate all the available tokens in your wallet
 
-> ℹ️ **Info:** This step will migrate all the available tokens from 750 coin-type address to 118 coin-type address. If you have staked/delegated tokens in your wallet, we'll migrate them in the [_Step 3_](/docs/community-and-support/coin-type-migration-from-750-to-118/persistence-wallet.md#step-3-migrate-all-the-staked-delegated-tokens-in-your-wallet).
+> This step will migrate all the available tokens from 750 coin-type address to 118 coin-type address. If you have staked/delegated tokens in your wallet, we'll migrate them in the [_Step 3_](/community-and-support/coin-type-migration-from-750-to-118/persistence-wallet#step-3-migrate-all-the-staked-delegated-tokens-in-your-wallet).
 
 A. Claim all the pending staking rewards.
 
@@ -42,7 +42,7 @@ B. Click on **'Migrate Tokens from 750 to 118'**
 
 C. Hit '**Migrate**' button
 
-> ℹ️ **Info:** By default, all the available tokens and your 118 coin-type wallet address will be pre-filled
+> By default, all the available tokens and your 118 coin-type wallet address will be pre-filled
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.04.33 AM (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -58,7 +58,7 @@ A. Go to '**Staking**' page and select '**Delegated**' from the sub-menu
 
 B. Check if the validator where you stake/delegate your tokens have enough capacity (i.e Validator Bond) to migrate your tokens (using[ Smartstake](https://analytics.smartstake.io/persistence/valbonds) dashboard)
 
-> ℹ️ **Info:** Eg: As I delegate \\~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migation process.
+> Eg: As I delegate \\~23 XPRT to smart stake validator, i need to check if smart stake validator has enough capacity to help facilitate migrate for my tokens. As in my case the validator has the capacity, we can move forward with the migation process.
 
 <figure><img src="/images/Screenshot 2023-10-23 at 11.21.56 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -182,9 +182,7 @@ No, by default both the coin-type will be visible in your wallet
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Persistence Wallet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Persistence Wallet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

@@ -18,9 +18,9 @@ export default function Page() {
 
 ## **IBC Channels for Persistence Mainnet (core-1)**
 
-[Transfers](/docs/build/relayers/ibc-channels.md#transfers)
+[Transfers](/build/relayers/ibc-channels#transfers)
 
-[ICA](/docs/build/relayers/ibc-channels.md#ica)
+[ICA](/build/relayers/ibc-channels#ica)
 
 ### Transfers
 
@@ -68,9 +68,7 @@ Find more details on relayers via [Map of Zones](https://mapofzones.com/zones/co
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              IBC Channels
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>IBC Channels</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

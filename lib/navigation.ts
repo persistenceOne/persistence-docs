@@ -101,6 +101,7 @@ export const navigation: NavItem[] = [
         path: '/participate/xprt',
         icon: 'shake-hand.svg',
         children: [
+          { title: 'Token info', path: '/participate/xprt' },
           { title: 'Acquire', path: '/participate/xprt/acquire' },
           { title: 'Stake', path: '/participate/xprt/stake' },
           { title: 'Governance', path: '/participate/xprt/governance' },
@@ -111,6 +112,7 @@ export const navigation: NavItem[] = [
         path: '/participate/alternative-frontends',
         icon: 'globe.svg',
         children: [
+          { title: 'Alternative Frontends', path: '/participate/alternative-frontends' },
           { title: 'Hosting IPFS Versions with Pinata', path: '/participate/alternative-frontends/hosting-ipfs-versions-with-pinata' },
           { title: 'IPFS Automation', path: '/participate/alternative-frontends/ipfs-automation' },
         ],
@@ -139,7 +141,7 @@ export const navigation: NavItem[] = [
           { title: 'Run a Local Node', path: '/build/nodes-and-endpoints/setup' },
           { title: 'Run a Testnet Node', path: '/build/nodes-and-endpoints/join-testnet' },
           { title: 'Run a Mainnet Node', path: '/build/nodes-and-endpoints/join-mainnet' },
-          { title: 'Node Operations', path: '/build/nodes-and-endpoints/node-operations' },
+          // { title: 'Node Operations', path: '/build/nodes-and-endpoints/node-operations' },
           { title: 'Seed & Peers', path: '/build/nodes-and-endpoints/seed-and-peers' },
         ],
       },
@@ -158,6 +160,7 @@ export const navigation: NavItem[] = [
         title: 'Validators',
         path: '/build/validators',
         children: [
+          { title: 'Overview', path: '/build/validators' },
           { title: 'Validate on Testnet', path: '/build/validators/testnet-validator-setup' },
           { title: 'Validate on Mainnet', path: '/build/validators/mainnet-validator-setup' },
           { title: 'Validator Communication', path: '/build/validators/validator-communication' },
@@ -167,6 +170,7 @@ export const navigation: NavItem[] = [
         title: 'Relayers',
         path: '/build/relayers',
         children: [
+          { title: 'Overview', path: '/build/relayers' },
           { title: 'IBC Channels', path: '/build/relayers/ibc-channels' },
           { title: 'IBC Relayers', path: '/build/relayers/ibc-relayers' },
           { title: 'Relay on Mainnet', path: '/build/relayers/relay-on-mainnet' },

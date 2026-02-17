@@ -34,13 +34,13 @@ Testnets come with a range of integrated services, including relayers to other t
 
 <table><thead><tr><th width="182.5">Chain ID</th><th>Test-core-2</th></tr></thead><tbody><tr><td>RPC</td><td><a href="https://rpc.testnet2.persistence.one/">https://rpc.testnet2.persistence.one/</a></td></tr><tr><td>REST</td><td><a href="https://rest.testnet2.persistence.one/">https://rest.testnet2.persistence.one/</a></td></tr><tr><td>gRPC</td><td><a href="https://polkachu.com/testnets/persistence">https://polkachu.com/testnets/persistence</a></td></tr><tr><td>Explorer</td><td><a href="http://testnet.mintscan.io/persistence-testnet">http://testnet.mintscan.io/persistence-testnet</a></td></tr><tr><td>Faucet</td><td><a href="https://kitkat.zone/faucet">https://kitkat.zone/faucet</a></td></tr><tr><td>Snapshot</td><td><a href="https://polkachu.com/tendermint_snapshots/persistence">https://polkachu.com/tendermint_snapshots/persistence</a></td></tr><tr><td>Wallet</td><td><a href="https://test-core-2.wallet.persistence.one/">https://test-core-2.wallet.persistence.one/</a></td></tr></tbody></table>
 
-Browse alternative endpoints from [here](/docs/build/public-infrastructure/public-infrastructure).
+Browse alternative endpoints from [here](/build/public-infrastructure/public-infrastructure).
 
 ***
 
 ### 🌏 Join the Testnet
 
-Join the testnet following the instructions on [Run a Testnet Node](/docs/build/nodes-and-endpoints/join-testnet).
+Join the testnet following the instructions on [Run a Testnet Node](/build/nodes-and-endpoints/join-testnet).
 
 ***
 
@@ -67,9 +67,7 @@ For general questions and community support, join the [Persistence Discord](http
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
             <>
-              <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4} color={themeColors.text[700]}>
-                Persistence Testnet
-              </Heading></Link>
+              <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={description ? 2 : 4} color={themeColors.text[700]}>Persistence Testnet</Heading>
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                   {description}

@@ -20,7 +20,7 @@ export default function Page() {
 
 > ✅ **Success:** **Recommended options:** Include Keplr and Persistence Wallet. Please refer to the updated guide linked below.
 
-## [wallet-setup](/docs/begin-and-explore/wallet-setup.md "mention")
+## [wallet-setup](/begin-and-explore/wallet-setup "mention")
 
 ## Keplr
 
@@ -63,9 +63,7 @@ Tutorial/Guide:
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Wallets
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Wallets</Heading>
           )}
               {description && (
                 <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>

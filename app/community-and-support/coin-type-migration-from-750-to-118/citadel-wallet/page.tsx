@@ -19,7 +19,7 @@ export default function Page() {
 
 **Citadel Wallet** doesn't support 118 coin-type wallet addresses currently. We are in touch with the team and integration is on it's way!
 
-> ℹ️ **Info:** For the time being, 750 coin-type wallet will function as usual.&#x20;
+> For the time being, 750 coin-type wallet will function as usual.&#x20;
 
 Kindly check back here after some time or sign up for the updates on this from here:
 
@@ -80,9 +80,7 @@ Kindly check back here after some time or sign up for the updates on this from h
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Citadel Wallet
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Citadel Wallet</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

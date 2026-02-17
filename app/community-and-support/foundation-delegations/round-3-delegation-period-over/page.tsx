@@ -26,7 +26,7 @@ Minimum requirements to be met in order to be eligible for any foundation delega
 
 #### On-chain:
 
-* [x] Be in the active set at all times ([New validator?](/docs/community-and-support/foundation-delegations/round-3-delegation-period-over.md#pointers))
+* [x] Be in the active set at all times ([New validator?](/community-and-support/foundation-delegations/round-3-delegation-period-over#pointers))
 * [x] Voting Power: ≤2.5%
 * [x] Self-Stake: ≥ 1,000 XPRT
 * [x] Commission: 5% ≤ x ≤ 10%
@@ -116,9 +116,7 @@ As the rounds of the Foundation Program progress, the aim is to optimize the pro
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Round 3 - Delegation Period Over
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Round 3 - Delegation Period Over</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

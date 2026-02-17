@@ -25,7 +25,7 @@ This page provides a list of available faucets for both the Persistence mainnet 
 | Paranormal Bros.     |                                                                                      | [https://ptf.paranorm.pro](https://ptf.paranorm.pro)                                                       |
 | Kitkat Zone          | [https://faucet.kitkat.zone](https://faucet.kitkat.zone)                             | [https://faucet.kitkat.zone](https://faucet.kitkat.zone)                                                   |
 
-> ℹ️ **Info:** No balance in the faucet? Visit[connect-and-follow](/docs/community-and-support/connect-and-follow.md "mention") to contact us directly for tokens!
+> No balance in the faucet? Visit[connect-and-follow](/community-and-support/connect-and-follow "mention") to contact us directly for tokens!
 `
   const hideFirstHeading = true
   const pathname = usePathname()
@@ -42,9 +42,7 @@ This page provides a list of available faucets for both the Persistence mainnet 
           <Box flex="1" bg={themeColors.body.bg} overflowY="auto" overflowX="hidden" data-scroll-container>
           <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
           {hideFirstHeading && (
-            <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>
-              Faucets
-            </Heading></Link>
+            <Heading as="h1" size={{ base: "xl", md: "2xl" }} mb={4} color={themeColors.text[700]}>Faucets</Heading>
           )}
           
           <MarkdownContent content={content} hideFirstHeading={hideFirstHeading} />

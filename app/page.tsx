@@ -18,7 +18,7 @@ export default function Page() {
 
 <figure><img src="/images/header_image.jpg" alt=""><figcaption></figcaption></figure>
 
-> ℹ️ **Info:** **Note:** The documentation is continuously updated to reflect the latest developments across the ecosystem. We apologise if the information you’re looking for is not yet available. Feel free to contribute to its improvement or [contact the team](https://t.me/PersistenceOneChat) directly with any questions.
+> **Note:** The documentation is continuously updated to reflect the latest developments across the ecosystem. We apologise if the information you’re looking for is not yet available. Feel free to contribute to its improvement or [contact the team](https://t.me/PersistenceOneChat) directly with any questions.
 
 Welcome to the **Persistence Docs**! Here, you’ll find everything you need to learn, participate, and build within the ecosystem.
 
@@ -36,7 +36,7 @@ We invite you on this journey with us, where you can learn, participate, explore
 
 Your participation is crucial! Dive into the comprehensive guide on how you can actively engage with the Persistence ecosystem and discover all the tools that facilitate your involvement.&#x20;
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>XPRT</strong></td><td>Find out how to acquire and stake the native ecosystem token and use it in Governance and DeFi.</td><td><a href="participate/xprt/">xprt</a></td></tr><tr><td align="center"><strong>Wallets</strong></td><td>Find out which wallets to use to interact with the Persistence chain</td><td><a href="participate/wallets.md">wallets.md</a></td></tr><tr><td align="center"><strong>Explorers</strong></td><td>Your options to find the on-chain data you need</td><td><a href="participate/explorers.md">explorers.md</a></td></tr><tr><td align="center"><strong>Bridges</strong></td><td>Your options for bridging assets into or out of Persistence</td><td><a href="participate/bridges.md">bridges.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>XPRT</strong></td><td>Find out how to acquire and stake the native ecosystem token and use it in Governance and DeFi.</td><td><a href="participate/xprt/">xprt</a></td></tr><tr><td align="center"><strong>Wallets</strong></td><td>Find out which wallets to use to interact with the Persistence chain</td><td><a href="participate/wallets">wallets.md</a></td></tr><tr><td align="center"><strong>Explorers</strong></td><td>Your options to find the on-chain data you need</td><td><a href="participate/explorers">explorers.md</a></td></tr><tr><td align="center"><strong>Bridges</strong></td><td>Your options for bridging assets into or out of Persistence</td><td><a href="participate/bridges">bridges.md</a></td></tr></tbody></table>
 
 ## 🚚 Build, Integrate, Validate
 
@@ -66,9 +66,7 @@ _**Disclaimer:** This documentation page is collaboratively maintained by Persis
             <Container maxW="5xl" py={{ base: 4, md: 8 }} px={{ base: 4, md: 7 }}>
               {hideFirstHeading && (
                 <>
-                  <Link as={NextLink} href={pathname} _hover={{ textDecoration: 'none' }}><ChakraHeading as="h1" size={{ base: 'xl', md: '2xl' }} mb={description ? 2 : 4} color={themeColors.text[700]}>
-                    Overview
-                  </ChakraHeading></Link>
+                  <ChakraHeading as="h1" size={{ base: 'xl', md: '2xl' }} mb={description ? 2 : 4} color={themeColors.text[700]}>Overview</ChakraHeading>
                   {description && (
                     <Text fontSize={{ base: 'md', md: 'lg' }} color={themeColors.text[500]} mb={4}>
                       {description}
