@@ -19,6 +19,17 @@ export default function Page() {
 
 <figure><img src="/images/new_flowchart.jpg" alt=""><figcaption></figcaption></figure>
 
+### 🟠 Bitcoin Cross-Chain Swaps (V2)
+
+The flagship product of Persistence One — fast, zero-slippage cross-chain swaps of BTC-variants across Layer 2s and sidechains.
+
+* Powered by Intents.
+* Secured by Bitcoin.
+
+🏁 [Try Bitcoin Cross-Chain Swaps here.](https://beta.interop.persistence.one/)
+
+[Learn more about Bitcoin Cross-Chain Swaps](/products/bitcoin-cross-chain-swaps-v2/).
+
 ### 🔄 Persistence DEX (V1)
 
 A decentralised swapping solution where you can:
@@ -29,17 +40,6 @@ A decentralised swapping solution where you can:
 🏁 [Try Persistence DEX here.](https://app.persistence.one/)
 
 [Learn more about Persistence DEX.](/products/persistence-dex-v1/)
-
-### 🟠 Bitcoin Cross-Chain Swaps (V2)
-
-Our flagship product focused on fast, zero-slippage swaps across Bitcoin layer 2s and sidechains.
-
-* Powered by Intents.
-* Secured by Bitcoin.
-
-🏁 [Try Bitcoin Cross-Chain Swaps here.](https://beta.interop.persistence.one/)
-
-[Learn more about Bitcoin Cross-Chain Swaps](/products/bitcoin-cross-chain-swaps-v2/).
 
 ### ⚡️ XPRT
 

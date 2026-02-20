@@ -24,13 +24,17 @@ Welcome to the **Persistence Docs**! Here, you’ll find everything you need to 
 
 ## 🚦 Introduction
 
-**Persistence One** is building the BTCFi Liquidity Hub, enabling fast, near-zero-slippage swaps for XPRT, BTC-variants, and BTCfi tokens on **Persistence DEX**.
+> **Bitcoin Interoperability. Powered by Intents.**
 
-**BTCFi**’s rapid growth has created multiple BTC-related assets, making fragmentation a big challenge. Persistence One will provide a single liquidity hub, simplifying value transfer across the Bitcoin ecosystem.
+**Persistence One** is powering BTCFi interoperability, enabling instant cross-chain swaps of BTC-variants across Layer 2s using intent-based architecture.
 
 Whether you’re a developer, trader, or blockchain enthusiast, this documentation will guide you in exploring and utilising our products.
 
 We invite you on this journey with us, where you can learn, participate, explore, build, integrate, validate, and connect.
+
+## 🔗 Products
+
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Bitcoin Cross-Chain Swaps</strong></td><td>Fast, zero-slippage cross-chain swaps of BTC-variants across Layer 2s, powered by intents.</td><td><a href="products/bitcoin-cross-chain-swaps-v2/">bitcoin-cross-chain-swaps-v2</a></td></tr><tr><td align="center"><strong>Persistence DEX</strong></td><td>A decentralised swapping solution for trading and providing liquidity across the Persistence ecosystem.</td><td><a href="products/persistence-dex-v1/">persistence-dex-v1</a></td></tr></tbody></table>
 
 ## 🤝 Participate & Explore
 
@@ -51,7 +55,7 @@ Find all links to the Persistence official pages and channels [on this page](/co
 _**Disclaimer:** This documentation page is collaboratively maintained by Persistence Labs and the Persistence Foundation. However, there is no assurance that all the information presented is always accurate. We encourage the community to flag any errors or inaccuracies and contribute to keeping the documentation up-to-date._
 `
   const hideFirstHeading = true
-  const description = 'Familiarise yourself with all the events happening across the Persistence One ecosystem on this page.'
+  const description = 'Explore the Persistence One ecosystem — powering BTCFi interoperability with intent-based cross-chain swaps.'
   const pathname = usePathname()
   const [headings, setHeadings] = useState<HeadingItem[]>([])
 

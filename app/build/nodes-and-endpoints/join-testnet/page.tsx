@@ -119,17 +119,17 @@ We need to install and/or setup 5 dependencies - **Go**, **jq**, **gcc**, **make
     git clone https://github.com/persistenceOne/persistenceCore.git $GOPATH/source/persistenceCore && cd $GOPATH/source/persistenceCore
     \`\`\`
 2. Check what version is running on the test-core-2 chain by visiting the [Discord Testnet Validators Announcements Channel](https://discord.com/channels/796174129077813248/1042042319987294229).
-3.  Switch to the branch of the latest version _(v6.0.0-rc5 as of time of writing)_:
+3.  Switch to the branch of the latest version _(v16.0.1 as of time of writing)_:
 
     \`\`\`bash
-    git checkout v6.0.0-rc5
+    git checkout v16.0.1
     \`\`\`
 4.  Install the **persistenceCore** binary:
 
     \`\`\`bash
     make all
     \`\`\`
-5.  Verify installation (sample output: \`v6.0.0-rc5\`):
+5.  Verify installation (sample output: \`v16.0.1\`):
 
     \`\`\`bash
     persistenceCore version

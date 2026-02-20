@@ -175,7 +175,7 @@ Please read [this guide](/build/validators/setup-oracle-feeder) to setup price f
 
 ## Version
 
-This chain is currently running on persistenceCore [v6.0.0-rc5](https://github.com/persistenceOne/persistenceCore/releases/tag/v6.0.0-rc5) *(Commit Hash: \`b60bbcf5e1928f57cebffb69676419ed03c014c9\`)*
+This chain is currently running on persistenceCore [v16.0.1](https://github.com/persistenceOne/persistenceCore/releases/tag/v16.0.1) *(Commit Hash: \`b60bbcf5e1928f57cebffb69676419ed03c014c9\`)*
 
 > **Note**
 > If your node is running on an older version of the application, please update it to this version at the earliest to avoid being exposed to security vulnerabilities or defects.
