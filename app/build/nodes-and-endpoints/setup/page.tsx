@@ -20,7 +20,7 @@ export default function Page() {
 
 ## Initialize the Chain
 
-Before starting, ensure you've already [installed the persistenceCore binary](https://docs.persistence.one/build/nodes-and-endpoints/join-mainnet#install-the-persistencecore-binary) and the command \`persistenceCore version\` output is valid (e.g. \`v6.1.0\`).
+Before starting, ensure you've already [installed the persistenceCore binary](https://docs.persistence.one/build/nodes-and-endpoints/join-mainnet#install-the-persistencecore-binary) and the command \`persistenceCore version\` output is valid (e.g. \`v16.0.1\`).
 
 With that out of the way, before running the node, we need to initialize the chain and its genesis file. This is done with the \`init\` subcommand:
 

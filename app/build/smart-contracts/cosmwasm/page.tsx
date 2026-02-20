@@ -17,7 +17,7 @@ export default function Page() {
   const content = `
 # CosmWasm
 
-**To be added**
+CosmWasm smart contracts are supported on the Persistence Core-1 chain. For general CosmWasm development resources, visit the [official CosmWasm documentation](https://docs.cosmwasm.com). For Persistence-specific contract deployment, see [Uploading a Contract](/build/smart-contracts/uploading-a-contract).
 `
   const hideFirstHeading = true
   const pathname = usePathname()
