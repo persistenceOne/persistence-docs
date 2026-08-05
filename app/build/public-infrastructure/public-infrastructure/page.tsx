@@ -80,6 +80,10 @@ To help developers with integration, the following RPC-endpoints are provided
 | Imperator   | ws://rpc-persistence.imperator.co/wss           |                                                         |
 | Persistence | wss://rpc.core.persistence.one:443/websocket    |                                                         |
 | StakeFlow   | wss://rpc-persistence-01.stakeflow.io/websocket | wss://rpc-persistence-testnet-01.stakeflow.io/websocket |
+
+## Latency Benchmarks
+
+- [OpenChainBench](https://openchainbench.com/benchmarks/persistence-rpc) — live p50/p90/p99 latency leaderboard for free Persistence RPC endpoints, updated every 60 s
 `
   const hideFirstHeading = true
   const pathname = usePathname()
